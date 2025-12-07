@@ -22,7 +22,7 @@ on:
         default: true
 
 env:
-  DOTNET_VERSION: '6.0.x'
+  DOTNET_VERSION: '6.0.427'
   NODE_VERSION: '20.x'
 
 jobs:
@@ -116,7 +116,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Backend
-        run: bash build.sh --backend --enable-extra-platforms
+        run: bash build.sh --backend
         env:
           READARRVERSION: ${{ steps.version.outputs.version }}
 
@@ -124,7 +124,7 @@ jobs:
         run: bash build.sh --frontend
 
       - name: Create Packages
-        run: bash build.sh --packages --enable-extra-platforms
+        run: bash build.sh --packages
         env:
           READARRVERSION: ${{ steps.version.outputs.version }}
 
