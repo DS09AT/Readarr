@@ -22,7 +22,7 @@ on:
         default: true
 
 env:
-  DOTNET_VERSION: '6.0.427'
+  DOTNET_VERSION: '6.0.x'
   NODE_VERSION: '20.x'
 
 jobs:
