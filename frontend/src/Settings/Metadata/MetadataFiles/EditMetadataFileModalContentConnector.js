@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { saveMetadata, setMetadataFieldValue, setMetadataValue } from 'Store/Actions/settingsActions';
+import { saveMetadataFiles, setMetadataFilesFieldValue, setMetadataFilesValue } from 'Store/Actions/settingsActions';
 import selectSettings from 'Store/Selectors/selectSettings';
-import EditMetadataModalContent from './EditMetadataModalContent';
+import EditMetadataFileModalContent from './EditMetadataFileModalContent';
 
 function createMapStateToProps() {
   return createSelector(
@@ -33,12 +33,12 @@ function createMapStateToProps() {
 }
 
 const mapDispatchToProps = {
-  setMetadataValue,
-  setMetadataFieldValue,
-  saveMetadata
+  setMetadataFilesValue,
+  setMetadataFilesFieldValue,
+  saveMetadataFiles
 };
 
-class EditMetadataModalContentConnector extends Component {
+class EditMetadataFileModalContentConnector extends Component {
 
   //
   // Lifecycle
@@ -53,15 +53,15 @@ class EditMetadataModalContentConnector extends Component {
   // Listeners
 
   onInputChange = ({ name, value }) => {
-    this.props.setMetadataValue({ name, value });
+    this.props.setMetadataFilesValue({ name, value });
   };
 
   onFieldChange = ({ name, value }) => {
-    this.props.setMetadataFieldValue({ name, value });
+    this.props.setMetadataFilesFieldValue({ name, value });
   };
 
   onSavePress = () => {
-    this.props.saveMetadata({ id: this.props.id });
+    this.props.saveMetadataFiles({ id: this.props.id });
   };
 
   //
@@ -69,7 +69,7 @@ class EditMetadataModalContentConnector extends Component {
 
   render() {
     return (
-      <EditMetadataModalContent
+      <EditMetadataFileModalContent
         {...this.props}
         onSavePress={this.onSavePress}
         onInputChange={this.onInputChange}
@@ -79,15 +79,16 @@ class EditMetadataModalContentConnector extends Component {
   }
 }
 
-EditMetadataModalContentConnector.propTypes = {
+EditMetadataFileModalContentConnector.propTypes = {
   id: PropTypes.number,
   isSaving: PropTypes.bool.isRequired,
   saveError: PropTypes.object,
   item: PropTypes.object.isRequired,
-  setMetadataValue: PropTypes.func.isRequired,
-  setMetadataFieldValue: PropTypes.func.isRequired,
-  saveMetadata: PropTypes.func.isRequired,
+  setMetadataFilesValue: PropTypes.func.isRequired,
+  setMetadataFilesFieldValue: PropTypes.func.isRequired,
+  saveMetadataFiles: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditMetadataModalContentConnector);
+export default connect(createMapStateToProps, mapDispatchToProps)(EditMetadataFileModalContentConnector);
+

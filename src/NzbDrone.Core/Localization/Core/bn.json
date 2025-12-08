@@ -1,5 +1,26 @@
-{
-    "About": "সম্পর্কিত",
-    "Actions": "ক্রিয়াকাণ্ড",
-    "Activity": "কার্যকলাপ"
+﻿{
+  "About": "সম্পর্কিত",
+  "Actions": "ক্রিয়াকাণ্ড",
+  "Activity": "কার্যকলাপ",
+  "AddMetadataProvider": "",
+  "AllMetadataProvidersHaveBeenAdded": "সমস্ত মেটাডেটা প্রদানকারী যোগ করা হয়েছে। প্রতিটি প্রদানকারী প্রকার শুধুমাত্র একবার যোগ করা যেতে পারে।",
+  "AuthorSearch": "",
+  "BookSearch": "",
+  "DeleteMetadataProvider": "",
+  "DeleteMetadataProviderMessageText": "",
+  "EditMetadataProvider": "",
+  "EnableAuthorSearch": "",
+  "EnableAuthorSearchHelpText": "",
+  "EnableBookSearch": "",
+  "EnableBookSearchHelpText": "",
+  "InteractiveSearch": "",
+  "ISBNLookup": "",
+  "MetadataProvider": "",
+  "MetadataProviderBaseUrlHelpText": "",
+  "MetadataProviderPriorityHelpText": "",
+  "MetadataProviders": "",
+  "MetadataProvidersSettings": "",
+  "UnableToAddNewMetadataProviderPleaseTryAgain": "",
+  "UnableToLoadMetadataProvider": "",
+  "UnableToLoadMetadataProviders": ""
 }

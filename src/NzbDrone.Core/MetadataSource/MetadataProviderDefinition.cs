@@ -36,18 +36,14 @@ namespace NzbDrone.Core.MetadataSource
         public bool EnableAutomaticRefresh { get; set; }
 
         /// <summary>
-        /// Enable for interactive/manual searches
-        /// </summary>
-        public bool EnableInteractiveSearch { get; set; }
-
-        /// <summary>
-        /// Overall enable state (at least one feature must be enabled)
-        /// </summary>
-        public override bool Enable => EnableAuthorSearch || EnableBookSearch || EnableAutomaticRefresh || EnableInteractiveSearch;
-
-        /// <summary>
         /// Provider status (failures, backoff, etc.)
         /// </summary>
         public MetadataProviderStatus Status { get; set; }
+
+        /// <summary>
+        /// Provider is enabled if any feature is enabled
+        /// Computed property following the same pattern as IndexerDefinition
+        /// </summary>
+        public override bool Enable => EnableAuthorSearch || EnableBookSearch || EnableAutomaticRefresh;
     }
 }

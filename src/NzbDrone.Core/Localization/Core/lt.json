@@ -1,1 +1,23 @@
-{}
+﻿{
+  "AddMetadataProvider": "",
+  "AllMetadataProvidersHaveBeenAdded": "Visi metaduomenų teikėjai buvo pridėti. Kiekvieną teikėjo tipą galima pridėti tik vieną kartą.",
+  "AuthorSearch": "",
+  "BookSearch": "",
+  "DeleteMetadataProvider": "",
+  "DeleteMetadataProviderMessageText": "",
+  "EditMetadataProvider": "",
+  "EnableAuthorSearch": "",
+  "EnableAuthorSearchHelpText": "",
+  "EnableBookSearch": "",
+  "EnableBookSearchHelpText": "",
+  "InteractiveSearch": "",
+  "ISBNLookup": "",
+  "MetadataProvider": "",
+  "MetadataProviderBaseUrlHelpText": "",
+  "MetadataProviderPriorityHelpText": "",
+  "MetadataProviders": "",
+  "MetadataProvidersSettings": "",
+  "UnableToAddNewMetadataProviderPleaseTryAgain": "",
+  "UnableToLoadMetadataProvider": "",
+  "UnableToLoadMetadataProviders": ""
+}

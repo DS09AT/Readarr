@@ -26,7 +26,8 @@ namespace NzbDrone.Core.MetadataSource
         }
 
         public abstract string Name { get; }
-        public abstract int Priority { get; }
+        public virtual int Priority { get; set; }
+        public virtual string InfoLink => string.Empty;
         public abstract MetadataProviderCapabilities Capabilities { get; }
 
         public Type ConfigContract => typeof(TSettings);
@@ -41,14 +42,11 @@ namespace NzbDrone.Core.MetadataSource
 
                 yield return new MetadataProviderDefinition
                 {
-                    Name = GetType().Name,
                     EnableAuthorSearch = config.Validate().IsValid && Capabilities.SupportsAuthorSearch,
                     EnableBookSearch = config.Validate().IsValid && Capabilities.SupportsBookSearch,
                     EnableAutomaticRefresh = config.Validate().IsValid && Capabilities.SupportsChangeFeed,
-                    EnableInteractiveSearch = config.Validate().IsValid,
                     Implementation = GetType().Name,
-                    Settings = config,
-                    Priority = Priority
+                    Settings = config
                 };
             }
         }

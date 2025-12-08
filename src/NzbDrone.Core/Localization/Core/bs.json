@@ -1,1 +1,23 @@
-{}
+﻿{
+  "AddMetadataProvider": "",
+  "AllMetadataProvidersHaveBeenAdded": "Svi pružaoci metapodataka su dodani. Svaka vrsta pružaoca može se dodati samo jednom.",
+  "AuthorSearch": "",
+  "BookSearch": "",
+  "DeleteMetadataProvider": "",
+  "DeleteMetadataProviderMessageText": "",
+  "EditMetadataProvider": "",
+  "EnableAuthorSearch": "",
+  "EnableAuthorSearchHelpText": "",
+  "EnableBookSearch": "",
+  "EnableBookSearchHelpText": "",
+  "InteractiveSearch": "",
+  "ISBNLookup": "",
+  "MetadataProvider": "",
+  "MetadataProviderBaseUrlHelpText": "",
+  "MetadataProviderPriorityHelpText": "",
+  "MetadataProviders": "",
+  "MetadataProvidersSettings": "",
+  "UnableToAddNewMetadataProviderPleaseTryAgain": "",
+  "UnableToLoadMetadataProvider": "",
+  "UnableToLoadMetadataProviders": ""
+}

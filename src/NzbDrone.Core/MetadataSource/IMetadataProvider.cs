@@ -18,6 +18,11 @@ namespace NzbDrone.Core.MetadataSource
         int Priority { get; }
 
         /// <summary>
+        /// Link to wiki/documentation for this provider
+        /// </summary>
+        string InfoLink { get; }
+
+        /// <summary>
         /// Capabilities of this provider
         /// </summary>
         MetadataProviderCapabilities Capabilities { get; }

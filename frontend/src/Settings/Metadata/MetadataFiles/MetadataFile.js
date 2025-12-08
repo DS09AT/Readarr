@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import Card from 'Components/Card';
 import Label from 'Components/Label';
 import { kinds } from 'Helpers/Props';
-import EditMetadataModalConnector from './EditMetadataModalConnector';
-import styles from './Metadata.css';
+import EditMetadataFileModalConnector from './EditMetadataFileModalConnector';
+import styles from './MetadataFile.css';
 
-class Metadata extends Component {
+class MetadataFile extends Component {
 
   //
   // Lifecycle
@@ -129,7 +129,7 @@ class Metadata extends Component {
             </div>
         }
 
-        <EditMetadataModalConnector
+        <EditMetadataFileModalConnector
           id={id}
           isOpen={this.state.isEditMetadataModalOpen}
           onModalClose={this.onEditMetadataModalClose}
@@ -139,11 +139,12 @@ class Metadata extends Component {
   }
 }
 
-Metadata.propTypes = {
+MetadataFile.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   enable: PropTypes.bool.isRequired,
   fields: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
-export default Metadata;
+export default MetadataFile;
+

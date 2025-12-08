@@ -7,7 +7,6 @@ namespace Readarr.Api.V1.MetadataProvider
         public bool EnableAuthorSearch { get; set; }
         public bool EnableBookSearch { get; set; }
         public bool EnableAutomaticRefresh { get; set; }
-        public bool EnableInteractiveSearch { get; set; }
         public int Priority { get; set; }
 
         // Capabilities (read-only)
@@ -36,7 +35,6 @@ namespace Readarr.Api.V1.MetadataProvider
             resource.EnableAuthorSearch = definition.EnableAuthorSearch;
             resource.EnableBookSearch = definition.EnableBookSearch;
             resource.EnableAutomaticRefresh = definition.EnableAutomaticRefresh;
-            resource.EnableInteractiveSearch = definition.EnableInteractiveSearch;
             resource.Priority = definition.Priority;
 
             // Note: Capabilities will be set by the controller using the provider instance
@@ -56,7 +54,6 @@ namespace Readarr.Api.V1.MetadataProvider
             definition.EnableAuthorSearch = resource.EnableAuthorSearch;
             definition.EnableBookSearch = resource.EnableBookSearch;
             definition.EnableAutomaticRefresh = resource.EnableAutomaticRefresh;
-            definition.EnableInteractiveSearch = resource.EnableInteractiveSearch;
             definition.Priority = resource.Priority;
 
             return definition;

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using NzbDrone.Core.MetadataSource;
@@ -20,14 +21,36 @@ namespace Readarr.Api.V1.MetadataProvider
 
             // Priority validation: 1-100
             SharedValidator.RuleFor(c => c.Priority).InclusiveBetween(1, 100);
+        }
 
-            // At least one feature must be enabled
-            SharedValidator.RuleFor(c => c)
-                .Must(provider => provider.EnableAuthorSearch ||
-                                 provider.EnableBookSearch ||
-                                 provider.EnableAutomaticRefresh ||
-                                 provider.EnableInteractiveSearch)
-                .WithMessage("At least one feature must be enabled");
+        public override List<MetadataProviderResource> GetTemplates()
+        {
+            var templates = base.GetTemplates();
+
+            // Populate capabilities for each template from the provider definitions
+            foreach (var template in templates)
+            {
+                var definition = _metadataProviderFactory.GetDefaultDefinitions()
+                    .FirstOrDefault(d => d.Implementation == template.Implementation);
+
+                if (definition != null)
+                {
+                    var provider = _metadataProviderFactory.GetInstance(definition);
+
+                    template.InfoLink = provider.InfoLink;
+                    template.SupportsAuthorSearch = provider.Capabilities.SupportsAuthorSearch;
+                    template.SupportsBookSearch = provider.Capabilities.SupportsBookSearch;
+                    template.SupportsIsbnLookup = provider.Capabilities.SupportsIsbnLookup;
+                    template.SupportsAsinLookup = provider.Capabilities.SupportsAsinLookup;
+                    template.SupportsSeriesInfo = provider.Capabilities.SupportsSeriesInfo;
+                    template.SupportsChangeFeed = provider.Capabilities.SupportsChangeFeed;
+                    template.SupportsCovers = provider.Capabilities.SupportsCovers;
+                    template.SupportsRatings = provider.Capabilities.SupportsRatings;
+                    template.SupportsDescriptions = provider.Capabilities.SupportsDescriptions;
+                }
+            }
+
+            return templates;
         }
 
         protected override MetadataProviderResource GetResourceById(int id)
@@ -40,6 +63,7 @@ namespace Readarr.Api.V1.MetadataProvider
 
             if (provider != null)
             {
+                resource.InfoLink = provider.InfoLink;
                 resource.SupportsAuthorSearch = provider.Capabilities.SupportsAuthorSearch;
                 resource.SupportsBookSearch = provider.Capabilities.SupportsBookSearch;
                 resource.SupportsIsbnLookup = provider.Capabilities.SupportsIsbnLookup;

@@ -4,7 +4,7 @@ namespace Readarr.Api.V1.Metadata
 {
     public class MetadataResource : ProviderResource<MetadataResource>
     {
-        public bool Enable { get; set; }
+        public new bool Enable { get; set; }
     }
 
     public class MetadataResourceMapper : ProviderResourceMapper<MetadataResource, MetadataDefinition>

@@ -5,7 +5,7 @@ namespace Readarr.Api.V1.DownloadClient
 {
     public class DownloadClientResource : ProviderResource<DownloadClientResource>
     {
-        public bool Enable { get; set; }
+        public new bool Enable { get; set; }
         public DownloadProtocol Protocol { get; set; }
         public int Priority { get; set; }
         public bool RemoveCompletedDownloads { get; set; }

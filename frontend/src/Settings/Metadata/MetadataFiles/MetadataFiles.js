@@ -3,10 +3,10 @@ import React from 'react';
 import FieldSet from 'Components/FieldSet';
 import PageSectionContent from 'Components/Page/PageSectionContent';
 import translate from 'Utilities/String/translate';
-import Metadata from './Metadata';
-import styles from './Metadatas.css';
+import MetadataFile from './MetadataFile';
+import styles from './MetadataFiles.css';
 
-function Metadatas(props) {
+function MetadataFiles(props) {
   const {
     items,
     ...otherProps
@@ -18,11 +18,11 @@ function Metadatas(props) {
         errorMessage={translate('UnableToLoadMetadata')}
         {...otherProps}
       >
-        <div className={styles.metadatas}>
+        <div className={styles.metadatafiles}>
           {
             items.map((item) => {
               return (
-                <Metadata
+                <MetadataFile
                   key={item.id}
                   {...item}
                 />
@@ -35,10 +35,10 @@ function Metadatas(props) {
   );
 }
 
-Metadatas.propTypes = {
+MetadataFiles.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   error: PropTypes.object,
   items: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
-export default Metadatas;
+export default MetadataFiles;

@@ -62,7 +62,22 @@ namespace NzbDrone.Core.MetadataSource
         {
             base.SetProviderCharacteristics(provider, definition);
 
-            definition.Priority = provider.Priority;
+            // Set default name from provider if not already set
+            if (string.IsNullOrWhiteSpace(definition.Name))
+            {
+                definition.Name = provider.Name;
+            }
+
+            // Set priority for new definitions (not yet saved)
+            // Provider can override the central default by setting a custom priority
+            // Don't override user-configured priority for existing definitions
+            if (definition.Id == 0 && provider.Priority != 0)
+            {
+                definition.Priority = provider.Priority;
+            }
+
+            // If provider.Priority == 0 or definition.Id != 0, keep existing priority
+            // (either DefaultPriority from constructor or user-configured value)
         }
 
         public List<IMetadataProvider> AuthorSearchEnabled(bool filterBlocked = true)
@@ -109,8 +124,10 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<IMetadataProvider> InteractiveSearchEnabled(bool filterBlocked = true)
         {
+            // Interactive search uses providers that support either author or book search
             var enabledProviders = GetAvailableProviders()
-                .Where(p => ((MetadataProviderDefinition)p.Definition).EnableInteractiveSearch)
+                .Where(p => ((MetadataProviderDefinition)p.Definition).EnableAuthorSearch ||
+                           ((MetadataProviderDefinition)p.Definition).EnableBookSearch)
                 .OrderByDescending(p => ((MetadataProviderDefinition)p.Definition).Priority);
 
             if (filterBlocked)

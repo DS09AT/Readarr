@@ -1,1 +1,23 @@
-{}
+﻿{
+  "AddMetadataProvider": "",
+  "AllMetadataProvidersHaveBeenAdded": "அனைத்து மெட்டாடேட்டா வழங்குநர்களும் சேர்க்கப்பட்டுள்ளனர். ஒவ்வொரு வழங்குநர் வகையும் ஒரு முறை மட்டுமே சேர்க்க முடியும்.",
+  "AuthorSearch": "",
+  "BookSearch": "",
+  "DeleteMetadataProvider": "",
+  "DeleteMetadataProviderMessageText": "",
+  "EditMetadataProvider": "",
+  "EnableAuthorSearch": "",
+  "EnableAuthorSearchHelpText": "",
+  "EnableBookSearch": "",
+  "EnableBookSearchHelpText": "",
+  "InteractiveSearch": "",
+  "ISBNLookup": "",
+  "MetadataProvider": "",
+  "MetadataProviderBaseUrlHelpText": "",
+  "MetadataProviderPriorityHelpText": "",
+  "MetadataProviders": "",
+  "MetadataProvidersSettings": "",
+  "UnableToAddNewMetadataProviderPleaseTryAgain": "",
+  "UnableToLoadMetadataProvider": "",
+  "UnableToLoadMetadataProviders": ""
+}

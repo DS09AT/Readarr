@@ -44,6 +44,7 @@ class SpinnerErrorButton extends Component {
     super(props, context);
 
     this._testResultTimeout = null;
+    this._isMounted = false;
 
     this.state = {
       wasSuccessful: false,
@@ -75,9 +76,16 @@ class SpinnerErrorButton extends Component {
     }
   }
 
+  componentDidMount() {
+    this._isMounted = true;
+  }
+
   componentWillUnmount() {
+    this._isMounted = false;
+    
     if (this._testResultTimeout) {
       clearTimeout(this._testResultTimeout);
+      this._testResultTimeout = null;
     }
   }
 
@@ -85,6 +93,10 @@ class SpinnerErrorButton extends Component {
   // Control
 
   resetState = () => {
+    if (!this._isMounted) {
+      return;
+    }
+
     this.setState({
       wasSuccessful: false,
       hasWarning: false,

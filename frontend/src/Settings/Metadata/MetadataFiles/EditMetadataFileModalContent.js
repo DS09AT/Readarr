@@ -14,7 +14,7 @@ import ModalHeader from 'Components/Modal/ModalHeader';
 import { inputTypes } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
 
-function EditMetadataModalContent(props) {
+function EditMetadataFileModalContent(props) {
   const {
     isSaving,
     saveError,
@@ -90,7 +90,7 @@ function EditMetadataModalContent(props) {
   );
 }
 
-EditMetadataModalContent.propTypes = {
+EditMetadataFileModalContent.propTypes = {
   isSaving: PropTypes.bool.isRequired,
   saveError: PropTypes.object,
   item: PropTypes.object.isRequired,
@@ -101,4 +101,5 @@ EditMetadataModalContent.propTypes = {
   onDeleteMetadataPress: PropTypes.func
 };
 
-export default EditMetadataModalContent;
+export default EditMetadataFileModalContent;
+

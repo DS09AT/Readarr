@@ -2,29 +2,29 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { fetchMetadata } from 'Store/Actions/settingsActions';
+import { fetchMetadataFiles } from 'Store/Actions/settingsActions';
 import createSortedSectionSelector from 'Store/Selectors/createSortedSectionSelector';
 import sortByName from 'Utilities/Array/sortByName';
-import Metadatas from './Metadatas';
+import MetadataFiles from './MetadataFiles';
 
 function createMapStateToProps() {
   return createSelector(
-    createSortedSectionSelector('settings.metadata', sortByName),
-    (metadata) => metadata
+    createSortedSectionSelector('settings.metadataFiles', sortByName),
+    (metadataFiles) => metadataFiles
   );
 }
 
 const mapDispatchToProps = {
-  fetchMetadata
+  fetchMetadataFiles
 };
 
-class MetadatasConnector extends Component {
+class MetadataFilesConnector extends Component {
 
   //
   // Lifecycle
 
   componentDidMount() {
-    this.props.fetchMetadata();
+    this.props.fetchMetadataFiles();
   }
 
   //
@@ -32,7 +32,7 @@ class MetadatasConnector extends Component {
 
   render() {
     return (
-      <Metadatas
+      <MetadataFiles
         {...this.props}
         onConfirmDeleteMetadata={this.onConfirmDeleteMetadata}
       />
@@ -40,8 +40,8 @@ class MetadatasConnector extends Component {
   }
 }
 
-MetadatasConnector.propTypes = {
-  fetchMetadata: PropTypes.func.isRequired
+MetadataFilesConnector.propTypes = {
+  fetchMetadataFiles: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(MetadatasConnector);
+export default connect(createMapStateToProps, mapDispatchToProps)(MetadataFilesConnector);

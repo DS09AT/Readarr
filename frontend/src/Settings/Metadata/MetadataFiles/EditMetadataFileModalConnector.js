@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { clearPendingChanges } from 'Store/Actions/baseActions';
-import EditMetadataModal from './EditMetadataModal';
+import EditMetadataFileModal from './EditMetadataFileModal';
 
 function createMapDispatchToProps(dispatch, props) {
-  const section = 'settings.metadata';
+  const section = 'settings.metadataFiles';
 
   return {
     dispatchClearPendingChanges() {
@@ -14,7 +14,7 @@ function createMapDispatchToProps(dispatch, props) {
   };
 }
 
-class EditMetadataModalConnector extends Component {
+class EditMetadataFileModalConnector extends Component {
 
   //
   // Listeners
@@ -29,7 +29,7 @@ class EditMetadataModalConnector extends Component {
 
   render() {
     return (
-      <EditMetadataModal
+      <EditMetadataFileModal
         {...this.props}
         onModalClose={this.onModalClose}
       />
@@ -37,9 +37,10 @@ class EditMetadataModalConnector extends Component {
   }
 }
 
-EditMetadataModalConnector.propTypes = {
+EditMetadataFileModalConnector.propTypes = {
   onModalClose: PropTypes.func.isRequired,
   dispatchClearPendingChanges: PropTypes.func.isRequired
 };
 
-export default connect(null, createMapDispatchToProps)(EditMetadataModalConnector);
+export default connect(null, createMapDispatchToProps)(EditMetadataFileModalConnector);
+

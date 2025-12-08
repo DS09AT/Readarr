@@ -173,7 +173,7 @@ namespace Readarr.Api.V1
 
         [HttpGet("schema")]
         [Produces("application/json")]
-        public List<TProviderResource> GetTemplates()
+        public virtual List<TProviderResource> GetTemplates()
         {
             var defaultDefinitions = _providerFactory.GetDefaultDefinitions().OrderBy(p => p.ImplementationName).ToList();
 

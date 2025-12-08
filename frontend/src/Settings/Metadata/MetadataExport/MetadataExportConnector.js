@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { clearPendingChanges } from 'Store/Actions/baseActions';
-import { fetchMetadataProvider, saveMetadataProvider, setMetadataProviderValue } from 'Store/Actions/settingsActions';
+import { fetchMetadataExport, saveMetadataExport, setMetadataExportValue } from 'Store/Actions/settingsActions';
 import createSettingsSectionSelector from 'Store/Selectors/createSettingsSectionSelector';
-import MetadataProvider from './MetadataProvider';
+import MetadataExport from './MetadataExport';
 
-const SECTION = 'metadataProvider';
+const SECTION = 'metadataExport';
 
 function createMapStateToProps() {
   return createSelector(
@@ -23,26 +23,26 @@ function createMapStateToProps() {
 }
 
 const mapDispatchToProps = {
-  dispatchFetchMetadataProvider: fetchMetadataProvider,
-  dispatchSetMetadataProviderValue: setMetadataProviderValue,
-  dispatchSaveMetadataProvider: saveMetadataProvider,
+  dispatchFetchMetadataExport: fetchMetadataExport,
+  dispatchSetMetadataExportValue: setMetadataExportValue,
+  dispatchSaveMetadataExport: saveMetadataExport,
   dispatchClearPendingChanges: clearPendingChanges
 };
 
-class MetadataProviderConnector extends Component {
+class MetadataExportConnector extends Component {
 
   //
   // Lifecycle
 
   componentDidMount() {
     const {
-      dispatchFetchMetadataProvider,
-      dispatchSaveMetadataProvider,
+      dispatchFetchMetadataExport,
+      dispatchSaveMetadataExport,
       onChildMounted
     } = this.props;
 
-    dispatchFetchMetadataProvider();
-    onChildMounted(dispatchSaveMetadataProvider);
+    dispatchFetchMetadataExport();
+    onChildMounted(dispatchSaveMetadataExport);
   }
 
   componentDidUpdate(prevProps) {
@@ -64,14 +64,14 @@ class MetadataProviderConnector extends Component {
   }
 
   componentWillUnmount() {
-    this.props.dispatchClearPendingChanges({ section: 'settings.metadataProvider' });
+    this.props.dispatchClearPendingChanges({ section: 'settings.metadataExport' });
   }
 
   //
   // Listeners
 
   onInputChange = ({ name, value }) => {
-    this.props.dispatchSetMetadataProviderValue({ name, value });
+    this.props.dispatchSetMetadataExportValue({ name, value });
   };
 
   //
@@ -79,7 +79,7 @@ class MetadataProviderConnector extends Component {
 
   render() {
     return (
-      <MetadataProvider
+      <MetadataExport
         onInputChange={this.onInputChange}
         {...this.props}
       />
@@ -87,15 +87,15 @@ class MetadataProviderConnector extends Component {
   }
 }
 
-MetadataProviderConnector.propTypes = {
+MetadataExportConnector.propTypes = {
   isSaving: PropTypes.bool.isRequired,
   hasPendingChanges: PropTypes.bool.isRequired,
-  dispatchFetchMetadataProvider: PropTypes.func.isRequired,
-  dispatchSetMetadataProviderValue: PropTypes.func.isRequired,
-  dispatchSaveMetadataProvider: PropTypes.func.isRequired,
+  dispatchFetchMetadataExport: PropTypes.func.isRequired,
+  dispatchSetMetadataExportValue: PropTypes.func.isRequired,
+  dispatchSaveMetadataExport: PropTypes.func.isRequired,
   dispatchClearPendingChanges: PropTypes.func.isRequired,
   onChildMounted: PropTypes.func.isRequired,
   onChildStateChange: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(MetadataProviderConnector);
+export default connect(createMapStateToProps, mapDispatchToProps)(MetadataExportConnector);

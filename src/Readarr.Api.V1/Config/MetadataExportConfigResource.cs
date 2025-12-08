@@ -3,7 +3,7 @@ using Readarr.Http.REST;
 
 namespace Readarr.Api.V1.Config
 {
-    public class MetadataProviderConfigResource : RestResource
+    public class MetadataExportConfigResource : RestResource
     {
         public WriteAudioTagsType WriteAudioTags { get; set; }
         public bool ScrubAudioTags { get; set; }
@@ -12,11 +12,11 @@ namespace Readarr.Api.V1.Config
         public bool EmbedMetadata { get; set; }
     }
 
-    public static class MetadataProviderConfigResourceMapper
+    public static class MetadataExportConfigResourceMapper
     {
-        public static MetadataProviderConfigResource ToResource(IConfigService model)
+        public static MetadataExportConfigResource ToResource(IConfigService model)
         {
-            return new MetadataProviderConfigResource
+            return new MetadataExportConfigResource
             {
                 WriteAudioTags = model.WriteAudioTags,
                 ScrubAudioTags = model.ScrubAudioTags,

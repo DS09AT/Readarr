@@ -16,8 +16,10 @@ import indexers from './Settings/indexers';
 import languages from './Settings/languages';
 import mediaManagement from './Settings/mediaManagement';
 import metadata from './Settings/metadata';
+import metadataFiles from './Settings/metadataFiles';
 import metadataProfiles from './Settings/metadataProfiles';
-import metadataProvider from './Settings/metadataProvider';
+import metadataExport from './Settings/metadataExport';
+import metadataProviders from './Settings/metadataProviders';
 import naming from './Settings/naming';
 import namingExamples from './Settings/namingExamples';
 import notifications from './Settings/notifications';
@@ -43,7 +45,9 @@ export * from './Settings/languages';
 export * from './Settings/metadataProfiles';
 export * from './Settings/mediaManagement';
 export * from './Settings/metadata';
-export * from './Settings/metadataProvider';
+export * from './Settings/metadataFiles';
+export * from './Settings/metadataExport';
+export * from './Settings/metadataProviders';
 export * from './Settings/naming';
 export * from './Settings/namingExamples';
 export * from './Settings/notifications';
@@ -81,7 +85,9 @@ export const defaultState = {
   metadataProfiles: metadataProfiles.defaultState,
   mediaManagement: mediaManagement.defaultState,
   metadata: metadata.defaultState,
-  metadataProvider: metadataProvider.defaultState,
+  metadataFiles: metadataFiles.defaultState,
+  metadataExport: metadataExport.defaultState,
+  metadataProviders: metadataProviders.defaultState,
   naming: naming.defaultState,
   namingExamples: namingExamples.defaultState,
   notifications: notifications.defaultState,
@@ -127,7 +133,9 @@ export const actionHandlers = handleThunks({
   ...metadataProfiles.actionHandlers,
   ...mediaManagement.actionHandlers,
   ...metadata.actionHandlers,
-  ...metadataProvider.actionHandlers,
+  ...metadataFiles.actionHandlers,
+  ...metadataExport.actionHandlers,
+  ...metadataProviders.actionHandlers,
   ...naming.actionHandlers,
   ...namingExamples.actionHandlers,
   ...notifications.actionHandlers,
@@ -164,7 +172,9 @@ export const reducers = createHandleActions({
   ...metadataProfiles.reducers,
   ...mediaManagement.reducers,
   ...metadata.reducers,
-  ...metadataProvider.reducers,
+  ...metadataFiles.reducers,
+  ...metadataExport.reducers,
+  ...metadataProviders.reducers,
   ...naming.reducers,
   ...namingExamples.reducers,
   ...notifications.reducers,

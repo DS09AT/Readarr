@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import PageContent from 'Components/Page/PageContent';
 import PageContentBody from 'Components/Page/PageContentBody';
 import SettingsToolbarConnector from 'Settings/SettingsToolbarConnector';
 import translate from 'Utilities/String/translate';
-// import MetadatasConnector from './Metadata/MetadatasConnector';
-import MetadataProviderConnector from './MetadataProvider/MetadataProviderConnector';
+import MetadataProvidersConnector from 'Settings/MetadataProviders/MetadataProviders/MetadataProvidersConnector';
+import MetadataFilesConnector from './MetadataFiles/MetadataFilesConnector';
+import MetadataExportConnector from './MetadataExport/MetadataExportConnector';
 
 class MetadataSettings extends Component {
 
@@ -41,6 +43,7 @@ class MetadataSettings extends Component {
 
   //
   // Render
+
   render() {
     const {
       isSaving,
@@ -56,15 +59,21 @@ class MetadataSettings extends Component {
         />
 
         <PageContentBody>
-          <MetadataProviderConnector
+          <MetadataProvidersConnector />
+
+          <MetadataExportConnector
             onChildMounted={this.onChildMounted}
             onChildStateChange={this.onChildStateChange}
           />
-          {/* <MetadatasConnector /> */}
+
+          <MetadataFilesConnector />
         </PageContentBody>
       </PageContent>
     );
   }
 }
+
+MetadataSettings.propTypes = {
+};
 
 export default MetadataSettings;

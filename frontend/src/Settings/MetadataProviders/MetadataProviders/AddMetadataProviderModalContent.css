@@ -1,0 +1,17 @@
+.modalBody {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 200px;
+}
+
+.message {
+  padding: 15px;
+  width: 100%;
+}
+
+.metadataProviders {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}

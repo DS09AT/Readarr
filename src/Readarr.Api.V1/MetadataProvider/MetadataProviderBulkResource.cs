@@ -8,7 +8,6 @@ namespace Readarr.Api.V1.MetadataProvider
         public bool? EnableAuthorSearch { get; set; }
         public bool? EnableBookSearch { get; set; }
         public bool? EnableAutomaticRefresh { get; set; }
-        public bool? EnableInteractiveSearch { get; set; }
         public int? Priority { get; set; }
     }
 
@@ -26,7 +25,6 @@ namespace Readarr.Api.V1.MetadataProvider
                 existing.EnableAuthorSearch = resource.EnableAuthorSearch ?? existing.EnableAuthorSearch;
                 existing.EnableBookSearch = resource.EnableBookSearch ?? existing.EnableBookSearch;
                 existing.EnableAutomaticRefresh = resource.EnableAutomaticRefresh ?? existing.EnableAutomaticRefresh;
-                existing.EnableInteractiveSearch = resource.EnableInteractiveSearch ?? existing.EnableInteractiveSearch;
                 existing.Priority = resource.Priority ?? existing.Priority;
             });
 

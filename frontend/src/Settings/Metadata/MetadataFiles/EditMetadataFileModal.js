@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Modal from 'Components/Modal/Modal';
 import { sizes } from 'Helpers/Props';
-import EditMetadataModalContentConnector from './EditMetadataModalContentConnector';
+import EditMetadataFileModalContentConnector from './EditMetadataFileModalContentConnector';
 
-function EditMetadataModal({ isOpen, onModalClose, ...otherProps }) {
+function EditMetadataFileModal({ isOpen, onModalClose, ...otherProps }) {
   return (
     <Modal
       size={sizes.MEDIUM}
       isOpen={isOpen}
       onModalClose={onModalClose}
     >
-      <EditMetadataModalContentConnector
+      <EditMetadataFileModalContentConnector
         {...otherProps}
         onModalClose={onModalClose}
       />
@@ -19,9 +19,10 @@ function EditMetadataModal({ isOpen, onModalClose, ...otherProps }) {
   );
 }
 
-EditMetadataModal.propTypes = {
+EditMetadataFileModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default EditMetadataModal;
+export default EditMetadataFileModal;
+

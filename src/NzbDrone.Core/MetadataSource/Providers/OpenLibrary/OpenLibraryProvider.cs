@@ -26,7 +26,7 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
         };
 
         public override string Name => "Open Library";
-        public override int Priority => 90;
+        public override string InfoLink => "";
 
         public override MetadataProviderCapabilities Capabilities => new MetadataProviderCapabilities
         {

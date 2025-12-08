@@ -5,9 +5,11 @@ function createFetchSchemaHandler(section, url) {
   return function(getState, payload, dispatch) {
     dispatch(set({ section, isSchemaFetching: true }));
 
-    const promise = createAjaxRequest({
+    const ajaxRequest = createAjaxRequest({
       url
-    }).request;
+    });
+
+    const promise = ajaxRequest.request;
 
     promise.done((data) => {
       dispatch(set({
