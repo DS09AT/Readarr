@@ -59,7 +59,8 @@ namespace Readarr.Api.V1.Search
                 else if (result is NzbDrone.Core.Books.Book book)
                 {
                     resource.Book = book.ToResource();
-                    resource.Book.Overview = book.Editions.Value.Single(x => x.Monitored).Overview;
+                    var monitoredEdition = book.Editions.Value.FirstOrDefault(x => x.Monitored);
+                    resource.Book.Overview = monitoredEdition?.Overview ?? string.Empty;
                     resource.Book.Author = book.Author.Value.ToResource();
                     resource.Book.Editions = book.Editions.Value.ToResource();
                     resource.ForeignId = book.ForeignBookId;

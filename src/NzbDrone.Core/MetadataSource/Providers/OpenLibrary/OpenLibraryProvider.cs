@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
+using NzbDrone.Common.Cache;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MetadataSource.Providers.OpenLibrary.Resources;
@@ -42,8 +43,8 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
             MaxRequestsPerMinute = 100
         };
 
-        public OpenLibraryProvider(IMetadataProviderStatusService statusService, IHttpClient httpClient, Logger logger)
-            : base(statusService, logger)
+        public OpenLibraryProvider(IMetadataProviderStatusService statusService, IHttpClient httpClient, Logger logger, ICacheManager cacheManager)
+            : base(statusService, logger, cacheManager)
         {
             _httpClient = httpClient;
             _rateLimiter = new SemaphoreSlim(1, 1);
@@ -140,7 +141,7 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
             }
 
             var books = new List<Book>();
-            foreach (var doc in searchResult.Docs.Where(d => d.Type == "work").Take(20))
+            foreach (var doc in searchResult.Docs.Where(d => d.Key?.StartsWith("/works/") == true).Take(20))
             {
                 var book = OpenLibraryMapper.MapSearchResult(doc);
                 if (book != null)

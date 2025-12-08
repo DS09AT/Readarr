@@ -10,7 +10,7 @@ namespace NzbDrone.Core.MetadataSource
     /// Central aggregation service that implements the legacy metadata interfaces
     /// and delegates to pluggable metadata providers with failover support
     /// </summary>
-    public class MetadataAggregationService : IProvideAuthorInfo, IProvideBookInfo, ISearchForNewAuthor, ISearchForNewBook
+    public class MetadataAggregationService : IProvideAuthorInfo, IProvideBookInfo, ISearchForNewAuthor, ISearchForNewBook, ISearchForNewEntity
     {
         private readonly IMetadataProviderFactory _providerFactory;
         private readonly Logger _logger;
@@ -330,36 +330,28 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<Book> SearchByGoodreadsBookId(int goodreadsId, bool getAllEditions)
         {
-            // This method is for legacy Goodreads support
-            // For now, we'll convert the Goodreads ID to a string and try book search
-            _logger.Debug("Legacy Goodreads book ID search: {0}", goodreadsId);
-
-            var providers = _providerFactory.InteractiveSearchEnabled(filterBlocked: true);
-
-            if (!providers.Any())
-            {
-                _logger.Warn("No metadata providers available for Goodreads ID lookup");
-                return new List<Book>();
-            }
-
-            // Try to get book info directly using the Goodreads ID
-            // Providers that support Goodreads IDs can implement special handling
-            var foreignId = $"goodreads:{goodreadsId}";
-
-            try
-            {
-                var bookInfo = GetBookInfo(foreignId);
-                if (bookInfo?.Item2 != null)
-                {
-                    return new List<Book> { bookInfo.Item2 };
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.Warn(ex, "Could not find book by Goodreads ID {0}", goodreadsId);
-            }
-
+            _logger.Warn("SearchByGoodreadsBookId is deprecated. Goodreads API is no longer available. Returning empty results.");
             return new List<Book>();
+        }
+
+        public List<object> SearchForNewEntity(string title)
+        {
+            var books = SearchForNewBook(title, null, false);
+
+            var result = new List<object>();
+            foreach (var book in books)
+            {
+                var author = book.Author.Value;
+
+                if (!result.Contains(author))
+                {
+                    result.Add(author);
+                }
+
+                result.Add(book);
+            }
+
+            return result;
         }
     }
 }

@@ -270,27 +270,25 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
                 };
             }
 
+            var edition = new Edition
+            {
+                ForeignEditionId = doc.CoverEditionKey ?? doc.EditionKey?.FirstOrDefault() ?? "unknown",
+                Title = book.Title,
+                Images = new List<MediaCover.MediaCover>(),
+                Monitored = true
+            };
+
             if (doc.CoverId.HasValue && doc.CoverId.Value > 0)
             {
                 var coverUrl = $"https://covers.openlibrary.org/b/id/{doc.CoverId.Value}-L.jpg";
-                book.Editions = new List<Edition>
+                edition.Images.Add(new MediaCover.MediaCover
                 {
-                    new Edition
-                    {
-                        ForeignEditionId = doc.CoverEditionKey ?? doc.EditionKey?.FirstOrDefault() ?? "unknown",
-                        Title = book.Title,
-                        Images = new List<MediaCover.MediaCover>
-                        {
-                            new MediaCover.MediaCover
-                            {
-                                Url = coverUrl,
-                                CoverType = MediaCoverTypes.Cover
-                            }
-                        },
-                        Monitored = true
-                    }
-                };
+                    Url = coverUrl,
+                    CoverType = MediaCoverTypes.Cover
+                });
             }
+
+            book.Editions = new List<Edition> { edition };
 
             return book;
         }
