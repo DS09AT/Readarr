@@ -28,7 +28,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 EnableAuthorSearch = true,
                 EnableBookSearch = true,
                 EnableAutomaticRefresh = false,
-                EnableInteractiveSearch = true,
+
                 Priority = 75,
                 Tags = new System.Collections.Generic.HashSet<int> { 1, 2, 3 }
             };
@@ -44,7 +44,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             resource.EnableAuthorSearch.Should().BeTrue();
             resource.EnableBookSearch.Should().BeTrue();
             resource.EnableAutomaticRefresh.Should().BeFalse();
-            resource.EnableInteractiveSearch.Should().BeTrue();
+
             resource.Priority.Should().Be(75);
             resource.Tags.Should().BeEquivalentTo(new[] { 1, 2, 3 });
         }
@@ -61,7 +61,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 EnableAuthorSearch = true,
                 EnableBookSearch = false,
                 EnableAutomaticRefresh = true,
-                EnableInteractiveSearch = true,
+
                 Priority = 60,
                 Tags = new System.Collections.Generic.HashSet<int> { 4, 5 }
             };
@@ -77,7 +77,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             definition.EnableAuthorSearch.Should().BeTrue();
             definition.EnableBookSearch.Should().BeFalse();
             definition.EnableAutomaticRefresh.Should().BeTrue();
-            definition.EnableInteractiveSearch.Should().BeTrue();
+
             definition.Priority.Should().Be(60);
             definition.Tags.Should().BeEquivalentTo(new[] { 4, 5 });
         }
@@ -142,8 +142,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             {
                 EnableAuthorSearch = false,
                 EnableBookSearch = false,
-                EnableAutomaticRefresh = false,
-                EnableInteractiveSearch = false
+                EnableAutomaticRefresh = false
             };
 
             // When
@@ -153,7 +152,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             resource.EnableAuthorSearch.Should().BeFalse();
             resource.EnableBookSearch.Should().BeFalse();
             resource.EnableAutomaticRefresh.Should().BeFalse();
-            resource.EnableInteractiveSearch.Should().BeFalse();
         }
 
         [Test]
@@ -164,8 +162,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             {
                 EnableAuthorSearch = true,
                 EnableBookSearch = true,
-                EnableAutomaticRefresh = true,
-                EnableInteractiveSearch = true
+                EnableAutomaticRefresh = true
             };
 
             // When
@@ -175,7 +172,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             resource.EnableAuthorSearch.Should().BeTrue();
             resource.EnableBookSearch.Should().BeTrue();
             resource.EnableAutomaticRefresh.Should().BeTrue();
-            resource.EnableInteractiveSearch.Should().BeTrue();
         }
 
         [Test]
@@ -206,7 +202,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 EnableAuthorSearch = true,
                 EnableBookSearch = false,
                 EnableAutomaticRefresh = true,
-                EnableInteractiveSearch = false,
+
                 Priority = 42,
                 Tags = new System.Collections.Generic.HashSet<int> { 10, 20 }
             };
@@ -223,7 +219,7 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             roundTrippedDefinition.EnableAuthorSearch.Should().Be(originalDefinition.EnableAuthorSearch);
             roundTrippedDefinition.EnableBookSearch.Should().Be(originalDefinition.EnableBookSearch);
             roundTrippedDefinition.EnableAutomaticRefresh.Should().Be(originalDefinition.EnableAutomaticRefresh);
-            roundTrippedDefinition.EnableInteractiveSearch.Should().Be(originalDefinition.EnableInteractiveSearch);
+
             roundTrippedDefinition.Priority.Should().Be(originalDefinition.Priority);
             roundTrippedDefinition.Tags.Should().BeEquivalentTo(originalDefinition.Tags);
         }

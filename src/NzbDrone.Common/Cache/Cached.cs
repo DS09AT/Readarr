@@ -150,6 +150,14 @@ namespace NzbDrone.Common.Cache
 
         private void ScheduleTryRemove(string key, TimeSpan lifeTime)
         {
+            // Task.Delay has a maximum timeout of ~24.85 days (Int32.MaxValue milliseconds)
+            // For longer lifetimes, skip scheduling as expired items are already checked on access
+            var maxDelay = TimeSpan.FromMilliseconds(int.MaxValue);
+            if (lifeTime > maxDelay)
+            {
+                return;
+            }
+
             Task.Delay(lifeTime).ContinueWith(t =>
             {
                 if (_store.TryGetValue(key, out var cacheItem) && cacheItem.IsExpired())

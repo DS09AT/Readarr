@@ -201,9 +201,9 @@ class AddNewBookSearchResult extends Component {
           bookTitle={title}
           seriesTitle={seriesTitle}
           disambiguation={disambiguation}
-          authorName={author.authorName}
+          authorName={author?.authorName}
           overview={overview}
-          folder={author.folder}
+          folder={author?.folder}
           images={images}
           onModalClose={this.onAddBookModalClose}
         />

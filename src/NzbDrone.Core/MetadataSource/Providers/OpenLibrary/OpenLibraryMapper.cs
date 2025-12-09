@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
+using NzbDrone.Core.Datastore;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource.Providers.OpenLibrary.Resources;
 
@@ -90,12 +91,16 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
         {
             var metadata = MapAuthorMetadata(resource);
 
-            return new Author
+            var author = new Author
             {
-                Metadata = metadata,
                 CleanName = Parser.Parser.CleanAuthorName(metadata.Name),
                 Books = books ?? new List<Book>()
             };
+
+            // Explicitly set Metadata as LazyLoaded to ensure it's properly initialized
+            author.Metadata = new LazyLoaded<AuthorMetadata>(metadata);
+
+            return author;
         }
 
         public static Book MapBook(OpenLibraryWorkResource work, List<OpenLibraryEditionResource> editions = null)
@@ -318,16 +323,33 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
                 metadata.Born = ParseOpenLibraryDate(doc.BirthDate);
             }
 
+            // Add author image using the olid-based URL format
+            // The search API doesn't return photo IDs, but we can construct the URL
+            // OpenLibrary will return a placeholder if no image exists for this author
+            var authorId = doc.GetAuthorId();
+            if (!string.IsNullOrEmpty(authorId))
+            {
+                metadata.Images.Add(new MediaCover.MediaCover
+                {
+                    Url = $"https://covers.openlibrary.org/a/olid/{authorId}-L.jpg",
+                    CoverType = MediaCoverTypes.Poster
+                });
+            }
+
             metadata.SortName = metadata.Name.ToLower();
             metadata.NameLastFirst = metadata.Name.ToLastFirst();
             metadata.SortNameLastFirst = metadata.NameLastFirst.ToLower();
 
-            return new Author
+            var author = new Author
             {
-                Metadata = metadata,
                 CleanName = Parser.Parser.CleanAuthorName(metadata.Name),
                 Books = new List<Book>()
             };
+
+            // Explicitly set Metadata as LazyLoaded to ensure it's properly initialized
+            author.Metadata = new LazyLoaded<AuthorMetadata>(metadata);
+
+            return author;
         }
 
         private static DateTime? ParseOpenLibraryDate(string dateStr)

@@ -21,7 +21,6 @@ namespace NzbDrone.Core.Datastore.Migration
                 .WithColumn("EnableAuthorSearch").AsBoolean().WithDefaultValue(true)
                 .WithColumn("EnableBookSearch").AsBoolean().WithDefaultValue(true)
                 .WithColumn("EnableAutomaticRefresh").AsBoolean().WithDefaultValue(true)
-                .WithColumn("EnableInteractiveSearch").AsBoolean().WithDefaultValue(true)
                 .WithColumn("Priority").AsInt32().WithDefaultValue(50)
                 .WithColumn("Tags").AsString().Nullable();
 

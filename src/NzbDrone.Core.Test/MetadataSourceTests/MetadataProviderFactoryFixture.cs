@@ -38,7 +38,6 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                     EnableAuthorSearch = true,
                     EnableBookSearch = true,
                     EnableAutomaticRefresh = true,
-                    EnableInteractiveSearch = true,
                     Settings = new TestProviderSettingsForFactory()
                 },
                 new MetadataProviderDefinition
@@ -52,7 +51,6 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                     EnableAuthorSearch = true,
                     EnableBookSearch = false,
                     EnableAutomaticRefresh = true,
-                    EnableInteractiveSearch = true,
                     Settings = new TestProviderSettingsForFactory()
                 },
                 new MetadataProviderDefinition
@@ -66,7 +64,6 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                     EnableAuthorSearch = false,
                     EnableBookSearch = true,
                     EnableAutomaticRefresh = false,
-                    EnableInteractiveSearch = true,
                     Settings = new TestProviderSettingsForFactory()
                 }
             };
@@ -200,14 +197,15 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
         }
 
         [Test]
-        public void interactive_search_enabled_should_only_return_providers_with_interactive_search()
+        public void interactive_search_enabled_should_only_return_providers_with_author_or_book_search()
         {
             // When
             var providers = Subject.InteractiveSearchEnabled(filterBlocked: false);
 
-            // Then
+            // Then - should return providers with either author or book search enabled
             providers.Should().OnlyContain(p =>
-                ((MetadataProviderDefinition)p.Definition).EnableInteractiveSearch);
+                ((MetadataProviderDefinition)p.Definition).EnableAuthorSearch ||
+                ((MetadataProviderDefinition)p.Definition).EnableBookSearch);
         }
 
         [Test]

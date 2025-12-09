@@ -149,6 +149,10 @@ class AddNewItem extends Component {
                   items.map((item) => {
                     if (item.author) {
                       const author = item.author;
+                      // Skip authors with missing required fields
+                      if (!author.foreignAuthorId || !author.authorName) {
+                        return null;
+                      }
                       return (
                         <AddNewAuthorSearchResultConnector
                           key={item.id}

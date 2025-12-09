@@ -237,13 +237,14 @@ namespace NzbDrone.Core.Organizer
 
         private void AddAuthorTokens(Dictionary<string, Func<TokenMatch, string>> tokenHandlers, Author author)
         {
-            tokenHandlers["{Author Name}"] = m => author.Name;
-            tokenHandlers["{Author CleanName}"] = m => CleanTitle(author.Name);
-            tokenHandlers["{Author NameThe}"] = m => TitleThe(author.Name);
+            var authorName = author?.Metadata?.Value?.Name ?? string.Empty;
+            tokenHandlers["{Author Name}"] = m => authorName;
+            tokenHandlers["{Author CleanName}"] = m => CleanTitle(authorName);
+            tokenHandlers["{Author NameThe}"] = m => TitleThe(authorName);
             tokenHandlers["{Author SortName}"] = m => author?.Metadata?.Value?.NameLastFirst ?? string.Empty;
-            tokenHandlers["{Author NameFirstCharacter}"] = m => TitleThe(author.Name).Substring(0, 1).FirstCharToUpper();
+            tokenHandlers["{Author NameFirstCharacter}"] = m => string.IsNullOrEmpty(authorName) ? string.Empty : TitleThe(authorName).Substring(0, 1).FirstCharToUpper();
 
-            if (author.Metadata.Value.Disambiguation != null)
+            if (author?.Metadata?.Value?.Disambiguation != null)
             {
                 tokenHandlers["{Author Disambiguation}"] = m => author.Metadata.Value.Disambiguation;
             }
@@ -396,7 +397,7 @@ namespace NzbDrone.Core.Organizer
 
             var tokenHandler = tokenHandlers.GetValueOrDefault(tokenMatch.Token, m => string.Empty);
 
-            var replacementText = tokenHandler(tokenMatch).Trim();
+            var replacementText = tokenHandler(tokenMatch)?.Trim() ?? string.Empty;
 
             if (tokenMatch.Token.All(t => !char.IsLetter(t) || char.IsLower(t)))
             {

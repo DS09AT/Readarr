@@ -26,7 +26,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 EnableAuthorSearch = true,
                 EnableBookSearch = false,
                 EnableAutomaticRefresh = true,
-                EnableInteractiveSearch = false,
                 Priority = 80
             };
 
@@ -38,7 +37,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                     EnableAuthorSearch = false,
                     EnableBookSearch = true,
                     EnableAutomaticRefresh = false,
-                    EnableInteractiveSearch = true,
                     Priority = 50
                 },
                 new MetadataProviderDefinition
@@ -47,7 +45,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                     EnableAuthorSearch = false,
                     EnableBookSearch = true,
                     EnableAutomaticRefresh = false,
-                    EnableInteractiveSearch = true,
                     Priority = 60
                 }
             };
@@ -61,7 +58,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 d.EnableAuthorSearch == true &&
                 d.EnableBookSearch == false &&
                 d.EnableAutomaticRefresh == true &&
-                d.EnableInteractiveSearch == false &&
                 d.Priority == 80);
         }
 
@@ -82,7 +78,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                     EnableAuthorSearch = true,
                     EnableBookSearch = false,
                     EnableAutomaticRefresh = true,
-                    EnableInteractiveSearch = false,
                     Priority = 50
                 }
             };
@@ -95,7 +90,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             result[0].EnableAuthorSearch.Should().BeTrue(); // Unchanged
             result[0].EnableBookSearch.Should().BeFalse(); // Unchanged
             result[0].EnableAutomaticRefresh.Should().BeTrue(); // Unchanged
-            result[0].EnableInteractiveSearch.Should().BeFalse(); // Unchanged
         }
 
         [Test]
@@ -219,7 +213,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             // Given
             var bulkResource = new MetadataProviderBulkResource
             {
-                EnableInteractiveSearch = false
             };
 
             var existingDefinitions = new List<MetadataProviderDefinition>
@@ -227,7 +220,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                 new MetadataProviderDefinition
                 {
                     Id = 1,
-                    EnableInteractiveSearch = true,
                     Priority = 50
                 }
             };
@@ -236,7 +228,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             var result = _mapper.UpdateModel(bulkResource, existingDefinitions);
 
             // Then
-            result[0].EnableInteractiveSearch.Should().BeFalse();
             result[0].Priority.Should().Be(50); // Unchanged
         }
 
@@ -259,7 +250,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
                     EnableAuthorSearch = false,
                     EnableBookSearch = true,
                     EnableAutomaticRefresh = false,
-                    EnableInteractiveSearch = true,
                     Priority = 75
                 }
             };
@@ -271,7 +261,6 @@ namespace NzbDrone.Api.Test.MetadataProviderTests
             result[0].EnableAuthorSearch.Should().BeTrue(); // Updated
             result[0].EnableBookSearch.Should().BeTrue(); // Preserved
             result[0].EnableAutomaticRefresh.Should().BeFalse(); // Preserved
-            result[0].EnableInteractiveSearch.Should().BeTrue(); // Preserved
             result[0].Priority.Should().Be(75); // Preserved
         }
 

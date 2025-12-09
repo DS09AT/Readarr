@@ -29,21 +29,10 @@ namespace NzbDrone.Core.Test.Datastore.Migration
         [Test]
         public void should_insert_provider_successfully()
         {
-            var db = WithMigrationTestDb(c =>
-            {
-                c.Insert.IntoTable("MetadataProviders").Row(new
-                {
-                    Name = "TestProvider",
-                    Implementation = "TestProviderImpl",
-                    Settings = "{}",
-                    ConfigContract = "TestSettings",
-                    EnableAuthorSearch = true,
-                    EnableBookSearch = true,
-                    EnableAutomaticRefresh = true,
-                    EnableInteractiveSearch = true,
-                    Priority = 50
-                });
-            });
+            var db = WithMigrationTestDb();
+
+            // Insert provider after migration
+            db.Query("INSERT INTO MetadataProviders (Name, Implementation, Settings, ConfigContract, EnableAuthorSearch, EnableBookSearch, EnableAutomaticRefresh, Priority) VALUES ('TestProvider', 'TestProviderImpl', '{}', 'TestSettings', 1, 1, 1, 50)");
 
             var providers = db.Query<MetadataProviderDefinition041>("SELECT * FROM MetadataProviders");
             providers.Should().HaveCount(1);
@@ -54,14 +43,10 @@ namespace NzbDrone.Core.Test.Datastore.Migration
         [Test]
         public void should_have_default_values()
         {
-            var db = WithMigrationTestDb(c =>
-            {
-                c.Insert.IntoTable("MetadataProviders").Row(new
-                {
-                    Name = "MinimalProvider",
-                    Implementation = "Minimal"
-                });
-            });
+            var db = WithMigrationTestDb();
+
+            // Insert provider with minimal fields after migration
+            db.Query("INSERT INTO MetadataProviders (Name, Implementation) VALUES ('MinimalProvider', 'Minimal')");
 
             var providers = db.Query<MetadataProviderDefinition041>("SELECT * FROM MetadataProviders");
             var provider = providers.First();
@@ -69,7 +54,6 @@ namespace NzbDrone.Core.Test.Datastore.Migration
             provider.EnableAuthorSearch.Should().BeTrue();
             provider.EnableBookSearch.Should().BeTrue();
             provider.EnableAutomaticRefresh.Should().BeTrue();
-            provider.EnableInteractiveSearch.Should().BeTrue();
             provider.Priority.Should().Be(50);
         }
     }
@@ -84,7 +68,6 @@ namespace NzbDrone.Core.Test.Datastore.Migration
         public bool EnableAuthorSearch { get; set; }
         public bool EnableBookSearch { get; set; }
         public bool EnableAutomaticRefresh { get; set; }
-        public bool EnableInteractiveSearch { get; set; }
         public int Priority { get; set; }
         public string Tags { get; set; }
     }

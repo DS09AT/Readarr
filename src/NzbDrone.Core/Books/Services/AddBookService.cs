@@ -125,7 +125,18 @@ namespace NzbDrone.Core.Books
 
             newBook.Editions = tuple.Item2.Editions.Value;
             newBook.Editions.Value.ForEach(x => x.Monitored = false);
-            newBook.Editions.Value.Single(x => x.ForeignEditionId == editionId).Monitored = true;
+
+            // Try to find the edition that was selected, otherwise use the first one
+            var selectedEdition = newBook.Editions.Value.SingleOrDefault(x => x.ForeignEditionId == editionId);
+            if (selectedEdition == null)
+            {
+                selectedEdition = newBook.Editions.Value.FirstOrDefault();
+            }
+
+            if (selectedEdition != null)
+            {
+                selectedEdition.Monitored = true;
+            }
 
             var metadata = tuple.Item3.FirstOrDefault(x => x.ForeignAuthorId == tuple.Item1);
             newBook.AuthorMetadata = metadata;

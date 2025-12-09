@@ -121,7 +121,7 @@ class AddNewAuthorSearchResult extends Component {
                   {authorName}
 
                   {
-                    !authorName.contains(year) && year ?
+                    authorName && !authorName.contains(year) && year ?
                       <span className={styles.year}>
                         ({year})
                       </span> :
@@ -216,16 +216,16 @@ class AddNewAuthorSearchResult extends Component {
 }
 
 AddNewAuthorSearchResult.propTypes = {
-  foreignAuthorId: PropTypes.string.isRequired,
-  titleSlug: PropTypes.string.isRequired,
-  authorName: PropTypes.string.isRequired,
+  foreignAuthorId: PropTypes.string,
+  titleSlug: PropTypes.string,
+  authorName: PropTypes.string,
   year: PropTypes.number,
   disambiguation: PropTypes.string,
-  status: PropTypes.string.isRequired,
+  status: PropTypes.string,
   overview: PropTypes.string,
-  ratings: PropTypes.object.isRequired,
-  folder: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  ratings: PropTypes.object,
+  folder: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.object),
   isExistingAuthor: PropTypes.bool.isRequired,
   isSmallScreen: PropTypes.bool.isRequired
 };

@@ -190,7 +190,7 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<Book> SearchForNewBook(string title, string author, bool getAllEditions = true)
         {
-            var providers = _providerFactory.InteractiveSearchEnabled(filterBlocked: true);
+            var providers = _providerFactory.BookSearchEnabled(filterBlocked: true);
 
             if (!providers.Any())
             {
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<Book> SearchByIsbn(string isbn)
         {
-            var providers = _providerFactory.InteractiveSearchEnabled(filterBlocked: true)
+            var providers = _providerFactory.BookSearchEnabled(filterBlocked: true)
                 .Where(p => p.Capabilities.SupportsIsbnLookup)
                 .ToList();
 
@@ -283,7 +283,7 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<Book> SearchByAsin(string asin)
         {
-            var providers = _providerFactory.InteractiveSearchEnabled(filterBlocked: true)
+            var providers = _providerFactory.BookSearchEnabled(filterBlocked: true)
                 .Where(p => p.Capabilities.SupportsAsinLookup)
                 .ToList();
 
@@ -343,7 +343,11 @@ namespace NzbDrone.Core.MetadataSource
             {
                 var author = book.Author.Value;
 
-                if (!result.Contains(author))
+                // Only add author if it has required fields populated
+                if (author != null &&
+                    !string.IsNullOrEmpty(author.ForeignAuthorId) &&
+                    !string.IsNullOrEmpty(author.Metadata?.Value?.Name) &&
+                    !result.Contains(author))
                 {
                     result.Add(author);
                 }
