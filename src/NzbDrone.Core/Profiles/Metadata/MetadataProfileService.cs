@@ -152,6 +152,7 @@ namespace NzbDrone.Core.Profiles.Metadata
             var profile = Get(metadataProfileId);
 
             _logger.Trace($"Filtering:\n{remoteBooks.Select(x => x.ToString()).Join("\n")}");
+            _logger.Debug($"Starting filter with {remoteBooks.Count()} remote books");
 
             var hash = new HashSet<Book>(remoteBooks);
             var titles = new HashSet<string>(remoteBooks.Select(x => x.Title));
@@ -159,9 +160,17 @@ namespace NzbDrone.Core.Profiles.Metadata
             var localHash = new HashSet<string>(localBooks.Where(x => x.AddOptions.AddType == BookAddType.Manual).Select(x => x.ForeignBookId));
             localHash.UnionWith(localFiles.Select(x => x.Edition.Value.Book.Value.ForeignBookId));
 
+            _logger.Debug($"Profile: MinPopularity={profile.MinPopularity}, SkipMissingDate={profile.SkipMissingDate}, AllowedLanguages={profile.AllowedLanguages}");
+
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, BookAllowedByRating, "rating criteria not met");
+            _logger.Debug($"After rating filter: {hash.Count} books remaining");
+
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => !p.SkipMissingDate || x.ReleaseDate.HasValue, "release date is missing");
+            _logger.Debug($"After date filter: {hash.Count} books remaining");
+
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => !p.SkipPartsAndSets || !IsPartOrSet(x, seriesLinks.GetValueOrDefault(x), titles), "book is part of set");
+            _logger.Debug($"After parts/sets filter: {hash.Count} books remaining");
+
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => !p.SkipSeriesSecondary || !seriesLinks.ContainsKey(x) || seriesLinks[x].Any(y => y.IsPrimary), "book is a secondary series item");
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => !p.Ignored.Any(i => MatchesTerms(x.Title, i)), "contains ignored terms");
 
@@ -172,8 +181,12 @@ namespace NzbDrone.Core.Profiles.Metadata
                 book.Editions = FilterEditions(book.Editions.Value, localEditions, localFiles, profile);
             }
 
+            _logger.Debug($"Before edition filters: {hash.Count} books");
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => x.Editions.Value.Any(e => e.PageCount > p.MinPages) || x.Editions.Value.All(e => e.PageCount == 0), "minimum page count not met");
+            _logger.Debug($"After page count filter: {hash.Count} books remaining");
+
             FilterByPredicate(hash, x => x.ForeignBookId, localHash, profile, (x, p) => x.Editions.Value.Any(), "all editions filtered out");
+            _logger.Debug($"After edition existence filter: {hash.Count} books remaining");
 
             return hash.ToList();
         }
@@ -288,7 +301,7 @@ namespace NzbDrone.Core.Profiles.Metadata
                 {
                     Name = "Standard",
                     MinPopularity = 350,
-                    SkipMissingDate = true,
+                    SkipMissingDate = false,
                     SkipPartsAndSets = true,
                     AllowedLanguages = "eng, null"
                 });

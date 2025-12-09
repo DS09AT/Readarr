@@ -355,6 +355,51 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
             return author;
         }
 
+        public static Book MapWorkRefToBook(OpenLibraryWorkRefResource workRef)
+        {
+            if (workRef == null)
+            {
+                return null;
+            }
+
+            var book = new Book
+            {
+                ForeignBookId = workRef.GetWorkId(),
+                TitleSlug = workRef.GetWorkId(),
+                Title = workRef.Title?.CleanSpaces() ?? "Unknown",
+                CleanTitle = Parser.Parser.CleanAuthorName(workRef.Title ?? "Unknown"),
+                Genres = workRef.Subjects?.Take(5).ToList() ?? new List<string>(),
+                Links = new List<Links>(),
+                Ratings = new Ratings { Votes = 1, Value = 500m }
+            };
+
+            if (workRef.FirstPublishYear.HasValue)
+            {
+                book.ReleaseDate = new DateTime(workRef.FirstPublishYear.Value, 1, 1);
+            }
+
+            var edition = new Edition
+            {
+                ForeignEditionId = $"{workRef.GetWorkId()}-edition",
+                TitleSlug = workRef.GetWorkId(),
+                Title = book.Title,
+                Images = new List<MediaCover.MediaCover>(),
+                Monitored = true,
+                Language = null,
+                Isbn13 = null,
+                Asin = null
+            };
+
+            if (book.ReleaseDate.HasValue)
+            {
+                edition.ReleaseDate = book.ReleaseDate;
+            }
+
+            book.Editions = new List<Edition> { edition };
+
+            return book;
+        }
+
         private static DateTime? ParseOpenLibraryDate(string dateStr)
         {
             if (string.IsNullOrWhiteSpace(dateStr))

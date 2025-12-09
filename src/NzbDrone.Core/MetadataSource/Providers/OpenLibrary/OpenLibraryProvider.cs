@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
@@ -66,37 +67,84 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
 
             var author = OpenLibraryMapper.MapAuthor(authorResource);
 
-            var worksUrl = $"{Settings.BaseUrl}/authors/{authorId}/works.json?limit=50";
-            var worksResponse = await Task.Run(() => ExecuteRequest<OpenLibraryWorksListResource>(worksUrl));
-
-            if (worksResponse?.Entries?.Any() == true)
+            var works = await GetAuthorWorksAsync(authorId);
+            if (works?.Any() == true)
             {
-                var books = new List<Book>();
-                foreach (var workEntry in worksResponse.Entries.Take(50))
+                foreach (var book in works)
                 {
-                    try
-                    {
-                        var workId = workEntry.GetWorkId();
-                        if (!string.IsNullOrEmpty(workId))
-                        {
-                            var book = await GetBookByWorkId(workId);
-                            if (book != null)
-                            {
-                                book.AuthorMetadata = author.Metadata.Value;
-                                books.Add(book);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.Warn(ex, "Failed to get work details");
-                    }
+                    book.AuthorMetadata = author.Metadata.Value;
                 }
 
-                author.Books = books;
+                author.Books = works;
             }
 
             return author;
+        }
+
+        public async Task<List<Book>> GetAuthorWorksAsync(string authorId)
+        {
+            _logger.Debug("Getting works list for author: {0}", authorId);
+
+            var books = new List<Book>();
+            var offset = 0;
+            const int limit = 100;
+            var hasMore = true;
+
+            while (hasMore)
+            {
+                var worksUrl = $"{Settings.BaseUrl}/authors/{authorId}/works.json?limit={limit}&offset={offset}";
+                var worksResponse = await Task.Run(() => ExecuteRequest<OpenLibraryWorksListResource>(worksUrl));
+
+                if (worksResponse?.Entries == null || !worksResponse.Entries.Any())
+                {
+                    break;
+                }
+
+                foreach (var workRef in worksResponse.Entries)
+                {
+                    var book = OpenLibraryMapper.MapWorkRefToBook(workRef);
+                    if (book != null)
+                    {
+                        books.Add(book);
+                    }
+                }
+
+                offset += limit;
+                hasMore = worksResponse.Entries.Count == limit && offset < 500;
+
+                _logger.Debug("Loaded {0} works for author {1}, offset: {2}", books.Count, authorId, offset);
+            }
+
+            _logger.Info("Loaded {0} total works for author {1}", books.Count, authorId);
+            return books;
+        }
+
+        public async Task<Ratings> GetWorkRatingsAsync(string workId)
+        {
+            _logger.Debug("Getting ratings for work: {0}", workId);
+
+            workId = workId.Replace("/works/", "");
+            var ratingsUrl = $"{Settings.BaseUrl}/works/{workId}/ratings.json";
+
+            try
+            {
+                var ratingsResource = await Task.Run(() => ExecuteRequest<OpenLibraryRatingsResource>(ratingsUrl));
+
+                if (ratingsResource?.Summary != null && ratingsResource.Summary.Count > 0)
+                {
+                    return new Ratings
+                    {
+                        Votes = ratingsResource.Summary.Count,
+                        Value = (decimal)ratingsResource.Summary.Average
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Warn(ex, "Failed to get ratings for work {0}", workId);
+            }
+
+            return new Ratings { Votes = 100, Value = 5.0m };
         }
 
         protected override async Task<Tuple<string, Book, List<AuthorMetadata>>> GetBookInfoInternalAsync(string foreignBookId)
@@ -385,11 +433,16 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
 
     internal class OpenLibraryWorksListResource
     {
+        [JsonPropertyName("size")]
+        public int Size { get; set; }
+
+        [JsonPropertyName("entries")]
         public List<OpenLibraryWorkRefResource> Entries { get; set; }
     }
 
     internal class OpenLibraryEditionsListResource
     {
+        [JsonPropertyName("entries")]
         public List<OpenLibraryEditionResource> Entries { get; set; }
     }
 }

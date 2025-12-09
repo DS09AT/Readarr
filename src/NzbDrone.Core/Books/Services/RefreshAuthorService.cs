@@ -33,6 +33,7 @@ namespace NzbDrone.Core.Books
         private readonly IProvideAuthorInfo _authorInfo;
         private readonly IAuthorService _authorService;
         private readonly IBookService _bookService;
+        private readonly IEditionService _editionService;
         private readonly IMetadataProfileService _metadataProfileService;
         private readonly IRefreshBookService _refreshBookService;
         private readonly IRefreshSeriesService _refreshSeriesService;
@@ -51,6 +52,7 @@ namespace NzbDrone.Core.Books
                                     IAuthorService authorService,
                                     IAuthorMetadataService authorMetadataService,
                                     IBookService bookService,
+                                    IEditionService editionService,
                                     IMetadataProfileService metadataProfileService,
                                     IRefreshBookService refreshBookService,
                                     IRefreshSeriesService refreshSeriesService,
@@ -69,6 +71,7 @@ namespace NzbDrone.Core.Books
             _authorInfo = authorInfo;
             _authorService = authorService;
             _bookService = bookService;
+            _editionService = editionService;
             _metadataProfileService = metadataProfileService;
             _refreshBookService = refreshBookService;
             _refreshSeriesService = refreshSeriesService;
@@ -296,6 +299,17 @@ namespace NzbDrone.Core.Books
         protected override void AddChildren(List<Book> children)
         {
             _bookService.InsertMany(children);
+
+            // Insert editions for all new books
+            foreach (var book in children)
+            {
+                if (book.Editions?.Value?.Any() == true)
+                {
+                    var editions = book.Editions.Value;
+                    editions.ForEach(x => x.BookId = book.Id);
+                    _editionService.InsertMany(editions.Where(x => x.Id == 0).ToList());
+                }
+            }
         }
 
         protected override bool RefreshChildren(SortedChildren localChildren, List<Book> remoteChildren, Author remoteData, bool forceChildRefresh, bool forceUpdateFileTags, DateTime? lastUpdate)
