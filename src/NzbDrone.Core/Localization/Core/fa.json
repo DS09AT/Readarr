@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "۲۰ دقیقه: {0}",
   "45MinutesFourtyFive": "۴۵ دقیقه: {0}",
   "60MinutesSixty": "۶۰ دقیقه: {0}",
@@ -29,5 +29,6 @@
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
   "UnableToLoadMetadataProviders": "",
-  "Usenet": "Usenet"
+  "Usenet": "Usenet",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "لطفاً حداقل 3 کاراکتر برای جستجو وارد کنید"
 }

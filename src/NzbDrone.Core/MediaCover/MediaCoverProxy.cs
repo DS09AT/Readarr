@@ -36,6 +36,12 @@ namespace NzbDrone.Core.MediaCover
                 return null;
             }
 
+            // Validate URL format before caching
+            if (!Uri.TryCreate(url, UriKind.Absolute, out _))
+            {
+                return null;
+            }
+
             var hash = url.SHA256Hash();
 
             _cache.Set(hash, url, TimeSpan.FromHours(24));
@@ -63,6 +69,7 @@ namespace NzbDrone.Core.MediaCover
             var url = GetUrl(hash);
 
             var request = new HttpRequest(url);
+            request.AllowAutoRedirect = true;
 
             return _httpClient.Get(request).ResponseData;
         }

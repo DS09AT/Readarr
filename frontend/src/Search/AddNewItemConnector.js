@@ -61,12 +61,18 @@ class AddNewItemConnector extends Component {
       clearTimeout(this._searchTimeout);
     }
 
-    if (term.trim() === '') {
+    const trimmedTerm = term.trim();
+
+    if (trimmedTerm === '') {
       this.props.clearSearchResults();
+    } else if (trimmedTerm.length < 3) {
+      // Don't search if less than 3 characters
+      // But don't clear results either, just skip the search
+      return;
     } else {
       this._searchTimeout = setTimeout(() => {
         this.props.getSearchResults({ term });
-      }, 300);
+      }, 500);
     }
   };
 

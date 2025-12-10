@@ -1,4 +1,4 @@
-﻿{
+{
   "AddMetadataProvider": "",
   "AllMetadataProvidersHaveBeenAdded": "Svi pružaoci metapodataka su dodani. Svaka vrsta pružaoca može se dodati samo jednom.",
   "AuthorSearch": "",
@@ -19,5 +19,6 @@
   "MetadataProvidersSettings": "",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Molimo unesite najmanje 3 znaka za pretragu"
 }

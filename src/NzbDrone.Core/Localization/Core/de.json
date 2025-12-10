@@ -1140,5 +1140,6 @@
   "Year": "Jahr",
   "Yes": "Ja",
   "YesCancel": "Ja Abbrechen",
-  "Yesterday": "Gestern"
+  "Yesterday": "Gestern",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Bitte geben Sie mindestens 3 Zeichen ein, um zu suchen"
 }

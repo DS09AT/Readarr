@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 Perc: {0}",
   "45MinutesFourtyFive": "45 Perc: {0}",
   "60MinutesSixty": "60 Perc: {0}",
@@ -1107,5 +1107,6 @@
   "Year": "Év",
   "Yes": "Igen",
   "YesCancel": "Igen, elvet",
-  "Yesterday": "Tegnap"
+  "Yesterday": "Tegnap",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Kérjük, adjon meg legalább 3 karaktert a kereséshez"
 }

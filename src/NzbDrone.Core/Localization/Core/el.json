@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 λεπτά: {0}",
   "45MinutesFourtyFive": "45 λεπτά: {0}",
   "60MinutesSixty": "60 λεπτά: {0}",
@@ -1042,5 +1042,6 @@
   "Year": "Ετος",
   "Yes": "Ναί",
   "YesCancel": "Ναι, Ακύρωση",
-  "Yesterday": "Εχθές"
+  "Yesterday": "Εχθές",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Παρακαλώ εισάγετε τουλάχιστον 3 χαρακτήρες για αναζήτηση"
 }

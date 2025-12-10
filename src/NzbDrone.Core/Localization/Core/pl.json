@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "60 minut: {0}",
   "45MinutesFourtyFive": "60 minut: {0}",
   "60MinutesSixty": "60 minut: {0}",
@@ -740,5 +740,6 @@
   "Year": "Rok",
   "Yes": "tak",
   "YesCancel": "Tak, anuluj",
-  "Yesterday": "Wczoraj"
+  "Yesterday": "Wczoraj",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Wprowadź co najmniej 3 znaki, aby wyszukać"
 }

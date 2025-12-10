@@ -10,6 +10,10 @@ function getUrl(image, coverType, size) {
   const imageUrl = image?.url;
 
   if (imageUrl) {
+    // If the URL is a remote URL (starts with http), use it directly
+    if (imageUrl.startsWith('http')) {
+      return imageUrl;
+    }
     return imageUrl.replace(`${coverType}.jpg`, `${coverType}-${size}.jpg`);
   }
 }

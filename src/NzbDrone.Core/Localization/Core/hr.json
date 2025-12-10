@@ -1,4 +1,4 @@
-﻿{
+{
   "About": "O",
   "Actions": "Akcije",
   "Activity": "Aktivnost",
@@ -251,5 +251,6 @@
   "Year": "Godina",
   "Yes": "Da",
   "YesCancel": "Da, otkaži",
-  "Yesterday": "Jučer"
+  "Yesterday": "Jučer",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Molimo unesite najmanje 3 znaka za pretraživanje"
 }

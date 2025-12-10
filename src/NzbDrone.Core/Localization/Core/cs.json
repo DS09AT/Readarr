@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "120 minut: {0}",
   "45MinutesFourtyFive": "90 minut: {0}",
   "60MinutesSixty": "60 minut: {0}",
@@ -780,5 +780,6 @@
   "Year": "Rok",
   "Yes": "Ano",
   "YesCancel": "Ano, zrušit",
-  "Yesterday": "Včera"
+  "Yesterday": "Včera",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Zadejte prosím alespoň 3 znaky pro vyhledávání"
 }

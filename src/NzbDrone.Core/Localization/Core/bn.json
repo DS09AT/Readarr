@@ -1,4 +1,4 @@
-﻿{
+{
   "About": "সম্পর্কিত",
   "Actions": "ক্রিয়াকাণ্ড",
   "Activity": "কার্যকলাপ",
@@ -22,5 +22,6 @@
   "MetadataProvidersSettings": "",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "অনুসন্ধান করতে অন্তত ৩টি অক্ষর লিখুন"
 }

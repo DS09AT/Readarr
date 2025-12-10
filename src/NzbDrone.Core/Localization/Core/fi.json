@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 minuuttia: {0}",
   "45MinutesFourtyFive": "45 minuuttia: {0}",
   "60MinutesSixty": "60 minuuttia: {0}",
@@ -1142,5 +1142,6 @@
   "Year": "Vuosi",
   "Yes": "Kyllä",
   "YesCancel": "Kyllä, peru",
-  "Yesterday": "Eilen"
+  "Yesterday": "Eilen",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Anna vähintään 3 merkkiä hakeaksesi"
 }

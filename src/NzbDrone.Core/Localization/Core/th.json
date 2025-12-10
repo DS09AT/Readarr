@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "60 นาที: {0}",
   "45MinutesFourtyFive": "60 นาที: {0}",
   "60MinutesSixty": "60 นาที: {0}",
@@ -675,5 +675,6 @@
   "Year": "ปี",
   "Yes": "ใช่",
   "YesCancel": "ใช่ยกเลิก",
-  "Yesterday": "เมื่อวานนี้"
+  "Yesterday": "เมื่อวานนี้",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "กรุณาป้อนอย่างน้อย 3 ตัวอักษรเพื่อค้นหา"
 }

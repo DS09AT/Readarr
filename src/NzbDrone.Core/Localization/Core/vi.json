@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "60 phút: {0}",
   "45MinutesFourtyFive": "60 phút: {0}",
   "60MinutesSixty": "60 phút: {0}",
@@ -680,5 +680,6 @@
   "Year": "Năm",
   "Yes": "Đúng",
   "YesCancel": "Có, Hủy bỏ",
-  "Yesterday": "Hôm qua"
+  "Yesterday": "Hôm qua",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vui lòng nhập ít nhất 3 ký tự để tìm kiếm"
 }

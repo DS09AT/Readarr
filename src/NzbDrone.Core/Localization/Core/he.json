@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "60 דקות: {0}",
   "45MinutesFourtyFive": "60 דקות: {0}",
   "60MinutesSixty": "60 דקות: {0}",
@@ -709,5 +709,6 @@
   "Year": "שָׁנָה",
   "Yes": "כן",
   "YesCancel": "כן, בטל",
-  "Yesterday": "אתמול"
+  "Yesterday": "אתמול",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "נא להזין לפחות 3 תווים לחיפוש"
 }

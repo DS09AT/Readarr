@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "120 دقيقة: {0}",
   "45MinutesFourtyFive": "90 دقيقة: {0}",
   "60MinutesSixty": "60 دقيقة: {0}",
@@ -675,5 +675,6 @@
   "Year": "عام",
   "Yes": "نعم",
   "YesCancel": "نعم إلغاء",
-  "Yesterday": "في الامس"
+  "Yesterday": "في الامس",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "الرجاء إدخال 3 أحرف على الأقل للبحث"
 }

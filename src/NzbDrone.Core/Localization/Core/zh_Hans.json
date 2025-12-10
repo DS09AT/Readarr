@@ -1,4 +1,4 @@
-﻿{
+{
   "About": "关于",
   "Actions": "Actions",
   "Activity": "111",
@@ -24,5 +24,6 @@
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
   "UnableToLoadMetadataProviders": "",
-  "Username": "用户名"
+  "Username": "用户名",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "请至少输入3个字符进行搜索"
 }

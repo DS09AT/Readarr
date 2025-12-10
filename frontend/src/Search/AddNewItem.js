@@ -60,9 +60,11 @@ class AddNewItem extends Component {
   // Listeners
 
   onSearchInputChange = ({ value }) => {
-    const hasValue = !!value.trim();
+    const trimmedValue = value.trim();
+    const hasValue = !!trimmedValue;
+    const shouldFetch = hasValue && trimmedValue.length >= 3;
 
-    this.setState({ term: value, isFetching: hasValue }, () => {
+    this.setState({ term: value, isFetching: shouldFetch }, () => {
       if (hasValue) {
         this.props.onSearchChange(value);
       } else {
@@ -177,7 +179,7 @@ class AddNewItem extends Component {
           }
 
           {
-            !isFetching && !error && !items.length && !!term &&
+            !isFetching && !error && !items.length && !!term && term.trim().length >= 3 &&
               <div className={styles.message}>
                 <div className={styles.noResults}>
                   {translate('CouldntFindAnyResultsForTerm', [term])}
@@ -186,6 +188,15 @@ class AddNewItem extends Component {
                   You can also search using the
                   <Link to="https://goodreads.com"> Goodreads ID </Link>
                   of a book (e.g. edition:656), work (e.g. work:4912783) or author (e.g. author:128382), the isbn (e.g. isbn:067003469X) or the asin (e.g. asin:B00JCDK5ME)
+                </div>
+              </div>
+          }
+
+          {
+            !isFetching && !error && !!term && term.trim().length > 0 && term.trim().length < 3 &&
+              <div className={styles.message}>
+                <div className={styles.helpText}>
+                  {translate('PleaseEnterAtLeastThreeCharactersToSearch')}
                 </div>
               </div>
           }

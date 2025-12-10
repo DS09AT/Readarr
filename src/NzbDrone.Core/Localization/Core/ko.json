@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20분 : {0}",
   "45MinutesFourtyFive": "45분 : {0}",
   "60MinutesSixty": "60 분 : {0}",
@@ -802,5 +802,6 @@
   "Year": "년",
   "Yes": "예",
   "YesCancel": "예, 취소합니다",
-  "Yesterday": "어제"
+  "Yesterday": "어제",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "검색하려면 최소 3자를 입력하세요"
 }

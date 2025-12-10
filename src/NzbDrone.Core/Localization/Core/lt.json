@@ -1,4 +1,4 @@
-﻿{
+{
   "AddMetadataProvider": "",
   "AllMetadataProvidersHaveBeenAdded": "Visi metaduomenų teikėjai buvo pridėti. Kiekvieną teikėjo tipą galima pridėti tik vieną kartą.",
   "AuthorSearch": "",
@@ -19,5 +19,6 @@
   "MetadataProvidersSettings": "",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Įveskite bent 3 simbolius paieškai"
 }

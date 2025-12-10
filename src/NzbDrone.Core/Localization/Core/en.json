@@ -1142,5 +1142,6 @@
   "Year": "Year",
   "Yes": "Yes",
   "YesCancel": "Yes, Cancel",
-  "Yesterday": "Yesterday"
+  "Yesterday": "Yesterday",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Please enter at least 3 characters to search"
 }

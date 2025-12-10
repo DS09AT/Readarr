@@ -336,24 +336,104 @@ namespace NzbDrone.Core.MetadataSource
 
         public List<object> SearchForNewEntity(string title)
         {
-            var books = SearchForNewBook(title, null, false);
+            var interactiveProviders = _providerFactory.InteractiveSearchEnabled(filterBlocked: true);
+
+            if (!interactiveProviders.Any())
+            {
+                _logger.Error("No metadata providers are available or enabled for interactive search");
+                throw new NoMetadataProvidersAvailableException("No metadata providers enabled for author or book search");
+            }
+
+            var authorProviders = _providerFactory.AuthorSearchEnabled(filterBlocked: true);
+            var bookProviders = _providerFactory.BookSearchEnabled(filterBlocked: true);
 
             var result = new List<object>();
-            foreach (var book in books)
+            var seenAuthorIds = new HashSet<string>();
+            var seenBookIds = new HashSet<string>();
+
+            // Search for authors if author search is enabled
+            if (authorProviders.Any())
             {
-                var author = book.Author.Value;
+                _logger.Debug("Searching for authors matching '{0}' using {1} provider(s)", title, authorProviders.Count);
 
-                // Only add author if it has required fields populated
-                if (author != null &&
-                    !string.IsNullOrEmpty(author.ForeignAuthorId) &&
-                    !string.IsNullOrEmpty(author.Metadata?.Value?.Name) &&
-                    !result.Contains(author))
+                foreach (var provider in authorProviders)
                 {
-                    result.Add(author);
-                }
+                    try
+                    {
+                        _logger.Debug("Trying provider: {0} (Priority: {1})", provider.Name, provider.Priority);
+                        var authors = provider.SearchForNewAuthorAsync(title).GetAwaiter().GetResult();
 
-                result.Add(book);
+                        if (authors != null && authors.Any())
+                        {
+                            _logger.Debug("{0} returned {1} author result(s)", provider.Name, authors.Count);
+
+                            foreach (var author in authors)
+                            {
+                                if (!string.IsNullOrEmpty(author.ForeignAuthorId) && seenAuthorIds.Add(author.ForeignAuthorId))
+                                {
+                                    result.Add(author);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.Warn(ex, "Provider {0} failed to search for author '{1}', continuing with other providers", provider.Name, title);
+                    }
+                }
             }
+
+            // Search for books if book search is enabled
+            if (bookProviders.Any())
+            {
+                _logger.Debug("Searching for books matching '{0}' using {1} provider(s)", title, bookProviders.Count);
+
+                foreach (var provider in bookProviders)
+                {
+                    try
+                    {
+                        _logger.Debug("Trying provider: {0} (Priority: {1})", provider.Name, provider.Priority);
+                        var books = provider.SearchForNewBookAsync(title, null, false).GetAwaiter().GetResult();
+
+                        if (books != null && books.Any())
+                        {
+                            _logger.Debug("{0} returned {1} book result(s)", provider.Name, books.Count);
+
+                            foreach (var book in books)
+                            {
+                                if (!string.IsNullOrEmpty(book.ForeignBookId) && seenBookIds.Add(book.ForeignBookId))
+                                {
+                                    // Add the book's author only if author search is also enabled
+                                    if (authorProviders.Any())
+                                    {
+                                        var author = book.Author?.Value;
+                                        if (author != null &&
+                                            !string.IsNullOrEmpty(author.ForeignAuthorId) &&
+                                            !string.IsNullOrEmpty(author.Metadata?.Value?.Name) &&
+                                            seenAuthorIds.Add(author.ForeignAuthorId))
+                                        {
+                                            result.Add(author);
+                                        }
+                                    }
+
+                                    result.Add(book);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.Warn(ex, "Provider {0} failed to search for book '{1}', continuing with other providers", provider.Name, title);
+                    }
+                }
+            }
+
+            _logger.Info(
+                "Found {0} total result(s) for query '{1}' ({2} author(s), {3} book(s))",
+                result.Count,
+                title,
+                seenAuthorIds.Count,
+                seenBookIds.Count);
 
             return result;
         }

@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 मिनट: {0}",
   "45MinutesFourtyFive": "45 मिनट: {0}",
   "60MinutesSixty": "60 मिनट: {0}",
@@ -672,5 +672,6 @@
   "Year": "साल",
   "Yes": "हाँ",
   "YesCancel": "हाँ, रद्द करें",
-  "Yesterday": "बिता कल"
+  "Yesterday": "बिता कल",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "खोजने के लिए कृपया कम से कम 3 अक्षर दर्ज करें"
 }

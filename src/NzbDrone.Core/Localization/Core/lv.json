@@ -1,4 +1,4 @@
-﻿{
+{
   "About": "Par",
   "Actions": "Darbības",
   "Activity": "Aktivitāte",
@@ -24,5 +24,6 @@
   "New": "Jauns",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Lūdzu, ievadiet vismaz 3 rakstzīmes meklēšanai"
 }

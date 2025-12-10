@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "120 mínútur: {0}",
   "45MinutesFourtyFive": "60 mínútur: {0}",
   "60MinutesSixty": "60 mínútur: {0}",
@@ -674,5 +674,6 @@
   "Year": "Ár",
   "Yes": "Já",
   "YesCancel": "Já, hætta við",
-  "Yesterday": "Í gær"
+  "Yesterday": "Í gær",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vinsamlegast sláðu inn að minnsta kosti 3 stafi til að leita"
 }

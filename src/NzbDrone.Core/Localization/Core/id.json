@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "Indonesia",
   "About": "Tentang",
   "Actions": "Tindakan",
@@ -126,5 +126,6 @@
   "UnableToLoadMetadataProviders": "",
   "UnableToLoadTheCalendar": "Tidak dapat memuat kalender",
   "Unmonitored": "Tidak Dimonitor",
-  "Yesterday": "Kemarin"
+  "Yesterday": "Kemarin",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Harap masukkan setidaknya 3 karakter untuk mencari"
 }

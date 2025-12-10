@@ -119,6 +119,8 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .ThrowsAsync(new Exception("Provider 3 failed"));
 
             // When
+            ExceptionVerification.ExpectedWarns(3);
+            ExceptionVerification.ExpectedErrors(1);
             Action act = () => Subject.GetAuthorInfo(authorId);
 
             // Then
@@ -136,6 +138,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .Returns(new List<IMetadataProvider>());
 
             // When
+            ExceptionVerification.ExpectedErrors(1);
             Action act = () => Subject.GetAuthorInfo(authorId);
 
             // Then
@@ -210,6 +213,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .ReturnsAsync(expectedResult);
 
             // When
+            ExceptionVerification.ExpectedWarns(1);
             var result = Subject.GetBookInfo(bookId);
 
             // Then
@@ -237,6 +241,8 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .ThrowsAsync(new Exception("Provider 3 failed"));
 
             // When
+            ExceptionVerification.ExpectedWarns(3);
+            ExceptionVerification.ExpectedErrors(1);
             Action act = () => Subject.GetBookInfo(bookId);
 
             // Then
@@ -325,6 +331,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .ReturnsAsync(authors);
 
             // When
+            ExceptionVerification.ExpectedWarns(1);
             var result = Subject.SearchForNewAuthor(query);
 
             // Then
@@ -363,7 +370,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 new Book { ForeignBookId = "book2", Title = "The Two Towers" }
             };
 
-            _factory.Setup(f => f.InteractiveSearchEnabled(true))
+            _factory.Setup(f => f.BookSearchEnabled(true))
                 .Returns(_providers);
 
             _provider1.Setup(p => p.SearchForNewBookAsync(title, author, true))
@@ -393,7 +400,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
             var books1 = new List<Book> { duplicateBook };
             var books2 = new List<Book> { duplicateBook };
 
-            _factory.Setup(f => f.InteractiveSearchEnabled(true))
+            _factory.Setup(f => f.BookSearchEnabled(true))
                 .Returns(new List<IMetadataProvider> { _provider1.Object, _provider2.Object });
 
             _provider1.Setup(p => p.SearchForNewBookAsync(title, null, true))
@@ -429,7 +436,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
             nonIsbnProvider.SetupGet(p => p.Capabilities)
                 .Returns(new MetadataProviderCapabilities { SupportsIsbnLookup = false });
 
-            _factory.Setup(f => f.InteractiveSearchEnabled(true))
+            _factory.Setup(f => f.BookSearchEnabled(true))
                 .Returns(new List<IMetadataProvider> { isbnCapableProvider.Object, nonIsbnProvider.Object });
 
             // When
@@ -455,7 +462,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
             _provider3.SetupGet(p => p.Capabilities)
                 .Returns(new MetadataProviderCapabilities { SupportsIsbnLookup = false });
 
-            _factory.Setup(f => f.InteractiveSearchEnabled(true))
+            _factory.Setup(f => f.BookSearchEnabled(true))
                 .Returns(_providers);
 
             // When
@@ -526,6 +533,7 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
                 .ReturnsAsync(new HashSet<string>());
 
             // When
+            ExceptionVerification.ExpectedWarns(1);
             var result = Subject.GetChangedAuthors(startTime);
 
             // Then

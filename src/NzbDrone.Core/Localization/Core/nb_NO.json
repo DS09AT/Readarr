@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 Minutter: {0}",
   "45MinutesFourtyFive": "45 Minutter: {0}",
   "60MinutesSixty": "60 Minutter: {0}",
@@ -230,5 +230,6 @@
   "Updates": "Oppdater",
   "URLBase": "URL Base",
   "Usenet": "Usenet",
-  "Username": "Brukernavn"
+  "Username": "Brukernavn",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vennligst skriv inn minst 3 tegn for å søke"
 }

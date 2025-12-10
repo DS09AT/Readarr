@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 minuts: {0}",
   "45MinutesFourtyFive": "45 minuts: {0}",
   "60MinutesSixty": "60 minuts: {0}",
@@ -1142,5 +1142,6 @@
   "Year": "Any",
   "Yes": "Si",
   "YesCancel": "Si, cancel·la",
-  "Yesterday": "Ahir"
+  "Yesterday": "Ahir",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Si us plau, introduïu almenys 3 caràcters per cercar"
 }

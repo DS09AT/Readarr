@@ -1,4 +1,4 @@
-﻿{
+{
   "AddMetadataProvider": "",
   "AllMetadataProvidersHaveBeenAdded": "Todos los proveedores de metadatos han sido agregados. Cada tipo de proveedor solo puede agregarse una vez.",
   "AuthorSearch": "",
@@ -19,5 +19,6 @@
   "MetadataProvidersSettings": "",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Por favor, introduce al menos 3 caracteres para buscar"
 }

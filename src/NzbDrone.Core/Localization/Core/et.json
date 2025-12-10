@@ -1,4 +1,4 @@
-﻿{
+{
   "AddMetadataProvider": "",
   "AllMetadataProvidersHaveBeenAdded": "Kõik metaandmete pakkujad on lisatud. Iga pakkuja tüüpi saab lisada ainult üks kord.",
   "AuthorSearch": "",
@@ -19,5 +19,6 @@
   "MetadataProvidersSettings": "",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": ""
+  "UnableToLoadMetadataProviders": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Palun sisestage otsinguks vähemalt 3 tähemärki"
 }

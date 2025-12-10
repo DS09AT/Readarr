@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 Minút: {0}",
   "45MinutesFourtyFive": "45 Minút: {0}",
   "60MinutesSixty": "60 Minút: {0}",
@@ -225,5 +225,6 @@
   "URLBase": "Základ URL",
   "UrlBaseHelpTextWarning": "Vyžaduje sa reštart, aby sa zmeny prejavili",
   "Usenet": "Usenet",
-  "Username": "Používateľské meno"
+  "Username": "Používateľské meno",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Zadajte prosím aspoň 3 znaky na vyhľadávanie"
 }

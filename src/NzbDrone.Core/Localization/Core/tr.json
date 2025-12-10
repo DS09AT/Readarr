@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "60 Dakika: {0}",
   "45MinutesFourtyFive": "60 Dakika: {0}",
   "60MinutesSixty": "60 Dakika: {0}",
@@ -887,5 +887,6 @@
   "Year": "Yıl",
   "Yes": "Evet",
   "YesCancel": "Evet İptal",
-  "Yesterday": "Dün"
+  "Yesterday": "Dün",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Arama yapmak için lütfen en az 3 karakter girin"
 }

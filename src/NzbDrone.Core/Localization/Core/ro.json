@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "120 de minute: {0}",
   "45MinutesFourtyFive": "90 de minute: {0}",
   "60MinutesSixty": "60 de minute: {0}",
@@ -694,5 +694,6 @@
   "Year": "An",
   "Yes": "Da",
   "YesCancel": "Da, Anulați",
-  "Yesterday": "Ieri"
+  "Yesterday": "Ieri",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vă rugăm să introduceți cel puțin 3 caractere pentru a căuta"
 }
