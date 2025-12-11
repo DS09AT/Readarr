@@ -7,7 +7,6 @@ import Icon from 'Components/Icon';
 import Button from 'Components/Link/Button';
 import Measure from 'Components/Measure';
 import { icons, kinds, sizes } from 'Helpers/Props';
-import QualityProfileItemDragPreview from './QualityProfileItemDragPreview';
 import QualityProfileItemDragSource from './QualityProfileItemDragSource';
 import styles from './QualityProfileItems.css';
 
@@ -149,8 +148,6 @@ class QualityProfileItems extends Component {
                 );
               }).reverse()
             }
-
-            <QualityProfileItemDragPreview />
           </Measure>
         </div>
       </FormGroup>

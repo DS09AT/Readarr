@@ -8,7 +8,6 @@ import PageSectionContent from 'Components/Page/PageSectionContent';
 import { icons } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
 import DelayProfile from './DelayProfile';
-import DelayProfileDragPreview from './DelayProfileDragPreview';
 import DelayProfileDragSource from './DelayProfileDragSource';
 import EditDelayProfileModalConnector from './EditDelayProfileModalConnector';
 import styles from './DelayProfiles.css';
@@ -105,10 +104,6 @@ class DelayProfiles extends Component {
                   );
                 })
               }
-
-              <DelayProfileDragPreview
-                width={width}
-              />
             </div>
 
             {

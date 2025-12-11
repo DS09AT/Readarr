@@ -17,7 +17,6 @@ import ModalHeader from 'Components/Modal/ModalHeader';
 import { inputTypes } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
 import TableOptionsColumn from './TableOptionsColumn';
-import TableOptionsColumnDragPreview from './TableOptionsColumnDragPreview';
 import TableOptionsColumnDragSource from './TableOptionsColumnDragSource';
 import styles from './TableOptionsModal.css';
 
@@ -223,8 +222,6 @@ class TableOptionsModal extends Component {
                                   );
                                 })
                               }
-
-                              <TableOptionsColumnDragPreview />
                             </div>
                           </div>
                         </FormGroup> :
