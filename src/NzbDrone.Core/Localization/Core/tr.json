@@ -265,6 +265,7 @@
   "Enabled": "Etkin",
   "EnabledHelpText": "Yayımlama profilini etkinleştirmek için işaretleyin",
   "EnableHelpText": "Bu meta veri türü için meta veri dosyası oluşturmayı etkinleştir",
+  "EnableInteractiveSearch": "Etkileşimli aramayı etkinleştir",
   "EnableProfile": "Profili Etkinleştir",
   "EnableRSS": "RSS'yi etkinleştir",
   "EnableRssHelpText": "{appName}, RSS Senkronizasyonu aracılığıyla düzenli periyotlarda yayın değişikliği aradığında kullanacak",
@@ -317,6 +318,11 @@
   "GrabReleaseMessageText": "{appName}, bu sürümün hangi film için olduğunu belirleyemedi. {appName} bu sürümü otomatik olarak içe aktaramayabilir. '{0}' almak istiyor musunuz?",
   "GrabSelected": "Seçilenleri Al",
   "Group": "Grup",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg kataloğunu güncelle",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink / Dosyaları Kopyala",
   "HasPendingChangesNoChanges": "Değişiklikler yok",
   "HasPendingChangesSaveChanges": "Değişiklikleri Kaydet",
@@ -326,6 +332,7 @@
   "History": "Geçmiş",
   "Host": "Sunucu",
   "Hostname": "Hostname",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Beslemesi",
   "ICalHttpUrlHelpText": "Bu URL'yi müşterilerinize kopyalayın veya tarayıcınız webcal'i destekliyorsa abone olmak için tıklayın",
   "ICalLink": "iCal Bağlantısı",
@@ -540,6 +547,7 @@
   "PasswordConfirmation": "Şifre Tekrarı",
   "Path": "Yol",
   "Permissions": "İzinler",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Arama yapmak için lütfen en az 3 karakter girin",
   "Port": "Port No",
   "PortHelpTextWarning": "Etkili olması için yeniden başlatma gerektirir",
   "PortNumber": "Port numarası",
@@ -887,6 +895,5 @@
   "Year": "Yıl",
   "Yes": "Evet",
   "YesCancel": "Evet İptal",
-  "Yesterday": "Dün",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Arama yapmak için lütfen en az 3 karakter girin"
+  "Yesterday": "Dün"
 }

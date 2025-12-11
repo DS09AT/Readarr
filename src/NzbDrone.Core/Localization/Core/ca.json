@@ -358,6 +358,7 @@
   "Enabled": "Habilitat",
   "EnabledHelpText": "Marqueu-ho per a habilitar el perfil de la versió",
   "EnableHelpText": "Activa la creació de fitxers de metadades per a aquest tipus de metadades",
+  "EnableInteractiveSearch": "Activa la cerca interactiva",
   "EnableProfile": "Activa el perfil",
   "EnableRSS": "Activa RSS",
   "EnableRssHelpText": "S'utilitzarà quan Readarr cerqui publicacions periòdicament mitjançant RSS Sync",
@@ -426,6 +427,11 @@
   "GrabReleaseMessageText": "Readarr no ha pogut determinar per a quina pel·lícula era aquest llançament. És possible que Readarr no pugui importar automàticament aquesta versió. Voleu capturar '{0}'?",
   "GrabSelected": "Captura sel·leccionada",
   "Group": "Grup",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Actualitza el catàleg de Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Enllaç dur/Copia fitxers",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "No hi ha llibres supervisats per a aquest autor",
   "HasPendingChangesNoChanges": "Sense Canvis",
@@ -438,6 +444,7 @@
   "Host": "Amfitrió",
   "HostHelpText": "Servidor de contingut del Calibre",
   "Hostname": "Nom d'amfitrió",
+  "HTTP": "HTTP",
   "ICalFeed": "Canal iCal",
   "ICalHttpUrlHelpText": "Copieu aquest URL als vostres clients o feu clic per a subscriure's si el vostre navegador és compatible amb webcal",
   "ICalLink": "Enllaç iCal`",
@@ -735,6 +742,7 @@
   "PathHelpText": "Carpeta arrel que conté la biblioteca de llibres",
   "PathHelpTextWarning": "Això ha de ser diferent del directori on el vostre client de baixada posa fitxers",
   "Permissions": "Permisos",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Si us plau, introduïu almenys 3 caràcters per cercar",
   "Port": "Port^",
   "PortHelpText": "Port del servidor de contingut del Calibre",
   "PortHelpTextWarning": "Cal reiniciar perquè tingui efecte",
@@ -1142,6 +1150,5 @@
   "Year": "Any",
   "Yes": "Si",
   "YesCancel": "Si, cancel·la",
-  "Yesterday": "Ahir",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Si us plau, introduïu almenys 3 caràcters per cercar"
+  "Yesterday": "Ahir"
 }

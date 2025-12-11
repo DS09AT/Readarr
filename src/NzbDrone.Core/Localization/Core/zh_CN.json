@@ -356,6 +356,7 @@
   "Enabled": "已启用",
   "EnabledHelpText": "检查以启用发布配置文件",
   "EnableHelpText": "启用此元数据类型的元数据文件创建",
+  "EnableInteractiveSearch": "启用交互式搜索",
   "EnableProfile": "启用配置",
   "EnableRSS": "启用 RSS",
   "EnableRssHelpText": "当 {appName} 定期通过 RSS 同步查找发布资源时使用",
@@ -424,6 +425,11 @@
   "GrabReleaseMessageText": "{appName}无法确定这个发布版本是哪部电影，{appName}可能无法自动导入此版本，你想要获取“{0}”吗？",
   "GrabSelected": "抓取已选",
   "Group": "组",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg基础URL",
+  "GutenbergCatalogNotAvailable": "目录不可用。请等待目录更新完成。",
+  "GutenbergCatalogUnreachable": "无法访问Project Gutenberg目录。HTTP状态：{0}",
+  "GutenbergCatalogUpdateCommand": "更新古腾堡计划目录",
+  "GutenbergConnectionFailed": "无法连接到Project Gutenberg。请检查您的互联网连接。",
   "HardlinkCopyFiles": "硬链接/复制文件",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "此作者没有受监控的书籍",
   "HasPendingChangesNoChanges": "无修改",
@@ -436,6 +442,7 @@
   "Host": "主机",
   "HostHelpText": "Calibre内容服务器主机",
   "Hostname": "主机名",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal订阅地址",
   "ICalHttpUrlHelpText": "将此URL复制到您的客户端，如果您的浏览器支持webcal，请直接点击右侧订阅按钮",
   "ICalLink": "iCal链接",
@@ -733,6 +740,7 @@
   "PathHelpText": "根目录文件夹包含您的书籍库",
   "PathHelpTextWarning": "这必须与下载客户端放置文件的目录不同",
   "Permissions": "权限",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "请至少输入3个字符进行搜索",
   "Port": "端口",
   "PortHelpText": "Calibre内容服务器端口",
   "PortHelpTextWarning": "重启生效",
@@ -1140,6 +1148,5 @@
   "Year": "年份",
   "Yes": "确定",
   "YesCancel": "确定，取消",
-  "Yesterday": "昨天",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "请至少输入3个字符进行搜索"
+  "Yesterday": "昨天"
 }

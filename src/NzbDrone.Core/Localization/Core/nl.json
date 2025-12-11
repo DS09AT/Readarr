@@ -258,6 +258,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Importeer automatisch voltooide downloads vanuit de download cliënt",
   "Enabled": "Ingeschakeld",
   "EnableHelpText": "Schakel het maken van metadata bestanden in voor dit metadata type",
+  "EnableInteractiveSearch": "Interactief zoeken inschakelen",
   "EnableRSS": "Activeer RSS Synchronisatie",
   "EnableRssHelpText": "Wordt gebruikt wanneer {appName} periodiek zoekt naar uitgaven via RSS synchronisatie",
   "EnableSSL": "Activeer SSL",
@@ -306,6 +307,11 @@
   "GrabReleaseMessageText": "{appName} was niet in staat om deze uitgave aan een film te koppelen. {appName} zal waarschijnlijk deze uitgave niet automatisch kunnen importeren. Wilt u '{0}' ophalen?",
   "GrabSelected": "Selectie Ophalen",
   "Group": "Groep",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg basis-URL",
+  "GutenbergCatalogNotAvailable": "Catalogus niet beschikbaar. Wacht tot de catalogusupdate is voltooid.",
+  "GutenbergCatalogUnreachable": "Kan Project Gutenberg catalogus niet bereiken. HTTP-status: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg catalogus bijwerken",
+  "GutenbergConnectionFailed": "Kan geen verbinding maken met Project Gutenberg. Controleer uw internetverbinding.",
   "HardlinkCopyFiles": "Hardlink/Kopieer Bestanden",
   "HasPendingChangesNoChanges": "Geen Wijzigingen",
   "HasPendingChangesSaveChanges": "Wijzigingen Opslaan",
@@ -315,6 +321,7 @@
   "History": "Geschiedenis",
   "Host": "Host",
   "Hostname": "Hostnaam",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Informatiestroom",
   "ICalHttpUrlHelpText": "Kopieer deze URL naar je cliënt(en) of klik om te abonneren als je browser Webcal ondersteunt",
   "ICalLink": "iCal Koppeling",
@@ -484,6 +491,7 @@
   "Password": "Wachtwoord",
   "Path": "Pad",
   "Permissions": "Permissies",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Voer minimaal 3 tekens in om te zoeken",
   "Port": "Poort",
   "PortHelpTextWarning": "Herstarten vereist om in werking te treden",
   "PortNumber": "Poort Nummer",
@@ -801,6 +809,5 @@
   "Year": "Jaar",
   "Yes": "Ja",
   "YesCancel": "Ja, Annuleren",
-  "Yesterday": "Gisteren",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Voer minimaal 3 tekens in om te zoeken"
+  "Yesterday": "Gisteren"
 }

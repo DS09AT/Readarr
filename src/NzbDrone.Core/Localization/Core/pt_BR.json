@@ -358,6 +358,7 @@
   "Enabled": "Habilitado",
   "EnabledHelpText": "Marque para habilitar o perfil de lançamento",
   "EnableHelpText": "Habilitar criação de arquivo de metadados para este tipo de metadados",
+  "EnableInteractiveSearch": "Ativar busca interativa",
   "EnableProfile": "Habilitar perfil",
   "EnableRSS": "Habilitar RSS",
   "EnableRssHelpText": "Será usado quando o Readarr procurar periodicamente lançamentos via RSS Sync",
@@ -426,6 +427,11 @@
   "GrabReleaseMessageText": "O Readarr não conseguiu determinar para qual autor e livro é este lançamento. O Readarr pode não conseguir importar automaticamente este lançamento. Deseja obter \"{0}\"?",
   "GrabSelected": "Baixar Selecionado",
   "Group": "Grupo",
+  "GutenbergBaseUrlHelpText": "URL base do Project Gutenberg",
+  "GutenbergCatalogNotAvailable": "Catálogo não disponível. Aguarde a conclusão da atualização do catálogo.",
+  "GutenbergCatalogUnreachable": "Não é possível acessar o catálogo do Project Gutenberg. Status HTTP: {0}",
+  "GutenbergCatalogUpdateCommand": "Atualizar catálogo do Project Gutenberg",
+  "GutenbergConnectionFailed": "Não é possível conectar ao Project Gutenberg. Verifique sua conexão com a Internet.",
   "HardlinkCopyFiles": "Criar hardlink/Copiar arquivos",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Nenhum livro não monitorado para este autor",
   "HasPendingChangesNoChanges": "Sem alterações",
@@ -438,6 +444,7 @@
   "Host": "Host",
   "HostHelpText": "Host do servidor de conteúdo do Calibre",
   "Hostname": "Nome do host",
+  "HTTP": "HTTP",
   "ICalFeed": "Feed do iCal",
   "ICalHttpUrlHelpText": "Copie este URL em seu(s) cliente(s) ou clique para se inscrever se o seu navegador é compatível com webcal",
   "ICalLink": "Link do iCal",
@@ -735,6 +742,7 @@
   "PathHelpText": "Pasta raiz que contém sua biblioteca de livros",
   "PathHelpTextWarning": "Isto deve ser diferente do diretório em que o cliente de download coloca os arquivos",
   "Permissions": "Permissões",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Por favor, insira pelo menos 3 caracteres para pesquisar",
   "Port": "Porta",
   "PortHelpText": "Porta do servidor de conteúdo do Calibre",
   "PortHelpTextWarning": "Requer reinício para ter efeito",
@@ -1142,6 +1150,5 @@
   "Year": "Ano",
   "Yes": "Sim",
   "YesCancel": "Sim, Cancelar",
-  "Yesterday": "Ontem",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Por favor, insira pelo menos 3 caracteres para pesquisar"
+  "Yesterday": "Ontem"
 }

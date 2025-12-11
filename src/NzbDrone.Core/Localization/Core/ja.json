@@ -187,6 +187,7 @@
   "EnableCompletedDownloadHandlingHelpText": "完了したダウンロードをダウンロードクライアントから自動的にインポートします",
   "Enabled": "有効",
   "EnableHelpText": "このメタデータタイプのメタデータファイルの作成を有効にする",
+  "EnableInteractiveSearch": "インタラクティブ検索を有効にする",
   "EnableRSS": "RSSを有効にする",
   "EnableSSL": "SSLを有効にする",
   "EnableSslHelpText": " 有効にするには、管理者として実行を再開する必要があります",
@@ -231,6 +232,11 @@
   "GrabReleaseMessageText": "{appName}は、このリリースの対象となる映画を特定できませんでした。 {appName}は、このリリースを自動的にインポートできない場合があります。 '{0}'を取得しますか？",
   "GrabSelected": "選択したグラブ",
   "Group": "グループ",
+  "GutenbergBaseUrlHelpText": "Project GutenbergベースURL",
+  "GutenbergCatalogNotAvailable": "カタログは利用できません。カタログの更新が完了するまでお待ちください。",
+  "GutenbergCatalogUnreachable": "Project Gutenbergカタログにアクセスできません。HTTPステータス: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenbergカタログを更新",
+  "GutenbergConnectionFailed": "Project Gutenbergに接続できません。インターネット接続を確認してください。",
   "HardlinkCopyFiles": "ファイルのハードリンク/コピー",
   "HasPendingChangesNoChanges": "変更なし",
   "HasPendingChangesSaveChanges": "変更内容を保存",
@@ -240,6 +246,7 @@
   "History": "歴史",
   "Host": "ホスト",
   "Hostname": "ホスト名",
+  "HTTP": "HTTP",
   "ICalFeed": "iCalフィード",
   "ICalHttpUrlHelpText": "このURLをクライアントにコピーするか、ブラウザがwebcalをサポートしている場合はクリックしてサブスクライブします",
   "ICalLink": "iCalリンク",
@@ -392,6 +399,7 @@
   "Password": "パスワード",
   "Path": "道",
   "Permissions": "権限",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "検索するには少なくとも3文字を入力してください",
   "Port": "港",
   "PortHelpTextWarning": "有効にするには再起動が必要です",
   "PortNumber": "ポート番号",
@@ -673,6 +681,5 @@
   "Year": "年",
   "Yes": "はい",
   "YesCancel": "はい、キャンセル",
-  "Yesterday": "昨日",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "検索するには少なくとも3文字を入力してください"
+  "Yesterday": "昨日"
 }

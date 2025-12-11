@@ -316,6 +316,7 @@
   "Enabled": "Ενεργοποιήθηκε",
   "EnabledHelpText": "Επιλέξτε για να ενεργοποιήσετε το προφίλ απελευθέρωσης",
   "EnableHelpText": "Ενεργοποίηση δημιουργίας αρχείων μεταδεδομένων για αυτόν τον τύπο μεταδεδομένων",
+  "EnableInteractiveSearch": "Ενεργοποίηση διαδραστικής αναζήτησης",
   "EnableProfile": "Ενεργοποίηση προφίλ",
   "EnableRSS": "Ενεργοποίηση RSS",
   "EnableRssHelpText": "Θα χρησιμοποιηθεί όταν το Readarr αναζητά περιοδικά εκδόσεις μέσω RSS Sync",
@@ -381,6 +382,11 @@
   "GrabReleaseMessageText": "Ο {appName} δεν μπόρεσε να προσδιορίσει ποια ταινία ήταν αυτή η κυκλοφορία. Το {appName} ενδέχεται να μην μπορεί να εισαγάγει αυτόματα αυτήν την κυκλοφορία. Θέλετε να τραβήξετε το \"{0}\";",
   "GrabSelected": "Επιλογή αρπαγής",
   "Group": "Ομάδα",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Ενημέρωση καταλόγου Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink / Αντιγραφή αρχείων",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Δεν υπάρχουν βιβλία που παρακολουθούνται για αυτόν τον συγγραφέα",
   "HasPendingChangesNoChanges": "Χωρίς αλλαγές",
@@ -393,6 +399,7 @@
   "Host": "Πλήθος",
   "HostHelpText": "Κεντρικός υπολογιστής διακομιστή περιεχομένου Caliber",
   "Hostname": "Όνομα κεντρικού υπολογιστή",
+  "HTTP": "HTTP",
   "ICalFeed": "Ροή iCal",
   "ICalHttpUrlHelpText": "Αντιγράψτε αυτήν τη διεύθυνση URL στους πελάτες σας ή κάντε κλικ για να εγγραφείτε εάν το πρόγραμμα περιήγησής σας υποστηρίζει webcal",
   "ICalLink": "Σύνδεσμος iCal",
@@ -651,6 +658,7 @@
   "PathHelpText": "Ριζικός φάκελος που περιέχει τη βιβλιοθήκη σας",
   "PathHelpTextWarning": "Αυτό πρέπει να είναι διαφορετικό από τον κατάλογο όπου το πρόγραμμα-πελάτης λήψης τοποθετεί τα αρχεία",
   "Permissions": "Άδειες",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Παρακαλώ εισάγετε τουλάχιστον 3 χαρακτήρες για αναζήτηση",
   "Port": "Λιμάνι",
   "PortHelpText": "Θύρα διακομιστή περιεχομένου Caliber",
   "PortHelpTextWarning": "Απαιτείται επανεκκίνηση για να τεθεί σε ισχύ",
@@ -1042,6 +1050,5 @@
   "Year": "Ετος",
   "Yes": "Ναί",
   "YesCancel": "Ναι, Ακύρωση",
-  "Yesterday": "Εχθές",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Παρακαλώ εισάγετε τουλάχιστον 3 χαρακτήρες για αναζήτηση"
+  "Yesterday": "Εχθές"
 }

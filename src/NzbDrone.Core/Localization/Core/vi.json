@@ -192,6 +192,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Tự động nhập các bản tải xuống đã hoàn thành từ máy khách tải xuống",
   "Enabled": "Đã bật",
   "EnableHelpText": "Cho phép tạo tệp siêu dữ liệu cho loại siêu dữ liệu này",
+  "EnableInteractiveSearch": "Bật tìm kiếm tương tác",
   "EnableRSS": "Bật RSS",
   "EnableSSL": "Bật SSL",
   "EnableSslHelpText": " Yêu cầu khởi động lại chạy với tư cách quản trị viên để có hiệu lực",
@@ -236,6 +237,11 @@
   "GrabReleaseMessageText": "{appName} không thể xác định bộ phim này được phát hành. {appName} có thể không tự động nhập bản phát hành này. Bạn có muốn lấy '{0}' không?",
   "GrabSelected": "Lấy đã chọn",
   "Group": "Nhóm",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Cập nhật danh mục Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink / Sao chép tệp",
   "HasPendingChangesNoChanges": "Không thay đổi",
   "HasPendingChangesSaveChanges": "Lưu thay đổi",
@@ -245,6 +251,7 @@
   "History": "Lịch sử",
   "Host": "Tổ chức",
   "Hostname": "Tên máy chủ",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalHttpUrlHelpText": "Sao chép URL này vào (các) khách hàng của bạn hoặc nhấp để đăng ký nếu trình duyệt của bạn hỗ trợ webcal",
   "ICalLink": "Liên kết iCal",
@@ -397,6 +404,7 @@
   "Password": "Mật khẩu",
   "Path": "Con đường",
   "Permissions": "Quyền",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vui lòng nhập ít nhất 3 ký tự để tìm kiếm",
   "Port": "Hải cảng",
   "PortHelpTextWarning": "Yêu cầu khởi động lại để có hiệu lực",
   "PortNumber": "Số cổng",
@@ -680,6 +688,5 @@
   "Year": "Năm",
   "Yes": "Đúng",
   "YesCancel": "Có, Hủy bỏ",
-  "Yesterday": "Hôm qua",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Vui lòng nhập ít nhất 3 ký tự để tìm kiếm"
+  "Yesterday": "Hôm qua"
 }

@@ -358,6 +358,7 @@
   "Enabled": "Käytössä",
   "EnabledHelpText": "Käytä julkaisuprofiilia merkitsemällä tämä.",
   "EnableHelpText": "Luo metatietotiedostot tälle metatietotyypille.",
+  "EnableInteractiveSearch": "Ota käyttöön interaktiivinen haku",
   "EnableProfile": "Käytä profiilia",
   "EnableRSS": "RSS-syöte",
   "EnableRssHelpText": "Käytetään Readarrin etsiessä julkaisuja ajoitetusti RSS-synkronoinnilla.",
@@ -426,6 +427,11 @@
   "GrabReleaseMessageText": "Readarr ei tunnistanut julkaisun kirjailijaa ja kirjaa, eikä sen vuoksi voi tuoda sitä automaattisesti. Haluatko kaapata julkaisun \"{0}\"?",
   "GrabSelected": "Kaappaa valitut",
   "Group": "Ryhmä",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg perus-URL",
+  "GutenbergCatalogNotAvailable": "Luettelo ei ole käytettävissä. Odota, kunnes luettelon päivitys on valmis.",
+  "GutenbergCatalogUnreachable": "Project Gutenberg -luetteloa ei voi tavoittaa. HTTP-tila: {0}",
+  "GutenbergCatalogUpdateCommand": "Päivitä Project Gutenberg -luettelo",
+  "GutenbergConnectionFailed": "Yhdistäminen Project Gutenbergiin ei onnistu. Tarkista internet-yhteytesi.",
   "HardlinkCopyFiles": "Hardlink/tiedostojen kopiointi",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Kirjailijalta ei valvota kirjoja",
   "HasPendingChangesNoChanges": "Ei muutoksia",
@@ -438,6 +444,7 @@
   "Host": "Osoite",
   "HostHelpText": "Calibre-sisältöpalvelimen osoite.",
   "Hostname": "Osoite",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal-syöte",
   "ICalHttpUrlHelpText": "Kopioi URL-osoite kalenteripalveluusi/-sovellukseesi tai tilaa se painamalla tästä, jos selaimesi tukee Webcal-osoitteita.",
   "ICalLink": "iCal-linkki",
@@ -735,6 +742,7 @@
   "PathHelpText": "Kirjakokoelmasi sisältävä juurikansio.",
   "PathHelpTextWarning": "Tämä ei voi olla sama kansio, johon latauspalvelusi tallentaa tiedostot.",
   "Permissions": "Käyttöoikeudet",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Anna vähintään 3 merkkiä hakeaksesi",
   "Port": "Portti",
   "PortHelpText": "Calibre-sisältöpalvelimen portti.",
   "PortHelpTextWarning": "Käyttöönotto vaatii sovelluksen uudelleenkäynnistyksen.",
@@ -1142,6 +1150,5 @@
   "Year": "Vuosi",
   "Yes": "Kyllä",
   "YesCancel": "Kyllä, peru",
-  "Yesterday": "Eilen",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Anna vähintään 3 merkkiä hakeaksesi"
+  "Yesterday": "Eilen"
 }

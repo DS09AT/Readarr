@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 Minuten: {0}",
   "45MinutesFourtyFive": "45 Minuten: {0}",
   "60MinutesSixty": "60 Minuten: {0}",
@@ -356,6 +356,7 @@
   "Enabled": "Aktiviert",
   "EnabledHelpText": "Anhaken um Veröffentlichungsprofile zu aktivieren",
   "EnableHelpText": "Aktiviere die Erstellung von Metadaten-Dateien für diesen Metadaten-Typ",
+  "EnableInteractiveSearch": "Interaktive Suche aktivieren",
   "EnableProfile": "Profil aktivieren",
   "EnableRSS": "RSS aktivieren",
   "EnableRssHelpText": "Wird benutzt, wenn {appName} mittels RSS-Sync regelmäßig nach Releases schaut",
@@ -424,6 +425,11 @@
   "GrabReleaseMessageText": "Das Release konnte keinem Film zugeordnet werden. Ein automatischer Import wird nicht möglich sein. Trotzdem '{0}' erfassen?",
   "GrabSelected": "Auswahl abrufen",
   "Group": "Gruppe",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg Basis-URL",
+  "GutenbergCatalogNotAvailable": "Katalog nicht verfügbar. Bitte warten Sie, bis die Katalogaktualisierung abgeschlossen ist.",
+  "GutenbergCatalogUnreachable": "Project Gutenberg-Katalog nicht erreichbar. HTTP-Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg Katalog aktualisieren",
+  "GutenbergConnectionFailed": "Verbindung zu Project Gutenberg fehlgeschlagen. Bitte überprüfen Sie Ihre Internetverbindung.",
   "HardlinkCopyFiles": "Hardlink/Dateien kopieren",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Keine beobachteten Bücher für diesen Autor",
   "HasPendingChangesNoChanges": "Keine Änderungen",
@@ -436,6 +442,7 @@
   "Host": "Host",
   "HostHelpText": "Calibre-Content-Server",
   "Hostname": "Hostname",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalHttpUrlHelpText": "Füge diese URL in deinen Client ein oder klicke auf abonnieren wenn dein Browser Webcal untertützt",
   "ICalLink": "iCal Link",
@@ -733,6 +740,7 @@
   "PathHelpText": "Stammordner für die Musikbibliothek",
   "PathHelpTextWarning": "Dies muss ein anderes Verzeichnis sein als das, in dem der Download Client die Dateien ablegt",
   "Permissions": "Berechtigungen",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Bitte geben Sie mindestens 3 Zeichen ein, um zu suchen",
   "Port": "Port",
   "PortHelpText": "Calibre-Content-Server",
   "PortHelpTextWarning": "Erfordert einen Neustart",
@@ -1140,6 +1148,5 @@
   "Year": "Jahr",
   "Yes": "Ja",
   "YesCancel": "Ja Abbrechen",
-  "Yesterday": "Gestern",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Bitte geben Sie mindestens 3 Zeichen ein, um zu suchen"
+  "Yesterday": "Gestern"
 }

@@ -277,6 +277,7 @@
   "Enabled": "Включено",
   "EnabledHelpText": "Установите флажок, чтобы включить профиль релиза",
   "EnableHelpText": "Включить создание файла метаданных для этого типа метаданных",
+  "EnableInteractiveSearch": "Включить интерактивный поиск",
   "EnableProfile": "Включить профиль",
   "EnableRSS": "Включить RSS",
   "EnableRssHelpText": "Будет использоваться, когда {appName} будет периодически искать выпуски через RSS Sync",
@@ -330,6 +331,11 @@
   "GrabReleaseMessageText": "{appName} не смог определить для какого фильма был релиз. {appName} не сможет автоматически его импортировать. Хотите захватить '{0}'?",
   "GrabSelected": "Захватить выбранные",
   "Group": "Группа",
+  "GutenbergBaseUrlHelpText": "Базовый URL Project Gutenberg",
+  "GutenbergCatalogNotAvailable": "Каталог недоступен. Пожалуйста, дождитесь завершения обновления каталога.",
+  "GutenbergCatalogUnreachable": "Невозможно получить доступ к каталогу Project Gutenberg. HTTP-статус: {0}",
+  "GutenbergCatalogUpdateCommand": "Обновить каталог Project Gutenberg",
+  "GutenbergConnectionFailed": "Невозможно подключиться к Project Gutenberg. Проверьте подключение к Интернету.",
   "HardlinkCopyFiles": "Жесткая ссылка/Копирование файлов",
   "HasPendingChangesNoChanges": "Нет изменений",
   "HasPendingChangesSaveChanges": "Сохранить изменения",
@@ -339,6 +345,7 @@
   "History": "История",
   "Host": "Хост",
   "Hostname": "Имя хоста",
+  "HTTP": "HTTP",
   "ICalFeed": "Лента iCal",
   "ICalHttpUrlHelpText": "Скопировать URL или нажать чтобы подписаться, если ваш браузер поддерживает webcal",
   "ICalLink": "iCal ссылка",
@@ -555,6 +562,7 @@
   "PasswordConfirmation": "Подтверждение пароля",
   "Path": "Путь",
   "Permissions": "Разрешения",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Пожалуйста, введите не менее 3 символов для поиска",
   "Port": "Порт",
   "PortHelpTextWarning": "Для вступления в силу требуется перезапуск",
   "PortNumber": "Номер порта",
@@ -904,6 +912,5 @@
   "Year": "Год",
   "Yes": "Да",
   "YesCancel": "Да, Отмена",
-  "Yesterday": "Вчера",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Пожалуйста, введите не менее 3 символов для поиска"
+  "Yesterday": "Вчера"
 }

@@ -190,6 +190,7 @@
   "EnableCompletedDownloadHandlingHelpText": "นำเข้าการดาวน์โหลดที่เสร็จสมบูรณ์โดยอัตโนมัติจากไคลเอนต์ดาวน์โหลด",
   "Enabled": "เปิดใช้งาน",
   "EnableHelpText": "เปิดใช้งานการสร้างไฟล์ข้อมูลเมตาสำหรับประเภทข้อมูลเมตานี้",
+  "EnableInteractiveSearch": "เปิดใช้งานการค้นหาแบบโต้ตอบ",
   "EnableRSS": "เปิดใช้ RSS",
   "EnableSSL": "เปิดใช้งาน SSL",
   "EnableSslHelpText": " ต้องรีสตาร์ทในฐานะผู้ดูแลระบบจึงจะมีผล",
@@ -234,6 +235,11 @@
   "GrabReleaseMessageText": "{appName} ไม่สามารถระบุได้ว่าภาพยนตร์เรื่องนี้เป็นภาพยนตร์เรื่องใด {appName} อาจไม่สามารถนำเข้ารุ่นนี้โดยอัตโนมัติได้ คุณต้องการคว้า \"{0}\" ไหม",
   "GrabSelected": "Grab Selected",
   "Group": "กลุ่ม",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "อัปเดตแคตตาล็อก Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "ฮาร์ดลิงค์ / คัดลอกไฟล์",
   "HasPendingChangesNoChanges": "ไม่มีการเปลี่ยนแปลง",
   "HasPendingChangesSaveChanges": "บันทึกการเปลี่ยนแปลง",
@@ -243,6 +249,7 @@
   "History": "ประวัติศาสตร์",
   "Host": "โฮสต์",
   "Hostname": "ชื่อโฮสต์",
+  "HTTP": "HTTP",
   "ICalFeed": "ฟีด iCal",
   "ICalHttpUrlHelpText": "คัดลอก URL นี้ไปยังลูกค้าของคุณหรือคลิกเพื่อสมัครหากเบราว์เซอร์ของคุณรองรับ webcal",
   "ICalLink": "ลิงค์ iCal",
@@ -395,6 +402,7 @@
   "Password": "รหัสผ่าน",
   "Path": "เส้นทาง",
   "Permissions": "สิทธิ์",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "กรุณาป้อนอย่างน้อย 3 ตัวอักษรเพื่อค้นหา",
   "Port": "ท่าเรือ",
   "PortHelpTextWarning": "ต้องรีสตาร์ทเพื่อให้มีผล",
   "PortNumber": "หมายเลขพอร์ต",
@@ -675,6 +683,5 @@
   "Year": "ปี",
   "Yes": "ใช่",
   "YesCancel": "ใช่ยกเลิก",
-  "Yesterday": "เมื่อวานนี้",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "กรุณาป้อนอย่างน้อย 3 ตัวอักษรเพื่อค้นหา"
+  "Yesterday": "เมื่อวานนี้"
 }

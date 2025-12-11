@@ -14,6 +14,13 @@
   "EnableAuthorSearchHelpText": "",
   "EnableBookSearch": "",
   "EnableBookSearchHelpText": "",
+  "EnableInteractiveSearch": "启用交互式搜索",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg基础URL",
+  "GutenbergCatalogNotAvailable": "目录不可用。请等待目录更新完成。",
+  "GutenbergCatalogUnreachable": "无法访问Project Gutenberg目录。HTTP状态：{0}",
+  "GutenbergCatalogUpdateCommand": "更新古腾堡计划目录",
+  "GutenbergConnectionFailed": "无法连接到Project Gutenberg。请检查您的互联网连接。",
+  "HTTP": "HTTP",
   "InteractiveSearch": "",
   "ISBNLookup": "",
   "MetadataProvider": "",
@@ -21,9 +28,9 @@
   "MetadataProviderPriorityHelpText": "",
   "MetadataProviders": "",
   "MetadataProvidersSettings": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "请至少输入3个字符进行搜索",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
   "UnableToLoadMetadataProviders": "",
-  "Username": "用户名",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "请至少输入3个字符进行搜索"
+  "Username": "用户名"
 }

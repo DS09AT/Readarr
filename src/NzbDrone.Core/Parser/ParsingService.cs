@@ -155,7 +155,21 @@ namespace NzbDrone.Core.Parser
             }
             else
             {
-                _logger.Debug("Unable to find {0}", parsedBookInfo);
+                // Fallback: fuzzy match against all books by author to improve parsing for HTTP releases
+                var candidates = _bookService.GetBooksByAuthor(author.Id);
+                var best = candidates
+                    .OrderByDescending(b => parsedBookInfo.BookTitle.FuzzyMatch(b.Title, 0.5))
+                    .FirstOrDefault();
+
+                if (best != null)
+                {
+                    _logger.Debug("Fuzzy matched book '{0}' for '{1}'", best.Title, parsedBookInfo.BookTitle);
+                    result.Add(best);
+                }
+                else
+                {
+                    _logger.Debug("Unable to find {0}", parsedBookInfo);
+                }
             }
 
             return result;

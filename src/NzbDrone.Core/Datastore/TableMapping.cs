@@ -21,6 +21,7 @@ using NzbDrone.Core.Http;
 using NzbDrone.Core.ImportLists;
 using NzbDrone.Core.ImportLists.Exclusions;
 using NzbDrone.Core.Indexers;
+using NzbDrone.Core.Indexers.Gutenberg;
 using NzbDrone.Core.Instrumentation;
 using NzbDrone.Core.Jobs;
 using NzbDrone.Core.MediaFiles;
@@ -219,6 +220,8 @@ namespace NzbDrone.Core.Datastore
             Mapper.Entity<DownloadHistory>("DownloadHistory").RegisterModel();
 
             Mapper.Entity<UpdateHistory>("UpdateHistory").RegisterModel();
+
+            Mapper.Entity<GutenbergBook>("GutenbergBooks").RegisterModel();
         }
 
         private static void RegisterMappers()

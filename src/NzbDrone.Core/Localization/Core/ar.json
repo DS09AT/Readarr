@@ -189,6 +189,7 @@
   "EnableCompletedDownloadHandlingHelpText": "استيراد التنزيلات المكتملة تلقائيًا من عميل التنزيل",
   "Enabled": "ممكن",
   "EnableHelpText": "تفعيل إنشاء ملف البيانات الوصفية لنوع البيانات الوصفية هذا",
+  "EnableInteractiveSearch": "تمكين البحث التفاعلي",
   "EnableRSS": "تمكين RSS",
   "EnableSSL": "تمكين SSL",
   "EnableSslHelpText": " يتطلب إعادة التشغيل قيد التشغيل كمسؤول ليصبح ساري المفعول",
@@ -233,6 +234,11 @@
   "GrabReleaseMessageText": "لم يتمكن {appName} من تحديد الفيلم الذي كان هذا الإصدار من أجله. قد يتعذر على {appName} استيراد هذا الإصدار تلقائيًا. هل تريد انتزاع \"{0}\"؟",
   "GrabSelected": "انتزاع المحدد",
   "Group": "مجموعة",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "تحديث كتالوج مشروع جوتنبرج",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink / نسخ الملفات",
   "HasPendingChangesNoChanges": "لا تغيرات",
   "HasPendingChangesSaveChanges": "حفظ التغييرات",
@@ -242,6 +248,7 @@
   "History": "التاريخ",
   "Host": "مضيف",
   "Hostname": "اسم المضيف",
+  "HTTP": "HTTP",
   "ICalFeed": "تغذية iCal",
   "ICalHttpUrlHelpText": "انسخ عنوان URL هذا إلى العميل (العملاء) أو انقر للاشتراك إذا كان متصفحك يدعم webcal",
   "ICalLink": "رابط iCal",
@@ -394,6 +401,7 @@
   "Password": "كلمه السر",
   "Path": "مسار",
   "Permissions": "أذونات",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "الرجاء إدخال 3 أحرف على الأقل للبحث",
   "Port": "ميناء",
   "PortHelpTextWarning": "يتطلب إعادة التشغيل ليصبح ساري المفعول",
   "PortNumber": "رقم المنفذ",
@@ -675,6 +683,5 @@
   "Year": "عام",
   "Yes": "نعم",
   "YesCancel": "نعم إلغاء",
-  "Yesterday": "في الامس",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "الرجاء إدخال 3 أحرف على الأقل للبحث"
+  "Yesterday": "في الامس"
 }

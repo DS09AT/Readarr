@@ -39,6 +39,7 @@ namespace NzbDrone.Core.Messaging.Commands
     {
         private readonly ICommandRepository _repo;
         private readonly KnownTypes _knownTypes;
+        private readonly IEventAggregator _eventAggregator;
         private readonly Logger _logger;
 
         private readonly CommandQueue _commandQueue;
@@ -46,10 +47,12 @@ namespace NzbDrone.Core.Messaging.Commands
         public CommandQueueManager(ICommandRepository repo,
                                    IServiceFactory serviceFactory,
                                    KnownTypes knownTypes,
+                                   IEventAggregator eventAggregator,
                                    Logger logger)
         {
             _repo = repo;
             _knownTypes = knownTypes;
+            _eventAggregator = eventAggregator;
             _logger = logger;
 
             _commandQueue = new CommandQueue();
@@ -132,6 +135,12 @@ namespace NzbDrone.Core.Messaging.Commands
 
                 _repo.Insert(commandModel);
                 _commandQueue.Add(commandModel);
+
+                // Broadcast to clients that command was queued
+                if (command.SendUpdatesToClient)
+                {
+                    _eventAggregator.PublishEvent(new ProgressMessaging.CommandUpdatedEvent(commandModel));
+                }
 
                 return commandModel;
             }

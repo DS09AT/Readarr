@@ -210,6 +210,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Automatycznie importuj ukończone pliki do pobrania z klienta pobierania",
   "Enabled": "Włączone",
   "EnableHelpText": "Włącz tworzenie pliku metadanych dla tego typu metadanych",
+  "EnableInteractiveSearch": "Włącz wyszukiwanie interaktywne",
   "EnableRSS": "Włącz RSS",
   "EnableSSL": "Włącz SSL",
   "EnableSslHelpText": " Wymaga ponownego uruchomienia jako administrator, aby odniosło skutek",
@@ -254,6 +255,11 @@
   "GrabReleaseMessageText": "{appName} nie był w stanie określić, dla którego filmu jest to wydanie. {appName} może nie być w stanie automatycznie zaimportować tej wersji. Czy chcesz złapać „{0}”?",
   "GrabSelected": "Wybierz wybrane",
   "Group": "Grupa",
+  "GutenbergBaseUrlHelpText": "Podstawowy adres URL Project Gutenberg",
+  "GutenbergCatalogNotAvailable": "Katalog niedostępny. Poczekaj na zakończenie aktualizacji katalogu.",
+  "GutenbergCatalogUnreachable": "Nie można uzyskać dostępu do katalogu Project Gutenberg. Status HTTP: {0}",
+  "GutenbergCatalogUpdateCommand": "Zaktualizuj katalog Project Gutenberg",
+  "GutenbergConnectionFailed": "Nie można połączyć się z Project Gutenberg. Sprawdź połączenie internetowe.",
   "HardlinkCopyFiles": "Hardlink / Kopiuj pliki",
   "HasPendingChangesNoChanges": "Bez zmian",
   "HasPendingChangesSaveChanges": "Zapisz zmiany",
@@ -263,6 +269,7 @@
   "History": "Historia",
   "Host": "Gospodarz",
   "Hostname": "Nazwa hosta",
+  "HTTP": "HTTP",
   "ICalFeed": "Kanał iCal",
   "ICalHttpUrlHelpText": "Skopiuj ten adres URL do swoich klientów lub kliknij, aby zasubskrybować, jeśli Twoja przeglądarka obsługuje webcal",
   "ICalLink": "iCal Link",
@@ -428,6 +435,7 @@
   "Password": "Hasło",
   "Path": "Ścieżka",
   "Permissions": "Uprawnienia",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Wprowadź co najmniej 3 znaki, aby wyszukać",
   "Port": "Port",
   "PortHelpTextWarning": "Wymaga ponownego uruchomienia, aby odniosło skutek",
   "PortNumber": "Numer portu",
@@ -740,6 +748,5 @@
   "Year": "Rok",
   "Yes": "tak",
   "YesCancel": "Tak, anuluj",
-  "Yesterday": "Wczoraj",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Wprowadź co najmniej 3 znaki, aby wyszukać"
+  "Yesterday": "Wczoraj"
 }

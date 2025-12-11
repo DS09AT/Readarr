@@ -222,6 +222,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Автоматично импортирайте завършени изтегляния от клиент за изтегляне",
   "Enabled": "Активирано",
   "EnableHelpText": "Активирайте създаването на файл с метаданни за този тип метаданни",
+  "EnableInteractiveSearch": "Активиране на интерактивно търсене",
   "EnableRSS": "Активиране на RSS",
   "EnableSSL": "Активирайте SSL",
   "EnableSslHelpText": " Изисква рестартиране, изпълнено като администратор, за да влезе в сила",
@@ -266,6 +267,11 @@
   "GrabReleaseMessageText": "{appName} не успя да определи за кой филм е предназначено това издание. {appName} може да не може автоматично да импортира тази версия. Искате ли да вземете „{0}“?",
   "GrabSelected": "Grab Selected",
   "Group": "Група",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Актуализиране на каталога на Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Твърда връзка / копиране на файлове",
   "HasPendingChangesNoChanges": "Без промени",
   "HasPendingChangesSaveChanges": "Запазите промените",
@@ -275,6 +281,7 @@
   "History": "История",
   "Host": "Водещ",
   "Hostname": "Име на хост",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalHttpUrlHelpText": "Копирайте този URL адрес на вашите клиенти или кликнете, за да се абонирате, ако браузърът ви поддържа webcal",
   "ICalLink": "iCal връзка",
@@ -433,6 +440,7 @@
   "Password": "Парола",
   "Path": "Път",
   "Permissions": "Разрешения",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Моля, въведете поне 3 знака за търсене",
   "Port": "Порт",
   "PortHelpTextWarning": "Изисква рестартиране, за да влезе в сила",
   "PortNumber": "Номер на пристанище",
@@ -717,6 +725,5 @@
   "Year": "Година",
   "Yes": "Да",
   "YesCancel": "Да, Отказ",
-  "Yesterday": "Вчера",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Моля, въведете поне 3 знака за търсене"
+  "Yesterday": "Вчера"
 }

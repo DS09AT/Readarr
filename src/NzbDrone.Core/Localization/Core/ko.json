@@ -251,6 +251,7 @@
   "Enabled": "활성화",
   "EnabledHelpText": "출시 프로필을 활성화하려면 체크하세요",
   "EnableHelpText": "이 메타 데이터 유형에 대한 메타 데이터 파일 생성 활성화",
+  "EnableInteractiveSearch": "대화형 검색 활성화",
   "EnableRSS": "RSS 활성화",
   "EnableSSL": "SSL 활성화",
   "EnableSslHelpText": " 적용하려면 관리자로 실행을 다시 시작해야합니다.",
@@ -299,6 +300,11 @@
   "GrabReleaseMessageText": "{appName}는이 릴리스의 영화를 확인할 수 없습니다. {appName}는이 릴리스를 자동으로 가져 오지 못할 수 있습니다. '{0}'을 (를) 잡으시겠습니까?",
   "GrabSelected": "선택한 항목 잡아",
   "Group": "그룹",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg 기본 URL",
+  "GutenbergCatalogNotAvailable": "카탈로그를 사용할 수 없습니다. 카탈로그 업데이트가 완료될 때까지 기다려주세요.",
+  "GutenbergCatalogUnreachable": "Project Gutenberg 카탈로그에 접근할 수 없습니다. HTTP 상태: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg 카탈로그 업데이트",
+  "GutenbergConnectionFailed": "Project Gutenberg에 연결할 수 없습니다. 인터넷 연결을 확인하세요.",
   "HardlinkCopyFiles": "하드 링크 / 복사 파일",
   "HasPendingChangesNoChanges": "변경 사항 없음",
   "HasPendingChangesSaveChanges": "변경 사항을 저장하다",
@@ -308,6 +314,7 @@
   "History": "내역",
   "Host": "주최자",
   "Hostname": "호스트 이름",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal 피드",
   "ICalHttpUrlHelpText": "이 URL을 클라이언트에 복사하거나 브라우저가 webcal을 지원하는 경우 구독하려면 클릭하십시오.",
   "ICalLink": "iCal 링크",
@@ -484,6 +491,7 @@
   "PasswordConfirmation": "비밀번호 확인",
   "Path": "통로",
   "Permissions": "권한",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "검색하려면 최소 3자를 입력하세요",
   "Port": "포트",
   "PortHelpTextWarning": "적용하려면 다시 시작해야합니다.",
   "PortNumber": "포트 번호",
@@ -802,6 +810,5 @@
   "Year": "년",
   "Yes": "예",
   "YesCancel": "예, 취소합니다",
-  "Yesterday": "어제",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "검색하려면 최소 3자를 입력하세요"
+  "Yesterday": "어제"
 }

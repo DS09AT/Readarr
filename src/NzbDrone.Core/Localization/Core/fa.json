@@ -18,6 +18,13 @@
   "EnableAuthorSearchHelpText": "",
   "EnableBookSearch": "",
   "EnableBookSearchHelpText": "",
+  "EnableInteractiveSearch": "فعال کردن جستجوی تعاملی",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "به‌روزرسانی کاتالوگ پروژه گوتنبرگ",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
+  "HTTP": "HTTP",
   "InteractiveSearch": "",
   "ISBNLookup": "",
   "MetadataProvider": "",
@@ -25,10 +32,10 @@
   "MetadataProviderPriorityHelpText": "",
   "MetadataProviders": "",
   "MetadataProvidersSettings": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "لطفاً حداقل 3 کاراکتر برای جستجو وارد کنید",
   "Torrents": "تورنت ها",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
   "UnableToLoadMetadataProviders": "",
-  "Usenet": "Usenet",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "لطفاً حداقل 3 کاراکتر برای جستجو وارد کنید"
+  "Usenet": "Usenet"
 }

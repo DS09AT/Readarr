@@ -198,6 +198,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Importer automatisk afsluttede downloads fra downloadklienten",
   "Enabled": "Aktiveret",
   "EnableHelpText": "Aktivér oprettelse af metadatafiler for denne metadatatype",
+  "EnableInteractiveSearch": "Aktivér interaktiv søgning",
   "EnableRSS": "Aktivér RSS",
   "EnableSSL": "Aktivér SSL",
   "EnableSslHelpText": " Kræver genstart, der kører som administrator for at træde i kraft",
@@ -242,6 +243,11 @@
   "GrabReleaseMessageText": "{appName} var ikke i stand til at bestemme, hvilken film denne udgivelse var til. {appName} kan muligvis ikke automatisk importere denne udgivelse. Vil du hente '{0}'?",
   "GrabSelected": "Greb Valgt",
   "Group": "Gruppe",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base-URL",
+  "GutenbergCatalogNotAvailable": "Kataloget er ikke tilgængeligt. Vent til katalogopdateringen er fuldført.",
+  "GutenbergCatalogUnreachable": "Kan ikke nå Project Gutenberg-kataloget. HTTP-status: {0}",
+  "GutenbergCatalogUpdateCommand": "Opdater Project Gutenberg-katalog",
+  "GutenbergConnectionFailed": "Kan ikke oprette forbindelse til Project Gutenberg. Tjek din internetforbindelse.",
   "HardlinkCopyFiles": "Hardlink/Kopir Filer",
   "HasPendingChangesNoChanges": "Ingen ændringer",
   "HasPendingChangesSaveChanges": "Gem ændringer",
@@ -251,6 +257,7 @@
   "History": "Historie",
   "Host": "Vært",
   "Hostname": "Værtsnavn",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal-feed",
   "ICalHttpUrlHelpText": "Kopier denne URL til dine klienter eller klik for at abonnere, hvis din browser understøtter webcal",
   "ICalLink": "iCal-link",
@@ -406,6 +413,7 @@
   "Password": "Adgangskode",
   "Path": "Sti",
   "Permissions": "Tilladelser",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Indtast venligst mindst 3 tegn for at søge",
   "Port": "Havn",
   "PortHelpTextWarning": "Kræver genstart for at træde i kraft",
   "PortNumber": "Portnummer",
@@ -693,6 +701,5 @@
   "Year": "År",
   "Yes": "Ja",
   "YesCancel": "Ja, Annuller",
-  "Yesterday": "I går",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Indtast venligst mindst 3 tegn for at søge"
+  "Yesterday": "I går"
 }

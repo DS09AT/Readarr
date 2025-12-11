@@ -203,6 +203,7 @@
   "EnableCompletedDownloadHandlingHelpText": "ייבא אוטומטית הורדות שהושלמו מלקוח ההורדות",
   "Enabled": "מופעל",
   "EnableHelpText": "אפשר יצירת קובץ מטא-נתונים עבור סוג מטא-נתונים זה",
+  "EnableInteractiveSearch": "הפעל חיפוש אינטראקטיבי",
   "EnableRSS": "אפשר RSS",
   "EnableSSL": "אפשר SSL",
   "EnableSslHelpText": " דרוש הפעלה מחדש כמנהל כדי להיכנס לתוקף",
@@ -247,6 +248,11 @@
   "GrabReleaseMessageText": "רדאר לא הצליח לקבוע לאיזה סרט הסרט הזה נועד. ייתכן ש- {appName} לא תוכל לייבא גרסה זו באופן אוטומטי. האם אתה רוצה לתפוס את '{0}'?",
   "GrabSelected": "תפוס נבחר",
   "Group": "קְבוּצָה",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "עדכן קטלוג Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "קישור קשיח / העתק קבצים",
   "HasPendingChangesNoChanges": "אין שינויים",
   "HasPendingChangesSaveChanges": "שמור שינויים",
@@ -256,6 +262,7 @@
   "History": "הִיסטוֹרִיָה",
   "Host": "מנחה",
   "Hostname": "שם מארח",
+  "HTTP": "HTTP",
   "ICalFeed": "עדכון iCal",
   "ICalHttpUrlHelpText": "העתק כתובת URL זו ללקוחות שלך או לחץ כדי להירשם אם הדפדפן שלך תומך ב- webcal",
   "ICalLink": "קישור ל- iCal",
@@ -416,6 +423,7 @@
   "Password": "סיסמה",
   "Path": "נָתִיב",
   "Permissions": "אישורים",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "נא להזין לפחות 3 תווים לחיפוש",
   "Port": "נמל",
   "PortHelpTextWarning": "נדרש הפעלה מחדש כדי להיכנס לתוקף",
   "PortNumber": "מספר יציאה",
@@ -709,6 +717,5 @@
   "Year": "שָׁנָה",
   "Yes": "כן",
   "YesCancel": "כן, בטל",
-  "Yesterday": "אתמול",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "נא להזין לפחות 3 תווים לחיפוש"
+  "Yesterday": "אתמול"
 }

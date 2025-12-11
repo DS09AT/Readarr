@@ -355,11 +355,21 @@ namespace NzbDrone.Core.Parser
 
                 simpleTitle = CleanTorrentSuffixRegex.Replace(simpleTitle);
 
-                var bestBook = books
-                    .OrderByDescending(x => simpleTitle.FuzzyMatch(x.Editions.Value.Single(x => x.Monitored).Title, wordDelimiters: WordDelimiters))
-                    .First()
-                    .Editions.Value
-                    .Single(x => x.Monitored);
+                // Select a monitored edition if available, otherwise fallback to the first available edition to avoid Sequence contains no elements
+                var bestBookEdition = books
+                    .Select(b => new
+                    {
+                        Book = b,
+                        Edition = b.Editions.Value.FirstOrDefault(e => e.Monitored) ?? b.Editions.Value.FirstOrDefault()
+                    })
+                    .Where(x => x.Edition != null)
+                    .OrderByDescending(x => simpleTitle.FuzzyMatch(x.Edition.Title, wordDelimiters: WordDelimiters))
+                    .FirstOrDefault()?.Edition;
+
+                if (bestBookEdition == null)
+                {
+                    return null;
+                }
 
                 var foundAuthor = GetTitleFuzzy(simpleTitle, authorName, out var remainder);
 
@@ -368,11 +378,11 @@ namespace NzbDrone.Core.Parser
                     foundAuthor = GetTitleFuzzy(simpleTitle, authorName.ToLastFirst(), out remainder);
                 }
 
-                var foundBook = GetTitleFuzzy(remainder, bestBook.Title, out _);
+                var foundBook = GetTitleFuzzy(remainder, bestBookEdition.Title, out _);
 
                 if (foundBook == null)
                 {
-                    foundBook = GetTitleFuzzy(remainder, bestBook.Title.SplitBookTitle(authorName).Item1, out _);
+                    foundBook = GetTitleFuzzy(remainder, bestBookEdition.Title.SplitBookTitle(authorName).Item1, out _);
                 }
 
                 Logger.Trace($"Found {foundAuthor} - {foundBook} with fuzzy parser");
@@ -709,11 +719,10 @@ namespace NzbDrone.Core.Parser
 
         private static ParsedTrackInfo ParseMatchMusicCollection(MatchCollection matchCollection)
         {
-            var authorName = matchCollection[0].Groups["author"].Value./*Removed for cases like Will.I.Am Replace('.', ' ').*/Replace('_', ' ');
+            var authorName = matchCollection[0].Groups["author"].Value.Replace('_', ' ');
             authorName = RequestInfoRegex.Replace(authorName, "").Trim(' ');
 
-            // Coppied from Radarr (https://github.com/Radarr/Radarr/blob/develop/src/NzbDrone.Core/Parser/Parser.cs)
-            // TODO: Split into separate method and write unit tests for.
+            // Handle acronyms in author names (e.g., Will.I.Am)
             var parts = authorName.Split('.');
             authorName = "";
             var n = 0;

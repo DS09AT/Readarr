@@ -348,6 +348,7 @@
   "Enabled": "Engedélyezés",
   "EnabledHelpText": "Jelöljd be a kiadási profil engedélyezéséhez",
   "EnableHelpText": "Metaadatfájl létrehozásának engedélyezése ehhez a metaadattípushoz",
+  "EnableInteractiveSearch": "Interaktív keresés engedélyezése",
   "EnableProfile": "Profil engedélyezése",
   "EnableRSS": "RSS Engedélyezése",
   "EnableRssHelpText": "Akkor használatos, amikor a {appName} rendszeresen keres kiadásokat az RSS Sync segítségével",
@@ -415,6 +416,11 @@
   "GrabReleaseMessageText": "Readarr nem tudta meghatározni, hogy melyik filmhez készült ez a kiadás. Lehet, hogy a Readarr nem tudja automatikusan importálni ezt a kiadást. Meg szeretnéd ragadni a (z) „{0}”-t?",
   "GrabSelected": "Kiválasztott Megfogása",
   "Group": "Csoport",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg katalógus frissítése",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlinkelés/Fájl(ok) Másolása",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Nincsenek monitorozott könyvek ehhez a szerzőhöz",
   "HasPendingChangesNoChanges": "Nincsenek változások",
@@ -427,6 +433,7 @@
   "Host": "Hoszt",
   "HostHelpText": "Calibre tartalomszerver gazdagép",
   "Hostname": "Hosztnév",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal-Feed",
   "ICalHttpUrlHelpText": "Másolja ezt az URL-t az klienseihez, vagy kattintson a feliratkozáshoz, ha böngészője támogatja a webcal-t",
   "ICalLink": "iCal Link(ek)",
@@ -705,6 +712,7 @@
   "PathHelpText": "A könyvtáradat tartalmazó gyökérmappa",
   "PathHelpTextWarning": "Ennek különböznie kell attól a könyvtártól, ahová a letöltési kliens fájlokat tesz",
   "Permissions": "Engedélyek",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Kérjük, adjon meg legalább 3 karaktert a kereséshez",
   "Port": "Port",
   "PortHelpText": "Calibre tartalomszerver portja",
   "PortHelpTextWarning": "Újraindítás szükséges a hatálybalépéshez",
@@ -1107,6 +1115,5 @@
   "Year": "Év",
   "Yes": "Igen",
   "YesCancel": "Igen, elvet",
-  "Yesterday": "Tegnap",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Kérjük, adjon meg legalább 3 karaktert a kereséshez"
+  "Yesterday": "Tegnap"
 }

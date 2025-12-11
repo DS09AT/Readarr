@@ -356,6 +356,7 @@
   "Enabled": "Activé",
   "EnabledHelpText": "Cochez pour activer le profil de version",
   "EnableHelpText": "Activer la création de fichiers de métadonnées pour ce type de métadonnées",
+  "EnableInteractiveSearch": "Activer la recherche interactive",
   "EnableProfile": "Activer profil",
   "EnableRSS": "Activer le RSS",
   "EnableRssHelpText": "Sera utilisé lorsque Readarr recherche périodiquement des sorties via la synchronisation RSS",
@@ -424,6 +425,11 @@
   "GrabReleaseMessageText": "Readarr n'a pas été en mesure de déterminer à quel auteur et livre correspondait cette version. Readarr peut être incapable d'importer automatiquement cette version. Voulez-vous récupérer '{0}' ?",
   "GrabSelected": "Saisir la sélection",
   "Group": "Groupe",
+  "GutenbergBaseUrlHelpText": "URL de base de Project Gutenberg",
+  "GutenbergCatalogNotAvailable": "Catalogue non disponible. Veuillez attendre la fin de la mise à jour du catalogue.",
+  "GutenbergCatalogUnreachable": "Impossible d'accéder au catalogue Project Gutenberg. État HTTP : {0}",
+  "GutenbergCatalogUpdateCommand": "Mettre à jour le catalogue Project Gutenberg",
+  "GutenbergConnectionFailed": "Impossible de se connecter à Project Gutenberg. Veuillez vérifier votre connexion Internet.",
   "HardlinkCopyFiles": "Lien physique/Copie de fichiers",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Aucun livre surveillé pour cet auteur",
   "HasPendingChangesNoChanges": "Aucune modification",
@@ -436,6 +442,7 @@
   "Host": "Hôte",
   "HostHelpText": "Hôte du serveur de contenu Calibre",
   "Hostname": "Nom d'hôte",
+  "HTTP": "HTTP",
   "ICalFeed": "Flux iCal",
   "ICalHttpUrlHelpText": "Copiez cette URL dans votre/vos client(s) ou cliquez pour abonner si votre navigateur est compatible avec webcal",
   "ICalLink": "Lien iCal",
@@ -733,6 +740,7 @@
   "PathHelpText": "Dossier racine contenant votre bibliothèque musicale",
   "PathHelpTextWarning": "Cela doit être différent du répertoire dans lequel votre client de téléchargement place les fichiers",
   "Permissions": "Autorisations",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Veuillez entrer au moins 3 caractères pour rechercher",
   "Port": "Port",
   "PortHelpText": "Port du serveur de contenu Calibre",
   "PortHelpTextWarning": "Nécessite un redémarrage pour prendre effet",
@@ -1140,6 +1148,5 @@
   "Year": "Année",
   "Yes": "Oui",
   "YesCancel": "Oui, annuler",
-  "Yesterday": "Hier",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Veuillez entrer au moins 3 caractères pour rechercher"
+  "Yesterday": "Hier"
 }

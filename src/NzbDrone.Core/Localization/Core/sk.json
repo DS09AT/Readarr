@@ -139,6 +139,7 @@
   "EnableBookSearch": "",
   "EnableBookSearchHelpText": "",
   "Enabled": "Povoliť",
+  "EnableInteractiveSearch": "Povoliť interaktívne vyhľadávanie",
   "EnableSslHelpText": " Vyžaduje sa reštart s oprávnením správcu, aby sa zmeny prejavili",
   "Events": "Udalosť",
   "ExportCustomFormat": "Pridať vlastný formát",
@@ -146,8 +147,14 @@
   "Filters": "Filtre",
   "Formats": "Formát",
   "Grab": "Grab",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Aktualizovať katalóg Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "Host": "Hostiteľ",
   "Hostname": "Názov hostiteľa",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalLink": "iCal Link",
   "IconTooltip": "Naplánované",
@@ -174,6 +181,7 @@
   "MetadataProvidersSettings": "",
   "New": "Nový",
   "Password": "Heslo",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Zadajte prosím aspoň 3 znaky na vyhľadávanie",
   "Port": "Port",
   "PortHelpTextWarning": "Vyžaduje sa reštart, aby sa zmeny prejavili",
   "Protocol": "Protokol",
@@ -225,6 +233,5 @@
   "URLBase": "Základ URL",
   "UrlBaseHelpTextWarning": "Vyžaduje sa reštart, aby sa zmeny prejavili",
   "Usenet": "Usenet",
-  "Username": "Používateľské meno",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Zadajte prosím aspoň 3 znaky na vyhľadávanie"
+  "Username": "Používateľské meno"
 }

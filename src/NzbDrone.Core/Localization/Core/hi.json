@@ -187,6 +187,7 @@
   "EnableCompletedDownloadHandlingHelpText": "डाउनलोड क्लाइंट से स्वचालित रूप से पूर्ण डाउनलोड आयात करें",
   "Enabled": "सक्रिय",
   "EnableHelpText": "इस मेटाडेटा प्रकार के लिए मेटाडेटा फ़ाइल निर्माण सक्षम करें",
+  "EnableInteractiveSearch": "इंटरैक्टिव खोज सक्षम करें",
   "EnableRSS": "आरएसएस को सक्षम करें",
   "EnableSSL": "SSL सक्षम करें",
   "EnableSslHelpText": " प्रभावी होने के लिए प्रशासक के रूप में पुनः आरंभ करने की आवश्यकता है",
@@ -230,6 +231,11 @@
   "GrabReleaseMessageText": "रेडर यह निर्धारित करने में असमर्थ था कि यह फिल्म किस फिल्म के लिए है। {appName} इस रिलीज़ को स्वचालित रूप से आयात करने में असमर्थ हो सकता है। क्या आप '{0}' को हथियाना चाहते हैं?",
   "GrabSelected": "पकड़ो पकड़ो",
   "Group": "समूह",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "प्रोजेक्ट गुटेनबर्ग कैटलॉग अपडेट करें",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "हार्डलिंक / कॉपी फाइलें",
   "HasPendingChangesNoChanges": "कोई बदलाव नहीं",
   "HasPendingChangesSaveChanges": "परिवर्तनों को सुरक्षित करें",
@@ -239,6 +245,7 @@
   "History": "इतिहास",
   "Host": "मेज़बान",
   "Hostname": "होस्ट का नाम",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal फ़ीड",
   "ICalHttpUrlHelpText": "इस URL को अपने क्लाइंट को कॉपी करें या यदि आपका ब्राउज़र वेबकॉल का समर्थन करता है तो सदस्यता के लिए क्लिक करें",
   "ICalLink": "iCal लिंक",
@@ -391,6 +398,7 @@
   "Password": "कुंजिका",
   "Path": "पथ",
   "Permissions": "अनुमतियां",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "खोजने के लिए कृपया कम से कम 3 अक्षर दर्ज करें",
   "Port": "बंदरगाह",
   "PortHelpTextWarning": "प्रभावी करने के लिए पुनरारंभ की आवश्यकता है",
   "PortNumber": "पोर्ट संख्या",
@@ -672,6 +680,5 @@
   "Year": "साल",
   "Yes": "हाँ",
   "YesCancel": "हाँ, रद्द करें",
-  "Yesterday": "बिता कल",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "खोजने के लिए कृपया कम से कम 3 अक्षर दर्ज करें"
+  "Yesterday": "बिता कल"
 }

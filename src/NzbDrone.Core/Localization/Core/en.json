@@ -1,4 +1,4 @@
-﻿{
+{
   "20MinutesTwenty": "20 Minutes: {0}",
   "45MinutesFourtyFive": "45 Minutes: {0}",
   "60MinutesSixty": "60 Minutes: {0}",
@@ -358,6 +358,7 @@
   "Enabled": "Enabled",
   "EnabledHelpText": "Check to enable release profile",
   "EnableHelpText": "Enable metadata file creation for this metadata type",
+  "EnableInteractiveSearch": "Enable Interactive Search",
   "EnableProfile": "Enable Profile",
   "EnableRSS": "Enable RSS",
   "EnableRssHelpText": "Will be used when Readarr periodically looks for releases via RSS Sync",
@@ -426,6 +427,11 @@
   "GrabReleaseMessageText": "Readarr was unable to determine which author and book this release was for. Readarr may be unable to automatically import this release. Do you want to grab '{0}'?",
   "GrabSelected": "Grab Selected",
   "Group": "Group",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Update Project Gutenberg Catalog",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink/Copy Files",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "No monitored books for this author",
   "HasPendingChangesNoChanges": "No Changes",
@@ -438,6 +444,7 @@
   "Host": "Host",
   "HostHelpText": "Calibre content server host",
   "Hostname": "Hostname",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalHttpUrlHelpText": "Copy this URL to your client(s) or click to subscribe if your browser supports webcal",
   "ICalLink": "iCal Link",
@@ -735,6 +742,7 @@
   "PathHelpText": "Root Folder containing your book library",
   "PathHelpTextWarning": "This must be different to the directory where your download client puts files",
   "Permissions": "Permissions",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Please enter at least 3 characters to search",
   "Port": "Port",
   "PortHelpText": "Calibre content server port",
   "PortHelpTextWarning": "Requires restart to take effect",
@@ -1142,6 +1150,5 @@
   "Year": "Year",
   "Yes": "Yes",
   "YesCancel": "Yes, Cancel",
-  "Yesterday": "Yesterday",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Please enter at least 3 characters to search"
+  "Yesterday": "Yesterday"
 }

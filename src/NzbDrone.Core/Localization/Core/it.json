@@ -308,6 +308,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Importa automaticamente i download completati dal client di download",
   "Enabled": "Abilitato",
   "EnableHelpText": "Abilita la creazione del file di metadati per questo tipo di metadati",
+  "EnableInteractiveSearch": "Abilita ricerca interattiva",
   "EnableProfile": "Abilita Profilo",
   "EnableRSS": "Abilita RSS",
   "EnableSSL": "Abilita SSL",
@@ -367,6 +368,11 @@
   "GrabReleaseMessageText": "{appName} non è stato in grado di determinare a quale film si riferisce questa release. {appName} potrebbe non essere in grado di importarla automaticamente. Vuoi catturare '{0}'?",
   "GrabSelected": "Recupera selezione",
   "Group": "Gruppo",
+  "GutenbergBaseUrlHelpText": "URL base di Project Gutenberg",
+  "GutenbergCatalogNotAvailable": "Catalogo non disponibile. Attendere il completamento dell'aggiornamento del catalogo.",
+  "GutenbergCatalogUnreachable": "Impossibile raggiungere il catalogo di Project Gutenberg. Stato HTTP: {0}",
+  "GutenbergCatalogUpdateCommand": "Aggiorna catalogo Project Gutenberg",
+  "GutenbergConnectionFailed": "Impossibile connettersi a Project Gutenberg. Verificare la connessione Internet.",
   "HardlinkCopyFiles": "Hardlink/Copia Files",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Nessun libro monitorato per questo autore",
   "HasPendingChangesNoChanges": "Nessuna Modifica",
@@ -378,6 +384,7 @@
   "History": "Storia",
   "Host": "Host",
   "Hostname": "Nome Host",
+  "HTTP": "HTTP",
   "ICalFeed": "Feed iCal",
   "ICalHttpUrlHelpText": "Copia questo URL sul tuo client o clicca per sottoscrivere se il tuo browser supporta Webcal",
   "ICalLink": "Link iCal",
@@ -601,6 +608,7 @@
   "PastDays": "Giorni Scorsi",
   "Path": "Percorso",
   "Permissions": "Permessi",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Inserisci almeno 3 caratteri per cercare",
   "Port": "Porta",
   "PortHelpTextWarning": "Richiede il riavvio per avere effetti",
   "PortNumber": "Numero Porta",
@@ -937,6 +945,5 @@
   "Year": "Anno",
   "Yes": "Sì",
   "YesCancel": "Sì, Cancella",
-  "Yesterday": "Ieri",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Inserisci almeno 3 caratteri per cercare"
+  "Yesterday": "Ieri"
 }

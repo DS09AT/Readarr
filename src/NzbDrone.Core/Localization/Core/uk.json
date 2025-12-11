@@ -264,6 +264,7 @@
   "Enabled": "Увімкнено",
   "EnabledHelpText": "Установіть прапорець, щоб увімкнути профіль релізу",
   "EnableHelpText": "Увімкнути створення файлу метаданих для цього типу метаданих",
+  "EnableInteractiveSearch": "Увімкнути інтерактивний пошук",
   "EnableProfile": "Увімкнути профіль",
   "EnableRSS": "Увімкнути RSS",
   "EnableRssHelpText": "Використовуватиметься, коли {appName} періодично шукатиме випуски через RSS Sync",
@@ -315,6 +316,11 @@
   "GrabReleaseMessageText": "{appName} не зміг визначити, для якого фільму цей випуск. Можливо, {appName} не зможе автоматично імпортувати цей випуск. Ви хочете взяти '{0}'?",
   "GrabSelected": "Захопити вибране",
   "Group": "Група",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Оновити каталог Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Жорстке посилання/Копіювати файли",
   "HasPendingChangesNoChanges": "Жодних змін",
   "HasPendingChangesSaveChanges": "Зберегти зміни",
@@ -324,6 +330,7 @@
   "History": "Історія",
   "Host": "Хост",
   "Hostname": "Ім'я хоста",
+  "HTTP": "HTTP",
   "ICalFeed": "Канал iCal",
   "ICalHttpUrlHelpText": "Скопіюйте цю URL-адресу до своїх клієнтів або натисніть, щоб підписатися, якщо ваш браузер підтримує веб-канал",
   "ICalLink": "Посилання iCal",
@@ -534,6 +541,7 @@
   "PasswordConfirmation": "Підтвердження пароля",
   "Path": "Шлях",
   "Permissions": "Дозволи",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Будь ласка, введіть принаймні 3 символи для пошуку",
   "Port": "Порт",
   "PortHelpTextWarning": "Щоб набуло чинності, потрібно перезапустити",
   "PortNumber": "Номер порту",
@@ -880,6 +888,5 @@
   "Year": "Рік",
   "Yes": "Так",
   "YesCancel": "Так, скасувати",
-  "Yesterday": "Вчора",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Будь ласка, введіть принаймні 3 символи для пошуку"
+  "Yesterday": "Вчора"
 }

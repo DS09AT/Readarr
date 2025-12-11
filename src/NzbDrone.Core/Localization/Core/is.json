@@ -188,6 +188,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Flytja sjálfkrafa niður niðurhal frá niðurhalsþjóni",
   "Enabled": "Virkt",
   "EnableHelpText": "Virkja stofnun lýsigagna fyrir þessa gerð lýsigagna",
+  "EnableInteractiveSearch": "Virkja gagnvirka leit",
   "EnableRSS": "Virkja RSS",
   "EnableSSL": "Virkja SSL",
   "EnableSslHelpText": " Krefst endurræsingar sem stjórnandi til að taka gildi",
@@ -232,6 +233,11 @@
   "GrabReleaseMessageText": "{appName} gat ekki ákvarðað fyrir hvaða kvikmynd þessi útgáfa var gerð. {appName} gæti hugsanlega ekki flutt þessa útgáfu sjálfkrafa inn. Viltu grípa '{0}'?",
   "GrabSelected": "Grípa valið",
   "Group": "Hópur",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Uppfæra Project Gutenberg skrá",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink / afrita skrár",
   "HasPendingChangesNoChanges": "Engar breytingar",
   "HasPendingChangesSaveChanges": "Vista breytingar",
@@ -241,6 +247,7 @@
   "History": "Saga",
   "Host": "Gestgjafi",
   "Hostname": "Gestgjafanafn",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal straumur",
   "ICalHttpUrlHelpText": "Afritaðu þessa slóð til viðskiptavinar þíns eða smelltu til að gerast áskrifandi ef vafrinn þinn styður vefsíðu",
   "ICalLink": "iCal hlekkur",
@@ -393,6 +400,7 @@
   "Password": "Lykilorð",
   "Path": "Leið",
   "Permissions": "Heimildir",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vinsamlegast sláðu inn að minnsta kosti 3 stafi til að leita",
   "Port": "Höfn",
   "PortHelpTextWarning": "Krefst endurræsingar til að taka gildi",
   "PortNumber": "Portnúmer",
@@ -674,6 +682,5 @@
   "Year": "Ár",
   "Yes": "Já",
   "YesCancel": "Já, hætta við",
-  "Yesterday": "Í gær",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Vinsamlegast sláðu inn að minnsta kosti 3 stafi til að leita"
+  "Yesterday": "Í gær"
 }

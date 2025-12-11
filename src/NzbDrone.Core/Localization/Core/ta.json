@@ -10,6 +10,13 @@
   "EnableAuthorSearchHelpText": "",
   "EnableBookSearch": "",
   "EnableBookSearchHelpText": "",
+  "EnableInteractiveSearch": "ஊடாடும் தேடலை இயக்கு",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Project Gutenberg பட்டியலை புதுப்பிக்கவும்",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
+  "HTTP": "HTTP",
   "InteractiveSearch": "",
   "ISBNLookup": "",
   "MetadataProvider": "",
@@ -17,8 +24,8 @@
   "MetadataProviderPriorityHelpText": "",
   "MetadataProviders": "",
   "MetadataProvidersSettings": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "தேட குறைந்தது 3 எழுத்துக்களை உள்ளிடவும்",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": "",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "தேட குறைந்தது 3 எழுத்துக்களை உள்ளிடவும்"
+  "UnableToLoadMetadataProviders": ""
 }

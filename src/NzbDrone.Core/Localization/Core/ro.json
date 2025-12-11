@@ -202,6 +202,7 @@
   "EnableCompletedDownloadHandlingHelpText": "Importați automat descărcările finalizate de la clientul de descărcare",
   "Enabled": "Activat",
   "EnableHelpText": "Activați crearea fișierului de metadate pentru acest tip de metadate",
+  "EnableInteractiveSearch": "Activează căutarea interactivă",
   "EnableRSS": "Activați RSS",
   "EnableSSL": "Activați SSL",
   "EnableSslHelpText": " Necesită repornirea în funcție de administrator pentru a intra în vigoare",
@@ -246,6 +247,11 @@
   "GrabReleaseMessageText": "{appName} nu a putut stabili pentru ce film a fost lansată această lansare. Este posibil ca {appName} să nu poată importa automat această versiune. Doriți să luați „{0}”?",
   "GrabSelected": "Prinderea selectată",
   "Group": "grup",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Actualizează catalogul Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
   "HardlinkCopyFiles": "Hardlink/Copiază Fișiere",
   "HasPendingChangesNoChanges": "Nicio Modificare",
   "HasPendingChangesSaveChanges": "Salvează modificările",
@@ -255,6 +261,7 @@
   "History": "Istoric",
   "Host": "Gazdă",
   "Hostname": "Numele gazdei",
+  "HTTP": "HTTP",
   "ICalFeed": "Feed iCal",
   "ICalHttpUrlHelpText": "Copiați această adresă URL către clienții dvs. sau faceți clic pentru a vă abona dacă browserul dvs. acceptă webcal",
   "ICalLink": "Legătură iCal",
@@ -409,6 +416,7 @@
   "Password": "Parola",
   "Path": "Cale",
   "Permissions": "Permisiuni",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Vă rugăm să introduceți cel puțin 3 caractere pentru a căuta",
   "Port": "Port",
   "PortHelpTextWarning": "Necesită repornire pentru a intra în vigoare",
   "PortNumber": "Număr port",
@@ -694,6 +702,5 @@
   "Year": "An",
   "Yes": "Da",
   "YesCancel": "Da, Anulați",
-  "Yesterday": "Ieri",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Vă rugăm să introduceți cel puțin 3 caractere pentru a căuta"
+  "Yesterday": "Ieri"
 }

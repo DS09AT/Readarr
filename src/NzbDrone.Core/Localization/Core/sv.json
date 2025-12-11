@@ -266,6 +266,7 @@
   "Enabled": "Aktiverad",
   "EnabledHelpText": "Kryssa i för att aktivera utgåveprofil",
   "EnableHelpText": "Aktivera metadatafilskapande för denna metadatatyp",
+  "EnableInteractiveSearch": "Aktivera interaktiv sökning",
   "EnableProfile": "Aktivera Profil",
   "EnableRSS": "Aktivera RSS",
   "EnableSSL": "Aktivera SSL",
@@ -328,6 +329,11 @@
   "GrabReleaseMessageText": "Readarr kunde inte avgöra vilken författare och bok denna utgåva tillhör. Readarr kanske inte kan importera den här utgåvan automatiskt. Vill du ta hämta \"{0}\"?",
   "GrabSelected": "Hämta markerade",
   "Group": "Grupp",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg bas-URL",
+  "GutenbergCatalogNotAvailable": "Katalogen är inte tillgänglig. Vänta tills kataloguppdateringen är klar.",
+  "GutenbergCatalogUnreachable": "Det går inte att nå Project Gutenberg-katalogen. HTTP-status: {0}",
+  "GutenbergCatalogUpdateCommand": "Uppdatera Project Gutenberg-katalog",
+  "GutenbergConnectionFailed": "Det går inte att ansluta till Project Gutenberg. Kontrollera din internetanslutning.",
   "HardlinkCopyFiles": "Hardlink/kopiera filer",
   "HasMonitoredBooksNoMonitoredBooksForThisAuthor": "Inga bevakade böcker av den här författaren",
   "HasPendingChangesNoChanges": "Inga Ändringar",
@@ -340,6 +346,7 @@
   "Host": "Värd",
   "HostHelpText": "Calibre innehåll servervärd",
   "Hostname": "Värdnamn",
+  "HTTP": "HTTP",
   "ICalFeed": "iCal Feed",
   "ICalHttpUrlHelpText": "Kopiera denna URL till din klient(er) eller klicka på prenumerera om din webbläsare stödjer webcal",
   "ICalLink": "iCal-länk",
@@ -565,6 +572,7 @@
   "PathHelpText": "Rotmappen innehåller ditt bok-bibliotek",
   "PathHelpTextWarning": "Det här måste vara en annan mapp-plats där dina nedladdningsklienter stoppar sina filer",
   "Permissions": "Behörigheter",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Ange minst 3 tecken för att söka",
   "Port": "Port",
   "PortHelpText": "Calibre innehållsserver port",
   "PortHelpTextWarning": "Kräver omstart för att träda i kraft",
@@ -904,6 +912,5 @@
   "Year": "År",
   "Yes": "Ja",
   "YesCancel": "Ja, avbryt",
-  "Yesterday": "Igår",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Ange minst 3 tecken för att söka"
+  "Yesterday": "Igår"
 }

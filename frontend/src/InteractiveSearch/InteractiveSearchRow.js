@@ -221,9 +221,10 @@ class InteractiveSearchRow extends Component {
                   <ul>
                     {
                       rejections.map((rejection, index) => {
+                        const text = typeof rejection === 'string' ? rejection : (rejection && rejection.reason) || '';
                         return (
                           <li key={index}>
-                            {rejection}
+                            {text}
                           </li>
                         );
                       })

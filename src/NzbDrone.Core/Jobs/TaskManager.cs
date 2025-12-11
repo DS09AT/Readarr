@@ -133,10 +133,18 @@ namespace NzbDrone.Core.Jobs
 
             foreach (var job in currentTasks)
             {
-                if (!defaultTasks.Any(c => c.TypeName == job.TypeName))
+                // Don't delete Gutenberg task, it's managed by GutenbergTaskManager
+                var isGutenbergTask = job.TypeName == typeof(Indexers.Gutenberg.Commands.GutenbergCatalogUpdateCommand).FullName;
+
+                if (!defaultTasks.Any(c => c.TypeName == job.TypeName) && !isGutenbergTask)
                 {
                     _logger.Trace("Removing job from database '{0}'", job.TypeName);
                     _scheduledTaskRepository.Delete(job.Id);
+                }
+                else if (!defaultTasks.Any(c => c.TypeName == job.TypeName))
+                {
+                    // Preserve non-default tasks (e.g., Gutenberg) in cache so they appear after restart
+                    _cache.Set(job.TypeName, job);
                 }
             }
 

@@ -10,6 +10,13 @@
   "EnableAuthorSearchHelpText": "",
   "EnableBookSearch": "",
   "EnableBookSearchHelpText": "",
+  "EnableInteractiveSearch": "Habilitar búsqueda interactiva",
+  "GutenbergBaseUrlHelpText": "Project Gutenberg base URL",
+  "GutenbergCatalogNotAvailable": "Catalog not available. Please wait for catalog update to complete.",
+  "GutenbergCatalogUnreachable": "Unable to reach Project Gutenberg catalog. HTTP Status: {0}",
+  "GutenbergCatalogUpdateCommand": "Actualizar catálogo de Project Gutenberg",
+  "GutenbergConnectionFailed": "Unable to connect to Project Gutenberg. Please check your internet connection.",
+  "HTTP": "HTTP",
   "InteractiveSearch": "",
   "ISBNLookup": "",
   "MetadataProvider": "",
@@ -17,8 +24,8 @@
   "MetadataProviderPriorityHelpText": "",
   "MetadataProviders": "",
   "MetadataProvidersSettings": "",
+  "PleaseEnterAtLeastThreeCharactersToSearch": "Por favor, introduce al menos 3 caracteres para buscar",
   "UnableToAddNewMetadataProviderPleaseTryAgain": "",
   "UnableToLoadMetadataProvider": "",
-  "UnableToLoadMetadataProviders": "",
-  "PleaseEnterAtLeastThreeCharactersToSearch": "Por favor, introduce al menos 3 caracteres para buscar"
+  "UnableToLoadMetadataProviders": ""
 }
