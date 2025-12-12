@@ -1,60 +1,42 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useEffect, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearInteractiveImportBookFiles, fetchInteractiveImportBookFiles } from 'Store/Actions/interactiveImportActions';
 import createClientSideCollectionSelector from 'Store/Selectors/createClientSideCollectionSelector';
 import ConfirmImportModalContent from './ConfirmImportModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
-    createClientSideCollectionSelector('interactiveImport.bookFiles'),
-    (bookFiles) => {
-      return bookFiles;
-    }
-  );
-}
-
-const mapDispatchToProps = {
-  fetchInteractiveImportBookFiles,
-  clearInteractiveImportBookFiles
+const makeSelector = () => {
+  return createClientSideCollectionSelector('interactiveImport.bookFiles');
 };
 
-class ConfirmImportModalContentConnector extends Component {
+function ConfirmImportModalContentConnector({ books, ...otherProps }) {
+  const dispatch = useDispatch();
 
-  //
-  // Lifecycle
+  const selector = useMemo(makeSelector, []);
 
-  componentDidMount() {
-    const {
-      books
-    } = this.props;
+  const stateProps = useSelector(selector);
 
-    this.props.fetchInteractiveImportBookFiles({ bookId: books.map((x) => x.id) });
-  }
+  useEffect(() => {
+    const bookIds = books.map((x) => x.id);
+    dispatch(fetchInteractiveImportBookFiles({ bookId: bookIds }));
 
-  componentWillUnmount() {
-    this.props.clearInteractiveImportBookFiles();
-  }
+    return () => {
+      dispatch(clearInteractiveImportBookFiles());
+    };
+  }, [dispatch, books]);
 
-  //
-  // Render
-
-  render() {
-    return (
-      <ConfirmImportModalContent
-        {...this.props}
-      />
-    );
-  }
+  return (
+    <ConfirmImportModalContent
+      {...stateProps}
+      books={books}
+      {...otherProps}
+    />
+  );
 }
 
 ConfirmImportModalContentConnector.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  fetchInteractiveImportBookFiles: PropTypes.func.isRequired,
-  clearInteractiveImportBookFiles: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(ConfirmImportModalContentConnector);
+export default ConfirmImportModalContentConnector;

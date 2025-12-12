@@ -1,235 +1,177 @@
+import {
+  arrow,
+  autoUpdate,
+  flip,
+  FloatingPortal,
+  offset,
+  shift,
+  size,
+  useClick,
+  useDismiss,
+  useFloating,
+  useHover,
+  useInteractions,
+  useRole
+} from '@floating-ui/react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Manager, Popper, Reference } from 'react-popper';
-import Portal from 'Components/Portal';
+import React, { useRef, useState } from 'react';
 import { kinds, tooltipPositions } from 'Helpers/Props';
 import dimensions from 'Styles/Variables/dimensions';
 import { isMobile as isMobileUtil } from 'Utilities/browser';
 import styles from './Tooltip.css';
 
-let maxWidth = null;
+let maxTooltipWidth = null;
 
 function getMaxWidth() {
   const windowWidth = window.innerWidth;
 
   if (windowWidth >= parseInt(dimensions.breakpointLarge)) {
-    maxWidth = 800;
+    maxTooltipWidth = 800;
   } else if (windowWidth >= parseInt(dimensions.breakpointMedium)) {
-    maxWidth = 650;
+    maxTooltipWidth = 650;
   } else if (windowWidth >= parseInt(dimensions.breakpointSmall)) {
-    maxWidth = 500;
+    maxTooltipWidth = 500;
   } else {
-    maxWidth = 450;
+    maxTooltipWidth = 450;
   }
 
-  return maxWidth;
+  return maxTooltipWidth;
 }
 
-class Tooltip extends Component {
+function Tooltip(props) {
+  const {
+    className,
+    bodyClassName = styles.body,
+    anchor,
+    tooltip,
+    kind = kinds.DEFAULT,
+    position = tooltipPositions.TOP,
+    canFlip = false
+  } = props;
 
-  //
-  // Lifecycle
+  const [isOpen, setIsOpen] = useState(false);
+  const arrowRef = useRef(null);
 
-  constructor(props, context) {
-    super(props, context);
+  const { refs, floatingStyles, context, placement, middlewareData } = useFloating({
+    open: isOpen,
+    onOpenChange: setIsOpen,
+    placement: position,
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset(10),
+      canFlip && flip(),
+      shift(),
+      size({
+        apply({ availableWidth, availableHeight, elements }) {
+          const currentMaxWidth = maxTooltipWidth || getMaxWidth();
+          const finalMaxWidth = Math.min(currentMaxWidth, availableWidth - 20);
 
-    this._scheduleUpdate = null;
-    this._closeTimeout = null;
-    this._maxWidth = maxWidth || getMaxWidth();
+          Object.assign(elements.floating.style, {
+            maxWidth: `${finalMaxWidth}px`,
+            maxHeight: `${availableHeight - 20}px`
+          });
+        }
+      }),
+      arrow({
+        element: arrowRef
+      })
+    ]
+  });
 
-    this.state = {
-      isOpen: false
-    };
-  }
+  const hover = useHover(context, {
+    enabled: !isMobileUtil(),
+    delay: { open: 0, close: 100 },
+    move: false
+  });
+  const click = useClick(context, {
+    enabled: isMobileUtil()
+  });
+  const dismiss = useDismiss(context);
+  const role = useRole(context, { role: 'tooltip' });
 
-  componentDidUpdate() {
-    if (this._scheduleUpdate && this.state.isOpen) {
-      this._scheduleUpdate();
-    }
-  }
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    hover,
+    click,
+    dismiss,
+    role
+  ]);
 
-  componentWillUnmount() {
-    if (this._closeTimeout) {
-      this._closeTimeout = clearTimeout(this._closeTimeout);
-    }
-  }
+  const popperPlacement = placement ? placement.split('-')[0] : position;
+  const vertical = popperPlacement === 'top' || popperPlacement === 'bottom';
 
-  //
-  // Control
+  // Calculate arrow position
+  const { x: arrowX, y: arrowY } = middlewareData.arrow || {};
+  const staticSide = {
+    top: 'bottom',
+    right: 'left',
+    bottom: 'top',
+    left: 'right'
+  }[popperPlacement];
 
-  computeMaxSize = (data) => {
-    const {
-      top,
-      right,
-      bottom,
-      left
-    } = data.offsets.reference;
-
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    if ((/^top/).test(data.placement)) {
-      data.styles.maxHeight = top - 20;
-    } else if ((/^bottom/).test(data.placement)) {
-      data.styles.maxHeight = windowHeight - bottom - 20;
-    } else if ((/^right/).test(data.placement)) {
-      data.styles.maxWidth = Math.min(this._maxWidth, windowWidth - right - 20);
-      data.styles.maxHeight = top - 20;
-    } else {
-      data.styles.maxWidth = Math.min(this._maxWidth, left - 20);
-      data.styles.maxHeight = top - 20;
-    }
-
-    return data;
+  const arrowStyle = {
+    left: arrowX != null ? `${arrowX}px` : '',
+    top: arrowY != null ? `${arrowY}px` : '',
+    right: '',
+    bottom: '',
+    [staticSide]: '-4px'
   };
 
-  //
-  // Listeners
-
-  onMeasure = ({ width }) => {
-    this.setState({ width });
-  };
-
-  onClick = () => {
-    if (isMobileUtil()) {
-      this.setState({ isOpen: !this.state.isOpen });
-    }
-  };
-
-  onMouseEnter = () => {
-    if (this._closeTimeout) {
-      this._closeTimeout = clearTimeout(this._closeTimeout);
-    }
-
-    this.setState({ isOpen: true });
-  };
-
-  onMouseLeave = () => {
-    this._closeTimeout = setTimeout(() => {
-      this.setState({ isOpen: false });
-    }, 100);
-  };
-
-  //
-  // Render
-
-  render() {
-    const {
-      className,
-      bodyClassName,
-      anchor,
-      tooltip,
-      kind,
-      position,
-      canFlip
-    } = this.props;
-
-    return (
-      <Manager>
-        <Reference>
-          {({ ref }) => (
-            <span
-              ref={ref}
-              className={className}
-              onClick={this.onClick}
-              onMouseEnter={this.onMouseEnter}
-              onMouseLeave={this.onMouseLeave}
-            >
-              {anchor}
-            </span>
-          )}
-        </Reference>
-
-        <Portal>
-          <Popper
-            placement={position}
-            // Disable events to improve performance when many tooltips
-            // are shown (Quality Definitions for example).
-            eventsEnabled={false}
-            modifiers={{
-              computeMaxHeight: {
-                order: 851,
-                enabled: true,
-                fn: this.computeMaxSize
-              },
-              preventOverflow: {
-                // Fixes positioning for tooltips in the queue
-                // and likely others.
-                escapeWithReference: false
-              },
-              flip: {
-                enabled: canFlip
-              }
-            }}
+  return (
+    <>
+      <span
+        ref={refs.setReference}
+        className={className}
+        {...getReferenceProps()}
+      >
+        {anchor}
+      </span>
+      {isOpen && (
+        <FloatingPortal id="portal-root">
+          <div
+            ref={refs.setFloating}
+            className={classNames(
+              styles.tooltipContainer,
+              vertical ? styles.verticalContainer : styles.horizontalContainer
+            )}
+            style={floatingStyles}
+            {...getFloatingProps()}
           >
-            {({ ref, style, placement, arrowProps, scheduleUpdate }) => {
-              this._scheduleUpdate = scheduleUpdate;
-
-              const popperPlacement = placement ? placement.split('-')[0] : position;
-              const vertical = popperPlacement === 'top' || popperPlacement === 'bottom';
-
-              return (
-                <div
-                  ref={ref}
-                  className={classNames(
-                    styles.tooltipContainer,
-                    vertical ? styles.verticalContainer : styles.horizontalContainer
-                  )}
-                  style={style}
-                  onMouseEnter={this.onMouseEnter}
-                  onMouseLeave={this.onMouseLeave}
-                >
-                  <div
-                    className={this.state.isOpen ? classNames(
-                      styles.arrow,
-                      styles[kind],
-                      styles[popperPlacement]
-                    ) : styles.arrowDisabled}
-                    ref={arrowProps.ref}
-                    style={arrowProps.style}
-                  />
-                  {
-                    this.state.isOpen ?
-                      <div
-                        className={classNames(
-                          styles.tooltip,
-                          styles[kind]
-                        )}
-                      >
-                        <div
-                          className={bodyClassName}
-                        >
-                          {tooltip}
-                        </div>
-                      </div> :
-                      null
-                  }
-                </div>
-              );
-            }}
-          </Popper>
-        </Portal>
-      </Manager>
-    );
-  }
+            <div
+              ref={arrowRef}
+              className={classNames(
+                styles.arrow,
+                styles[kind],
+                styles[popperPlacement]
+              )}
+              style={arrowStyle}
+            />
+            
+            <div
+              className={classNames(
+                styles.tooltip,
+                styles[kind]
+              )}
+            >
+              <div className={bodyClassName}>
+                {tooltip}
+              </div>
+            </div>
+          </div>
+        </FloatingPortal>
+      )}
+    </>
+  );
 }
 
 Tooltip.propTypes = {
   className: PropTypes.string,
-  bodyClassName: PropTypes.string.isRequired,
+  bodyClassName: PropTypes.string,
   anchor: PropTypes.node.isRequired,
   tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   kind: PropTypes.oneOf([kinds.DEFAULT, kinds.INVERSE]),
   position: PropTypes.oneOf(tooltipPositions.all),
-  canFlip: PropTypes.bool.isRequired
-};
-
-Tooltip.defaultProps = {
-  bodyClassName: styles.body,
-  kind: kinds.DEFAULT,
-  position: tooltipPositions.TOP,
-  canFlip: false
+  canFlip: PropTypes.bool
 };
 
 export default Tooltip;

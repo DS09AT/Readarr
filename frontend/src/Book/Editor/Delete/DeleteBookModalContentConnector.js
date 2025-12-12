@@ -24,6 +24,7 @@ function createMapStateToProps() {
 
       const book = _.map(sortedBook, (s) => {
         return {
+          id: s.id,
           title: s.title,
           path: s.path
         };

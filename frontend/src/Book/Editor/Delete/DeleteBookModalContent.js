@@ -116,7 +116,7 @@ class DeleteBookModalContent extends Component {
             {
               book.map((s) => {
                 return (
-                  <li key={s.title}>
+                  <li key={s.id}>
                     <span>{s.title}</span>
                   </li>
                 );

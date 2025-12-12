@@ -22,11 +22,12 @@ function createMapStateToProps() {
     (state, { value }) => value,
     createTagsSelector(),
     (tags, tagList) => {
+      const tagsArray = tags || [];
       const sortedTags = _.sortBy(tagList, 'label');
-      const filteredTagList = _.filter(sortedTags, (tag) => _.indexOf(tags, tag.id) === -1);
+      const filteredTagList = _.filter(sortedTags, (tag) => _.indexOf(tagsArray, tag.id) === -1);
 
       return {
-        tags: tags.reduce((acc, tag) => {
+        tags: tagsArray.reduce((acc, tag) => {
           const matchingTag = _.find(tagList, { id: tag });
 
           if (matchingTag) {
@@ -69,7 +70,8 @@ class TagInputConnector extends Component {
       onChange
     } = this.props;
 
-    if (value.length !== tags.length) {
+    const valueArray = value || [];
+    if (valueArray.length !== tags.length) {
       onChange({ name, value: tags.map((tag) => tag.id) });
     }
   }
@@ -97,7 +99,7 @@ class TagInputConnector extends Component {
       return;
     }
 
-    const newValue = value.slice();
+    const newValue = (value || []).slice();
     newValue.push(tag.id);
 
     this.props.onChange({ name, value: newValue });
@@ -109,7 +111,7 @@ class TagInputConnector extends Component {
       value
     } = this.props;
 
-    const newValue = value.slice();
+    const newValue = (value || []).slice();
     newValue.splice(index, 1);
 
     this.props.onChange({
@@ -124,7 +126,7 @@ class TagInputConnector extends Component {
       value
     } = this.props;
 
-    const newValue = value.slice();
+    const newValue = (value || []).slice();
     newValue.push(tag.id);
 
     this.props.onChange({ name, value: newValue });
@@ -147,11 +149,15 @@ class TagInputConnector extends Component {
 
 TagInputConnector.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.arrayOf(PropTypes.number).isRequired,
+  value: PropTypes.arrayOf(PropTypes.number),
   tags: PropTypes.arrayOf(PropTypes.object).isRequired,
   allTags: PropTypes.arrayOf(PropTypes.object).isRequired,
   onChange: PropTypes.func.isRequired,
   addTag: PropTypes.func.isRequired
+};
+
+TagInputConnector.defaultProps = {
+  value: []
 };
 
 export default connect(createMapStateToProps, mapDispatchToProps)(TagInputConnector);

@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { saveRootFolder, setRootFolderValue } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
 import EditRootFolderModalContent from './EditRootFolderModalContent';
 
 function createMapStateToProps() {
   return createSelector(
-    (state, { id }) => id,
+    (state) => state.settings.rootFolders,
     (state) => state.settings.advancedSettings,
     (state) => state.settings.metadataProfiles,
-    (state) => state.settings.rootFolders,
-    createProviderSettingsSelector('rootFolders'),
-    (id, advancedSettings, metadataProfiles, rootFolders, rootFolderSettings) => {
+    (state, { id }) => id,
+    (rootFolders, advancedSettings, metadataProfiles, id) => {
+      const rootFolderSettings = selectProviderSettings(rootFolders, id);
+      
       return {
         advancedSettings,
         showMetadataProfile: metadataProfiles.items.length > 1,

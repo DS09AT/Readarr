@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   saveDownloadClient,
   setDownloadClientFieldValue,
@@ -9,93 +8,86 @@ import {
   testDownloadClient,
   toggleAdvancedSettings
 } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import createDeepEqualSelector from 'Store/Selectors/createDeepEqualSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
 import EditDownloadClientModalContent from './EditDownloadClientModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
+const makeSelector = () => {
+  return createDeepEqualSelector(
+    (state, { id }) => id,
+    (state) => state.settings.downloadClients,
     (state) => state.settings.advancedSettings,
-    createProviderSettingsSelector('downloadClients'),
-    (advancedSettings, downloadClient) => {
+    (id, section, advancedSettings) => {
+      const downloadClient = selectProviderSettings(section, id);
+
       return {
-        advancedSettings,
-        ...downloadClient
+        ...downloadClient,
+        advancedSettings
       };
     }
   );
-}
-
-const mapDispatchToProps = {
-  setDownloadClientValue,
-  setDownloadClientFieldValue,
-  saveDownloadClient,
-  testDownloadClient,
-  toggleAdvancedSettings
 };
 
-class EditDownloadClientModalContentConnector extends Component {
+function EditDownloadClientModalContentConnector({ id, onModalClose }) {
+  const dispatch = useDispatch();
 
-  //
-  // Lifecycle
+  const selector = useMemo(makeSelector, []);
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isSaving && !this.props.isSaving && !this.props.saveError) {
-      this.props.onModalClose();
+  const stateProps = useSelector((state) => selector(state, { id }));
+
+  const { isSaving, saveError } = stateProps;
+
+  const prevIsSavingRef = useRef(isSaving);
+
+  useEffect(() => {
+    if (prevIsSavingRef.current && !isSaving && !saveError) {
+      onModalClose();
     }
-  }
+    prevIsSavingRef.current = isSaving;
+  }, [isSaving, saveError, onModalClose]);
 
-  //
-  // Listeners
+  const onInputChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setDownloadClientValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onInputChange = ({ name, value }) => {
-    this.props.setDownloadClientValue({ name, value });
-  };
+  const onFieldChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setDownloadClientFieldValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onFieldChange = ({ name, value }) => {
-    this.props.setDownloadClientFieldValue({ name, value });
-  };
+  const onSavePress = useCallback(() => {
+    dispatch(saveDownloadClient({ id }));
+  }, [dispatch, id]);
 
-  onSavePress = () => {
-    this.props.saveDownloadClient({ id: this.props.id });
-  };
+  const onTestPress = useCallback(() => {
+    dispatch(testDownloadClient({ id }));
+  }, [dispatch, id]);
 
-  onTestPress = () => {
-    this.props.testDownloadClient({ id: this.props.id });
-  };
+  const onAdvancedSettingsPress = useCallback(() => {
+    dispatch(toggleAdvancedSettings());
+  }, [dispatch]);
 
-  onAdvancedSettingsPress = () => {
-    this.props.toggleAdvancedSettings();
-  };
-
-  //
-  // Render
-
-  render() {
-    return (
-      <EditDownloadClientModalContent
-        {...this.props}
-        onSavePress={this.onSavePress}
-        onTestPress={this.onTestPress}
-        onAdvancedSettingsPress={this.onAdvancedSettingsPress}
-        onInputChange={this.onInputChange}
-        onFieldChange={this.onFieldChange}
-      />
-    );
-  }
+  return (
+    <EditDownloadClientModalContent
+      {...stateProps}
+      onSavePress={onSavePress}
+      onTestPress={onTestPress}
+      onAdvancedSettingsPress={onAdvancedSettingsPress}
+      onInputChange={onInputChange}
+      onFieldChange={onFieldChange}
+      onModalClose={onModalClose}
+    />
+  );
 }
 
 EditDownloadClientModalContentConnector.propTypes = {
   id: PropTypes.number,
-  isFetching: PropTypes.bool.isRequired,
-  isSaving: PropTypes.bool.isRequired,
-  saveError: PropTypes.object,
-  item: PropTypes.object.isRequired,
-  setDownloadClientValue: PropTypes.func.isRequired,
-  setDownloadClientFieldValue: PropTypes.func.isRequired,
-  saveDownloadClient: PropTypes.func.isRequired,
-  testDownloadClient: PropTypes.func.isRequired,
-  toggleAdvancedSettings: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditDownloadClientModalContentConnector);
+export default EditDownloadClientModalContentConnector;

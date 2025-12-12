@@ -67,11 +67,12 @@ class AddImportListModalContent extends Component {
                         <div className={styles.lists}>
                           {
                             listGroups[key].map((list) => {
+                              const { key: listKey, ...listProps } = list;
                               return (
                                 <AddImportListItem
                                   key={list.implementation}
                                   implementation={list.implementation}
-                                  {...list}
+                                  {...listProps}
                                   onImportListSelect={onImportListSelect}
                                 />
                               );

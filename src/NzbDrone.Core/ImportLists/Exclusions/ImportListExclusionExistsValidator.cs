@@ -23,7 +23,7 @@ namespace NzbDrone.Core.ImportLists.Exclusions
             // Try to get ID from the instance being validated using reflection
             var instanceId = 0;
             var instance = context.InstanceToValidate;
-            
+
             if (instance != null)
             {
                 var idProperty = instance.GetType().GetProperty("Id");

@@ -115,7 +115,7 @@ namespace Readarr.Api.V1.Books
             var updatedBook = resource.ToModel();
 
             book.ApplyChanges(updatedBook);
-            
+
             if (updatedBook.Editions != null)
             {
                 book.Editions = updatedBook.Editions;

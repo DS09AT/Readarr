@@ -1,139 +1,74 @@
+import {
+  autoUpdate,
+  flip,
+  FloatingPortal,
+  offset,
+  size,
+  useFloating
+} from '@floating-ui/react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { useRef } from 'react';
 import Autosuggest from 'react-autosuggest';
-import { Manager, Popper, Reference } from 'react-popper';
-import Portal from 'Components/Portal';
 import styles from './AutoSuggestInput.css';
 
-class AutoSuggestInput extends Component {
+function AutoSuggestInput(props) {
+  const {
+    forwardedRef,
+    className = styles.input,
+    inputContainerClassName = styles.inputContainer,
+    name,
+    value,
+    placeholder,
+    suggestions,
+    hasError,
+    hasWarning,
+    enforceMaxHeight = true,
+    minHeight = 50,
+    maxHeight = 200,
+    getSuggestionValue,
+    renderInputComponent: CustomInputComponent,
+    renderSuggestion,
+    onInputChange,
+    onInputKeyDown,
+    onInputFocus,
+    onInputBlur,
+    onSuggestionsFetchRequested,
+    onSuggestionsClearRequested,
+    onSuggestionSelected,
+    onChange,
+    ...otherProps
+  } = props;
 
-  //
-  // Lifecycle
+  const { refs, floatingStyles } = useFloating({
+    placement: 'bottom-start',
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset(0),
+      flip({ padding: minHeight }),
+      size({
+        apply({ availableHeight, elements, rects }) {
+          Object.assign(elements.floating.style, {
+            width: `${rects.reference.width}px`,
+            maxHeight: enforceMaxHeight ? `${availableHeight}px` : ''
+          });
+        }
+      })
+    ]
+  });
 
-  constructor(props, context) {
-    super(props, context);
-
-    this._scheduleUpdate = null;
-  }
-
-  componentDidUpdate(prevProps) {
-    if (
-      this._scheduleUpdate &&
-      prevProps.suggestions !== this.props.suggestions
-    ) {
-      this._scheduleUpdate();
-    }
-  }
-
-  //
-  // Control
-
-  renderInputComponent = (inputProps) => {
-    const { renderInputComponent } = this.props;
-
-    return (
-      <Reference>
-        {({ ref }) => {
-          if (renderInputComponent) {
-            return renderInputComponent(inputProps, ref);
-          }
-
-          return (
-            <div ref={ref}>
-              <input
-                {...inputProps}
-              />
-            </div>
-          );
-        }}
-      </Reference>
-    );
-  };
-
-  renderSuggestionsContainer = ({ containerProps, children }) => {
-    return (
-      <Portal>
-        <Popper
-          placement='bottom-start'
-          modifiers={{
-            computeMaxHeight: {
-              order: 851,
-              enabled: true,
-              fn: this.onComputeMaxHeight
-            },
-            flip: {
-              padding: this.props.minHeight
-            }
-          }}
-        >
-          {({ ref: popperRef, style, scheduleUpdate }) => {
-            this._scheduleUpdate = scheduleUpdate;
-
-            return (
-              <div
-                ref={popperRef}
-                style={style}
-                className={children ? styles.suggestionsContainerOpen : undefined}
-              >
-                <div
-                  {...containerProps}
-                  style={{
-                    maxHeight: style.maxHeight
-                  }}
-                >
-                  {children}
-                </div>
-              </div>
-            );
-          }}
-        </Popper>
-      </Portal>
-    );
-  };
-
-  //
-  // Listeners
-
-  onComputeMaxHeight = (data) => {
-    const {
-      top,
-      bottom,
-      width
-    } = data.offsets.reference;
-
-    const windowHeight = window.innerHeight;
-
-    if ((/^botton/).test(data.placement)) {
-      data.styles.maxHeight = windowHeight - bottom;
-    } else {
-      data.styles.maxHeight = top;
-    }
-
-    data.styles.width = width;
-
-    return data;
-  };
-
-  onInputChange = (event, { newValue }) => {
-    this.props.onChange({
-      name: this.props.name,
+  const handleInputChange = (event, { newValue }) => {
+    onChange({
+      name,
       value: newValue
     });
   };
 
-  onInputKeyDown = (event) => {
-    const {
-      name,
-      value,
-      suggestions,
-      onChange
-    } = this.props;
-
+  const handleInputKeyDown = (event) => {
     if (
       event.key === 'Tab' &&
       suggestions.length &&
-      suggestions[0] !== this.props.value
+      suggestions[0] !== value
     ) {
       event.preventDefault();
 
@@ -146,93 +81,117 @@ class AutoSuggestInput extends Component {
     }
   };
 
-  //
-  // Render
-
-  render() {
-    const {
-      forwardedRef,
-      className,
-      inputContainerClassName,
-      name,
-      value,
-      placeholder,
-      suggestions,
-      hasError,
-      hasWarning,
-      getSuggestionValue,
-      renderSuggestion,
-      onInputChange,
-      onInputKeyDown,
-      onInputFocus,
-      onInputBlur,
-      onSuggestionsFetchRequested,
-      onSuggestionsClearRequested,
-      onSuggestionSelected,
-      ...otherProps
-    } = this.props;
-
-    const inputProps = {
-      className: classNames(
-        className,
-        hasError && styles.hasError,
-        hasWarning && styles.hasWarning
-      ),
-      name,
-      value,
-      placeholder,
-      autoComplete: 'off',
-      spellCheck: false,
-      onChange: onInputChange || this.onInputChange,
-      onKeyDown: onInputKeyDown || this.onInputKeyDown,
-      onFocus: onInputFocus,
-      onBlur: onInputBlur
+  const renderInputComponent = (inputProps) => {
+    const { ref, key, ...rest } = inputProps;
+    
+    // Combine refs: Autosuggest's ref and Floating UI's setReference
+    const combinedRef = (node) => {
+      refs.setReference(node);
+      if (typeof ref === 'function') {
+        ref(node);
+      } else if (ref) {
+        ref.current = node;
+      }
     };
 
-    const theme = {
-      container: inputContainerClassName,
-      containerOpen: styles.suggestionsContainerOpen,
-      suggestionsContainer: styles.suggestionsContainer,
-      suggestionsList: styles.suggestionsList,
-      suggestion: styles.suggestion,
-      suggestionHighlighted: styles.suggestionHighlighted
-    };
+    if (CustomInputComponent) {
+      return CustomInputComponent(rest, combinedRef);
+    }
 
     return (
-      <Manager>
-        <Autosuggest
-          {...otherProps}
-          ref={forwardedRef}
-          id={name}
-          inputProps={inputProps}
-          theme={theme}
-          suggestions={suggestions}
-          getSuggestionValue={getSuggestionValue}
-          renderInputComponent={this.renderInputComponent}
-          renderSuggestionsContainer={this.renderSuggestionsContainer}
-          renderSuggestion={renderSuggestion}
-          onSuggestionSelected={onSuggestionSelected}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-          onSuggestionsClearRequested={onSuggestionsClearRequested}
-        />
-      </Manager>
+      <div ref={combinedRef}>
+        <input {...rest} />
+      </div>
     );
-  }
+  };
+
+  const renderSuggestionsContainer = ({ containerProps, children }) => {
+    if (!children) {
+      return null;
+    }
+
+    // Extract key from containerProps to avoid React 19 warning
+    const { key, ...restContainerProps } = containerProps;
+
+    return (
+      <FloatingPortal id="portal-root">
+        <div
+          ref={refs.setFloating}
+          style={floatingStyles}
+          className={children ? styles.suggestionsContainerOpen : undefined}
+        >
+          <div
+            key={key}
+            {...restContainerProps}
+            style={{
+              maxHeight: floatingStyles.maxHeight || maxHeight
+            }}
+          >
+            {children}
+          </div>
+        </div>
+      </FloatingPortal>
+    );
+  };
+
+  const inputProps = {
+    className: classNames(
+      className,
+      hasError && styles.hasError,
+      hasWarning && styles.hasWarning
+    ),
+    name,
+    value,
+    placeholder,
+    autoComplete: 'off',
+    spellCheck: false,
+    onChange: onInputChange || handleInputChange,
+    onKeyDown: onInputKeyDown || handleInputKeyDown,
+    onFocus: onInputFocus,
+    onBlur: onInputBlur
+  };
+
+  const theme = {
+    container: inputContainerClassName,
+    containerOpen: styles.suggestionsContainerOpen,
+    suggestionsContainer: styles.suggestionsContainer,
+    suggestionsList: styles.suggestionsList,
+    suggestion: styles.suggestion,
+    suggestionHighlighted: styles.suggestionHighlighted
+  };
+
+  return (
+    <Autosuggest
+      {...otherProps}
+      ref={forwardedRef}
+      id={name}
+      inputProps={inputProps}
+      theme={theme}
+      suggestions={suggestions}
+      getSuggestionValue={getSuggestionValue}
+      renderInputComponent={renderInputComponent}
+      renderSuggestionsContainer={renderSuggestionsContainer}
+      renderSuggestion={renderSuggestion}
+      onSuggestionSelected={onSuggestionSelected}
+      onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+      onSuggestionsClearRequested={onSuggestionsClearRequested}
+    />
+  );
 }
 
 AutoSuggestInput.propTypes = {
   forwardedRef: PropTypes.func,
-  className: PropTypes.string.isRequired,
-  inputContainerClassName: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  inputContainerClassName: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   placeholder: PropTypes.string,
   suggestions: PropTypes.array.isRequired,
   hasError: PropTypes.bool,
   hasWarning: PropTypes.bool,
-  enforceMaxHeight: PropTypes.bool.isRequired,
-  minHeight: PropTypes.number.isRequired,
-  maxHeight: PropTypes.number.isRequired,
+  enforceMaxHeight: PropTypes.bool,
+  minHeight: PropTypes.number,
+  maxHeight: PropTypes.number,
   getSuggestionValue: PropTypes.func.isRequired,
   renderInputComponent: PropTypes.elementType,
   renderSuggestion: PropTypes.func.isRequired,
@@ -244,14 +203,6 @@ AutoSuggestInput.propTypes = {
   onSuggestionsClearRequested: PropTypes.func.isRequired,
   onSuggestionSelected: PropTypes.func,
   onChange: PropTypes.func.isRequired
-};
-
-AutoSuggestInput.defaultProps = {
-  className: styles.input,
-  inputContainerClassName: styles.inputContainer,
-  enforceMaxHeight: true,
-  minHeight: 50,
-  maxHeight: 200
 };
 
 export default AutoSuggestInput;

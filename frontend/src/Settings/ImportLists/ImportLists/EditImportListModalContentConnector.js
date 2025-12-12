@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   saveImportList,
   setImportListFieldValue,
@@ -9,97 +8,89 @@ import {
   testImportList,
   toggleAdvancedSettings
 } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import createDeepEqualSelector from 'Store/Selectors/createDeepEqualSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
+import selectShowMetadataProfile from 'Store/Selectors/selectShowMetadataProfile';
 import EditImportListModalContent from './EditImportListModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
+const makeSelector = () => {
+  return createDeepEqualSelector(
+    (state, { id }) => id,
+    (state) => state.settings.importLists,
     (state) => state.settings.advancedSettings,
-    (state) => state.settings.metadataProfiles,
-    createProviderSettingsSelector('importLists'),
-    (advancedSettings, metadataProfiles, importList) => {
-      const showMetadataProfile = metadataProfiles.items.length > 1;
-      
+    selectShowMetadataProfile,
+    (id, section, advancedSettings, showMetadataProfile) => {
+      const providerSettings = selectProviderSettings(section, id);
+
       return {
-        ...importList,
+        ...providerSettings,
         advancedSettings,
         showMetadataProfile
       };
     }
   );
-}
-
-const mapDispatchToProps = {
-  setImportListValue,
-  setImportListFieldValue,
-  saveImportList,
-  testImportList,
-  toggleAdvancedSettings
 };
 
-class EditImportListModalContentConnector extends Component {
+function EditImportListModalContentConnector({ id, onModalClose }) {
+  const dispatch = useDispatch();
 
-  //
-  // Lifecycle
+  const selector = useMemo(makeSelector, []);
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isSaving && !this.props.isSaving && !this.props.saveError) {
-      this.props.onModalClose();
+  const stateProps = useSelector((state) => selector(state, { id }));
+
+  const { isSaving, saveError } = stateProps;
+
+  const prevIsSavingRef = useRef(isSaving);
+
+  useEffect(() => {
+    if (prevIsSavingRef.current && !isSaving && !saveError) {
+      onModalClose();
     }
-  }
+    prevIsSavingRef.current = isSaving;
+  }, [isSaving, saveError, onModalClose]);
 
-  //
-  // Listeners
+  const onInputChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setImportListValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onInputChange = ({ name, value }) => {
-    this.props.setImportListValue({ name, value });
-  };
+  const onFieldChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setImportListFieldValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onFieldChange = ({ name, value }) => {
-    this.props.setImportListFieldValue({ name, value });
-  };
+  const onSavePress = useCallback(() => {
+    dispatch(saveImportList({ id }));
+  }, [dispatch, id]);
 
-  onSavePress = () => {
-    this.props.saveImportList({ id: this.props.id });
-  };
+  const onTestPress = useCallback(() => {
+    dispatch(testImportList({ id }));
+  }, [dispatch, id]);
 
-  onTestPress = () => {
-    this.props.testImportList({ id: this.props.id });
-  };
+  const onAdvancedSettingsPress = useCallback(() => {
+    dispatch(toggleAdvancedSettings());
+  }, [dispatch]);
 
-  onAdvancedSettingsPress = () => {
-    this.props.toggleAdvancedSettings();
-  };
-
-  //
-  // Render
-
-  render() {
-    return (
-      <EditImportListModalContent
-        {...this.props}
-        onSavePress={this.onSavePress}
-        onTestPress={this.onTestPress}
-        onAdvancedSettingsPress={this.onAdvancedSettingsPress}
-        onInputChange={this.onInputChange}
-        onFieldChange={this.onFieldChange}
-      />
-    );
-  }
+  return (
+    <EditImportListModalContent
+      {...stateProps}
+      onSavePress={onSavePress}
+      onTestPress={onTestPress}
+      onAdvancedSettingsPress={onAdvancedSettingsPress}
+      onInputChange={onInputChange}
+      onFieldChange={onFieldChange}
+      onModalClose={onModalClose}
+    />
+  );
 }
 
 EditImportListModalContentConnector.propTypes = {
   id: PropTypes.number,
-  isFetching: PropTypes.bool.isRequired,
-  isSaving: PropTypes.bool.isRequired,
-  saveError: PropTypes.object,
-  item: PropTypes.object.isRequired,
-  setImportListValue: PropTypes.func.isRequired,
-  setImportListFieldValue: PropTypes.func.isRequired,
-  saveImportList: PropTypes.func.isRequired,
-  testImportList: PropTypes.func.isRequired,
-  toggleAdvancedSettings: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditImportListModalContentConnector);
+export default EditImportListModalContentConnector;

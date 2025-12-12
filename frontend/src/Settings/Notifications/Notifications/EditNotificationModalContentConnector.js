@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   saveNotification,
   setNotificationFieldValue,
@@ -9,93 +8,86 @@ import {
   testNotification,
   toggleAdvancedSettings
 } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import createDeepEqualSelector from 'Store/Selectors/createDeepEqualSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
 import EditNotificationModalContent from './EditNotificationModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
+const makeSelector = () => {
+  return createDeepEqualSelector(
+    (state, { id }) => id,
+    (state) => state.settings.notifications,
     (state) => state.settings.advancedSettings,
-    createProviderSettingsSelector('notifications'),
-    (advancedSettings, notification) => {
+    (id, section, advancedSettings) => {
+      const notification = selectProviderSettings(section, id);
+
       return {
-        advancedSettings,
-        ...notification
+        ...notification,
+        advancedSettings
       };
     }
   );
-}
-
-const mapDispatchToProps = {
-  setNotificationValue,
-  setNotificationFieldValue,
-  saveNotification,
-  testNotification,
-  toggleAdvancedSettings
 };
 
-class EditNotificationModalContentConnector extends Component {
+function EditNotificationModalContentConnector({ id, onModalClose }) {
+  const dispatch = useDispatch();
 
-  //
-  // Lifecycle
+  const selector = useMemo(makeSelector, []);
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isSaving && !this.props.isSaving && !this.props.saveError) {
-      this.props.onModalClose();
+  const stateProps = useSelector((state) => selector(state, { id }));
+
+  const { isSaving, saveError } = stateProps;
+
+  const prevIsSavingRef = useRef(isSaving);
+
+  useEffect(() => {
+    if (prevIsSavingRef.current && !isSaving && !saveError) {
+      onModalClose();
     }
-  }
+    prevIsSavingRef.current = isSaving;
+  }, [isSaving, saveError, onModalClose]);
 
-  //
-  // Listeners
+  const onInputChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setNotificationValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onInputChange = ({ name, value }) => {
-    this.props.setNotificationValue({ name, value });
-  };
+  const onFieldChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setNotificationFieldValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onFieldChange = ({ name, value }) => {
-    this.props.setNotificationFieldValue({ name, value });
-  };
+  const onSavePress = useCallback(() => {
+    dispatch(saveNotification({ id }));
+  }, [dispatch, id]);
 
-  onSavePress = () => {
-    this.props.saveNotification({ id: this.props.id });
-  };
+  const onTestPress = useCallback(() => {
+    dispatch(testNotification({ id }));
+  }, [dispatch, id]);
 
-  onTestPress = () => {
-    this.props.testNotification({ id: this.props.id });
-  };
+  const onAdvancedSettingsPress = useCallback(() => {
+    dispatch(toggleAdvancedSettings());
+  }, [dispatch]);
 
-  onAdvancedSettingsPress = () => {
-    this.props.toggleAdvancedSettings();
-  };
-
-  //
-  // Render
-
-  render() {
-    return (
-      <EditNotificationModalContent
-        {...this.props}
-        onSavePress={this.onSavePress}
-        onTestPress={this.onTestPress}
-        onAdvancedSettingsPress={this.onAdvancedSettingsPress}
-        onInputChange={this.onInputChange}
-        onFieldChange={this.onFieldChange}
-      />
-    );
-  }
+  return (
+    <EditNotificationModalContent
+      {...stateProps}
+      onSavePress={onSavePress}
+      onTestPress={onTestPress}
+      onAdvancedSettingsPress={onAdvancedSettingsPress}
+      onInputChange={onInputChange}
+      onFieldChange={onFieldChange}
+      onModalClose={onModalClose}
+    />
+  );
 }
 
 EditNotificationModalContentConnector.propTypes = {
   id: PropTypes.number,
-  isFetching: PropTypes.bool.isRequired,
-  isSaving: PropTypes.bool.isRequired,
-  saveError: PropTypes.object,
-  item: PropTypes.object.isRequired,
-  setNotificationValue: PropTypes.func.isRequired,
-  setNotificationFieldValue: PropTypes.func.isRequired,
-  saveNotification: PropTypes.func.isRequired,
-  testNotification: PropTypes.func.isRequired,
-  toggleAdvancedSettings: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditNotificationModalContentConnector);
+export default EditNotificationModalContentConnector;

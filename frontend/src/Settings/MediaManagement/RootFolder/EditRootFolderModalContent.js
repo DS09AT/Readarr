@@ -47,7 +47,7 @@ function EditRootFolderModalContent(props) {
     defaultMetadataProfileId,
     defaultMonitorOption,
     defaultNewItemMonitorOption,
-    defaultTags,
+    defaultTags = { value: [] },
     isCalibreLibrary,
     host,
     port,
@@ -60,7 +60,9 @@ function EditRootFolderModalContent(props) {
     useSsl
   } = item;
 
-  const profileHelpText = calibreProfiles.options.find((x) => x.key === outputProfile.value).description;
+  const profileHelpText = outputProfile?.value
+    ? calibreProfiles.options.find((x) => x.key === outputProfile?.value)?.description
+    : '';
 
   return (
     <ModalContent onModalClose={onModalClose}>

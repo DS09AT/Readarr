@@ -1,95 +1,87 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { saveIndexer, setIndexerFieldValue, setIndexerValue, testIndexer, toggleAdvancedSettings } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import createDeepEqualSelector from 'Store/Selectors/createDeepEqualSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
 import EditIndexerModalContent from './EditIndexerModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
+const makeSelector = () => {
+  return createDeepEqualSelector(
+    (state, { id }) => id,
+    (state) => state.settings.indexers,
     (state) => state.settings.advancedSettings,
-    createProviderSettingsSelector('indexers'),
-    (advancedSettings, indexer) => {
+    (id, section, advancedSettings) => {
+      const indexer = selectProviderSettings(section, id);
+
       return {
-        advancedSettings,
-        ...indexer
+        ...indexer,
+        advancedSettings
       };
     }
   );
-}
-
-const mapDispatchToProps = {
-  setIndexerValue,
-  setIndexerFieldValue,
-  saveIndexer,
-  testIndexer,
-  toggleAdvancedSettings
 };
 
-class EditIndexerModalContentConnector extends Component {
+function EditIndexerModalContentConnector({ id, onModalClose }) {
+  const dispatch = useDispatch();
 
-  //
-  // Lifecycle
+  const selector = useMemo(makeSelector, []);
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isSaving && !this.props.isSaving && !this.props.saveError) {
-      this.props.onModalClose();
+  const stateProps = useSelector((state) => selector(state, { id }));
+
+  const { isSaving, saveError } = stateProps;
+
+  const prevIsSavingRef = useRef(isSaving);
+
+  useEffect(() => {
+    if (prevIsSavingRef.current && !isSaving && !saveError) {
+      onModalClose();
     }
-  }
+    prevIsSavingRef.current = isSaving;
+  }, [isSaving, saveError, onModalClose]);
 
-  //
-  // Listeners
+  const onInputChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setIndexerValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onInputChange = ({ name, value }) => {
-    this.props.setIndexerValue({ name, value });
-  };
+  const onFieldChange = useCallback(
+    ({ name, value }) => {
+      dispatch(setIndexerFieldValue({ name, value }));
+    },
+    [dispatch]
+  );
 
-  onFieldChange = ({ name, value }) => {
-    this.props.setIndexerFieldValue({ name, value });
-  };
+  const onSavePress = useCallback(() => {
+    dispatch(saveIndexer({ id }));
+  }, [dispatch, id]);
 
-  onSavePress = () => {
-    this.props.saveIndexer({ id: this.props.id });
-  };
+  const onTestPress = useCallback(() => {
+    dispatch(testIndexer({ id }));
+  }, [dispatch, id]);
 
-  onTestPress = () => {
-    this.props.testIndexer({ id: this.props.id });
-  };
+  const onAdvancedSettingsPress = useCallback(() => {
+    dispatch(toggleAdvancedSettings());
+  }, [dispatch]);
 
-  onAdvancedSettingsPress = () => {
-    this.props.toggleAdvancedSettings();
-  };
-
-  //
-  // Render
-
-  render() {
-    return (
-      <EditIndexerModalContent
-        {...this.props}
-        onSavePress={this.onSavePress}
-        onTestPress={this.onTestPress}
-        onAdvancedSettingsPress={this.onAdvancedSettingsPress}
-        onInputChange={this.onInputChange}
-        onFieldChange={this.onFieldChange}
-      />
-    );
-  }
+  return (
+    <EditIndexerModalContent
+      {...stateProps}
+      onSavePress={onSavePress}
+      onTestPress={onTestPress}
+      onAdvancedSettingsPress={onAdvancedSettingsPress}
+      onInputChange={onInputChange}
+      onFieldChange={onFieldChange}
+      onModalClose={onModalClose}
+    />
+  );
 }
 
 EditIndexerModalContentConnector.propTypes = {
   id: PropTypes.number,
-  isFetching: PropTypes.bool.isRequired,
-  isSaving: PropTypes.bool.isRequired,
-  saveError: PropTypes.object,
-  item: PropTypes.object.isRequired,
-  setIndexerValue: PropTypes.func.isRequired,
-  setIndexerFieldValue: PropTypes.func.isRequired,
-  toggleAdvancedSettings: PropTypes.func.isRequired,
-  saveIndexer: PropTypes.func.isRequired,
-  testIndexer: PropTypes.func.isRequired,
   onModalClose: PropTypes.func.isRequired
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditIndexerModalContentConnector);
+export default EditIndexerModalContentConnector;

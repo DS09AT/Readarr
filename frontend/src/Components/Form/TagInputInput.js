@@ -7,6 +7,10 @@ import styles from './TagInputInput.css';
 class TagInputInput extends Component {
 
   onMouseDown = (event) => {
+    if (event.target.tagName === 'INPUT') {
+      return;
+    }
+
     event.preventDefault();
 
     const {

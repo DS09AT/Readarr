@@ -247,19 +247,27 @@ class Bookshelf extends Component {
         columnIndex={0}
         rowIndex={rowIndex}
       >
-        {({ registerChild }) => (
-          <VirtualTableRow
-            ref={registerChild}
-            style={style}
-          >
-            <BookStudioRowConnector
-              key={item.id}
-              authorId={item.id}
-              isSelected={selectedState[item.id]}
-              onSelectedChange={this.onSelectedChange}
-            />
-          </VirtualTableRow>
-        )}
+        {({ registerChild, measure }) => {
+          const rowRef = (node) => {
+            if (typeof registerChild === 'function') {
+              registerChild(node);
+            }
+          };
+
+          return (
+            <VirtualTableRow
+              ref={rowRef}
+              style={style}
+            >
+              <BookStudioRowConnector
+                key={item.id}
+                authorId={item.id}
+                isSelected={selectedState[item.id]}
+                onSelectedChange={this.onSelectedChange}
+              />
+            </VirtualTableRow>
+          );
+        }}
       </CellMeasurer>
     );
   };

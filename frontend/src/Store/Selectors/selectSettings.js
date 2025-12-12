@@ -19,6 +19,35 @@ function mapFailure(failure) {
 function selectSettings(item, pendingChanges, saveError) {
   const validationFailures = getValidationFailures(saveError);
 
+  // Handle null/undefined item, but still process pendingChanges
+  if (!item) {
+    // Process pending changes even without an item
+    const settings = _.reduce(pendingChanges, (result, value, key) => {
+      if (key === 'fields') {
+        return result;
+      }
+
+      result[key] = {
+        value,
+        previousValue: undefined,
+        pending: true,
+        errors: [],
+        warnings: []
+      };
+
+      return result;
+    }, {});
+
+    return {
+      settings,
+      validationErrors: [],
+      validationWarnings: [],
+      hasPendingChanges: !_.isEmpty(pendingChanges),
+      hasSettings: !_.isEmpty(settings),
+      pendingChanges
+    };
+  }
+
   // Merge all settings from the item along with pending
   // changes to ensure any settings that were not included
   // with the item are included.
@@ -57,7 +86,7 @@ function selectSettings(item, pendingChanges, saveError) {
     return result;
   }, {});
 
-  const fields = _.reduce(item.fields, (result, f) => {
+  const fields = _.reduce(item.fields || [], (result, f) => {
     const field = Object.assign({ pending: false }, f);
     const hasPendingFieldChange = pendingChanges.fields && pendingChanges.fields.hasOwnProperty(field.name);
 

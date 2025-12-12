@@ -1,33 +1,59 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import React, { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearPendingChanges } from 'Store/Actions/baseActions';
 import { cancelSaveMetadataProviders, cancelTestMetadataProviders, saveMetadataProviders, setMetadataProvidersFieldValue, setMetadataProvidersValue, testMetadataProviders } from 'Store/Actions/settingsActions';
-import createProviderSettingsSelector from 'Store/Selectors/createProviderSettingsSelector';
+import createDeepEqualSelector from 'Store/Selectors/createDeepEqualSelector';
+import { selectProviderSettings } from 'Store/Selectors/createProviderSettingsSelector';
 import EditMetadataProviderModalContent from './EditMetadataProviderModalContent';
 
-function createMapStateToProps() {
-  return createSelector(
+const makeSelector = () => {
+  return createDeepEqualSelector(
+    (state, { id }) => id,
+    (state) => state.settings.metadataProviders,
     (state) => state.settings.advancedSettings,
-    createProviderSettingsSelector('metadataProviders'),
-    (advancedSettings, metadataProvider) => {
+    (id, section, advancedSettings) => {
+      const metadataProvider = selectProviderSettings(section, id);
+
       return {
-        advancedSettings,
-        ...metadataProvider
+        ...metadataProvider,
+        advancedSettings
       };
     }
   );
-}
-
-const mapDispatchToProps = {
-  setMetadataProviderValue: setMetadataProvidersValue,
-  setMetadataProviderFieldValue: setMetadataProvidersFieldValue,
-  saveMetadataProvider: saveMetadataProviders,
-  cancelSaveMetadataProvider: cancelSaveMetadataProviders,
-  testMetadataProvider: testMetadataProviders,
-  cancelTestMetadataProvider: cancelTestMetadataProviders,
-  clearPendingChanges
 };
 
-export default connect(createMapStateToProps, mapDispatchToProps)(EditMetadataProviderModalContent);
+function EditMetadataProviderModalContentConnector({ id, ...otherProps }) {
+  const dispatch = useDispatch();
+
+  const selector = useMemo(makeSelector, []);
+
+  const stateProps = useSelector((state) => selector(state, { id }));
+
+  const actions = useMemo(
+    () => ({
+      setMetadataProviderValue: (payload) => dispatch(setMetadataProvidersValue(payload)),
+      setMetadataProviderFieldValue: (payload) => dispatch(setMetadataProvidersFieldValue(payload)),
+      saveMetadataProvider: (payload) => dispatch(saveMetadataProviders(payload)),
+      cancelSaveMetadataProvider: () => dispatch(cancelSaveMetadataProviders()),
+      testMetadataProvider: (payload) => dispatch(testMetadataProviders(payload)),
+      cancelTestMetadataProvider: () => dispatch(cancelTestMetadataProviders()),
+      clearPendingChanges: (payload) => dispatch(clearPendingChanges(payload))
+    }),
+    [dispatch]
+  );
+
+  return (
+    <EditMetadataProviderModalContent
+      {...stateProps}
+      {...actions}
+      {...otherProps}
+    />
+  );
+}
+
+EditMetadataProviderModalContentConnector.propTypes = {
+  id: PropTypes.number
+};
+
+export default EditMetadataProviderModalContentConnector;

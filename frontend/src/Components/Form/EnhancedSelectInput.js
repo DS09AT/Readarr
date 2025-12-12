@@ -1,15 +1,23 @@
+import {
+  autoUpdate,
+  flip,
+  FloatingPortal,
+  offset,
+  size,
+  useClick,
+  useDismiss,
+  useFloating,
+  useInteractions
+} from '@floating-ui/react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Manager, Popper, Reference } from 'react-popper';
+import React, { useEffect, useState } from 'react';
 import Icon from 'Components/Icon';
 import Link from 'Components/Link/Link';
 import LoadingIndicator from 'Components/Loading/LoadingIndicator';
-import Measure from 'Components/Measure';
 import Modal from 'Components/Modal/Modal';
 import ModalBody from 'Components/Modal/ModalBody';
-import Portal from 'Components/Portal';
 import Scroller from 'Components/Scroller/Scroller';
 import { icons, scrollDirections, sizes } from 'Helpers/Props';
 import { isMobile as isMobileUtil } from 'Utilities/browser';
@@ -90,116 +98,109 @@ function getKey(selectedIndex, values) {
   return values[selectedIndex].key;
 }
 
-class EnhancedSelectInput extends Component {
+function EnhancedSelectInput(props) {
+  const {
+    className = styles.enhancedSelect,
+    disabledClassName = styles.isDisabled,
+    name,
+    value,
+    values,
+    isDisabled = false,
+    isEditable = false,
+    isFetching = false,
+    hasError,
+    hasWarning,
+    valueOptions = {},
+    selectedValueOptions = {},
+    selectedValueComponent: SelectedValueComponent = HintedSelectInputSelectedValue,
+    optionComponent: OptionComponent = HintedSelectInputOption,
+    onChange,
+    onOpen
+  } = props;
 
-  //
-  // Lifecycle
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(() => getSelectedIndex(props));
+  const [isMobile] = useState(() => isMobileUtil());
+  const [buttonId] = useState(getUniqueElememtId);
+  const [optionsId] = useState(getUniqueElememtId);
 
-  constructor(props, context) {
-    super(props, context);
+  const { refs, floatingStyles, context } = useFloating({
+    open: isOpen,
+    onOpenChange: (open) => {
+      setIsOpen(open);
+      if (open && onOpen) {
+        onOpen();
+      }
+    },
+    placement: 'bottom-start',
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset(0),
+      flip({ padding: 0 }),
+      size({
+        apply({ availableHeight, rects, elements }) {
+          Object.assign(elements.floating.style, {
+            minWidth: `${rects.reference.width}px`,
+            maxHeight: `${Math.max(0, availableHeight - MINIMUM_DISTANCE_FROM_EDGE)}px`
+          });
+        }
+      })
+    ]
+  });
 
-    this._scheduleUpdate = null;
-    this._buttonId = getUniqueElememtId();
-    this._optionsId = getUniqueElememtId();
+  const click = useClick(context, { enabled: !isDisabled && !isMobile });
+  const dismiss = useDismiss(context);
 
-    this.state = {
-      isOpen: false,
-      selectedIndex: getSelectedIndex(props),
-      width: 0,
-      isMobile: isMobileUtil()
-    };
-  }
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    click,
+    dismiss
+  ]);
 
-  componentDidUpdate(prevProps) {
-    if (this._scheduleUpdate) {
-      this._scheduleUpdate();
+  useEffect(() => {
+    if (!Array.isArray(value)) {
+      setSelectedIndex(getSelectedIndex(props));
     }
+  }, [value, values]);
 
-    if (!Array.isArray(this.props.value)) {
-      if (prevProps.value !== this.props.value || prevProps.values !== this.props.values) {
-        this.setState({
-          selectedIndex: getSelectedIndex(this.props)
-        });
+  const onSelect = (val) => {
+    if (Array.isArray(value)) {
+      let newValue = null;
+      const index = value.indexOf(val);
+      if (index === -1) {
+        newValue = values.map((v) => v.key).filter((v) => (v === val) || value.includes(v));
+      } else {
+        newValue = [...value];
+        newValue.splice(index, 1);
+      }
+      onChange({
+        name,
+        value: newValue
+      });
+    } else {
+      setIsOpen(false);
+      onChange({
+        name,
+        value: val
+      });
+    }
+  };
+
+  const onBlur = () => {
+    if (!isEditable) {
+      const origIndex = getSelectedIndex(props);
+      if (origIndex !== selectedIndex) {
+        setSelectedIndex(origIndex);
       }
     }
-  }
-
-  //
-  // Control
-
-  _addListener() {
-    window.addEventListener('click', this.onWindowClick);
-  }
-
-  _removeListener() {
-    window.removeEventListener('click', this.onWindowClick);
-  }
-
-  //
-  // Listeners
-
-  onComputeMaxHeight = (data) => {
-    const windowHeight = window.innerHeight;
-
-    data.styles.maxHeight = windowHeight - MINIMUM_DISTANCE_FROM_EDGE;
-
-    return data;
   };
 
-  onWindowClick = (event) => {
-    const button = document.getElementById(this._buttonId);
-    const options = document.getElementById(this._optionsId);
-
-    if (!button || !event.target.isConnected || this.state.isMobile) {
-      return;
-    }
-
-    if (
-      !button.contains(event.target) &&
-      options &&
-      !options.contains(event.target) &&
-      this.state.isOpen
-    ) {
-      this.setState({ isOpen: false });
-      this._removeListener();
-    }
-  };
-
-  onFocus = () => {
-    if (this.state.isOpen) {
-      this._removeListener();
-      this.setState({ isOpen: false });
-    }
-  };
-
-  onBlur = () => {
-    if (!this.props.isEditable) {
-      // Calling setState without this check prevents the click event from being properly handled on Chrome (it is on firefox)
-      const origIndex = getSelectedIndex(this.props);
-
-      if (origIndex !== this.state.selectedIndex) {
-        this.setState({ selectedIndex: origIndex });
-      }
-    }
-  };
-
-  onKeyDown = (event) => {
-    const {
-      values
-    } = this.props;
-
-    const {
-      isOpen,
-      selectedIndex
-    } = this.state;
-
+  const onKeyDown = (event) => {
     const keyCode = event.keyCode;
-    const newState = {};
 
     if (!isOpen) {
       if (isArrowKey(keyCode)) {
         event.preventDefault();
-        newState.isOpen = true;
+        setIsOpen(true);
       }
 
       if (
@@ -207,368 +208,270 @@ class EnhancedSelectInput extends Component {
         getSelectedOption(selectedIndex, values).isDisabled
       ) {
         if (keyCode === keyCodes.UP_ARROW) {
-          newState.selectedIndex = previousIndex(0, values);
+          setSelectedIndex(previousIndex(0, values));
         } else if (keyCode === keyCodes.DOWN_ARROW) {
-          newState.selectedIndex = nextIndex(values.length - 1, values);
+          setSelectedIndex(nextIndex(values.length - 1, values));
         }
       }
-
-      this.setState(newState);
       return;
     }
 
     if (keyCode === keyCodes.UP_ARROW) {
       event.preventDefault();
-      newState.selectedIndex = previousIndex(selectedIndex, values);
+      setSelectedIndex(previousIndex(selectedIndex, values));
     }
 
     if (keyCode === keyCodes.DOWN_ARROW) {
       event.preventDefault();
-      newState.selectedIndex = nextIndex(selectedIndex, values);
+      setSelectedIndex(nextIndex(selectedIndex, values));
     }
 
     if (keyCode === keyCodes.ENTER) {
       event.preventDefault();
-      newState.isOpen = false;
-      this.onSelect(getKey(selectedIndex, values));
+      setIsOpen(false);
+      onSelect(getKey(selectedIndex, values));
     }
 
     if (keyCode === keyCodes.TAB) {
-      newState.isOpen = false;
-      this.onSelect(getKey(selectedIndex, values));
+      setIsOpen(false);
+      onSelect(getKey(selectedIndex, values));
     }
 
     if (keyCode === keyCodes.ESCAPE) {
       event.preventDefault();
       event.stopPropagation();
-      newState.isOpen = false;
-      newState.selectedIndex = getSelectedIndex(this.props);
-    }
-
-    if (!_.isEmpty(newState)) {
-      this.setState(newState);
+      setIsOpen(false);
+      setSelectedIndex(getSelectedIndex(props));
     }
   };
 
-  onPress = () => {
-    if (this.state.isOpen) {
-      this._removeListener();
-    } else {
-      this._addListener();
-    }
-
-    if (!this.state.isOpen && this.props.onOpen) {
-      this.props.onOpen();
-    }
-
-    this.setState({ isOpen: !this.state.isOpen });
+  // For mobile modal
+  const onOptionsModalClose = () => {
+    setIsOpen(false);
   };
 
-  onSelect = (value) => {
-    if (Array.isArray(this.props.value)) {
-      let newValue = null;
-      const index = this.props.value.indexOf(value);
-      if (index === -1) {
-        newValue = this.props.values.map((v) => v.key).filter((v) => (v === value) || this.props.value.includes(v));
-      } else {
-        newValue = [...this.props.value];
-        newValue.splice(index, 1);
-      }
-      this.props.onChange({
-        name: this.props.name,
-        value: newValue
-      });
-    } else {
-      this.setState({ isOpen: false });
-
-      this.props.onChange({
-        name: this.props.name,
-        value
-      });
+  const handleMobilePress = () => {
+    if (isMobile && !isDisabled) {
+      setIsOpen(true);
     }
   };
 
-  onMeasure = ({ width }) => {
-    this.setState({ width });
-  };
+  const isMultiSelect = Array.isArray(value);
+  const selectedOption = getSelectedOption(selectedIndex, values);
+  let selectedValueDisplay = value;
 
-  onOptionsModalClose = () => {
-    this.setState({ isOpen: false });
-  };
+  if (!values.length) {
+    selectedValueDisplay = isMultiSelect ? [] : '';
+  }
 
-  //
-  // Render
+  const referenceProps = getReferenceProps({
+    onKeyDown: onKeyDown,
+    onBlur: onBlur,
+    onClick: handleMobilePress
+  });
 
-  render() {
-    const {
-      className,
-      disabledClassName,
-      name,
-      value,
-      values,
-      isDisabled,
-      isEditable,
-      isFetching,
-      hasError,
-      hasWarning,
-      valueOptions,
-      selectedValueOptions,
-      selectedValueComponent: SelectedValueComponent,
-      optionComponent: OptionComponent,
-      onChange
-    } = this.props;
-
-    const {
-      selectedIndex,
-      width,
-      isOpen,
-      isMobile
-    } = this.state;
-
-    const isMultiSelect = Array.isArray(value);
-    const selectedOption = getSelectedOption(selectedIndex, values);
-    let selectedValue = value;
-
-    if (!values.length) {
-      selectedValue = isMultiSelect ? [] : '';
-    }
-
-    return (
-      <div>
-        <Manager>
-          <Reference>
-            {({ ref }) => (
-              <div
-                ref={ref}
-                id={this._buttonId}
-              >
-                <Measure
-                  whitelist={['width']}
-                  onMeasure={this.onMeasure}
-                >
-                  {
-                    isEditable ?
-                      <div
-                        className={styles.editableContainer}
-                      >
-                        <TextInput
-                          className={className}
-                          name={name}
-                          value={value}
-                          readOnly={isDisabled}
-                          hasError={hasError}
-                          hasWarning={hasWarning}
-                          onFocus={this.onFocus}
-                          onBlur={this.onBlur}
-                          onChange={onChange}
-                        />
-                        <Link
-                          className={classNames(
-                            styles.dropdownArrowContainerEditable,
-                            isDisabled ?
-                              styles.dropdownArrowContainerDisabled :
-                              styles.dropdownArrowContainer)
-                          }
-                          onPress={this.onPress}
-                        >
-                          {
-                            isFetching ?
-                              <LoadingIndicator
-                                className={styles.loading}
-                                size={20}
-                              /> :
-                              null
-                          }
-
-                          {
-                            isFetching ?
-                              null :
-                              <Icon
-                                name={icons.CARET_DOWN}
-                              />
-                          }
-                        </Link>
-                      </div> :
-                      <Link
-                        className={classNames(
-                          className,
-                          hasError && styles.hasError,
-                          hasWarning && styles.hasWarning,
-                          isDisabled && disabledClassName
-                        )}
-                        isDisabled={isDisabled}
-                        onBlur={this.onBlur}
-                        onKeyDown={this.onKeyDown}
-                        onPress={this.onPress}
-                      >
-                        <SelectedValueComponent
-                          value={selectedValue}
-                          values={values}
-                          {...selectedValueOptions}
-                          {...selectedOption}
-                          isDisabled={isDisabled}
-                          isMultiSelect={isMultiSelect}
-                        >
-                          {selectedOption ? selectedOption.value : null}
-                        </SelectedValueComponent>
-
-                        <div
-                          className={isDisabled ?
-                            styles.dropdownArrowContainerDisabled :
-                            styles.dropdownArrowContainer
-                          }
-                        >
-
-                          {
-                            isFetching ?
-                              <LoadingIndicator
-                                className={styles.loading}
-                                size={20}
-                              /> :
-                              null
-                          }
-
-                          {
-                            isFetching ?
-                              null :
-                              <Icon
-                                name={icons.CARET_DOWN}
-                              />
-                          }
-                        </div>
-                      </Link>
-                  }
-                </Measure>
-              </div>
-            )}
-          </Reference>
-          <Portal>
-            <Popper
-              placement="bottom-start"
-              modifiers={{
-                computeMaxHeight: {
-                  order: 851,
-                  enabled: true,
-                  fn: this.onComputeMaxHeight
-                },
-                preventOverflow: {
-                  enabled: true,
-                  boundariesElement: 'viewport'
-                }
-              }}
-            >
-              {({ ref, style, scheduleUpdate }) => {
-                this._scheduleUpdate = scheduleUpdate;
-
-                return (
-                  <div
-                    ref={ref}
-                    id={this._optionsId}
-                    className={styles.optionsContainer}
-                    style={{
-                      ...style,
-                      minWidth: width
-                    }}
-                  >
-                    {
-                      isOpen && !isMobile ?
-                        <Scroller
-                          className={styles.options}
-                          style={{
-                            maxHeight: style.maxHeight
-                          }}
-                        >
-                          {
-                            values.map((v, index) => {
-                              const hasParent = v.parentKey !== undefined;
-                              const depth = hasParent ? 1 : 0;
-                              const parentSelected = hasParent && value.includes(v.parentKey);
-                              return (
-                                <OptionComponent
-                                  key={v.key}
-                                  id={v.key}
-                                  depth={depth}
-                                  isSelected={isSelectedItem(index, this.props)}
-                                  isDisabled={parentSelected}
-                                  isMultiSelect={isMultiSelect}
-                                  {...valueOptions}
-                                  {...v}
-                                  isMobile={false}
-                                  onSelect={this.onSelect}
-                                >
-                                  {v.value}
-                                </OptionComponent>
-                              );
-                            })
-                          }
-                        </Scroller> :
-                        null
-                    }
-                  </div>
-                );
-              }
-              }
-            </Popper>
-          </Portal>
-        </Manager>
-
+  return (
+    <div>
+      <div
+        id={buttonId}
+        ref={refs.setReference}
+        {...referenceProps}
+      >
         {
-          isMobile ?
-            <Modal
-              className={styles.optionsModal}
-              size={sizes.EXTRA_SMALL}
-              isOpen={isOpen}
-              onModalClose={this.onOptionsModalClose}
+          isEditable ?
+            <div
+              className={styles.editableContainer}
             >
-              <ModalBody
-                className={styles.optionsModalBody}
-                innerClassName={styles.optionsInnerModalBody}
-                scrollDirection={scrollDirections.NONE}
+              <TextInput
+                className={className}
+                name={name}
+                value={value}
+                readOnly={isDisabled}
+                hasError={hasError}
+                hasWarning={hasWarning}
+                onBlur={onBlur}
+                onChange={onChange}
+              />
+              <Link
+                className={classNames(
+                  styles.dropdownArrowContainerEditable,
+                  isDisabled ?
+                    styles.dropdownArrowContainerDisabled :
+                    styles.dropdownArrowContainer)
+                }
+                // onPress handled by referenceProps.onClick/useClick via bubbling or direct attachment?
+                // Link's onPress might preventDefault.
+                // Floating UI useClick attaches onClick.
+                // If Link stops propagation, useClick might not fire.
+                // Let's attach onClick directly to the container or Link.
+                // Since we wrap the whole thing in referenceProps which has onClick, it should work.
               >
-                <Scroller className={styles.optionsModalScroller}>
-                  <div className={styles.mobileCloseButtonContainer}>
-                    <Link
-                      className={styles.mobileCloseButton}
-                      onPress={this.onOptionsModalClose}
-                    >
-                      <Icon
-                        name={icons.CLOSE}
-                        size={18}
-                      />
-                    </Link>
-                  </div>
+                {
+                  isFetching ?
+                    <LoadingIndicator
+                      className={styles.loading}
+                      size={20}
+                    /> :
+                    null
+                }
 
-                  {
-                    values.map((v, index) => {
-                      const hasParent = v.parentKey !== undefined;
-                      const depth = hasParent ? 1 : 0;
-                      const parentSelected = hasParent && value.includes(v.parentKey);
-                      return (
-                        <OptionComponent
-                          key={v.key}
-                          id={v.key}
-                          depth={depth}
-                          isSelected={isSelectedItem(index, this.props)}
-                          isMultiSelect={isMultiSelect}
-                          isDisabled={parentSelected}
-                          {...valueOptions}
-                          {...v}
-                          isMobile={true}
-                          onSelect={this.onSelect}
-                        >
-                          {v.value}
-                        </OptionComponent>
-                      );
-                    })
-                  }
-                </Scroller>
-              </ModalBody>
-            </Modal> :
-            null
+                {
+                  isFetching ?
+                    null :
+                    <Icon
+                      name={icons.CARET_DOWN}
+                    />
+                }
+              </Link>
+            </div> :
+            <Link
+              className={classNames(
+                className,
+                hasError && styles.hasError,
+                hasWarning && styles.hasWarning,
+                isDisabled && disabledClassName
+              )}
+              isDisabled={isDisabled}
+            >
+              <SelectedValueComponent
+                value={selectedValueDisplay}
+                values={values}
+                {...selectedValueOptions}
+                {...(selectedOption ? (() => { const { key, ...rest } = selectedOption; return rest; })() : {})}
+                isDisabled={isDisabled}
+                isMultiSelect={isMultiSelect}
+              >
+                {selectedOption ? selectedOption.value : null}
+              </SelectedValueComponent>
+
+              <div
+                className={isDisabled ?
+                  styles.dropdownArrowContainerDisabled :
+                  styles.dropdownArrowContainer
+                }
+              >
+
+                {
+                  isFetching ?
+                    <LoadingIndicator
+                      className={styles.loading}
+                      size={20}
+                    /> :
+                    null
+                }
+
+                {
+                  isFetching ?
+                    null :
+                    <Icon
+                      name={icons.CARET_DOWN}
+                    />
+                }
+              </div>
+            </Link>
         }
       </div>
-    );
-  }
+
+      {isOpen && !isMobile && (
+        <FloatingPortal id="portal-root">
+          <div
+            ref={refs.setFloating}
+            id={optionsId}
+            className={styles.optionsContainer}
+            style={floatingStyles}
+            {...getFloatingProps()}
+          >
+            <Scroller
+              className={styles.options}
+              style={{
+                maxHeight: floatingStyles.maxHeight
+              }}
+            >
+              {
+                values.map((v, index) => {
+                  const hasParent = v.parentKey !== undefined;
+                  const depth = hasParent ? 1 : 0;
+                  const parentSelected = hasParent && value.includes(v.parentKey);
+                  const { key, ...optionProps } = v;
+                  return (
+                    <OptionComponent
+                      key={key}
+                      id={key}
+                      depth={depth}
+                      isSelected={isSelectedItem(index, props)}
+                      isDisabled={parentSelected}
+                      isMultiSelect={isMultiSelect}
+                      {...valueOptions}
+                      {...optionProps}
+                      isMobile={false}
+                      onSelect={onSelect}
+                    >
+                      {v.value}
+                    </OptionComponent>
+                  );
+                })
+              }
+            </Scroller>
+          </div>
+        </FloatingPortal>
+      )}
+
+      {isMobile ?
+        <Modal
+          className={styles.optionsModal}
+          size={sizes.EXTRA_SMALL}
+          isOpen={isOpen}
+          onModalClose={onOptionsModalClose}
+        >
+          <ModalBody
+            className={styles.optionsModalBody}
+            innerClassName={styles.optionsInnerModalBody}
+            scrollDirection={scrollDirections.NONE}
+          >
+            <Scroller className={styles.optionsModalScroller}>
+              <div className={styles.mobileCloseButtonContainer}>
+                <Link
+                  className={styles.mobileCloseButton}
+                  onPress={onOptionsModalClose}
+                >
+                  <Icon
+                    name={icons.CLOSE}
+                    size={18}
+                  />
+                </Link>
+              </div>
+
+              {
+                values.map((v, index) => {
+                  const hasParent = v.parentKey !== undefined;
+                  const depth = hasParent ? 1 : 0;
+                  const parentSelected = hasParent && value.includes(v.parentKey);
+                  const { key, ...optionProps } = v;
+                  return (
+                    <OptionComponent
+                      key={key}
+                      id={key}
+                      depth={depth}
+                      isSelected={isSelectedItem(index, props)}
+                      isMultiSelect={isMultiSelect}
+                      isDisabled={parentSelected}
+                      {...valueOptions}
+                      {...optionProps}
+                      isMobile={true}
+                      onSelect={onSelect}
+                    >
+                      {v.value}
+                    </OptionComponent>
+                  );
+                })
+              }
+            </Scroller>
+          </ModalBody>
+        </Modal> :
+        null
+      }
+    </div>
+  );
 }
 
 EnhancedSelectInput.propTypes = {
@@ -577,29 +480,17 @@ EnhancedSelectInput.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.arrayOf(PropTypes.string), PropTypes.arrayOf(PropTypes.number)]),
   values: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isDisabled: PropTypes.bool.isRequired,
-  isFetching: PropTypes.bool.isRequired,
-  isEditable: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
+  isFetching: PropTypes.bool,
+  isEditable: PropTypes.bool,
   hasError: PropTypes.bool,
   hasWarning: PropTypes.bool,
-  valueOptions: PropTypes.object.isRequired,
-  selectedValueOptions: PropTypes.object.isRequired,
-  selectedValueComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
+  valueOptions: PropTypes.object,
+  selectedValueOptions: PropTypes.object,
+  selectedValueComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   optionComponent: PropTypes.elementType,
   onOpen: PropTypes.func,
   onChange: PropTypes.func.isRequired
-};
-
-EnhancedSelectInput.defaultProps = {
-  className: styles.enhancedSelect,
-  disabledClassName: styles.isDisabled,
-  isDisabled: false,
-  isFetching: false,
-  isEditable: false,
-  valueOptions: {},
-  selectedValueOptions: {},
-  selectedValueComponent: HintedSelectInputSelectedValue,
-  optionComponent: HintedSelectInputOption
 };
 
 export default EnhancedSelectInput;
