@@ -484,7 +484,7 @@
   "RequiredPlaceHolder": "नया प्रतिबंध जोड़ें",
   "RescanAfterRefreshHelpText": "मूवी रिफ्रेश करने के बाद मूवी फोल्डर को रेस्क्यू करें",
   "RescanAfterRefreshHelpTextWarning": "जब हमेशा 'ऑलवेज' पर सेट नहीं किया जाता है, तो रेडियर स्वचालित रूप से फाइलों में बदलाव का पता नहीं लगाएगा",
-  "RescanAuthorFolderAfterRefresh": "रिफ्रेश के बाद Rescan Movie Folder",
+  "RescanAuthorFolderAfterRefresh": "रिफ्रेश के बाद Rescan पुस्तक Folder",
   "Reset": "रीसेट",
   "ResetAPIKey": "एपीआई कुंजी को रीसेट करें",
   "ResetAPIKeyMessageText": "क्या आप वाकई अपनी API कुंजी को रीसेट करना चाहते हैं?",

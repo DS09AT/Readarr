@@ -29,7 +29,7 @@
   "AuthenticationRequiredUsernameHelpTextWarning": "Masukkan nama pengguna baru",
   "AuthenticationRequiredWarning": "Untuk mencegah akses jarak jauh tanpa autentikasi, {appName} kini mewajibkan pengaktifkan autentikasi. Kamu dapat menonaktifkan autentikasi dari jaringan lokal.",
   "AuthForm": "Formulir (Halaman Masuk)",
-  "AuthorClickToChangeBook": "Klik untuk mengubah film",
+  "AuthorClickToChangeBook": "Klik untuk mengubah buku",
   "AuthorSearch": "",
   "Automatic": "Otomatis",
   "AutoRedownloadFailed": "Pengunduhan Ulang Gagal",
