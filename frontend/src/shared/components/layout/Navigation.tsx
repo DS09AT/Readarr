@@ -1,13 +1,15 @@
-import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import clsx from 'clsx';
 
 import { Button } from '@/shared/components/ui';
 import { remToPx } from '@/shared/lib/remToPx';
+import { translate } from '@/shared/lib/i18n';
 
 interface NavLink {
   title: string;
   href: string;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 interface NavGroup {
@@ -15,64 +17,69 @@ interface NavGroup {
   links: NavLink[];
 }
 
-const navigation: NavGroup[] = [
-  {
-    title: 'Library',
-    links: [
-      { title: 'Authors', href: '/authors' },
-      { title: 'Books', href: '/books' },
-	  { title: 'Add New', href: '/add/search' },
-	  { title: 'Bookshelf', href: '/shelf' },
-      { title: 'Unmapped Files', href: '/unmapped' },
-      { title: 'Calendar', href: '/calendar' },
-    ],
-  },
-  {
-    title: 'Activity',
-    links: [
-      { title: 'Queue', href: '/queue' },
-      { title: 'History', href: '/history' },
-      { title: 'Blocklist', href: '/blocklist' },
-      { title: 'Wanted', href: '/wanted' },
-      { title: 'Cutoff Unmet', href: '/cutoff-unmet' },
-    ],
-  },
+function getNavigation(): NavGroup[] {
+  return [
     {
-    title: 'Wanted',
-    links: [
-      { title: 'Missing', href: '/wanted/missing' },
-      { title: 'Cutoff Unmet', href: '/wanted/cutoffunmet' },
-    ],
-  },
-  {
-    title: 'Settings',
-    links: [
-      { title: 'Media Management', href: '/settings/mediamanagement' },
-      { title: 'Profiles', href: '/settings/profiles' },
-      { title: 'Quality', href: '/settings/quality' },
-      { title: 'Custom Formats', href: '/settings/customformats' },
-      { title: 'Indexers', href: '/settings/indexers' },
-      { title: 'Download Clients', href: '/settings/downloadclients' },
-      { title: 'Import Lists', href: '/settings/importlists' },
-      { title: 'Connect', href: '/settings/connect' },
-      { title: 'Metadata', href: '/settings/metadata' },
-      { title: 'Tags', href: '/settings/tags' },
-      { title: 'General', href: '/settings/general' },
-      { title: 'UI', href: '/settings/ui' },
-    ],
-  },
-  {
-    title: 'System',
-    links: [
-      { title: 'Status', href: '/system/status' },
-      { title: 'Tasks', href: '/system/tasks' },
-      { title: 'Backup', href: '/system/backup' },
-      { title: 'Updates', href: '/system/updates' },
-      { title: 'Events', href: '/system/events' },
-      { title: 'Logs', href: '/system/logs' },
-    ],
-  },
-];
+      title: translate('Library'),
+      links: [
+        { title: translate('Authors'), href: '/authors' },
+        { title: translate('Books'), href: '/books' },
+        { title: translate('AddNew'), href: '/add/search' },
+        { title: translate('Bookshelf'), href: '/shelf' },
+        { title: translate('UnmappedFiles'), href: '/unmapped' },
+      ],
+    },
+    {
+      title: translate('Calendar'),
+      links: [
+        { title: translate('Calendar'), href: '/calendar' },
+      ],
+    },
+    {
+      title: translate('Activity'),
+      links: [
+        { title: translate('Queue'), href: '/activity/queue' },
+        { title: translate('History'), href: '/activity/history' },
+        { title: translate('Blocklist'), href: '/activity/blocklist' },
+      ],
+    },
+    {
+      title: translate('Wanted'),
+      links: [
+        { title: translate('Missing'), href: '/wanted/missing' },
+        { title: translate('CutoffUnmet'), href: '/wanted/cutoffunmet' },
+      ],
+    },
+    {
+      title: translate('Settings'),
+      links: [
+        { title: translate('MediaManagement'), href: '/settings/mediamanagement' },
+        { title: translate('Profiles'), href: '/settings/profiles' },
+        { title: translate('Quality'), href: '/settings/quality' },
+        { title: translate('CustomFormats'), href: '/settings/customformats' },
+        { title: translate('Indexers'), href: '/settings/indexers' },
+        { title: translate('DownloadClients'), href: '/settings/downloadclients' },
+        { title: translate('ImportLists'), href: '/settings/importlists' },
+        { title: translate('Connect'), href: '/settings/connect' },
+        { title: translate('Metadata'), href: '/settings/metadata' },
+        { title: translate('Tags'), href: '/settings/tags' },
+        { title: translate('General'), href: '/settings/general' },
+        { title: translate('Ui'), href: '/settings/ui' },
+      ],
+    },
+    {
+      title: translate('System'),
+      links: [
+        { title: translate('Status'), href: '/system/status' },
+        { title: translate('Tasks'), href: '/system/tasks' },
+        { title: translate('Backup'), href: '/system/backup' },
+        { title: translate('Updates'), href: '/system/updates' },
+        { title: translate('Events'), href: '/system/events' },
+        { title: translate('LogFiles'), href: '/system/logs/files' },
+      ],
+    },
+  ];
+}
 
 function ActivePageMarker({ activeIndex }: { activeIndex: number }) {
   const itemHeight = remToPx(2);
@@ -167,9 +174,7 @@ function NavigationGroup({
             <motion.li key={link.href} layout="position" className="relative">
               <NavLinkComponent
                 href={link.href}
-                onClick={() => {
-                  // onLinkClick(link.href);
-                }}
+                onClick={() => {}}
               >
                 {link.title}
               </NavLinkComponent>
@@ -182,7 +187,7 @@ function NavigationGroup({
 }
 
 export function Navigation({ className }: { className?: string }) {
-  // const [activeHref, setActiveHref] = useState('#authors');
+  const navigation = getNavigation();
 
   return (
     <nav className={className}>
@@ -195,7 +200,7 @@ export function Navigation({ className }: { className?: string }) {
         ))}
         <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
           <Button href="#signin" variant="filled" className="w-full">
-            Sign in
+            {translate('SignIn')}
           </Button>
         </li>
       </ul>

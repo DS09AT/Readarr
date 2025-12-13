@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { Providers } from '@/shared/lib/Providers';
+import { initI18n } from '@/shared/lib/i18n';
 
 import { App } from './App';
 
@@ -31,8 +32,10 @@ const initialize = async () => {
     }
   } catch (e) {
     // console.warn('Failed to load initialize.json', e);
-    // Proceed with rendering even if fetch fails
   }
+
+  // Initialize translations
+  await initI18n();
 
   ReactDOM.createRoot(root).render(
     <StrictMode>
