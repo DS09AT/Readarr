@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import createUISettingsSelector from 'Store/Selectors/createUISettingsSelector';
-import HistoryDetails from './HistoryDetails';
+import HistoryDetails from './HistoryDetails.tsx';
 
 function createMapStateToProps() {
   return createSelector(

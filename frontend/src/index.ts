@@ -1,4 +1,5 @@
 import './polyfills';
+import 'Styles/tailwind.css';
 import 'Styles/globals.css';
 import './index.css';
 

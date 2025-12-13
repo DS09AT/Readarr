@@ -7,7 +7,7 @@ import { grabQueueItem, removeQueueItem } from 'Store/Actions/queueActions';
 import createAuthorSelector from 'Store/Selectors/createAuthorSelector';
 import createBookSelector from 'Store/Selectors/createBookSelector';
 import createUISettingsSelector from 'Store/Selectors/createUISettingsSelector';
-import QueueRow from './QueueRow';
+import QueueRow from './QueueRow.tsx';
 
 function createMapStateToProps() {
   return createSelector(

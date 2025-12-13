@@ -6,8 +6,6 @@ import { AppDispatch } from 'Store/types';
 import Icon from 'Components/Icon';
 import IconButton from 'Components/Link/IconButton';
 import ConfirmModal from 'Components/Modal/ConfirmModal';
-import TableRowCell from 'Components/Table/Cells/TableRowCell';
-import TableRow from 'Components/Table/TableRow';
 import useModalOpenState from 'Helpers/Hooks/useModalOpenState';
 import { icons, kinds } from 'Helpers/Props';
 import { cancelCommand } from 'Store/Actions/commandActions';
@@ -17,8 +15,8 @@ import formatDateTime from 'Utilities/Date/formatDateTime';
 import formatTimeSpan from 'Utilities/Date/formatTimeSpan';
 import titleCase from 'Utilities/String/titleCase';
 import translate from 'Utilities/String/translate';
+import { TableRow, TableCell } from 'ComponentsV2/UI';
 import QueuedTaskRowNameCell from './QueuedTaskRowNameCell';
-import styles from './QueuedTaskRow.css';
 
 function getStatusIconProps(status: string, message: string | undefined) {
   const title = titleCase(status);
@@ -175,13 +173,12 @@ export default function QueuedTaskRow(props: QueuedTaskRowProps) {
 
   return (
     <TableRow>
-      <TableRowCell className={styles.trigger}>
-        <span className={styles.triggerContent}>
+      <TableCell className="w-12">
+        <div className="flex w-full items-center justify-between">
           <Icon name={triggerIcon} title={titleCase(trigger)} />
-
           <Icon {...getStatusIconProps(status, message)} />
-        </span>
-      </TableRowCell>
+        </div>
+      </TableCell>
 
       <QueuedTaskRowNameCell
         commandName={commandName}
@@ -189,32 +186,32 @@ export default function QueuedTaskRow(props: QueuedTaskRowProps) {
         clientUserAgent={clientUserAgent}
       />
 
-      <TableRowCell
-        className={styles.queued}
+      <TableCell
+        className="w-44"
         title={formatDateTime(queued, longDateFormat, timeFormat)}
       >
         {queuedAt}
-      </TableRowCell>
+      </TableCell>
 
-      <TableRowCell
-        className={styles.started}
+      <TableCell
+        className="w-44"
         title={formatDateTime(started, longDateFormat, timeFormat)}
       >
         {startedAt}
-      </TableRowCell>
+      </TableCell>
 
-      <TableRowCell
-        className={styles.ended}
+      <TableCell
+        className="w-44"
         title={formatDateTime(ended, longDateFormat, timeFormat)}
       >
         {endedAt}
-      </TableRowCell>
+      </TableCell>
 
-      <TableRowCell className={styles.duration}>
+      <TableCell className="w-24">
         {formatTimeSpan(duration)}
-      </TableRowCell>
+      </TableCell>
 
-      <TableRowCell className={styles.actions}>
+      <TableCell className="w-14">
         {status === 'queued' && (
           <IconButton
             title={translate('RemovedFromTaskQueue')}
@@ -222,7 +219,7 @@ export default function QueuedTaskRow(props: QueuedTaskRowProps) {
             onPress={openCancelConfirmModal}
           />
         )}
-      </TableRowCell>
+      </TableCell>
 
       <ConfirmModal
         isOpen={isCancelConfirmModalOpen}

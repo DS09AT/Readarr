@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { CommandBody } from 'Commands/Command';
-import TableRowCell from 'Components/Table/Cells/TableRowCell';
 import createMultiAuthorsSelector from 'Store/Selectors/createMultiAuthorsSelector';
 import translate from 'Utilities/String/translate';
-import styles from './QueuedTaskRowNameCell.css';
+import { TableCell } from 'ComponentsV2/UI';
 
 function formatTitles(titles: string[]) {
   if (!titles) {
@@ -44,22 +43,22 @@ export default function QueuedTaskRowNameCell(
   );
 
   return (
-    <TableRowCell>
-      <span className={styles.commandName}>
+    <TableCell>
+      <div className="inline-block min-w-[220px] text-zinc-900 dark:text-zinc-100">
         {commandName}
         {sortedAuthors.length ? (
           <span> - {formatTitles(sortedAuthors.map((a) => a.authorName))}</span>
         ) : null}
-      </span>
+      </div>
 
       {clientUserAgent ? (
-        <span
-          className={styles.userAgent}
+        <div
+          className="text-sm text-zinc-400 dark:text-zinc-500"
           title={translate('TaskUserAgentTooltip')}
         >
           {translate('From')}: {clientUserAgent}
-        </span>
+        </div>
       ) : null}
-    </TableRowCell>
+    </TableCell>
   );
 }

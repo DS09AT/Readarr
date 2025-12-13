@@ -16,6 +16,9 @@ const mixinsFiles = [
 
 module.exports = {
   plugins: [
+    // Tailwind CSS v4.1 - must be first for proper processing
+    '@tailwindcss/postcss',
+    // Keep existing plugins for CSS Modules compatibility during migration
     ['postcss-mixins', {
       mixinsFiles
     }],

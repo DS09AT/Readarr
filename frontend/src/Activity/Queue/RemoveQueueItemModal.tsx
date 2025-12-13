@@ -10,7 +10,6 @@ import ModalFooter from 'Components/Modal/ModalFooter';
 import ModalHeader from 'Components/Modal/ModalHeader';
 import { inputTypes, kinds, sizes } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
-import styles from './RemoveQueueItemModal.css';
 
 interface RemovePressProps {
   remove: boolean;

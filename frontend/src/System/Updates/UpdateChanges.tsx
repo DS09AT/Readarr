@@ -1,6 +1,5 @@
 import React from 'react';
 import InlineMarkdown from 'Components/Markdown/InlineMarkdown';
-import styles from './UpdateChanges.css';
 
 interface UpdateChangesProps {
   title: string;
@@ -18,8 +17,10 @@ function UpdateChanges(props: UpdateChangesProps) {
 
   return (
     <div>
-      <div className={styles.title}>{title}</div>
-      <ul>
+      <div className="mt-2 text-base font-medium text-zinc-900 dark:text-zinc-100">
+        {title}
+      </div>
+      <ul className="ml-5 list-disc space-y-1 text-zinc-700 dark:text-zinc-300">
         {uniqueChanges.map((change, index) => {
           const checkChange = change.replace(
             /#\d{4,5}\b/g,

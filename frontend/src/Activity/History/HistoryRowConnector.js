@@ -6,7 +6,7 @@ import { fetchHistory, markAsFailed } from 'Store/Actions/historyActions';
 import createAuthorSelector from 'Store/Selectors/createAuthorSelector';
 import createBookSelector from 'Store/Selectors/createBookSelector';
 import createUISettingsSelector from 'Store/Selectors/createUISettingsSelector';
-import HistoryRow from './HistoryRow';
+import HistoryRow from './HistoryRow.tsx';
 
 function createMapStateToProps() {
   return createSelector(

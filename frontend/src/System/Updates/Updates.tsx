@@ -24,8 +24,9 @@ import { UpdateMechanism } from 'typings/Settings/General';
 import formatDate from 'Utilities/Date/formatDate';
 import formatDateTime from 'Utilities/Date/formatDateTime';
 import translate from 'Utilities/String/translate';
+import { Badge } from 'ComponentsV2/UI';
+import { Spinner } from 'ComponentsV2/UI';
 import UpdateChanges from './UpdateChanges';
-import styles from './Updates.css';
 
 const VERSION_REGEX = /\d+\.\d+\.\d+\.\d+/i;
 
@@ -143,7 +144,7 @@ function Updates() {
         ) : null}
 
         {hasUpdateToInstall ? (
-          <div className={styles.messageContainer}>
+          <div className="mb-5 flex items-center gap-3">
             {updateMechanism === 'builtIn' || updateMechanism === 'script' ? (
               <SpinnerButton
                 kind={kinds.PRIMARY}
@@ -156,7 +157,7 @@ function Updates() {
               <>
                 <Icon name={icons.WARNING} kind={kinds.WARNING} size={30} />
 
-                <div className={styles.message}>
+                <div className="pl-1 text-lg leading-[30px] text-zinc-700 dark:text-zinc-300">
                   {externalUpdaterPrefix}{' '}
                   <InlineMarkdown
                     data={
@@ -170,36 +171,40 @@ function Updates() {
             )}
 
             {isFetching ? (
-              <LoadingIndicator className={styles.loading} size={20} />
+              <Spinner size="sm" className="ml-auto mt-1" />
             ) : null}
           </div>
         ) : null}
 
         {noUpdateToInstall && (
-          <div className={styles.messageContainer}>
+          <div className="mb-5 flex items-center gap-3">
             <Icon
-              className={styles.upToDateIcon}
+              className="text-emerald-500"
               name={icons.CHECK_CIRCLE}
               size={30}
             />
-            <div className={styles.message}>{translate('OnLatestVersion')}</div>
+            <div className="pl-1 text-lg leading-[30px] text-zinc-700 dark:text-zinc-300">
+              {translate('OnLatestVersion')}
+            </div>
 
             {isFetching && (
-              <LoadingIndicator className={styles.loading} size={20} />
+              <Spinner size="sm" className="ml-auto mt-1" />
             )}
           </div>
         )}
 
         {hasUpdates && (
-          <div>
+          <div className="space-y-5">
             {items.map((update) => {
               return (
-                <div key={update.version} className={styles.update}>
-                  <div className={styles.info}>
-                    <div className={styles.version}>{update.version}</div>
-                    <div className={styles.space}>&mdash;</div>
+                <div key={update.version} className="mt-5">
+                  <div className="mb-2 flex items-center gap-2 border-b border-zinc-200 pb-1 dark:border-zinc-800">
+                    <div className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      {update.version}
+                    </div>
+                    <div className="px-1 text-zinc-500 dark:text-zinc-400">&mdash;</div>
                     <div
-                      className={styles.date}
+                      className="text-base text-zinc-600 dark:text-zinc-400"
                       title={formatDateTime(
                         update.releaseDate,
                         longDateFormat,
@@ -210,13 +215,16 @@ function Updates() {
                     </div>
 
                     {update.branch === 'master' ? null : (
-                      <Label className={styles.label}>{update.branch}</Label>
+                      <Badge variant="neutral" size="sm" className="ml-2">
+                        {update.branch}
+                      </Badge>
                     )}
 
                     {update.version === currentVersion ? (
-                      <Label
-                        className={styles.label}
-                        kind={kinds.SUCCESS}
+                      <Badge
+                        variant="success"
+                        size="sm"
+                        className="ml-2"
                         title={formatDateTime(
                           update.installedOn,
                           longDateFormat,
@@ -224,13 +232,14 @@ function Updates() {
                         )}
                       >
                         {translate('CurrentlyInstalled')}
-                      </Label>
+                      </Badge>
                     ) : null}
 
                     {update.version !== currentVersion && update.installedOn ? (
-                      <Label
-                        className={styles.label}
-                        kind={kinds.INVERSE}
+                      <Badge
+                        variant="neutral"
+                        size="sm"
+                        className="ml-2"
                         title={formatDateTime(
                           update.installedOn,
                           longDateFormat,
@@ -238,7 +247,7 @@ function Updates() {
                         )}
                       >
                         {translate('PreviouslyInstalled')}
-                      </Label>
+                      </Badge>
                     ) : null}
                   </div>
 
@@ -255,7 +264,9 @@ function Updates() {
                       />
                     </div>
                   ) : (
-                    <div>{translate('MaintenanceRelease')}</div>
+                    <div className="text-zinc-600 dark:text-zinc-400">
+                      {translate('MaintenanceRelease')}
+                    </div>
                   )}
                 </div>
               );

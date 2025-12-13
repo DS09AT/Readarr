@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { removeBlocklistItem } from 'Store/Actions/blocklistActions';
 import createAuthorSelector from 'Store/Selectors/createAuthorSelector';
-import BlocklistRow from './BlocklistRow';
+import BlocklistRow from './BlocklistRow.tsx';
 
 function createMapStateToProps() {
   const authorSelector = createAuthorSelector();
