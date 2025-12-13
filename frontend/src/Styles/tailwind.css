@@ -39,18 +39,23 @@
   --container-2xl: 40rem;
   --container-3xl: 50rem;
   --container-5xl: 66rem;
+
+  --color-primary-300: #f0989b;
+  --color-primary-400: #e06469;
+  --color-primary-500: #bc2f35;
+  --color-primary-600: #96252a;
 }
 
 @layer base {
   :root {
     --shiki-color-text: var(--color-white);
-    --shiki-token-constant: var(--color-emerald-300);
-    --shiki-token-string: var(--color-emerald-300);
+    --shiki-token-constant: var(--color-primary-300);
+    --shiki-token-string: var(--color-primary-300);
     --shiki-token-comment: var(--color-zinc-500);
-    --shiki-token-keyword: var(--color-sky-300);
-    --shiki-token-parameter: var(--color-pink-300);
-    --shiki-token-function: var(--color-violet-300);
-    --shiki-token-string-expression: var(--color-emerald-300);
+    --shiki-token-keyword: var(--color-primary-300);
+    --shiki-token-parameter: var(--color-primary-300);
+    --shiki-token-function: var(--color-primary-300);
+    --shiki-token-string-expression: var(--color-primary-300);
     --shiki-token-punctuation: var(--color-zinc-200);
   }
 
