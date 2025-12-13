@@ -1,17 +1,6 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 import { useState, useEffect, useRef } from 'react';
-
-function SearchIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" {...props}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12.01 12a4.25 4.25 0 1 0-6.02-6 4.25 4.25 0 0 0 6.02 6Zm0 0 3.24 3.25"
-      />
-    </svg>
-  );
-}
+import { Search as SearchIcon } from 'lucide-react';
 
 function SearchDialog({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
   const inputRef = useRef<HTMLInputElement>(null);

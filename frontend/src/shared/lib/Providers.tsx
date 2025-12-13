@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { ThemeProvider, useTheme } from 'next-themes';
+import { BrowserRouter } from 'react-router-dom';
 
 function ThemeWatcher() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -29,7 +30,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange={true}>
       <ThemeWatcher />
-      {children}
+      <BrowserRouter basename={window.Readarr?.urlBase}>
+        {children}
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

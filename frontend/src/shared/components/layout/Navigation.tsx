@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { Button } from '@/shared/components/ui';
 import { remToPx } from '@/shared/lib/remToPx';
@@ -19,38 +19,57 @@ const navigation: NavGroup[] = [
   {
     title: 'Library',
     links: [
-      { title: 'Authors', href: '#authors' },
-      { title: 'Books', href: '#books' },
-      { title: 'Calendar', href: '#calendar' },
-      { title: 'Activity', href: '#activity' },
+      { title: 'Authors', href: '/authors' },
+      { title: 'Books', href: '/books' },
+	  { title: 'Add New', href: '/add/search' },
+	  { title: 'Bookshelf', href: '/shelf' },
+      { title: 'Unmapped Files', href: '/unmapped' },
+      { title: 'Calendar', href: '/calendar' },
     ],
   },
   {
-    title: 'Management',
+    title: 'Activity',
     links: [
-      { title: 'Wanted', href: '#wanted' },
-      { title: 'Queue', href: '#queue' },
-      { title: 'History', href: '#history' },
-      { title: 'Blocklist', href: '#blocklist' },
+      { title: 'Queue', href: '/queue' },
+      { title: 'History', href: '/history' },
+      { title: 'Blocklist', href: '/blocklist' },
+      { title: 'Wanted', href: '/wanted' },
+      { title: 'Cutoff Unmet', href: '/cutoff-unmet' },
+    ],
+  },
+    {
+    title: 'Wanted',
+    links: [
+      { title: 'Missing', href: '/wanted/missing' },
+      { title: 'Cutoff Unmet', href: '/wanted/cutoffunmet' },
     ],
   },
   {
     title: 'Settings',
     links: [
-      { title: 'Media Management', href: '#settings-media' },
-      { title: 'Profiles', href: '#settings-profiles' },
-      { title: 'Indexers', href: '#settings-indexers' },
-      { title: 'Download Clients', href: '#settings-downloads' },
-      { title: 'General', href: '#settings-general' },
+      { title: 'Media Management', href: '/settings/mediamanagement' },
+      { title: 'Profiles', href: '/settings/profiles' },
+      { title: 'Quality', href: '/settings/quality' },
+      { title: 'Custom Formats', href: '/settings/customformats' },
+      { title: 'Indexers', href: '/settings/indexers' },
+      { title: 'Download Clients', href: '/settings/downloadclients' },
+      { title: 'Import Lists', href: '/settings/importlists' },
+      { title: 'Connect', href: '/settings/connect' },
+      { title: 'Metadata', href: '/settings/metadata' },
+      { title: 'Tags', href: '/settings/tags' },
+      { title: 'General', href: '/settings/general' },
+      { title: 'UI', href: '/settings/ui' },
     ],
   },
   {
     title: 'System',
     links: [
-      { title: 'Status', href: '#system-status' },
-      { title: 'Tasks', href: '#system-tasks' },
-      { title: 'Logs', href: '#system-logs' },
-      { title: 'Updates', href: '#system-updates' },
+      { title: 'Status', href: '/system/status' },
+      { title: 'Tasks', href: '/system/tasks' },
+      { title: 'Backup', href: '/system/backup' },
+      { title: 'Updates', href: '/system/updates' },
+      { title: 'Events', href: '/system/events' },
+      { title: 'Logs', href: '/system/logs' },
     ],
   },
 ];
@@ -91,39 +110,38 @@ function VisibleSectionHighlight({ activeIndex }: { activeIndex: number }) {
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
-  active?: boolean;
   onClick?: (e: React.MouseEvent) => void;
 }
 
-function NavLinkComponent({ href, children, active = false, onClick }: NavLinkProps) {
+function NavLinkComponent({ href, children, onClick }: NavLinkProps) {
+  const location = useLocation();
+  const activeLink = location.pathname === href;
+
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       onClick={onClick}
-      aria-current={active ? 'page' : undefined}
+      aria-current={activeLink ? 'page' : undefined}
       className={clsx(
         'flex justify-between gap-2 py-1 pl-4 pr-3 text-sm transition',
-        active
+        activeLink
           ? 'text-zinc-900 dark:text-white'
           : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white'
       )}
     >
       <span className="truncate">{children}</span>
-    </a>
+    </Link>
   );
 }
 
 function NavigationGroup({
   group,
-  activeHref,
-  onLinkClick,
 }: {
   group: NavGroup;
-  activeHref: string;
-  onLinkClick: (href: string) => void;
 }) {
-  const activeIndex = group.links.findIndex((link) => link.href === activeHref);
-  const isActiveGroup = activeIndex !== -1;
+  const location = useLocation();
+  const isActiveGroup = group.links.some((link) => link.href === location.pathname);
+  const activeIndex = group.links.findIndex((link) => link.href === location.pathname);
 
   return (
     <li className="relative mt-6">
@@ -149,10 +167,8 @@ function NavigationGroup({
             <motion.li key={link.href} layout="position" className="relative">
               <NavLinkComponent
                 href={link.href}
-                active={link.href === activeHref}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onLinkClick(link.href);
+                onClick={() => {
+                  // onLinkClick(link.href);
                 }}
               >
                 {link.title}
@@ -166,7 +182,7 @@ function NavigationGroup({
 }
 
 export function Navigation({ className }: { className?: string }) {
-  const [activeHref, setActiveHref] = useState('#authors');
+  // const [activeHref, setActiveHref] = useState('#authors');
 
   return (
     <nav className={className}>
@@ -175,8 +191,6 @@ export function Navigation({ className }: { className?: string }) {
           <NavigationGroup
             key={group.title}
             group={group}
-            activeHref={activeHref}
-            onLinkClick={setActiveHref}
           />
         ))}
         <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
