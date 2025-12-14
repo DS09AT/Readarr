@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>net8.0</TargetFrameworks>
@@ -9,6 +9,6 @@
     <PackageReference Include="NLog" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Readarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
   </ItemGroup>
 </Project>

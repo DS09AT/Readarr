@@ -80,7 +80,7 @@ DotnetPublishWithRetry()
 ShowHelp()
 {
     cat << EOF
-Readarr Development Build Script
+Shelvance Development Build Script
 
 Usage: ./build-dev.sh [options]
 
@@ -127,19 +127,19 @@ BuildBackendFull()
 
     mkdir -p "$devFolder"
 
-    echo "  [1/2] Building & publishing Readarr.Console..."
+    echo "  [1/2] Building & publishing Shelvance.Console..."
     DotnetPublishWithRetry src/NzbDrone.Console/Readarr.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
-        echo "Failed to build Readarr.Console"
+        echo "Failed to build Shelvance.Console"
         return 1
     fi
 
-    echo "  [2/2] Building & publishing Readarr.Update..."
+    echo "  [2/2] Building & publishing Shelvance.Update..."
     DotnetPublishWithRetry src/NzbDrone.Update/Readarr.Update.csproj "$devFolder/Readarr.Update"
 
     if [ $? -ne 0 ]; then
-        echo "Failed to build Readarr.Update"
+        echo "Failed to build Shelvance.Update"
         return 1
     fi
     
@@ -175,20 +175,20 @@ PublishBackend()
 
     mkdir -p "$devFolder"
 
-    echo "  [1/2] Publishing Readarr.Console..."
+    echo "  [1/2] Publishing Shelvance.Console..."
     DotnetPublishWithRetry src/NzbDrone.Console/Readarr.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
-        echo "Failed to publish Readarr.Console"
+        echo "Failed to publish Shelvance.Console"
         return 1
     fi
 
     echo ""
-    echo "  [2/2] Publishing Readarr.Update..."
+    echo "  [2/2] Publishing Shelvance.Update..."
     DotnetPublishWithRetry src/NzbDrone.Update/Readarr.Update.csproj "$devFolder/Readarr.Update"
 
     if [ $? -ne 0 ]; then
-        echo "Failed to publish Readarr.Update"
+        echo "Failed to publish Shelvance.Update"
         return 1
     fi
     
@@ -319,7 +319,7 @@ WatchMode()
         (
             set +e
             
-            local timestamp_file="/tmp/readarr-watch-timestamp-$$"
+            local timestamp_file="/tmp/shelvance-watch-timestamp-$$"
             touch "$timestamp_file"
             
             while true; do
@@ -365,7 +365,7 @@ WatchMode()
                     local build_duration=$((build_end - build_start))
                     
                     local compiled_projects=$(echo "$build_output" | grep -E "^\s+[A-Za-z].*->.*\.dll$")
-                    local publish_line=$(echo "$build_output" | grep -E "^\s+Readarr\.Console\s*->\s*.*net8.0-dev")
+                    local publish_line=$(echo "$build_output" | grep -E "^\s+Shelvance\.Console\s*->\s*.*net8.0-dev")
                     local errors=$(echo "$build_output" | grep -E "(error|warning)")
                     
                     if [ -n "$compiled_projects" ]; then
@@ -519,7 +519,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-echo "Readarr Dev Build"
+echo "Shelvance Dev Build"
 echo "  Platform: $os ($platform)"
 echo "  Runtime: $RID"
 echo "  Framework: $FRAMEWORK"
@@ -565,8 +565,8 @@ echo "Dev build complete"
 echo "Output: $devFolder/"
 
 if [ "$os" = "windows" ]; then
-    echo "Start: .\\$devFolder\\Readarr.exe"
+    echo "Start: .\\$devFolder\\Shelvance.exe"
 else
-    echo "Start: ./$devFolder/Readarr"
+    echo "Start: ./$devFolder/Shelvance"
 fi
 

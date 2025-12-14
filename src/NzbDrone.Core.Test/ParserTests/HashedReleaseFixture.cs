@@ -44,7 +44,7 @@ namespace NzbDrone.Core.Test.ParserTests
                 @"C:\Test\Weeds.S01E10.DVDRip.XviD-Readarr\AHFMZXGHEWD660.mp3".AsOsAgnostic(),
                 "Weeds",
                 Quality.MP3,
-                "Readarr"
+                "Shelvance"
             },
             new object[]
             {

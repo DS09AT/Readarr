@@ -24,7 +24,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
 
         public string BaseUrl { get; set; }
 
-        public string SigningUrl => "https://auth.servarr.com/v1/goodreads/sign";
+        public string SigningUrl => "https://shelvance.org/v1/goodreads/sign";
         public string OAuthUrl => "https://www.goodreads.com/oauth/authorize";
         public string OAuthRequestTokenUrl => "https://www.goodreads.com/oauth/request_token";
         public string OAuthAccessTokenUrl => "https://www.goodreads.com/oauth/access_token";

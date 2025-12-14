@@ -42,9 +42,7 @@ namespace NzbDrone.Console
 
                 Bootstrap.Start(args);
             }
-            catch (ReadarrStartupException ex)
-            {
-                System.Console.WriteLine("");
+            catch (Shelvance$3");
                 System.Console.WriteLine("");
                 Logger.Fatal(ex, "EPIC FAIL!");
                 Exit(ExitCodes.NonRecoverableFailure, startupArgs);
@@ -53,7 +51,7 @@ namespace NzbDrone.Console
             {
                 System.Console.WriteLine("");
                 System.Console.WriteLine("");
-                Logger.Fatal(ex.Message + ". This can happen if another instance of Readarr is already running another application is using the same port (default: 8787) or the user has insufficient permissions");
+                Logger.Fatal(ex.Message + ". This can happen if another instance of Shelvance is already running another application is using the same port (default: 8787) or the user has insufficient permissions");
                 Exit(ExitCodes.RecoverableFailure, startupArgs);
             }
             catch (IOException ex)
@@ -62,7 +60,7 @@ namespace NzbDrone.Console
                 {
                     System.Console.WriteLine("");
                     System.Console.WriteLine("");
-                    Logger.Fatal(ex.Message + " This can happen if another instance of Readarr is already running another application is using the same port (default: 8787) or the user has insufficient permissions");
+                    Logger.Fatal(ex.Message + " This can happen if another instance of Shelvance is already running another application is using the same port (default: 8787) or the user has insufficient permissions");
                     Exit(ExitCodes.RecoverableFailure, startupArgs);
                 }
                 else

@@ -114,7 +114,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests
 
         protected void GivenMusicCategory()
         {
-            _settings.MusicCategory = "Readarr";
+            _settings.MusicCategory = "Shelvance";
         }
 
         protected void GivenTvDirectory()

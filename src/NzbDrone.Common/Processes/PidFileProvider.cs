@@ -29,7 +29,7 @@ namespace NzbDrone.Common.Processes
                 return;
             }
 
-            var filename = Path.Combine(_appFolderInfo.AppDataFolder, "readarr.pid");
+            var filename = Path.Combine(_appFolderInfo.AppDataFolder, "shelvance.pid");
             try
             {
                 File.WriteAllText(filename, ProcessProvider.GetCurrentProcessId().ToString());

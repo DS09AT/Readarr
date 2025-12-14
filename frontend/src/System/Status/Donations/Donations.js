@@ -15,7 +15,7 @@ class Donations extends Component {
           <Link to="https://opencollective.com/radarr">
             <img
               className={styles.logo}
-              src={`${window.Readarr.urlBase}/Content/Images/Icons/logo-radarr.png`}
+              src={`${window.Shelvance.urlBase}/images/icons/logo-radarr.png`}
             />
           </Link>
         </div>
@@ -23,15 +23,15 @@ class Donations extends Component {
           <Link to="https://opencollective.com/lidarr">
             <img
               className={styles.logo}
-              src={`${window.Readarr.urlBase}/Content/Images/Icons/logo-lidarr.png`}
+              src={`${window.Shelvance.urlBase}/images/icons/logo-lidarr.png`}
             />
           </Link>
         </div>
-        <div className={styles.logoContainer} title="Readarr">
-          <Link to="https://opencollective.com/readarr">
+        <div className={styles.logoContainer} title="Shelvance">
+          <Link to="https://opencollective.com/shelvance">
             <img
               className={styles.logo}
-              src={`${window.Readarr.urlBase}/Content/Images/Icons/logo-readarr.png`}
+              src={`${window.Shelvance.urlBase}/images/icons/logo-Shelvance.png`}
             />
           </Link>
         </div>
@@ -39,7 +39,7 @@ class Donations extends Component {
           <Link to="https://opencollective.com/prowlarr">
             <img
               className={styles.logo}
-              src={`${window.Readarr.urlBase}/Content/Images/Icons/logo-prowlarr.png`}
+              src={`${window.Shelvance.urlBase}/images/icons/logo-prowlarr.png`}
             />
           </Link>
         </div>
@@ -47,7 +47,7 @@ class Donations extends Component {
           <Link to="https://opencollective.com/sonarr">
             <img
               className={styles.logo}
-              src={`${window.Readarr.urlBase}/Content/Images/Icons/logo-sonarr.png`}
+              src={`${window.Shelvance.urlBase}/images/icons/logo-sonarr.png`}
             />
           </Link>
         </div>

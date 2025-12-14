@@ -617,7 +617,7 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
             ApplyRateLimit();
 
             var request = new HttpRequest(url);
-            request.Headers.Add("User-Agent", "Readarr/1.0 (https://readarr.com)");
+            request.Headers.Add("User-Agent", "Shelvance/1.0 (https://shelvance.org)");
             request.AllowAutoRedirect = true;
             request.SuppressHttpError = false;
 

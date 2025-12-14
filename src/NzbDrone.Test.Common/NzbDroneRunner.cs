@@ -48,11 +48,11 @@ namespace NzbDrone.Test.Common
             string readarrConsoleExe;
             if (OsInfo.IsWindows)
             {
-                readarrConsoleExe = "Readarr.Console.exe";
+                readarrConsoleExe = "Shelvance.Console.exe";
             }
             else
             {
-                readarrConsoleExe = "Readarr";
+                readarrConsoleExe = "Shelvance";
             }
 
             _startupLog = new List<string>();
@@ -71,7 +71,7 @@ namespace NzbDrone.Test.Common
 
                 if (_nzbDroneProcess.HasExited)
                 {
-                    TestContext.Progress.WriteLine("Readarr has exited unexpectedly");
+                    TestContext.Progress.WriteLine("Shelvance has exited unexpectedly");
                     Thread.Sleep(2000);
                     var output = _startupLog.Join(Environment.NewLine);
                     Assert.Fail("Process has exited: ExitCode={0} Output={1}", _nzbDroneProcess.ExitCode, output);
@@ -86,7 +86,7 @@ namespace NzbDrone.Test.Common
                 if (statusCall.ResponseStatus == ResponseStatus.Completed)
                 {
                     _startupLog = null;
-                    TestContext.Progress.WriteLine($"Readarr {Port} is started. Running Tests");
+                    TestContext.Progress.WriteLine($"Shelvance {Port} is started. Running Tests");
                     return;
                 }
 
@@ -105,7 +105,7 @@ namespace NzbDrone.Test.Common
                     _nzbDroneProcess.Refresh();
                     if (_nzbDroneProcess.HasExited)
                     {
-                        var log = File.ReadAllLines(Path.Combine(AppData, "logs", "readarr.trace.txt"));
+                        var log = File.ReadAllLines(Path.Combine(AppData, "logs", "shelvance.trace.txt"));
                         var output = log.Join(Environment.NewLine);
                         TestContext.Progress.WriteLine("Process has exited prematurely: ExitCode={0} Output:\n{1}", _nzbDroneProcess.ExitCode, output);
                     }

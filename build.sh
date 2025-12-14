@@ -19,13 +19,13 @@ ProgressEnd()
 
 UpdateVersionNumber()
 {
-    if [ "$READARRVERSION" != "" ]; then
+    if [ "$SHELVANCEVERSION" != "" ]; then
         echo "Updating Version Info"
         # Strip 'v' prefix if present
-        VERSION="${READARRVERSION#v}"
+        VERSION="${SHELVANCEVERSION#v}"
         sed -i'' -e "s/<AssemblyVersion>[0-9.*]\+<\/AssemblyVersion>/<AssemblyVersion>$VERSION<\/AssemblyVersion>/g" src/Directory.Build.props
         sed -i'' -e "s/<AssemblyConfiguration>[\$()A-Za-z-]\+<\/AssemblyConfiguration>/<AssemblyConfiguration>${BUILD_SOURCEBRANCHNAME}<\/AssemblyConfiguration>/g" src/Directory.Build.props
-        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$VERSION<\/string>/g" distribution/osx/Readarr.app/Contents/Info.plist
+        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$VERSION<\/string>/g" distribution/osx/Shelvance.app/Contents/Info.plist
     fi
 }
 
@@ -125,7 +125,7 @@ PackageLinux()
 
     ProgressStart "Creating $runtime Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Shelvance
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -133,14 +133,14 @@ PackageLinux()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Readarr.Windows"
+    echo "Removing Shelvance.Windows"
     rm $folder/Readarr.Windows.*
 
-    echo "Adding Readarr.Mono to UpdatePackage"
+    echo "Adding Shelvance.Mono to UpdatePackage"
     cp $folder/Readarr.Mono.* $folder/Readarr.Update
     if [ "$framework" = "net6.0" ] || [ "$framework" = "net8.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Readarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Readarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Shelvance.Update
+        cp $folder/libMonoPosixHelper.* $folder/Shelvance.Update
     fi
 
     ProgressEnd "Creating $runtime Package for $framework"
@@ -153,7 +153,7 @@ PackageMacOS()
     
     ProgressStart "Creating MacOS Package for $framework $runtime"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Shelvance
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -161,14 +161,14 @@ PackageMacOS()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Readarr.Windows"
+    echo "Removing Shelvance.Windows"
     rm $folder/Readarr.Windows.*
 
-    echo "Adding Readarr.Mono to UpdatePackage"
+    echo "Adding Shelvance.Mono to UpdatePackage"
     cp $folder/Readarr.Mono.* $folder/Readarr.Update
     if [ "$framework" = "net6.0" ] || [ "$framework" = "net8.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Readarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Readarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Shelvance.Update
+        cp $folder/libMonoPosixHelper.* $folder/Shelvance.Update
     fi
 
     ProgressEnd 'Creating MacOS Package'
@@ -185,14 +185,14 @@ PackageMacOSApp()
 
     rm -rf $folder
     mkdir -p $folder
-    cp -r distribution/osx/Readarr.app $folder
-    mkdir -p $folder/Readarr.app/Contents/MacOS
+    cp -r distribution/osx/Shelvance.app $folder
+    mkdir -p $folder/Shelvance.app/Contents/MacOS
 
     echo "Copying Binaries"
-    cp -r $artifactsFolder/$runtime/$framework/Readarr/* $folder/Readarr.app/Contents/MacOS
+    cp -r $artifactsFolder/$runtime/$framework/Shelvance/* $folder/Shelvance.app/Contents/MacOS
 
     echo "Removing Update Folder"
-    rm -r $folder/Readarr.app/Contents/MacOS/Readarr.Update
+    rm -r $folder/Shelvance.app/Contents/MacOS/Shelvance.Update
 
     ProgressEnd 'Creating macOS App Package'
 }
@@ -204,16 +204,16 @@ PackageWindows()
 
     ProgressStart "Creating $runtime Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Shelvance
     
     PackageFiles "$folder" "$framework" "$runtime"
 
-    echo "Removing Readarr.Mono"
+    echo "Removing Shelvance.Mono"
     rm -f $folder/Readarr.Mono.*
     rm -f $folder/Mono.Posix.NETStandard.*
     rm -f $folder/libMonoPosixHelper.*
 
-    echo "Adding Readarr.Windows to UpdatePackage"
+    echo "Adding Shelvance.Windows to UpdatePackage"
     cp $folder/Readarr.Windows.* $folder/Readarr.Update
 
     ProgressEnd "Creating $runtime Package for $framework"
@@ -246,7 +246,7 @@ BuildInstaller()
     local framework="$1"
     local runtime="$2"
     
-    ./_inno/ISCC.exe distribution/windows/setup/readarr.iss "//DFramework=$framework" "//DRuntime=$runtime"
+    ./_inno/ISCC.exe distribution/windows/setup/shelvance.iss "//DFramework=$framework" "//DRuntime=$runtime"
 }
 
 InstallInno()

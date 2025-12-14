@@ -11,10 +11,10 @@ function App({ store }) {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{window.Readarr.instanceName}</title>
+        <title>{window.Shelvance.instanceName}</title>
       </Helmet>
       <Provider store={store}>
-        <BrowserRouter basename={window.Readarr.urlBase}>
+        <BrowserRouter basename={window.Shelvance.urlBase}>
           <ApplyTheme>
             <PageConnector>
               <AppRoutes app={App} />

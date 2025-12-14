@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Api.Test", "NzbDron
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Automation.Test", "NzbDrone.Automation.Test\Readarr.Automation.Test.csproj", "{2356C987-F992-4084-9DA2-5DAD1DA35E85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Common.Test", "NzbDrone.Common.Test\Readarr.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelvance.Common.Test", "NzbDrone.Common.Test\Shelvance.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Common", "NzbDrone.Common\Readarr.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelvance.Common", "NzbDrone.Common\Shelvance.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Console", "NzbDrone.Console\Readarr.Console.csproj", "{AEA9EE9A-19BF-45CB-93D9-52CA443FD313}"
 EndProject

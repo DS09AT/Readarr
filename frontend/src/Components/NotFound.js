@@ -14,7 +14,7 @@ function NotFound({ message = 'You must be lost, nothing to see here.' }) {
 
         <img
           className={styles.image}
-          src={`${window.Readarr.urlBase}/Content/Images/404.png`}
+          src={`${window.Shelvance.urlBase}/images/404.png`}
         />
       </div>
     </PageContent>

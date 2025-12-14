@@ -6,7 +6,7 @@
   "Actions": "Acties",
   "Activity": "Activiteit",
   "AddedAuthorSettings": "Auteur instellingen toegevoegd",
-  "AddImportListExclusionHelpText": "Voorkom dat Readarr het boek toevoegt met Import Lijsten of Auteur Verversing",
+  "AddImportListExclusionHelpText": "Voorkom dat Shelvance het boek toevoegt met Import Lijsten of Auteur Verversing",
   "AddingTag": "Tag wordt toegevoegd",
   "AddList": "Lijst Toevoegen",
   "AddListExclusion": "Lijst uitzondering toevoegen",
@@ -812,3 +812,4 @@
   "YesCancel": "Ja, Annuleren",
   "Yesterday": "Gisteren"
 }
+

@@ -6,7 +6,7 @@
   "Actions": "Действия",
   "Activity": "Активность",
   "AddedAuthorSettings": "Добавленные Авторские Настройки",
-  "AddImportListExclusionHelpText": "Предотвратить добавление книги в Readarr с помощью списков импорта или обновления автора",
+  "AddImportListExclusionHelpText": "Предотвратить добавление книги в Shelvance с помощью списков импорта или обновления автора",
   "AddingTag": "Добавление тега",
   "AddList": "Добавить список",
   "AddListExclusion": "Добавить исключение из списка",
@@ -915,3 +915,4 @@
   "YesCancel": "Да, Отмена",
   "Yesterday": "Вчера"
 }
+

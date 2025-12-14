@@ -26,9 +26,9 @@ slnFile=src/Readarr.sln
 platform=Posix
 
 if [ "$PLATFORM" = "Windows" ]; then
-  application=Readarr.Console.dll
+  application=Shelvance.Console.dll
 else
-  application=Readarr.dll
+  application=Shelvance.dll
 fi
 
 dotnet clean $slnFile -c Debug

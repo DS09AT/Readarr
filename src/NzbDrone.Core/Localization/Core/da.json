@@ -6,7 +6,7 @@
   "Actions": "Handlinger",
   "Activity": "Aktivitet",
   "AddedAuthorSettings": "Indstillinger for tilføjede forfattere",
-  "AddImportListExclusionHelpText": "Forhindre bog i at blive tilføjet til Readarr via Importer Lister eller Opdater Forfatter",
+  "AddImportListExclusionHelpText": "Forhindre bog i at blive tilføjet til Shelvance via Importer Lister eller Opdater Forfatter",
   "AddingTag": "Tilføjer tag",
   "AddList": "Tilføj Liste",
   "AddListExclusion": "Tilføj ekskludering af liste",
@@ -704,3 +704,4 @@
   "YesCancel": "Ja, Annuller",
   "Yesterday": "I går"
 }
+

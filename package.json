@@ -1,7 +1,7 @@
 {
-  "name": "readarr",
+  "name": "shelvance",
   "version": "1.0.0",
-  "description": "Readarr",
+  "description": "Shelvance",
   "scripts": {
     "build": "webpack --config ./frontend/build/webpack.config.js",
     "prebuild": "yarn clean",
@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Readarr/Readarr.git"
+    "url": "git://github.com/DS09AT/Shelvance.git"
   },
-  "author": "Team Readarr",
+  "author": "Team Shelvance",
   "license": "GPL-3.0",
   "readmeFilename": "readme.md",
   "main": "index.ts",

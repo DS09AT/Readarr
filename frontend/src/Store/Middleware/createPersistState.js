@@ -100,7 +100,7 @@ const config = {
   slicer,
   serialize,
   merge,
-  key: 'readarr'
+  key: 'shelvance'
 };
 
 export default function createPersistState() {

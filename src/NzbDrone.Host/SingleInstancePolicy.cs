@@ -32,7 +32,7 @@ namespace NzbDrone.Host
         {
             if (IsAlreadyRunning())
             {
-                _logger.Warn("Another instance of Readarr is already running.");
+                _logger.Warn("Another instance of Shelvance is already running.");
                 _browserService.LaunchWebUI();
                 throw new TerminateApplicationException("Another instance is already running");
             }
@@ -50,7 +50,7 @@ namespace NzbDrone.Host
         {
             if (IsAlreadyRunning())
             {
-                _logger.Debug("Another instance of Readarr is already running.");
+                _logger.Debug("Another instance of Shelvance is already running.");
             }
         }
 
@@ -65,7 +65,7 @@ namespace NzbDrone.Host
             {
                 var currentId = _processProvider.GetCurrentProcess().Id;
 
-                var otherProcesses = _processProvider.FindProcessByName(ProcessProvider.READARR_CONSOLE_PROCESS_NAME)
+                var otherProcesses = _processProvider.FindProcessByName(ProcessProvider.Shelvance_CONSOLE_PROCESS_NAME)
                                                      .Union(_processProvider.FindProcessByName(ProcessProvider.READARR_PROCESS_NAME))
                                                      .Select(c => c.Id)
                                                      .Except(new[] { currentId })
@@ -73,14 +73,14 @@ namespace NzbDrone.Host
 
                 if (otherProcesses.Any())
                 {
-                    _logger.Info("{0} instance(s) of Readarr are running", otherProcesses.Count);
+                    _logger.Info("{0} instance(s) of Shelvance are running", otherProcesses.Count);
                 }
 
                 return otherProcesses;
             }
             catch (Exception ex)
             {
-                _logger.Warn(ex, "Failed to check for multiple instances of Readarr.");
+                _logger.Warn(ex, "Failed to check for multiple instances of Shelvance.");
                 return new List<int>();
             }
         }

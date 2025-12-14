@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
   </PropertyGroup>
@@ -6,9 +6,9 @@
     <PackageReference Include="Mono.Posix.NETStandard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common.Test\Readarr.Common.Test.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Mono\Readarr.Mono.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common.Test\Shelvance.Common.Test.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Mono\Shelvance.Mono.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Files\**\*.*">

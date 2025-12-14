@@ -51,7 +51,7 @@ namespace NzbDrone.Host
                 b.ClearProviders();
                 b.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                 b.AddFilter("Microsoft.AspNetCore", Microsoft.Extensions.Logging.LogLevel.Warning);
-                b.AddFilter("Readarr.Http.Authentication", LogLevel.Information);
+                b.AddFilter("Shelvance.Http.Authentication", LogLevel.Information);
                 b.AddFilter("Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager", LogLevel.Error);
                 b.AddNLog();
             });
@@ -100,12 +100,12 @@ namespace NzbDrone.Host
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "1.0.0",
-                    Title = "Readarr",
-                    Description = "Readarr API docs",
+                    Title = "Shelvance",
+                    Description = "Shelvance API docs",
                     License = new OpenApiLicense
                     {
                         Name = "GPL-3.0",
-                        Url = new Uri("https://github.com/Readarr/Readarr/blob/develop/LICENSE.md")
+                        Url = new Uri("https://github.com/DS09AT/Shelvance/blob/develop/LICENSE.md")
                     }
                 });
 

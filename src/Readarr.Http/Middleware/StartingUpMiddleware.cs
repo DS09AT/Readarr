@@ -11,7 +11,7 @@ namespace Readarr.Http.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly IRuntimeInfo _runtimeInfo;
-        private static readonly string MESSAGE = "Readarr is starting up, please try again later";
+        private static readonly string MESSAGE = "Shelvance is starting up, please try again later";
 
         public StartingUpMiddleware(RequestDelegate next, IRuntimeInfo runtimeInfo)
         {

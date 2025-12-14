@@ -72,7 +72,7 @@ namespace NzbDrone.Core.Test.OrganizerTests.FileNameBuilderTests
                 .With(e => e.Part = 1)
                 .With(e => e.PartCount = 1)
                 .With(e => e.Quality = new QualityModel(Quality.MP3))
-                .With(e => e.ReleaseGroup = "ReadarrTest")
+                .With(e => e.ReleaseGroup = "ShelvanceTest")
                 .With(e => e.MediaInfo = new Parser.Model.MediaInfoModel
                 {
                     AudioBitrate = 320,
@@ -630,7 +630,7 @@ namespace NzbDrone.Core.Test.OrganizerTests.FileNameBuilderTests
             _namingConfig.StandardBookFormat = "{Release Group}";
 
             Subject.BuildBookFileName(_author, _edition, _trackFile)
-                   .Should().Be("Readarr");
+                   .Should().Be("Shelvance");
         }
 
         [TestCase("{Book Title}{-Release Group}", "Hybrid Theory")]

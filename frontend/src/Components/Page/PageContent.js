@@ -15,7 +15,7 @@ function PageContent(props) {
   return (
     <ErrorBoundary errorComponent={PageContentError}>
       <Helmet>
-        <title>{title ? `${title} - ${window.Readarr.instanceName}` : window.Readarr.instanceName}</title>
+        <title>{title ? `${title} - ${window.Shelvance.instanceName}` : window.Shelvance.instanceName}</title>
       </Helmet>
       <div className={className}>
         {children}

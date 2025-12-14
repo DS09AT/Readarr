@@ -4,7 +4,7 @@ TYPE=$2
 COVERAGE=$3
 WHERE="Category!=ManualTest"
 TEST_PATTERN="*Test.dll"
-FILES=( "Readarr.Api.Test.dll" "Readarr.Automation.Test.dll" "Readarr.Common.Test.dll" "Readarr.Core.Test.dll" "Readarr.Host.Test.dll" "Readarr.Integration.Test.dll" "Readarr.Libraries.Test.dll" "Readarr.Mono.Test.dll" "Readarr.Update.Test.dll" "Readarr.Windows.Test.dll" )
+FILES=( "Shelvance.Api.Test.dll" "Shelvance.Automation.Test.dll" "Shelvance.Common.Test.dll" "Shelvance.Core.Test.dll" "Shelvance.Host.Test.dll" "Shelvance.Integration.Test.dll" "Shelvance.Libraries.Test.dll" "Shelvance.Mono.Test.dll" "Shelvance.Update.Test.dll" "Shelvance.Windows.Test.dll" )
 ASSMEBLIES=""
 TEST_LOG_FILE="TestLog.txt"
 
@@ -35,10 +35,10 @@ if [ "$PLATFORM" = "Mac" ]; then
 fi
 
 if [ "$PLATFORM" = "Windows" ]; then
-  mkdir -p "$ProgramData/Readarr"
+  mkdir -p "$ProgramData/Shelvance"
   WHERE="$WHERE&Category!=LINUX"
 elif [ "$PLATFORM" = "Linux" ] || [ "$PLATFORM" = "Mac" ] ; then
-  mkdir -p ~/.config/Readarr
+  mkdir -p ~/.config/Shelvance
   WHERE="$WHERE&Category!=WINDOWS"
 else
   echo "Platform must be provided as first arguement: Windows, Linux or Mac"

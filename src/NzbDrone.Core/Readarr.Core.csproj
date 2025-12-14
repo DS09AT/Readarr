@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <PackageReference Include="PdfSharpCore" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Readarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Localization\Core\**">
