@@ -2,16 +2,21 @@
 # editorconfig.org
 root = true
 
-# NOTE: Requires **VS2019 16.3** or later
+# NOTE: Requires **VS2022** or later
 
 # Stylecop.ruleset
-# Description: Rules for Readarr
+# Description: Rules for Shelvance
 
-# Code files
-[*.cs]
+# Default settings for all files
+[*]
+end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+max_line_length = 120
+
+# C# Code files
+[*.cs]
 indent_style = space
 indent_size = 4
 
@@ -137,7 +142,7 @@ dotnet_diagnostic.CA1024.severity = suggestion
 dotnet_diagnostic.CA1027.severity = suggestion
 dotnet_diagnostic.CA1028.severity = suggestion
 dotnet_diagnostic.CA1030.severity = suggestion
-dotnet_diagnostic.CA1031.severity = suggestion
+dotnet_diagnostic.CA1031.severity = warning
 dotnet_diagnostic.CA1032.severity = suggestion
 dotnet_diagnostic.CA1033.severity = suggestion
 dotnet_diagnostic.CA1034.severity = suggestion
@@ -155,7 +160,7 @@ dotnet_diagnostic.CA1056.severity = suggestion
 dotnet_diagnostic.CA1058.severity = suggestion
 dotnet_diagnostic.CA1060.severity = suggestion
 dotnet_diagnostic.CA1061.severity = suggestion
-dotnet_diagnostic.CA1062.severity = suggestion
+dotnet_diagnostic.CA1062.severity = warning
 dotnet_diagnostic.CA1063.severity = suggestion
 dotnet_diagnostic.CA1064.severity = suggestion
 dotnet_diagnostic.CA1065.severity = suggestion
@@ -197,7 +202,7 @@ dotnet_diagnostic.CA1812.severity = suggestion
 dotnet_diagnostic.CA1813.severity = suggestion
 dotnet_diagnostic.CA1814.severity = suggestion
 dotnet_diagnostic.CA1815.severity = suggestion
-dotnet_diagnostic.CA1816.severity = suggestion
+dotnet_diagnostic.CA1816.severity = warning
 dotnet_diagnostic.CA1819.severity = suggestion
 dotnet_diagnostic.CA1820.severity = suggestion
 dotnet_diagnostic.CA1821.severity = suggestion
@@ -210,7 +215,7 @@ dotnet_diagnostic.CA1827.severity = suggestion
 dotnet_diagnostic.CA1828.severity = suggestion
 dotnet_diagnostic.CA1829.severity = suggestion
 dotnet_diagnostic.CA1834.severity = suggestion
-dotnet_diagnostic.CA2000.severity = suggestion
+dotnet_diagnostic.CA2000.severity = warning
 dotnet_diagnostic.CA2002.severity = suggestion
 dotnet_diagnostic.CA2007.severity = suggestion
 dotnet_diagnostic.CA2008.severity = suggestion
@@ -219,7 +224,7 @@ dotnet_diagnostic.CA2010.severity = suggestion
 dotnet_diagnostic.CA2011.severity = suggestion
 dotnet_diagnostic.CA2012.severity = suggestion
 dotnet_diagnostic.CA2013.severity = suggestion
-dotnet_diagnostic.CA2100.severity = suggestion
+dotnet_diagnostic.CA2100.severity = error
 dotnet_diagnostic.CA2101.severity = suggestion
 dotnet_diagnostic.CA2119.severity = suggestion
 dotnet_diagnostic.CA2153.severity = suggestion
@@ -228,7 +233,7 @@ dotnet_diagnostic.CA2201.severity = suggestion
 dotnet_diagnostic.CA2207.severity = suggestion
 dotnet_diagnostic.CA2208.severity = suggestion
 dotnet_diagnostic.CA2211.severity = suggestion
-dotnet_diagnostic.CA2213.severity = suggestion
+dotnet_diagnostic.CA2213.severity = warning
 dotnet_diagnostic.CA2214.severity = suggestion
 dotnet_diagnostic.CA2215.severity = suggestion
 dotnet_diagnostic.CA2216.severity = suggestion
@@ -247,46 +252,67 @@ dotnet_diagnostic.CA2243.severity = suggestion
 dotnet_diagnostic.CA2244.severity = suggestion
 dotnet_diagnostic.CA2245.severity = suggestion
 dotnet_diagnostic.CA2246.severity = suggestion
-dotnet_diagnostic.CA3061.severity = suggestion
-dotnet_diagnostic.CA3075.severity = suggestion
-dotnet_diagnostic.CA3076.severity = suggestion
-dotnet_diagnostic.CA3077.severity = suggestion
+dotnet_diagnostic.CA3061.severity = warning
+dotnet_diagnostic.CA3075.severity = warning
+dotnet_diagnostic.CA3076.severity = warning
+dotnet_diagnostic.CA3077.severity = warning
 dotnet_diagnostic.CA3147.severity = suggestion
-dotnet_diagnostic.CA5350.severity = suggestion
-dotnet_diagnostic.CA5351.severity = suggestion
-dotnet_diagnostic.CA5359.severity = suggestion
-dotnet_diagnostic.CA5360.severity = suggestion
-dotnet_diagnostic.CA5363.severity = suggestion
-dotnet_diagnostic.CA5364.severity = suggestion
-dotnet_diagnostic.CA5365.severity = suggestion
-dotnet_diagnostic.CA5366.severity = suggestion
-dotnet_diagnostic.CA5368.severity = suggestion
-dotnet_diagnostic.CA5369.severity = suggestion
-dotnet_diagnostic.CA5370.severity = suggestion
-dotnet_diagnostic.CA5371.severity = suggestion
-dotnet_diagnostic.CA5372.severity = suggestion
-dotnet_diagnostic.CA5373.severity = suggestion
-dotnet_diagnostic.CA5374.severity = suggestion
-dotnet_diagnostic.CA5379.severity = suggestion
-dotnet_diagnostic.CA5384.severity = suggestion
-dotnet_diagnostic.CA5385.severity = suggestion
+dotnet_diagnostic.CA5350.severity = error
+dotnet_diagnostic.CA5351.severity = error
+dotnet_diagnostic.CA5359.severity = warning
+dotnet_diagnostic.CA5360.severity = warning
+dotnet_diagnostic.CA5363.severity = warning
+dotnet_diagnostic.CA5364.severity = warning
+dotnet_diagnostic.CA5365.severity = warning
+dotnet_diagnostic.CA5366.severity = warning
+dotnet_diagnostic.CA5368.severity = warning
+dotnet_diagnostic.CA5369.severity = warning
+dotnet_diagnostic.CA5370.severity = warning
+dotnet_diagnostic.CA5371.severity = warning
+dotnet_diagnostic.CA5372.severity = warning
+dotnet_diagnostic.CA5373.severity = warning
+dotnet_diagnostic.CA5374.severity = warning
+dotnet_diagnostic.CA5379.severity = warning
+dotnet_diagnostic.CA5384.severity = warning
+dotnet_diagnostic.CA5385.severity = warning
 dotnet_diagnostic.CA5392.severity = suggestion
 dotnet_diagnostic.CA5394.severity = suggestion
 dotnet_diagnostic.CA5397.severity = suggestion
 
 
 
+# Frontend files
 [*.{js,html,hbs,less,css,ts,tsx}]
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
 indent_style = space
 indent_size = 2
 
-# They have troubles with TABS. Use 2 spaces
-[{package.json,.travis.yml}]
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
+
+# MSBuild files
+[*.{csproj,props,targets,ruleset}]
+indent_style = space
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
+# XML configuration files
+[*.{xml,config,nuspec}]
 indent_style = space
 indent_size = 2
