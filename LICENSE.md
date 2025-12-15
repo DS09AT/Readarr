@@ -631,8 +631,15 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    {one line to give the program's name and a brief idea of what it does.}
-    Copyright (C) {year}  {name of author}
+    Shelvance - Ebook and audiobook collection manager
+    
+    Based on Readarr (2020-2025):
+    Copyright (C) 2020-2025 Readarr Team (The Servarr Team)
+    https://github.com/Readarr/Readarr
+    
+    Continued development (2025-present):
+    Copyright (C) 2025 DS09AT <contact@shelvance.com>
+    https://github.com/DS09AT/Shelvance
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -652,7 +659,10 @@ Also add information on how to contact you by electronic and paper mail.
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    {project}  Copyright (C) {year}  {fullname}
+    Shelvance
+    Copyright (C) 2020-2025 Readarr Team (The Servarr Team)
+    Copyright (C) 2025-present DS09AT <contact@shelvance.com>
+    
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.

@@ -13,8 +13,7 @@ Due to breaking changes in metadata providers (Goodreads no longer available, Op
 **Key changes:**
 - Goodreads metadata provider removed
 - Open Library metadata provider implemented (breaking change)
-- React 19 upgrade
-- React Router v7 upgrade  
+- SDK 8.0, React 19, React Router v7 and other package upgrades  
 - Project Gutenberg indexer support
 - QNAP Download Station support (HTTP and torrents)
 - Improved author search with relevance sorting
@@ -68,6 +67,10 @@ Feature requests are welcome. Please submit them via [GitHub Issues](https://git
 
 Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
+## Security
+
+Security vulnerabilities should be reported via email to [security@shelvance.com](mailto:security@shelvance.com). See [SECURITY.md](SECURITY.md) for details.
+
 ## Support Development
 
 If you find Shelvance useful, consider supporting development:
@@ -89,7 +92,7 @@ Features planned for future releases:
 - **Mobile App** - Native mobile application
 - **Plugin System** - Extensibility through standardized plugins
 - **Analytics & Statistics** - Library insights, reading statistics, collection analysis
-- **Book Series Support** - Reintroduction of series tracking (removed due to Goodreads migration)
+- **Book Series Support** - Reintroduction of series tracking (currently broken due to Goodreads migration)
 
 No timeline guarantees. Priorities subject to change.
 
