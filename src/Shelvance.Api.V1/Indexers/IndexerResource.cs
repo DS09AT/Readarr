@@ -1,6 +1,6 @@
 using NzbDrone.Core.Indexers;
 
-namespace Readarr.Api.V1.Indexers
+namespace Shelvance.Api.V1.Indexers
 {
     public class IndexerResource : ProviderResource<IndexerResource>
     {

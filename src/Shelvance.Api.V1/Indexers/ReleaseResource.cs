@@ -6,10 +6,10 @@ using NzbDrone.Core.DecisionEngine;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Qualities;
-using Readarr.Api.V1.CustomFormats;
-using Readarr.Http.REST;
+using Shelvance.Api.V1.CustomFormats;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Indexers
+namespace Shelvance.Api.V1.Indexers
 {
     public class ReleaseResource : RestResource
     {

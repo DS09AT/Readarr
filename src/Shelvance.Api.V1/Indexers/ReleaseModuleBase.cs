@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.DecisionEngine;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Indexers
+namespace Shelvance.Api.V1.Indexers
 {
     public abstract class ReleaseControllerBase : RestController<ReleaseResource>
     {

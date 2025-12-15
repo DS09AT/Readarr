@@ -6,9 +6,9 @@ using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaFiles;
 using NzbDrone.Core.MediaFiles.BookImport.Manual;
 using NzbDrone.Core.Qualities;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.ManualImport
+namespace Shelvance.Api.V1.ManualImport
 {
     [V1ApiController]
     public class ManualImportController : Controller

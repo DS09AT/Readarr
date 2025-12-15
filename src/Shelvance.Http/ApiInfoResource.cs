@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Readarr.Http
+namespace Shelvance.Http
 {
     public class ApiInfoResource
     {

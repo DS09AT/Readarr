@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     public static class AuthenticationBuilderExtensions
     {

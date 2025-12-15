@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using NzbDrone.Core.DecisionEngine;
 using NzbDrone.Core.Qualities;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.ManualImport
+namespace Shelvance.Api.V1.ManualImport
 {
     public class ManualImportUpdateResource : RestResource
     {

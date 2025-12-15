@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Books;
 
-namespace Readarr.Api.V1.Author
+namespace Shelvance.Api.V1.Author
 {
     public class AuthorEditorResource
     {

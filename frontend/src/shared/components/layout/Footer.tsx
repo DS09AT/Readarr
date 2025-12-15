@@ -60,10 +60,10 @@ export function Footer() {
           <SocialLink href="https://twitter.com" icon={XIcon}>
             Follow us on X
           </SocialLink>
-          <SocialLink href="https://github.com/Readarr/Readarr" icon={GitHubIcon}>
+          <SocialLink href="https://github.com/Shelvance/Shelvance" icon={GitHubIcon}>
             Follow us on GitHub
           </SocialLink>
-          <SocialLink href="https://discord.gg/readarr" icon={DiscordIcon}>
+          <SocialLink href="https://discord.gg/shelvance" icon={DiscordIcon}>
             Join our Discord server
           </SocialLink>
         </div>

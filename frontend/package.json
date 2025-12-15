@@ -1,13 +1,13 @@
 {
-  "name": "readarr",
+  "name": "shelvance",
   "version": "1.0.0",
-  "description": "Readarr",
+  "description": "Shelvance",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Readarr/Readarr.git"
+    "url": "git://github.com/Shelvance/Shelvance.git"
   },
-  "author": "Team Readarr",
+  "author": "Team Shelvance",
   "license": "GPL-3.0",
   "readmeFilename": "readme.md",
   "browserslist": [

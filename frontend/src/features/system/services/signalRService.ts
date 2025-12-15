@@ -8,11 +8,11 @@ class SignalRService extends EventEmitter {
   public async start() {
     if (this.connection && this.isConnected) return;
 
-    const url = `${window.Readarr.urlBase}/signalr/messages`;
+    const url = `${window.Shelvance.urlBase}/signalr/messages`;
 
     this.connection = new HubConnectionBuilder()
       .withUrl(url, {
-        accessTokenFactory: () => window.Readarr.apiKey
+        accessTokenFactory: () => window.Shelvance.apiKey
       })
       .withAutomaticReconnect()
       .configureLogging(LogLevel.Information)

@@ -15,18 +15,18 @@ if (!root) {
 }
 
 const initialize = async () => {
-  if (window.Readarr.urlBase === '__URL_BASE__') {
-    window.Readarr.urlBase = '';
+  if (window.Shelvance.urlBase === '__URL_BASE__') {
+    window.Shelvance.urlBase = '';
   }
 
-  const initializeUrl = `${window.Readarr.urlBase}/initialize.json?t=${Date.now()}`;
+  const initializeUrl = `${window.Shelvance.urlBase}/initialize.json?t=${Date.now()}`;
   
   try {
     const response = await fetch(initializeUrl);
     if (response.ok) {
       const data = await response.json();
-      window.Readarr = {
-        ...window.Readarr,
+      window.Shelvance = {
+        ...window.Shelvance,
         ...data
       };
     }

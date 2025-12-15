@@ -4,9 +4,9 @@ using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.MediaFiles;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Qualities;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.BookFiles
+namespace Shelvance.Api.V1.BookFiles
 {
     public class BookFileResource : RestResource
     {

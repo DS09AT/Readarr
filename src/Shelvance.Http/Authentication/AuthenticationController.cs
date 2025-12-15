@@ -13,7 +13,7 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     [AllowAnonymous]
     [ApiController]
@@ -62,7 +62,7 @@ namespace Readarr.Http.Authentication
             {
                 if (e.InnerException is XmlException)
                 {
-                    _logger.Error(e, "Failed to authenticate user due to corrupt XML. Please remove all XML files from {0} and restart Readarr", Path.Combine(_appFolderInfo.AppDataFolder, "asp"));
+                    _logger.Error(e, "Failed to authenticate user due to corrupt XML. Please remove all XML files from {0} and restart Shelvance", Path.Combine(_appFolderInfo.AppDataFolder, "asp"));
                 }
                 else
                 {

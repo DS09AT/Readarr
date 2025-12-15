@@ -1,9 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Notifications;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Notifications
+namespace Shelvance.Api.V1.Notifications
 {
     [V1ApiController]
     public class NotificationController : ProviderControllerBase<NotificationResource, NotificationBulkResource, INotification, NotificationDefinition>

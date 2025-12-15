@@ -4,7 +4,7 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Update;
 
-namespace Readarr.Api.V1.System
+namespace Shelvance.Api.V1.System
 {
     public class SystemResource
     {

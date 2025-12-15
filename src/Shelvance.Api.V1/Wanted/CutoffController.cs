@@ -5,11 +5,11 @@ using NzbDrone.Core.Datastore;
 using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.SignalR;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Api.V1.Wanted
+namespace Shelvance.Api.V1.Wanted
 {
     [V1ApiController("wanted/cutoff")]
     public class CutoffController : BookControllerWithSignalR

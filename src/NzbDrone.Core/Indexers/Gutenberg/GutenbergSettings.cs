@@ -24,7 +24,7 @@ namespace NzbDrone.Core.Indexers.Gutenberg
         [FieldDefinition(0, Label = "URL", Advanced = true, HelpText = "GutenbergBaseUrlHelpText")]
         public string BaseUrl { get; set; }
 
-        [FieldDefinition(1, Type = FieldType.Number, Label = "Early Download Limit", Unit = "days", HelpText = "Time before release date Readarr will download from this indexer, empty is no limit", Advanced = true)]
+        [FieldDefinition(1, Type = FieldType.Number, Label = "Early Download Limit", Unit = "days", HelpText = "Time before release date Shelvance will download from this indexer, empty is no limit", Advanced = true)]
         public int? EarlyReleaseLimit { get; set; }
 
         public NzbDroneValidationResult Validate()

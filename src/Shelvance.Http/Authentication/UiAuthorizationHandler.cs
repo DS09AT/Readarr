@@ -7,7 +7,7 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Configuration.Events;
 using NzbDrone.Core.Messaging.Events;
-using Readarr.Http.Extensions;
+using Shelvance.Http.Extensions;
 
 namespace NzbDrone.Http.Authentication
 {

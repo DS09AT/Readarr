@@ -1,7 +1,7 @@
 ﻿using System;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Logs
+namespace Shelvance.Api.V1.Logs
 {
     public class LogFileResource : RestResource
     {

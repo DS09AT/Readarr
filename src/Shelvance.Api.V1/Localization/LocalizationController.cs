@@ -2,9 +2,9 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Localization;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Localization
+namespace Shelvance.Api.V1.Localization
 {
     [V1ApiController]
     public class LocalizationController : Controller

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
 using NzbDrone.Core.MetadataSource;
-using Readarr.Api.V1.MetadataProvider;
+using Shelvance.Api.V1.MetadataProvider;
 
 namespace NzbDrone.Api.Test.MetadataProviderTests
 {

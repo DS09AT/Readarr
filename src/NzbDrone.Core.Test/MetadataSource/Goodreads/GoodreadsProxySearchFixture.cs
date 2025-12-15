@@ -52,11 +52,11 @@ namespace NzbDrone.Core.Test.MetadataSource.Goodreads
             ExceptionVerification.IgnoreWarns();
         }
 
-        [TestCase("readarrid:")]
-        [TestCase("readarrid: 99999999999999999999")]
-        [TestCase("readarrid: 0")]
-        [TestCase("readarrid: -12")]
-        [TestCase("readarrid: aaaa")]
+        [TestCase("shelvanceid:")]
+        [TestCase("shelvanceid: 99999999999999999999")]
+        [TestCase("shelvanceid: 0")]
+        [TestCase("shelvanceid: -12")]
+        [TestCase("shelvanceid: aaaa")]
         [TestCase("adjalkwdjkalwdjklawjdlKAJD")]
         public void no_author_search_result(string term)
         {

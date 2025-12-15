@@ -24,13 +24,13 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Host.AccessControl;
 using NzbDrone.Http.Authentication;
 using NzbDrone.SignalR;
-using Readarr.Api.V1.System;
-using Readarr.Http;
-using Readarr.Http.Authentication;
-using Readarr.Http.ClientSchema;
-using Readarr.Http.ErrorManagement;
-using Readarr.Http.Frontend;
-using Readarr.Http.Middleware;
+using Shelvance.Api.V1.System;
+using Shelvance.Http;
+using Shelvance.Http.Authentication;
+using Shelvance.Http.ClientSchema;
+using Shelvance.Http.ErrorManagement;
+using Shelvance.Http.Frontend;
+using Shelvance.Http.Middleware;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace NzbDrone.Host
@@ -51,7 +51,7 @@ namespace NzbDrone.Host
                 b.ClearProviders();
                 b.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                 b.AddFilter("Microsoft.AspNetCore", Microsoft.Extensions.Logging.LogLevel.Warning);
-                b.AddFilter("Readarr.Http.Authentication", LogLevel.Information);
+                b.AddFilter("Shelvance.Http.Authentication", LogLevel.Information);
                 b.AddFilter("Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager", LogLevel.Error);
                 b.AddNLog();
             });
@@ -100,12 +100,12 @@ namespace NzbDrone.Host
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "1.0.0",
-                    Title = "Readarr",
-                    Description = "Readarr API docs",
+                    Title = "Shelvance",
+                    Description = "Shelvance API docs",
                     License = new OpenApiLicense
                     {
                         Name = "GPL-3.0",
-                        Url = new Uri("https://github.com/Readarr/Readarr/blob/develop/LICENSE.md")
+                        Url = new Uri("https://github.com/Shelvance/Shelvance/blob/develop/LICENSE.md")
                     }
                 });
 
@@ -210,7 +210,7 @@ namespace NzbDrone.Host
                               IRuntimeInfo runtimeInfo,
                               IFirewallAdapter firewallAdapter,
                               IEventAggregator eventAggregator,
-                              ReadarrErrorPipeline errorHandler)
+                              ShelvanceErrorPipeline errorHandler)
         {
             initializeLogger.Initialize();
             appFolderFactory.Register();

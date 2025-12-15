@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Books;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Series
+namespace Shelvance.Api.V1.Series
 {
     public class SeriesBookLinkResource : RestResource
     {

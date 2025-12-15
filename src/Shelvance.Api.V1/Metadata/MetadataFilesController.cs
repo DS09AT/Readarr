@@ -1,9 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Extras.Metadata;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Metadata
+namespace Shelvance.Api.V1.Metadata
 {
     [V1ApiController]
     public class MetadataFilesController : ProviderControllerBase<MetadataResource, MetadataBulkResource, IMetadata, MetadataDefinition>

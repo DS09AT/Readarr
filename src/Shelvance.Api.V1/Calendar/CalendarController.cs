@@ -7,11 +7,11 @@ using NzbDrone.Core.Books;
 using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.SignalR;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Api.V1.Calendar
+namespace Shelvance.Api.V1.Calendar
 {
     [V1ApiController]
     public class CalendarController : BookControllerWithSignalR

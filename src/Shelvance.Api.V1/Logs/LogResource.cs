@@ -1,8 +1,8 @@
 using System;
 using NzbDrone.Core.Instrumentation;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Logs
+namespace Shelvance.Api.V1.Logs
 {
     public class LogResource : RestResource
     {

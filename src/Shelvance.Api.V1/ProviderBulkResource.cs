@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.ThingiProvider;
 
-namespace Readarr.Api.V1
+namespace Shelvance.Api.V1
 {
     public class ProviderBulkResource<T>
     {

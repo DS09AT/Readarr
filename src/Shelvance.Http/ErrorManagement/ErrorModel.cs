@@ -2,9 +2,9 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.Serializer;
-using Readarr.Http.Exceptions;
+using Shelvance.Http.Exceptions;
 
-namespace Readarr.Http.ErrorManagement
+namespace Shelvance.Http.ErrorManagement
 {
     public class ErrorModel
     {

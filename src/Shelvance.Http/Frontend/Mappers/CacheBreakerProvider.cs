@@ -5,7 +5,7 @@ using NzbDrone.Common.Crypto;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Shelvance.Http.Frontend.Mappers
 {
     public interface ICacheBreakerProvider
     {

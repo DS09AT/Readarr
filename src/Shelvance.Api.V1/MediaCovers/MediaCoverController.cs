@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.StaticFiles;
 using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.MediaCovers
+namespace Shelvance.Api.V1.MediaCovers
 {
     [V1ApiController]
     public class MediaCoverController : Controller

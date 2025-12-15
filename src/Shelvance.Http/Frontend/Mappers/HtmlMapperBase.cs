@@ -5,7 +5,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Shelvance.Http.Frontend.Mappers
 {
     public abstract class HtmlMapperBase : StaticResourceMapperBase
     {

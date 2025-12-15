@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Http;
 using NLog;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
-using Readarr.Http.Extensions;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     public interface IAuthenticationService
     {

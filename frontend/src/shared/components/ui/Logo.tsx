@@ -6,7 +6,7 @@ export function Logo(props: React.ComponentPropsWithoutRef<'img'>) {
   return (
     <img
       src="/Logo.svg"
-      alt="Readarr"
+      alt="Shelvance"
       width={32}
       height={32}
       className={clsx('h-8 w-8', className)}

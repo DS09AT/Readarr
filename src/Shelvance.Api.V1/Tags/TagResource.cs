@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Tags;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Tags
+namespace Shelvance.Api.V1.Tags
 {
     public class TagResource : RestResource
     {

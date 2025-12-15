@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Qualities;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Qualities
+namespace Shelvance.Api.V1.Qualities
 {
     public class QualityDefinitionResource : RestResource
     {

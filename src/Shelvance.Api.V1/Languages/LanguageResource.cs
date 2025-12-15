@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Languages
+namespace Shelvance.Api.V1.Languages
 {
     public class LanguageResource : RestResource
     {

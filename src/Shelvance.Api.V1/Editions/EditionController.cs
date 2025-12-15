@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Books;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
 
 namespace NzbDrone.Api.V1.Editions
 {

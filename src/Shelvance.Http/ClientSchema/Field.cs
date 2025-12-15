@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Readarr.Http.ClientSchema
+namespace Shelvance.Http.ClientSchema
 {
     public class Field
     {

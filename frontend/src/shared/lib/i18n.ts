@@ -15,7 +15,7 @@ export function translate(key: string, tokens: Record<string, string | number | 
   const translation = translations[key] || key;
 
   // Add default tokens
-  tokens.appName = 'Readarr';
+  tokens.appName = 'Shelvance';
 
   return translation.replace(/\{([a-z0-9]+?)\}/gi, (match, tokenMatch) =>
     String(tokens[tokenMatch] ?? match)

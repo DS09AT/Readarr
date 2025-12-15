@@ -1,4 +1,4 @@
-namespace Readarr.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     public class LoginResource
     {

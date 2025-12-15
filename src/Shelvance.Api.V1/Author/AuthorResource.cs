@@ -5,9 +5,9 @@ using Newtonsoft.Json;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaCover;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Author
+namespace Shelvance.Api.V1.Author
 {
     public class AuthorResource : RestResource
     {

@@ -34,7 +34,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange={true}>
       <ThemeWatcher />
-      <BrowserRouter basename={window.Readarr?.urlBase}>
+      <BrowserRouter basename={window.Shelvance?.urlBase}>
         <ToastProvider>
           <StatusMessageProvider>
             <SignalRProvider>

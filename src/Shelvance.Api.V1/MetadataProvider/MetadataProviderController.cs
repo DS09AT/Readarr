@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using NzbDrone.Core.MetadataSource;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.MetadataProvider
+namespace Shelvance.Api.V1.MetadataProvider
 {
     [V1ApiController]
     public class MetadataProviderController : ProviderControllerBase<MetadataProviderResource, MetadataProviderBulkResource, IMetadataProvider, MetadataProviderDefinition>

@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Update;
 using NzbDrone.Core.Update.History;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Update
+namespace Shelvance.Api.V1.Update
 {
     [V1ApiController]
     public class UpdateController : Controller

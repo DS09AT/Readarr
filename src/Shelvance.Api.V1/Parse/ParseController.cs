@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Parser;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Parse
+namespace Shelvance.Api.V1.Parse
 {
     [V1ApiController]
     public class ParseController : Controller

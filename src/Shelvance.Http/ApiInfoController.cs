@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Readarr.Http
+namespace Shelvance.Http
 {
     public class ApiInfoController : Controller
     {

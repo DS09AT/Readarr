@@ -35,7 +35,7 @@ export function SignalRToaster() {
                    addToast({
                        type: 'info',
                        title: 'Application Updated',
-                       message: 'Readarr has been updated. Please reload.',
+                       message: 'Shelvance has been updated. Please reload.',
                        duration: 0,
                    });
                }

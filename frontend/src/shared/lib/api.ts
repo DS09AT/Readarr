@@ -7,12 +7,12 @@ const api = axios.create({
   },
 });
 
-// Request interceptor to set URL and Key dynamically from window.Readarr
+// Request interceptor to set URL and Key dynamically from window.Shelvance
 api.interceptors.request.use((config) => {
-  config.baseURL = window.Readarr?.apiRoot || '/api/v1';
+  config.baseURL = window.Shelvance?.apiRoot || '/api/v1';
   
-  if (window.Readarr?.apiKey) {
-    config.headers['X-Api-Key'] = window.Readarr.apiKey;
+  if (window.Shelvance?.apiKey) {
+    config.headers['X-Api-Key'] = window.Shelvance.apiKey;
   }
   
   return config;

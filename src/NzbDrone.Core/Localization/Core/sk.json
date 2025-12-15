@@ -28,7 +28,7 @@
   "AlreadyInYourLibrary": "Už vo vašej knižnici",
   "AlternateTitles": "Alternatívny názov",
   "Analytics": "Analytika",
-  "AnalyticsEnabledHelpText": "Odosielajte anonymné informácie o používaní a chybách na servery Readarru. To zahŕňa informácie o vašom prehliadači, ktoré stránky {appName} WebUI používate, hlásenia chýb a taktiež verziu operačného systému a spúšťacieho prostredia. Tieto informácie použijeme k uprednostňovaniu funkcií a oprav chýb.",
+  "AnalyticsEnabledHelpText": "Odosielajte anonymné informácie o používaní a chybách na servery Shelvanceu. To zahŕňa informácie o vašom prehliadači, ktoré stránky {appName} WebUI používate, hlásenia chýb a taktiež verziu operačného systému a spúšťacieho prostredia. Tieto informácie použijeme k uprednostňovaniu funkcií a oprav chýb.",
   "AnalyticsEnabledHelpTextWarning": "Vyžaduje sa reštart, aby sa zmeny prejavili",
   "ApiKey": "Kľúč rozhrania API",
   "AppDataDirectory": "Priečinok AppData",

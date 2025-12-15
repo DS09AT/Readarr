@@ -4,10 +4,10 @@ using System.Linq;
 using Newtonsoft.Json;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaCover;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace Readarr.Api.V1.Books
+namespace Shelvance.Api.V1.Books
 {
     public class EditionResource : RestResource
     {

@@ -9,12 +9,12 @@ using NzbDrone.Core.Datastore;
 using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.Download;
 using NzbDrone.Core.History;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Api.V1.History
+namespace Shelvance.Api.V1.History
 {
     [V1ApiController]
     public class HistoryController : Controller

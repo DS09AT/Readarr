@@ -1,4 +1,4 @@
-namespace Readarr.Http.Ping
+namespace Shelvance.Http.Ping
 {
     public class PingResource
     {

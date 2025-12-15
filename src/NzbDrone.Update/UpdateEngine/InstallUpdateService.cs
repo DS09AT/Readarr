@@ -86,11 +86,11 @@ namespace NzbDrone.Update.UpdateEngine
         public void Start(string installationFolder, int processId)
         {
             _logger.Info("Installation Folder: {0}", installationFolder);
-            _logger.Info("Updating Readarr from version {0} to version {1}", _detectExistingVersion.GetExistingVersion(installationFolder), BuildInfo.Version);
+            _logger.Info("Updating Shelvance from version {0} to version {1}", _detectExistingVersion.GetExistingVersion(installationFolder), BuildInfo.Version);
 
             Verify(installationFolder, processId);
 
-            if (installationFolder.EndsWith(@"\bin\Readarr") || installationFolder.EndsWith(@"/bin/Readarr"))
+            if (installationFolder.EndsWith(@"\bin\Shelvance") || installationFolder.EndsWith(@"/bin/Shelvance"))
             {
                 installationFolder = installationFolder.GetParentPath();
                 _logger.Info("Fixed Installation Folder: {0}", installationFolder);
@@ -98,8 +98,8 @@ namespace NzbDrone.Update.UpdateEngine
 
             var appType = _detectApplicationType.GetAppType();
 
-            _processProvider.FindProcessByName(ProcessProvider.READARR_CONSOLE_PROCESS_NAME);
-            _processProvider.FindProcessByName(ProcessProvider.READARR_PROCESS_NAME);
+            _processProvider.FindProcessByName(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME);
+            _processProvider.FindProcessByName(ProcessProvider.SHELVANCE_PROCESS_NAME);
 
             if (OsInfo.IsWindows)
             {
@@ -113,9 +113,9 @@ namespace NzbDrone.Update.UpdateEngine
 
                 if (OsInfo.IsWindows)
                 {
-                    if (_processProvider.Exists(ProcessProvider.READARR_CONSOLE_PROCESS_NAME) || _processProvider.Exists(ProcessProvider.READARR_PROCESS_NAME))
+                    if (_processProvider.Exists(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME) || _processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                     {
-                        _logger.Error("Readarr was restarted prematurely by external process.");
+                        _logger.Error("Shelvance was restarted prematurely by external process.");
                         return;
                     }
                 }
@@ -128,7 +128,7 @@ namespace NzbDrone.Update.UpdateEngine
                     // Set executable flag on app
                     if (OsInfo.IsOsx || OsInfo.IsLinux)
                     {
-                        _diskProvider.SetFilePermissions(Path.Combine(installationFolder, "Readarr"), "755", null);
+                        _diskProvider.SetFilePermissions(Path.Combine(installationFolder, "Shelvance"), "755", null);
                     }
                 }
                 catch (Exception e)
@@ -153,14 +153,14 @@ namespace NzbDrone.Update.UpdateEngine
                     {
                         System.Threading.Thread.Sleep(1000);
 
-                        if (_processProvider.Exists(ProcessProvider.READARR_PROCESS_NAME))
+                        if (_processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                         {
-                            _logger.Info("Readarr was restarted by external process.");
+                            _logger.Info("Shelvance was restarted by external process.");
                             break;
                         }
                     }
 
-                    if (!_processProvider.Exists(ProcessProvider.READARR_PROCESS_NAME))
+                    if (!_processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                     {
                         _startNzbDrone.Start(appType, installationFolder);
                     }

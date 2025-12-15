@@ -2,7 +2,7 @@ export {};
 
 declare global {
   interface Window {
-    Readarr: {
+    Shelvance: {
       urlBase: string;
       apiRoot: string;
       apiKey: string;

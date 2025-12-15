@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Datastore;
 
-namespace Readarr.Http.Extensions
+namespace Shelvance.Http.Extensions
 {
     public static class RequestExtensions
     {
-        // See src/Readarr.Api.V1/Queue/QueueModule.cs
+        // See src/Shelvance.Api.V1/Queue/QueueModule.cs
         private static readonly HashSet<string> VALID_SORT_KEYS = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
             "authors.sortname", //Workaround authors table properties not being added on isValidSortKey call

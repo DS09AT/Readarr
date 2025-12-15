@@ -1,9 +1,9 @@
 using FluentValidation;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Validation;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Indexers
+namespace Shelvance.Api.V1.Indexers
 {
     [V1ApiController]
     public class IndexerController : ProviderControllerBase<IndexerResource, IndexerBulkResource, IIndexer, IndexerDefinition>

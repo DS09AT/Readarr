@@ -5,7 +5,7 @@
       <DataCollector friendlyName="XPlat Code Coverage">
         <Configuration>
           <Format>opencover</Format>
-          <Exclude>[Readarr.*.Test]*,[Readarr.Test.*]*,[Readarr.Api.V1]*</Exclude>
+          <Exclude>[Shelvance.*.Test]*,[Shelvance.Test.*]*,[Shelvance.Api.V1]*</Exclude>
         </Configuration>
       </DataCollector>
     </DataCollectors>
