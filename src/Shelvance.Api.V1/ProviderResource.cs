@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using NzbDrone.Common.Reflection;
 using NzbDrone.Core.ThingiProvider;
-using Readarr.Http.ClientSchema;
-using Readarr.Http.REST;
+using Shelvance.Http.ClientSchema;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1
+namespace Shelvance.Api.V1
 {
     public class ProviderResource<T> : RestResource
     {

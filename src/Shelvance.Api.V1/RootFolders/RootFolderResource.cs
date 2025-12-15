@@ -5,9 +5,9 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Books.Calibre;
 using NzbDrone.Core.RootFolders;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.RootFolders
+namespace Shelvance.Api.V1.RootFolders
 {
     public class RootFolderResource : RestResource
     {

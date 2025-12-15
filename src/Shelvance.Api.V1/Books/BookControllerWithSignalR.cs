@@ -5,10 +5,10 @@ using NzbDrone.Core.Books;
 using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.SignalR;
-using Readarr.Api.V1.Author;
-using Readarr.Http.REST;
+using Shelvance.Api.V1.Author;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Books
+namespace Shelvance.Api.V1.Books
 {
     public abstract class BookControllerWithSignalR : RestControllerWithSignalR<BookResource, Book>
     {

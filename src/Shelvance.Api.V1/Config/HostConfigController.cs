@@ -11,10 +11,10 @@ using NzbDrone.Core.Update;
 using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Config
+namespace Shelvance.Api.V1.Config
 {
     [V1ApiController("config/host")]
     public class HostConfigController : RestController<HostConfigResource>
@@ -39,7 +39,7 @@ namespace Readarr.Api.V1.Config
             SharedValidator.RuleFor(c => c.Port).ValidPort();
 
             SharedValidator.RuleFor(c => c.UrlBase).ValidUrlBase();
-            SharedValidator.RuleFor(c => c.InstanceName).ContainsReadarr().When(c => c.InstanceName.IsNotNullOrWhiteSpace());
+            SharedValidator.RuleFor(c => c.InstanceName).ContainsShelvance().When(c => c.InstanceName.IsNotNullOrWhiteSpace());
 
             SharedValidator.RuleFor(c => c.Username).NotEmpty().When(c => c.AuthenticationMethod == AuthenticationType.Basic ||
                                                                           c.AuthenticationMethod == AuthenticationType.Forms);

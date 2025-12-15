@@ -150,7 +150,7 @@ namespace NzbDrone.Core.Test.DecisionEngineTests
                 return c;
             }).ToList();
 
-            _trackFiles.First().ReleaseGroup = "NotReadarr";
+            _trackFiles.First().ReleaseGroup = "NotShelvance";
 
             var remoteBook = Builder<RemoteBook>.CreateNew()
                                                       .With(e => e.ParsedBookInfo = _parsedBookInfo)
@@ -170,7 +170,7 @@ namespace NzbDrone.Core.Test.DecisionEngineTests
 
             _trackFiles.Select(c =>
             {
-                c.ReleaseGroup = "NotReadarr";
+                c.ReleaseGroup = "NotShelvance";
                 return c;
             }).ToList();
             _trackFiles.Select(c =>

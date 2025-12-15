@@ -70,7 +70,7 @@ Build()
     rm -rf $outputFolder
     rm -rf $testPackageFolder
 
-    slnFile=src/Readarr.sln
+    slnFile=src/Shelvance.sln
 
     if [ $os = "windows" ]; then
         platform=Windows
@@ -111,7 +111,7 @@ PackageFiles()
     rm -rf $folder
     mkdir -p $folder
     cp -r $outputFolder/$framework/$runtime/publish/* $folder
-    cp -r $outputFolder/Readarr.Update/$framework/$runtime/publish $folder/Readarr.Update
+    cp -r $outputFolder/Shelvance.Update/$framework/$runtime/publish $folder/Shelvance.Update
     cp -r $outputFolder/UI $folder
 
     echo "Adding LICENSE"
@@ -134,10 +134,10 @@ PackageLinux()
     rm -f $folder/ServiceInstall.*
 
     echo "Removing Shelvance.Windows"
-    rm $folder/Readarr.Windows.*
+    rm $folder/Shelvance.Windows.*
 
     echo "Adding Shelvance.Mono to UpdatePackage"
-    cp $folder/Readarr.Mono.* $folder/Readarr.Update
+    cp $folder/Shelvance.Mono.* $folder/Shelvance.Update
     if [ "$framework" = "net6.0" ] || [ "$framework" = "net8.0" ]; then
         cp $folder/Mono.Posix.NETStandard.* $folder/Shelvance.Update
         cp $folder/libMonoPosixHelper.* $folder/Shelvance.Update
@@ -162,10 +162,10 @@ PackageMacOS()
     rm -f $folder/ServiceInstall.*
 
     echo "Removing Shelvance.Windows"
-    rm $folder/Readarr.Windows.*
+    rm $folder/Shelvance.Windows.*
 
     echo "Adding Shelvance.Mono to UpdatePackage"
-    cp $folder/Readarr.Mono.* $folder/Readarr.Update
+    cp $folder/Shelvance.Mono.* $folder/Shelvance.Update
     if [ "$framework" = "net6.0" ] || [ "$framework" = "net8.0" ]; then
         cp $folder/Mono.Posix.NETStandard.* $folder/Shelvance.Update
         cp $folder/libMonoPosixHelper.* $folder/Shelvance.Update
@@ -209,12 +209,12 @@ PackageWindows()
     PackageFiles "$folder" "$framework" "$runtime"
 
     echo "Removing Shelvance.Mono"
-    rm -f $folder/Readarr.Mono.*
+    rm -f $folder/Shelvance.Mono.*
     rm -f $folder/Mono.Posix.NETStandard.*
     rm -f $folder/libMonoPosixHelper.*
 
     echo "Adding Shelvance.Windows to UpdatePackage"
-    cp $folder/Readarr.Windows.* $folder/Readarr.Update
+    cp $folder/Shelvance.Windows.* $folder/Shelvance.Update
 
     ProgressEnd "Creating $runtime Package for $framework"
 }

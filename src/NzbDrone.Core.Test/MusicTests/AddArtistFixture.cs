@@ -34,10 +34,10 @@ namespace NzbDrone.Core.Test.MusicTests
                 .Returns<Author, bool>((author, _) => author);
         }
 
-        private void GivenValidAuthor(string readarrId)
+        private void GivenValidAuthor(string shelvanceId)
         {
             Mocker.GetMock<IProvideAuthorInfo>()
-                .Setup(s => s.GetAuthorInfo(readarrId, false))
+                .Setup(s => s.GetAuthorInfo(shelvanceId, false))
                 .Returns(_fakeAuthor);
         }
 

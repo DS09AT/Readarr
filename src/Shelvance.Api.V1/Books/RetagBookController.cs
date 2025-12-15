@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaFiles;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Books
+namespace Shelvance.Api.V1.Books
 {
     [V1ApiController("retag")]
     public class RetagBookController : Controller

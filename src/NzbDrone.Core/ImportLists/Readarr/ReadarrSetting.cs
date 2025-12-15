@@ -4,22 +4,22 @@ using FluentValidation;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Readarr
+namespace NzbDrone.Core.ImportLists.Shelvance
 {
-    public class ReadarrSettingsValidator : AbstractValidator<ReadarrSettings>
+    public class ShelvanceSettingsValidator : AbstractValidator<ShelvanceSettings>
     {
-        public ReadarrSettingsValidator()
+        public ShelvanceSettingsValidator()
         {
             RuleFor(c => c.BaseUrl).ValidRootUrl();
             RuleFor(c => c.ApiKey).NotEmpty();
         }
     }
 
-    public class ReadarrSettings : IImportListSettings
+    public class ShelvanceSettings : IImportListSettings
     {
-        private static readonly ReadarrSettingsValidator Validator = new ReadarrSettingsValidator();
+        private static readonly ShelvanceSettingsValidator Validator = new ShelvanceSettingsValidator();
 
-        public ReadarrSettings()
+        public ShelvanceSettings()
         {
             BaseUrl = "";
             ApiKey = "";

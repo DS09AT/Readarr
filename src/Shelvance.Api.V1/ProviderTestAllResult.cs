@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using FluentValidation.Results;
 using NzbDrone.Common.Extensions;
 
-namespace Readarr.Api.V1
+namespace Shelvance.Api.V1
 {
     public class ProviderTestAllResult
     {

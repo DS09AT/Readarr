@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource;
 using NzbDrone.Core.Organizer;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Search
+namespace Shelvance.Api.V1.Search
 {
     [V1ApiController]
     public class SearchController : Controller

@@ -13,7 +13,7 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     [AllowAnonymous]
     [ApiController]

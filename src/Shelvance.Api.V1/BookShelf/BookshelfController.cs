@@ -1,9 +1,9 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Books;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Bookshelf
+namespace Shelvance.Api.V1.Bookshelf
 {
     [V1ApiController]
     public class BookshelfController : Controller

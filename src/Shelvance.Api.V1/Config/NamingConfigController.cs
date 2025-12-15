@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Organizer;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Config
+namespace Shelvance.Api.V1.Config
 {
     [V1ApiController("config/naming")]
     public class NamingConfigController : RestController<NamingConfigResource>

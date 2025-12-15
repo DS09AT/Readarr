@@ -3,9 +3,9 @@ using System.Dynamic;
 using System.Linq;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.CustomFilters;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.CustomFilters
+namespace Shelvance.Api.V1.CustomFilters
 {
     public class CustomFilterResource : RestResource
     {

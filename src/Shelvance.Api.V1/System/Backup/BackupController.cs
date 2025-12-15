@@ -8,10 +8,10 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Backup;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.System.Backup
+namespace Shelvance.Api.V1.System.Backup
 {
     [V1ApiController("system/backup")]
     public class BackupController : Controller

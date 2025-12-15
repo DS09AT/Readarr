@@ -2,9 +2,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
-using Readarr.Http.Extensions;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Http.Middleware
+namespace Shelvance.Http.Middleware
 {
     public class IfModifiedMiddleware
     {

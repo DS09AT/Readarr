@@ -8,7 +8,7 @@ namespace ServiceUninstall
 {
     public static class ServiceHelper
     {
-        private static string ReadarrExe => Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).Directory.FullName, "Shelvance.Console.exe");
+        private static string ShelvanceExe => Path.Combine(new FileInfo(Assembly.GetExecutingAssembly().Location).Directory.FullName, "Shelvance.Console.exe");
 
         private static bool IsAnAdministrator()
         {
@@ -18,7 +18,7 @@ namespace ServiceUninstall
 
         public static void Run(string arg)
         {
-            if (!File.Exists(ReadarrExe))
+            if (!File.Exists(ShelvanceExe))
             {
                 Console.WriteLine("Unable to find Shelvance executable in the current directory.");
                 return;
@@ -32,7 +32,7 @@ namespace ServiceUninstall
 
             var startInfo = new ProcessStartInfo
             {
-                FileName = ReadarrExe,
+                FileName = ShelvanceExe,
                 Arguments = arg,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,

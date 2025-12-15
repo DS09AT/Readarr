@@ -1,6 +1,6 @@
 using NzbDrone.Core.AuthorStats;
 
-namespace Readarr.Api.V1.Author
+namespace Shelvance.Api.V1.Author
 {
     public class AuthorStatisticsResource
     {

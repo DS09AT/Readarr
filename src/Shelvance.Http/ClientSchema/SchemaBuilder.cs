@@ -11,7 +11,7 @@ using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Annotations;
 using NzbDrone.Core.Localization;
 
-namespace Readarr.Http.ClientSchema
+namespace Shelvance.Http.ClientSchema
 {
     public static class SchemaBuilder
     {

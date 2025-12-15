@@ -13,11 +13,11 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.ProgressMessaging;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
-using Readarr.Http.Validation;
+using Shelvance.Http;
+using Shelvance.Http.REST;
+using Shelvance.Http.Validation;
 
-namespace Readarr.Api.V1.Commands
+namespace Shelvance.Api.V1.Commands
 {
     [V1ApiController]
     public class CommandController : RestControllerWithSignalR<CommandResource, CommandModel>, IHandle<CommandUpdatedEvent>

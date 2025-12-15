@@ -624,7 +624,7 @@ namespace NzbDrone.Core.Test.OrganizerTests.FileNameBuilderTests
         }
 
         [Test]
-        public void should_use_Readarr_as_release_group_when_not_available()
+        public void should_use_Shelvance_as_release_group_when_not_available()
         {
             _trackFile.ReleaseGroup = null;
             _namingConfig.StandardBookFormat = "{Release Group}";
@@ -636,7 +636,7 @@ namespace NzbDrone.Core.Test.OrganizerTests.FileNameBuilderTests
         [TestCase("{Book Title}{-Release Group}", "Hybrid Theory")]
         [TestCase("{Book Title}{ Release Group}", "Hybrid Theory")]
         [TestCase("{Book Title}{ [Release Group]}", "Hybrid Theory")]
-        public void should_not_use_Readarr_as_release_group_if_pattern_has_separator(string pattern, string expectedFileName)
+        public void should_not_use_Shelvance_as_release_group_if_pattern_has_separator(string pattern, string expectedFileName)
         {
             _trackFile.ReleaseGroup = null;
             _namingConfig.StandardBookFormat = pattern;

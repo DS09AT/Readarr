@@ -16,15 +16,15 @@ using NzbDrone.Integration.Test.Client;
 using NzbDrone.SignalR;
 using NzbDrone.Test.Common;
 using NzbDrone.Test.Common.Categories;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Blocklist;
-using Readarr.Api.V1.Config;
-using Readarr.Api.V1.DownloadClient;
-using Readarr.Api.V1.History;
-using Readarr.Api.V1.Profiles.Quality;
-using Readarr.Api.V1.RootFolders;
-using Readarr.Api.V1.System.Tasks;
-using Readarr.Api.V1.Tags;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Blocklist;
+using Shelvance.Api.V1.Config;
+using Shelvance.Api.V1.DownloadClient;
+using Shelvance.Api.V1.History;
+using Shelvance.Api.V1.Profiles.Quality;
+using Shelvance.Api.V1.RootFolders;
+using Shelvance.Api.V1.System.Tasks;
+using Shelvance.Api.V1.Tags;
 using RestSharp;
 using RestSharp.Serializers.SystemTextJson;
 
@@ -283,9 +283,9 @@ namespace NzbDrone.Integration.Test
             return result;
         }
 
-        public void EnsureNoAuthor(string readarrId, string authorTitle)
+        public void EnsureNoAuthor(string shelvanceId, string authorTitle)
         {
-            var result = Author.All().FirstOrDefault(v => v.ForeignAuthorId == readarrId);
+            var result = Author.All().FirstOrDefault(v => v.ForeignAuthorId == shelvanceId);
 
             if (result != null)
             {

@@ -1,8 +1,8 @@
 using System;
 using NzbDrone.Core.Datastore.Events;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Http
+namespace Shelvance.Http
 {
     public class ResourceChangeMessage<TResource>
         where TResource : RestResource

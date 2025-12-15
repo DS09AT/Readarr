@@ -922,7 +922,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.QBittorrentTests
         [TestCase("stoppedUP")]
         public void should_get_category_from_the_category_if_set(string state)
         {
-            const string category = "music-readarr";
+            const string category = "music-shelvance";
             GivenGlobalSeedLimits(1.0f);
 
             var torrent = new QBittorrentTorrent
@@ -948,7 +948,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.QBittorrentTests
         [TestCase("stoppedUP")]
         public void should_get_category_from_the_label_if_the_category_is_not_available(string state)
         {
-            const string category = "music-readarr";
+            const string category = "music-shelvance";
             GivenGlobalSeedLimits(1.0f);
 
             var torrent = new QBittorrentTorrent

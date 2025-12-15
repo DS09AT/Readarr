@@ -185,7 +185,7 @@ class GeneralSettings extends Component {
         <ConfirmModal
           isOpen={this.state.isRestartRequiredModalOpen}
           kind={kinds.DANGER}
-          title={translate('RestartReadarr')}
+          title={translate('RestartShelvance')}
           message={
             `Shelvance requires a restart to apply changes, do you want to restart now? ${isWindowsService ? 'Depending which user is running the Shelvance service you may need to restart Shelvance as admin once before the service will start automatically.' : ''}`
           }

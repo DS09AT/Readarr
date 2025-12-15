@@ -1,7 +1,7 @@
 ﻿using System;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.System.Tasks
+namespace Shelvance.Api.V1.System.Tasks
 {
     public class TaskResource : RestResource
     {

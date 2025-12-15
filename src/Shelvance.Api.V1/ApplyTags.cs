@@ -1,4 +1,4 @@
-namespace Readarr.Api.V1
+namespace Shelvance.Api.V1
 {
     public enum ApplyTags
     {

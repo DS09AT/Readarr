@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using Readarr.Http.Extensions;
-using Readarr.Http.Frontend.Mappers;
+using Shelvance.Http.Extensions;
+using Shelvance.Http.Frontend.Mappers;
 
-namespace Readarr.Http.Frontend
+namespace Shelvance.Http.Frontend
 {
     [Authorize(Policy="UI")]
     [ApiController]

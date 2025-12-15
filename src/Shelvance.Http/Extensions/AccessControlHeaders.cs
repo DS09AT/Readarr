@@ -1,4 +1,4 @@
-﻿namespace Readarr.Http.Extensions
+﻿namespace Shelvance.Http.Extensions
 {
     public static class AccessControlHeaders
     {

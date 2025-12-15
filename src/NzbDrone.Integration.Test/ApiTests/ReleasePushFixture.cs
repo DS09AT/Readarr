@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Net;
 using FluentAssertions;
 using NUnit.Framework;
-using Readarr.Api.V1.Indexers;
+using Shelvance.Api.V1.Indexers;
 
 namespace NzbDrone.Integration.Test.ApiTests
 {

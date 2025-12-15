@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Readarr.Api.V1.Blocklist
+namespace Shelvance.Api.V1.Blocklist
 {
     public class BlocklistBulkResource
     {

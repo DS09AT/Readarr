@@ -3,12 +3,12 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net8.0</TargetFrameworks>
 
-    <ApplicationIcon>..\NzbDrone.Host\Readarr.ico</ApplicationIcon>
+    <ApplicationIcon>..\NzbDrone.Host\Shelvance.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="!$(RuntimeIdentifier.StartsWith('win'))">
-    <AssemblyName>Readarr</AssemblyName>
+    <AssemblyName>Shelvance</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Readarr.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Shelvance.Host.csproj" />
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 using FluentValidation;
 using NzbDrone.Core.Download;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.DownloadClient
+namespace Shelvance.Api.V1.DownloadClient
 {
     [V1ApiController]
     public class DownloadClientController : ProviderControllerBase<DownloadClientResource, DownloadClientBulkResource, IDownloadClient, DownloadClientDefinition>

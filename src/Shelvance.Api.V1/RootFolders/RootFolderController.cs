@@ -11,10 +11,10 @@ using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.RootFolders
+namespace Shelvance.Api.V1.RootFolders
 {
     [V1ApiController]
     public class RootFolderController : RestControllerWithSignalR<RootFolderResource, RootFolder>

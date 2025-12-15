@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Serializer;
-using Readarr.Http.Extensions;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Http.Middleware
+namespace Shelvance.Http.Middleware
 {
     public class StartingUpMiddleware
     {

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Languages;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Config
+namespace Shelvance.Api.V1.Config
 {
     [V1ApiController("config/ui")]
     public class UiConfigController : ConfigController<UiConfigResource>

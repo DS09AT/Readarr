@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using NzbDrone.Core.Datastore;
 
-namespace Readarr.Http
+namespace Shelvance.Http
 {
     public class PagingRequestResource
     {

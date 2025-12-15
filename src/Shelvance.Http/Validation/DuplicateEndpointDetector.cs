@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Routing.Matching;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Readarr.Http.Validation
+namespace Shelvance.Http.Validation
 {
     public interface IDfaMatcherBuilder
     {

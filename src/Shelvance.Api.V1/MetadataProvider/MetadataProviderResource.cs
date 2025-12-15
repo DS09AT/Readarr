@@ -1,6 +1,6 @@
 using NzbDrone.Core.MetadataSource;
 
-namespace Readarr.Api.V1.MetadataProvider
+namespace Shelvance.Api.V1.MetadataProvider
 {
     public class MetadataProviderResource : ProviderResource<MetadataProviderResource>
     {

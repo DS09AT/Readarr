@@ -21,7 +21,7 @@ testPackageFolder='_tests'
 rm -rf $outputFolder
 rm -rf $testPackageFolder
 
-slnFile=src/Readarr.sln
+slnFile=src/Shelvance.sln
 
 platform=Posix
 
@@ -39,7 +39,7 @@ dotnet msbuild -restore $slnFile -p:Configuration=Debug -p:Platform=$platform -p
 dotnet new tool-manifest
 dotnet tool install --version 6.6.2 Swashbuckle.AspNetCore.Cli
 
-dotnet tool run swagger tofile --output ./src/Readarr.Api.V1/openapi.json "$outputFolder/$FRAMEWORK/$RUNTIME/$application" v1 &
+dotnet tool run swagger tofile --output ./src/Shelvance.Api.V1/openapi.json "$outputFolder/$FRAMEWORK/$RUNTIME/$application" v1 &
 
 sleep 45
 

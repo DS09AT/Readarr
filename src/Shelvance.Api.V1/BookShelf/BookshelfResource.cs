@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Books;
 
-namespace Readarr.Api.V1.Bookshelf
+namespace Shelvance.Api.V1.Bookshelf
 {
     public class BookshelfResource
     {

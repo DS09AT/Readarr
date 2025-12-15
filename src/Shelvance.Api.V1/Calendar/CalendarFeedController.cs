@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Tags;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Calendar
+namespace Shelvance.Api.V1.Calendar
 {
     [V1FeedController("calendar")]
     public class CalendarFeedController : Controller

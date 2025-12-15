@@ -8,9 +8,9 @@ using NzbDrone.Common.Serializer;
 using NzbDrone.Core.ThingiProvider;
 using NzbDrone.Core.Validation;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1
+namespace Shelvance.Api.V1
 {
     public abstract class ProviderControllerBase<TProviderResource, TBulkProviderResource, TProvider, TProviderDefinition> : RestController<TProviderResource>
         where TProviderDefinition : ProviderDefinition, new()

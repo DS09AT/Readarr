@@ -45,24 +45,24 @@ namespace NzbDrone.Test.Common
 
             GenerateConfigFile(enableAuth);
 
-            string readarrConsoleExe;
+            string shelvanceConsoleExe;
             if (OsInfo.IsWindows)
             {
-                readarrConsoleExe = "Shelvance.Console.exe";
+                shelvanceConsoleExe = "Shelvance.Console.exe";
             }
             else
             {
-                readarrConsoleExe = "Shelvance";
+                shelvanceConsoleExe = "Shelvance";
             }
 
             _startupLog = new List<string>();
             if (BuildInfo.IsDebug)
             {
-                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "..", "_output", "net6.0", readarrConsoleExe));
+                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "..", "_output", "net6.0", shelvanceConsoleExe));
             }
             else
             {
-                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "bin", readarrConsoleExe));
+                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "bin", shelvanceConsoleExe));
             }
 
             while (true)
@@ -90,7 +90,7 @@ namespace NzbDrone.Test.Common
                     return;
                 }
 
-                TestContext.Progress.WriteLine("Waiting for Readarr to start. Response Status : {0}  [{1}] {2}", statusCall.ResponseStatus, statusCall.StatusDescription, statusCall.ErrorException.Message);
+                TestContext.Progress.WriteLine("Waiting for Shelvance to start. Response Status : {0}  [{1}] {2}", statusCall.ResponseStatus, statusCall.StatusDescription, statusCall.ErrorException.Message);
 
                 Thread.Sleep(500);
             }
@@ -146,13 +146,13 @@ namespace NzbDrone.Test.Common
             StringDictionary envVars = new ();
             if (PostgresOptions?.Host != null)
             {
-                envVars.Add("Readarr__Postgres__Host", PostgresOptions.Host);
-                envVars.Add("Readarr__Postgres__Port", PostgresOptions.Port.ToString());
-                envVars.Add("Readarr__Postgres__User", PostgresOptions.User);
-                envVars.Add("Readarr__Postgres__Password", PostgresOptions.Password);
-                envVars.Add("Readarr__Postgres__MainDb", PostgresOptions.MainDb);
-                envVars.Add("Readarr__Postgres__LogDb", PostgresOptions.LogDb);
-                envVars.Add("Readarr__Postgres__CacheDb", PostgresOptions.CacheDb);
+                envVars.Add("Shelvance__Postgres__Host", PostgresOptions.Host);
+                envVars.Add("Shelvance__Postgres__Port", PostgresOptions.Port.ToString());
+                envVars.Add("Shelvance__Postgres__User", PostgresOptions.User);
+                envVars.Add("Shelvance__Postgres__Password", PostgresOptions.Password);
+                envVars.Add("Shelvance__Postgres__MainDb", PostgresOptions.MainDb);
+                envVars.Add("Shelvance__Postgres__LogDb", PostgresOptions.LogDb);
+                envVars.Add("Shelvance__Postgres__CacheDb", PostgresOptions.CacheDb);
 
                 TestContext.Progress.WriteLine("Using env vars:\n{0}", envVars.ToJson());
             }

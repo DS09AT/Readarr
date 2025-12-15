@@ -114,11 +114,11 @@ namespace NzbDrone.Host
             }
             catch (InvalidConfigFileException ex)
             {
-                throw new ReadarrStartupException(ex);
+                throw new ShelvanceStartupException(ex);
             }
             catch (AccessDeniedConfigFileException ex)
             {
-                throw new ReadarrStartupException(ex);
+                throw new ShelvanceStartupException(ex);
             }
             catch (TerminateApplicationException ex)
             {
@@ -275,11 +275,11 @@ namespace NzbDrone.Host
             {
                 if (ex.HResult == 0x2 || ex.HResult == 0x2006D080)
                 {
-                    throw new ReadarrStartupException(ex,
+                    throw new ShelvanceStartupException(ex,
                         $"The SSL certificate file {cert} does not exist");
                 }
 
-                throw new ReadarrStartupException(ex);
+                throw new ShelvanceStartupException(ex);
             }
 
             return certificate;

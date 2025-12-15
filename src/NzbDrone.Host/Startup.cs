@@ -24,13 +24,13 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Host.AccessControl;
 using NzbDrone.Http.Authentication;
 using NzbDrone.SignalR;
-using Readarr.Api.V1.System;
-using Readarr.Http;
-using Readarr.Http.Authentication;
-using Readarr.Http.ClientSchema;
-using Readarr.Http.ErrorManagement;
-using Readarr.Http.Frontend;
-using Readarr.Http.Middleware;
+using Shelvance.Api.V1.System;
+using Shelvance.Http;
+using Shelvance.Http.Authentication;
+using Shelvance.Http.ClientSchema;
+using Shelvance.Http.ErrorManagement;
+using Shelvance.Http.Frontend;
+using Shelvance.Http.Middleware;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace NzbDrone.Host
@@ -210,7 +210,7 @@ namespace NzbDrone.Host
                               IRuntimeInfo runtimeInfo,
                               IFirewallAdapter firewallAdapter,
                               IEventAggregator eventAggregator,
-                              ReadarrErrorPipeline errorHandler)
+                              ShelvanceErrorPipeline errorHandler)
         {
             initializeLogger.Initialize();
             appFolderFactory.Register();

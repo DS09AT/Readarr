@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Readarr.Api.V1.Notifications;
+using Shelvance.Api.V1.Notifications;
 using RestSharp;
 
 namespace NzbDrone.Integration.Test.Client

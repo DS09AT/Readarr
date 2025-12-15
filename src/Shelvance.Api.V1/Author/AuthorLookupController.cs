@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource;
 using NzbDrone.Core.Organizer;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Author
+namespace Shelvance.Api.V1.Author
 {
     [V1ApiController("author/lookup")]
     public class AuthorLookupController : Controller

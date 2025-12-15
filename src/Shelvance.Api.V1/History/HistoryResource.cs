@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.History;
 using NzbDrone.Core.Qualities;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Api.V1.CustomFormats;
-using Readarr.Http.REST;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Books;
+using Shelvance.Api.V1.CustomFormats;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.History
+namespace Shelvance.Api.V1.History
 {
     public class HistoryResource : RestResource
     {

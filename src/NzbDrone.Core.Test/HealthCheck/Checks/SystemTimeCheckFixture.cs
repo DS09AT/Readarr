@@ -18,7 +18,7 @@ namespace NzbDrone.Core.Test.HealthCheck.Checks
         [SetUp]
         public void Setup()
         {
-            Mocker.SetConstant<IReadarrCloudRequestBuilder>(new ReadarrCloudRequestBuilder());
+            Mocker.SetConstant<IShelvanceCloudRequestBuilder>(new ShelvanceCloudRequestBuilder());
         }
 
         private void GivenServerTime(DateTime dateTime)

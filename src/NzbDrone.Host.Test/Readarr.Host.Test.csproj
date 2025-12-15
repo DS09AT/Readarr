@@ -3,7 +3,7 @@
     <TargetFrameworks>net8.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Readarr.Host.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Shelvance.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
   </ItemGroup>
 </Project>

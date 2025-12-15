@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Instrumentation;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Shelvance.Http;
+using Shelvance.Http.Extensions;
 
-namespace Readarr.Api.V1.Logs
+namespace Shelvance.Api.V1.Logs
 {
     [V1ApiController]
     public class LogController : Controller

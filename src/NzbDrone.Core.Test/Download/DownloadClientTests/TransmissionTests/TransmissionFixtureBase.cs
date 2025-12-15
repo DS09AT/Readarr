@@ -119,7 +119,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests
 
         protected void GivenTvDirectory()
         {
-            _settings.TvDirectory = @"C:/Downloads/Finished/Readarr";
+            _settings.TvDirectory = @"C:/Downloads/Finished/Shelvance";
         }
 
         protected void GivenFailedDownload()

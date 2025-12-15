@@ -10,9 +10,9 @@ using NzbDrone.Core.DecisionEngine;
 using NzbDrone.Core.Download;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Parser.Model;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Indexers
+namespace Shelvance.Api.V1.Indexers
 {
     [V1ApiController("release/push")]
     public class ReleasePushController : ReleaseControllerBase

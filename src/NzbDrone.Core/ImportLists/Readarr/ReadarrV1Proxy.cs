@@ -7,55 +7,55 @@ using NLog;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 
-namespace NzbDrone.Core.ImportLists.Readarr
+namespace NzbDrone.Core.ImportLists.Shelvance
 {
-    public interface IReadarrV1Proxy
+    public interface IShelvanceV1Proxy
     {
-        List<ReadarrAuthor> GetAuthors(ReadarrSettings settings);
-        List<ReadarrBook> GetBooks(ReadarrSettings settings);
-        List<ReadarrProfile> GetProfiles(ReadarrSettings settings);
-        List<ReadarrRootFolder> GetRootFolders(ReadarrSettings settings);
-        List<ReadarrTag> GetTags(ReadarrSettings settings);
-        ValidationFailure Test(ReadarrSettings settings);
+        List<ShelvanceAuthor> GetAuthors(ShelvanceSettings settings);
+        List<ShelvanceBook> GetBooks(ShelvanceSettings settings);
+        List<ShelvanceProfile> GetProfiles(ShelvanceSettings settings);
+        List<ShelvanceRootFolder> GetRootFolders(ShelvanceSettings settings);
+        List<ShelvanceTag> GetTags(ShelvanceSettings settings);
+        ValidationFailure Test(ShelvanceSettings settings);
     }
 
-    public class ReadarrV1Proxy : IReadarrV1Proxy
+    public class ShelvanceV1Proxy : IShelvanceV1Proxy
     {
         private readonly IHttpClient _httpClient;
         private readonly Logger _logger;
 
-        public ReadarrV1Proxy(IHttpClient httpClient, Logger logger)
+        public ShelvanceV1Proxy(IHttpClient httpClient, Logger logger)
         {
             _httpClient = httpClient;
             _logger = logger;
         }
 
-        public List<ReadarrAuthor> GetAuthors(ReadarrSettings settings)
+        public List<ShelvanceAuthor> GetAuthors(ShelvanceSettings settings)
         {
-            return Execute<ReadarrAuthor>("/api/v1/author", settings);
+            return Execute<ShelvanceAuthor>("/api/v1/author", settings);
         }
 
-        public List<ReadarrBook> GetBooks(ReadarrSettings settings)
+        public List<ShelvanceBook> GetBooks(ShelvanceSettings settings)
         {
-            return Execute<ReadarrBook>("/api/v1/book", settings);
+            return Execute<ShelvanceBook>("/api/v1/book", settings);
         }
 
-        public List<ReadarrProfile> GetProfiles(ReadarrSettings settings)
+        public List<ShelvanceProfile> GetProfiles(ShelvanceSettings settings)
         {
-            return Execute<ReadarrProfile>("/api/v1/qualityprofile", settings);
+            return Execute<ShelvanceProfile>("/api/v1/qualityprofile", settings);
         }
 
-        public List<ReadarrRootFolder> GetRootFolders(ReadarrSettings settings)
+        public List<ShelvanceRootFolder> GetRootFolders(ShelvanceSettings settings)
         {
-            return Execute<ReadarrRootFolder>("api/v1/rootfolder", settings);
+            return Execute<ShelvanceRootFolder>("api/v1/rootfolder", settings);
         }
 
-        public List<ReadarrTag> GetTags(ReadarrSettings settings)
+        public List<ShelvanceTag> GetTags(ShelvanceSettings settings)
         {
-            return Execute<ReadarrTag>("/api/v1/tag", settings);
+            return Execute<ShelvanceTag>("/api/v1/tag", settings);
         }
 
-        public ValidationFailure Test(ReadarrSettings settings)
+        public ValidationFailure Test(ShelvanceSettings settings)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
             return null;
         }
 
-        private List<TResource> Execute<TResource>(string resource, ReadarrSettings settings)
+        private List<TResource> Execute<TResource>(string resource, ShelvanceSettings settings)
         {
             if (settings.BaseUrl.IsNullOrWhiteSpace() || settings.ApiKey.IsNullOrWhiteSpace())
             {

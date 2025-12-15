@@ -115,6 +115,6 @@ class ConsoleApi {
   }
 }
 
-window.ReadarrApi = new ConsoleApi();
+window.ShelvanceApi = new ConsoleApi();
 
 export default ConsoleApi;

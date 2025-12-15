@@ -2,10 +2,10 @@
 <RunSettings>
     <RunConfiguration>
         <EnvironmentVariables>
-            <Readarr__Postgres__Host>192.168.100.5</Readarr__Postgres__Host>
-			<Readarr__Postgres__Port>5432</Readarr__Postgres__Port>
-			<Readarr__Postgres__User>abc</Readarr__Postgres__User>
-			<Readarr__Postgres__Password>abc</Readarr__Postgres__Password>
+            <Shelvance__Postgres__Host>192.168.100.5</Shelvance__Postgres__Host>
+			<Shelvance__Postgres__Port>5432</Shelvance__Postgres__Port>
+			<Shelvance__Postgres__User>abc</Shelvance__Postgres__User>
+			<Shelvance__Postgres__Password>abc</Shelvance__Postgres__Password>
         </EnvironmentVariables>
     </RunConfiguration>
 </RunSettings>

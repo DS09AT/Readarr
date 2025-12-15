@@ -1,7 +1,7 @@
 using NzbDrone.Core.Configuration;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Config
+namespace Shelvance.Api.V1.Config
 {
     public class IndexerConfigResource : RestResource
     {

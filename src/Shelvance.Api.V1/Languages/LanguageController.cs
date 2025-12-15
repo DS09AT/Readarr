@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Languages;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Languages
+namespace Shelvance.Api.V1.Languages
 {
     [V1ApiController]
     public class LanguageController : RestController<LanguageResource>

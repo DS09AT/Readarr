@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.HealthCheck;
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Health
+namespace Shelvance.Api.V1.Health
 {
     public class HealthResource : RestResource
     {

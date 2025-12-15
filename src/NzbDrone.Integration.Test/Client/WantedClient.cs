@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http;
 using RestSharp;
 
 namespace NzbDrone.Integration.Test.Client

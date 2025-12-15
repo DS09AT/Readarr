@@ -4,7 +4,7 @@ using FluentValidation.Validators;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Organizer;
 
-namespace Readarr.Api.V1.Author
+namespace Shelvance.Api.V1.Author
 {
     public class AuthorFolderAsRootFolderValidator : PropertyValidator
     {

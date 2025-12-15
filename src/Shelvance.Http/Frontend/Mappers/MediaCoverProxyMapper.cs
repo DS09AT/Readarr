@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 using NzbDrone.Core.MediaCover;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Shelvance.Http.Frontend.Mappers
 {
     public class MediaCoverProxyMapper : IMapHttpRequestsToDisk
     {

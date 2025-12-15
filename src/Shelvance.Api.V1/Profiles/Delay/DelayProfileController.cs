@@ -3,11 +3,11 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Profiles.Delay;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
-using Readarr.Http.Validation;
+using Shelvance.Http;
+using Shelvance.Http.REST;
+using Shelvance.Http.Validation;
 
-namespace Readarr.Api.V1.Profiles.Delay
+namespace Shelvance.Api.V1.Profiles.Delay
 {
     [V1ApiController]
     public class DelayProfileController : RestController<DelayProfileResource>

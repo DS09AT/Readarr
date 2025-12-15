@@ -333,7 +333,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.UTorrentTests
 
             result.IsLocalhost.Should().BeTrue();
             result.OutputRootFolders.Should().NotBeNull();
-            result.OutputRootFolders.First().Should().Be(@"C:\Downloads\Finished\utorrent\readarr".AsOsAgnostic());
+            result.OutputRootFolders.First().Should().Be(@"C:\Downloads\Finished\utorrent\shelvance".AsOsAgnostic());
         }
 
         [Test]

@@ -8,15 +8,15 @@ using NLog;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
-using Readarr.Http.Exceptions;
+using Shelvance.Http.Exceptions;
 
-namespace Readarr.Http.ErrorManagement
+namespace Shelvance.Http.ErrorManagement
 {
-    public class ReadarrErrorPipeline
+    public class ShelvanceErrorPipeline
     {
         private readonly Logger _logger;
 
-        public ReadarrErrorPipeline(Logger logger)
+        public ShelvanceErrorPipeline(Logger logger)
         {
             _logger = logger;
         }

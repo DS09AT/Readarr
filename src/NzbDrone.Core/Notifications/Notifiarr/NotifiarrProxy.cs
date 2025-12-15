@@ -32,7 +32,7 @@ namespace NzbDrone.Core.Notifications.Notifiarr
         {
             try
             {
-                var request = new HttpRequestBuilder(URL + "/api/v1/notification/readarr")
+                var request = new HttpRequestBuilder(URL + "/api/v1/notification/shelvance")
                     .Accept(HttpAccept.Json)
                     .SetHeader("X-API-Key", settings.APIKey)
                     .Build();

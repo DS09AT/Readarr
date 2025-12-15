@@ -10,22 +10,22 @@
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <RuntimeIdentifiers>win-x64;win-x86;osx-x64;osx-arm64;linux-x64;linux-musl-x64;linux-arm;linux-musl-arm;linux-arm64;linux-musl-arm64</RuntimeIdentifiers>
 
-    <ReadarrRootDir>$(MSBuildThisFileDirectory)..\</ReadarrRootDir>
+    <ShelvanceRootDir>$(MSBuildThisFileDirectory)..\</ShelvanceRootDir>
 
     <!-- Specifies the type of output -->
-    <ReadarrOutputType>Library</ReadarrOutputType>
-    <ReadarrOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr.Console'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr.Update'">Update</ReadarrOutputType>
+    <ShelvanceOutputType>Library</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="'$(MSBuildProjectName)'=='Shelvance'">Exe</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="'$(MSBuildProjectName)'=='Shelvance.Console'">Exe</ShelvanceOutputType>
+    <ShelvanceOutputType Condition="'$(MSBuildProjectName)'=='Shelvance.Update'">Update</ShelvanceOutputType>
 
     <!-- Specifies whether it's one of our own libraries -->
-    <ReadarrProject>false</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('Readarr'))">true</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</ReadarrProject>
+    <ShelvanceProject>false</ShelvanceProject>
+    <ShelvanceProject Condition="$(MSBuildProjectName.StartsWith('Shelvance'))">true</ShelvanceProject>
+    <ShelvanceProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</ShelvanceProject>
+    <ShelvanceProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</ShelvanceProject>
 
     <!-- A test project gets the test sdk packages automatically added -->
     <TestProject>false</TestProject>
@@ -42,14 +42,14 @@
   <PropertyGroup>
     <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
     <!-- Centralize intermediate and default outputs -->
-    <BaseIntermediateOutputPath>$(ReadarrRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(ReadarrRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
-    <OutputPath>$(ReadarrRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+    <BaseIntermediateOutputPath>$(ShelvanceRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(ShelvanceRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
+    <OutputPath>$(ShelvanceRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
 
     <!-- Output to _output and _tests respectively -->
-    <OutputPath Condition="'$(ReadarrProject)'=='true'">$(ReadarrRootDir)_output\</OutputPath>
-    <OutputPath Condition="'$(ReadarrOutputType)'=='Test'">$(ReadarrRootDir)_tests\</OutputPath>
-    <OutputPath Condition="'$(ReadarrOutputType)'=='Update'">$(ReadarrRootDir)_output\Readarr.Update\</OutputPath>
+    <OutputPath Condition="'$(ShelvanceProject)'=='true'">$(ShelvanceRootDir)_output\</OutputPath>
+    <OutputPath Condition="'$(ShelvanceOutputType)'=='Test'">$(ShelvanceRootDir)_tests\</OutputPath>
+    <OutputPath Condition="'$(ShelvanceOutputType)'=='Update'">$(ShelvanceRootDir)_output\Shelvance.Update\</OutputPath>
 
     <!-- Paths relative to project file for better readability -->
     <EnableBaseIntermediateOutputPathMismatchWarning>false</EnableBaseIntermediateOutputPathMismatchWarning>
@@ -61,14 +61,14 @@
   </PropertyGroup>
 
   <!-- Test projects need bindingRedirects -->
-  <PropertyGroup Condition="'$(ReadarrOutputType)'=='Test'">
+  <PropertyGroup Condition="'$(ShelvanceOutputType)'=='Test'">
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <SelfContained>false</SelfContained>
   </PropertyGroup>
 
   <!-- Set the Product and Version info for our own projects -->
-  <PropertyGroup Condition="'$(ReadarrProject)'=='true'">
+  <PropertyGroup Condition="'$(ShelvanceProject)'=='true'">
     <Product>Shelvance</Product>
     <Company>shelvance.org</Company>
     <Copyright>Copyright 2025-$([System.DateTime]::Now.ToString('yyyy')) shelvance.org (GNU General Public v3)</Copyright>
@@ -88,7 +88,7 @@
   </PropertyGroup>
 
   <!-- Set the AssemblyConfiguration attribute for projects -->
-  <ItemGroup Condition="'$(ReadarrProject)'=='true'">
+  <ItemGroup Condition="'$(ShelvanceProject)'=='true'">
     <AssemblyAttribute Include="System.Reflection.AssemblyConfigurationAttribute">
       <_Parameter1>$(AssemblyConfiguration)</_Parameter1>
     </AssemblyAttribute>
@@ -96,7 +96,7 @@
 
   <PropertyGroup>
     <!-- For now keep the NzbDrone namespace -->
-    <RootNamespace Condition="'$(ReadarrProject)'=='true'">$(MSBuildProjectName.Replace('Readarr','NzbDrone'))</RootNamespace>
+    <RootNamespace Condition="'$(ShelvanceProject)'=='true'">$(MSBuildProjectName.Replace('Shelvance','NzbDrone'))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TestProject)'!='true'">
@@ -138,7 +138,7 @@
   </ItemGroup>
 
   <!-- Set up stylecop -->
-  <ItemGroup Condition="'$(ReadarrProject)'=='true' and '$(EnableAnalyzers)'!='false'">
+  <ItemGroup Condition="'$(ShelvanceProject)'=='true' and '$(EnableAnalyzers)'!='false'">
     <!-- StyleCop analysis -->
     <PackageReference Include="StyleCop.Analyzers" >
       <PrivateAssets>all</PrivateAssets>

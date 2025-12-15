@@ -1,6 +1,6 @@
-using Readarr.Http.REST;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Queue
+namespace Shelvance.Api.V1.Queue
 {
     public class QueueStatusResource : RestResource
     {

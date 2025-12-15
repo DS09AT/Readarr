@@ -52,7 +52,7 @@ DotnetPublishWithRetry()
         # Check if it's a NETSDK1064 error (package not found)
         if echo "$temp_output" | grep -q "NETSDK1064"; then
             echo "  Package cache issue detected, running restore..."
-            dotnet restore src/Readarr.sln -v minimal
+            dotnet restore src/Shelvance.sln -v minimal
 
             # Retry without --no-restore flag
             dotnet publish "$project" \
@@ -110,10 +110,10 @@ CleanDev()
 
 CheckIfFullBuildNeeded()
 {
-    if [ ! -f "$devFolder/Readarr.Console.dll" ] || \
-       [ ! -f "$devFolder/Readarr.Console.exe" ] || \
-       [ ! -f "$devFolder/Readarr.Core.dll" ] || \
-       [ ! -f "$devFolder/Readarr.Host.dll" ] || \
+    if [ ! -f "$devFolder/Shelvance.Console.dll" ] || \
+       [ ! -f "$devFolder/Shelvance.Console.exe" ] || \
+       [ ! -f "$devFolder/Shelvance.Core.dll" ] || \
+       [ ! -f "$devFolder/Shelvance.Host.dll" ] || \
        [ ! -d "$devFolder/UI" ]; then
         echo "true"
     else
@@ -128,7 +128,7 @@ BuildBackendFull()
     mkdir -p "$devFolder"
 
     echo "  [1/2] Building & publishing Shelvance.Console..."
-    DotnetPublishWithRetry src/NzbDrone.Console/Readarr.Console.csproj "$devFolder"
+    DotnetPublishWithRetry src/NzbDrone.Console/Shelvance.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
         echo "Failed to build Shelvance.Console"
@@ -136,7 +136,7 @@ BuildBackendFull()
     fi
 
     echo "  [2/2] Building & publishing Shelvance.Update..."
-    DotnetPublishWithRetry src/NzbDrone.Update/Readarr.Update.csproj "$devFolder/Readarr.Update"
+    DotnetPublishWithRetry src/NzbDrone.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
 
     if [ $? -ne 0 ]; then
         echo "Failed to build Shelvance.Update"
@@ -145,20 +145,20 @@ BuildBackendFull()
     
     echo "  Copying platform-specific assemblies..."
 	
-    dotnet publish src/NzbDrone.Mono/Readarr.Mono.csproj \
+    dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
-    cp "_output/temp-mono/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || \
-        cp "_output/$FRAMEWORK/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || true
+    cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
+        cp "_output/$FRAMEWORK/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || true
     cp "_output/temp-mono/Mono.Posix.NETStandard.dll" "$devFolder/" 2>/dev/null || true
     cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-mono" 2>/dev/null || true
     
-    dotnet publish src/NzbDrone.Windows/Readarr.Windows.csproj \
+    dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
-    cp "_output/temp-windows/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || \
-        cp "_output/$FRAMEWORK/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || true
+    cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \
+        cp "_output/$FRAMEWORK/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-windows" 2>/dev/null || true
     
     ProgressEnd "Backend build ($(date +%H:%M:%S))"
@@ -176,7 +176,7 @@ PublishBackend()
     mkdir -p "$devFolder"
 
     echo "  [1/2] Publishing Shelvance.Console..."
-    DotnetPublishWithRetry src/NzbDrone.Console/Readarr.Console.csproj "$devFolder"
+    DotnetPublishWithRetry src/NzbDrone.Console/Shelvance.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
         echo "Failed to publish Shelvance.Console"
@@ -185,7 +185,7 @@ PublishBackend()
 
     echo ""
     echo "  [2/2] Publishing Shelvance.Update..."
-    DotnetPublishWithRetry src/NzbDrone.Update/Readarr.Update.csproj "$devFolder/Readarr.Update"
+    DotnetPublishWithRetry src/NzbDrone.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
 
     if [ $? -ne 0 ]; then
         echo "Failed to publish Shelvance.Update"
@@ -194,20 +194,20 @@ PublishBackend()
     
     echo "  Copying platform-specific assemblies..."
 	
-    dotnet publish src/NzbDrone.Mono/Readarr.Mono.csproj \
+    dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
-    cp "_output/temp-mono/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || \
-        cp "_output/$FRAMEWORK/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || true
+    cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
+        cp "_output/$FRAMEWORK/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || true
     cp "_output/temp-mono/Mono.Posix.NETStandard.dll" "$devFolder/" 2>/dev/null || true
     cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-mono" 2>/dev/null || true
     
-    dotnet publish src/NzbDrone.Windows/Readarr.Windows.csproj \
+    dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
-    cp "_output/temp-windows/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || \
-        cp "_output/$FRAMEWORK/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || true
+    cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \
+        cp "_output/$FRAMEWORK/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-windows" 2>/dev/null || true
     
     ProgressEnd "Backend published to $devFolder/"
@@ -263,7 +263,7 @@ RestoreDependencies()
     ProgressStart "Restoring dependencies"
     
     echo "  Restoring NuGet packages..."
-    dotnet restore src/Readarr.sln -v minimal
+    dotnet restore src/Shelvance.sln -v minimal
     
     if [ $? -ne 0 ]; then
         echo "Failed to restore NuGet packages"
@@ -291,7 +291,7 @@ WatchMode()
     echo ""
     
     if [ "$SKIP_BACKEND" = false ]; then
-        if [ ! -f "$devFolder/Readarr.Console.dll" ]; then
+        if [ ! -f "$devFolder/Shelvance.Console.dll" ]; then
             RestoreDependencies
         fi
     fi
@@ -348,7 +348,7 @@ WatchMode()
                     
                     local build_start=$(date +%s)
                     local build_output
-                    build_output=$(dotnet publish src/NzbDrone.Console/Readarr.Console.csproj \
+                    build_output=$(dotnet publish src/NzbDrone.Console/Shelvance.Console.csproj \
                         -c Debug \
                         -r $RID \
                         -f $FRAMEWORK \
@@ -379,20 +379,20 @@ WatchMode()
                         echo ""
                         echo "Published to: $devFolder/"
 						
-                        dotnet publish src/NzbDrone.Mono/Readarr.Mono.csproj \
+                        dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
                             -c Debug -r $RID -f $FRAMEWORK --no-restore \
                             -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
-                        cp "_output/temp-mono/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || \
-                            cp "_output/$FRAMEWORK/Readarr.Mono.dll" "$devFolder/" 2>/dev/null || true
+                        cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
+                            cp "_output/$FRAMEWORK/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || true
                         cp "_output/temp-mono/Mono.Posix.NETStandard.dll" "$devFolder/" 2>/dev/null || true
                         cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
                         rm -rf "_output/temp-mono" 2>/dev/null || true
                         
-                        dotnet publish src/NzbDrone.Windows/Readarr.Windows.csproj \
+                        dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
                             -c Debug -r $RID -f $FRAMEWORK --no-restore \
                             -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
-                        cp "_output/temp-windows/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || \
-                            cp "_output/$FRAMEWORK/Readarr.Windows.dll" "$devFolder/" 2>/dev/null || true
+                        cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \
+                            cp "_output/$FRAMEWORK/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || true
                         rm -rf "_output/temp-windows" 2>/dev/null || true
                     fi
                     

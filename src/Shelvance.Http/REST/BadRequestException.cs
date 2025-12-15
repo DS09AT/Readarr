@@ -1,7 +1,7 @@
 using System.Net;
-using Readarr.Http.Exceptions;
+using Shelvance.Http.Exceptions;
 
-namespace Readarr.Http.REST
+namespace Shelvance.Http.REST
 {
     public class BadRequestException : ApiException
     {

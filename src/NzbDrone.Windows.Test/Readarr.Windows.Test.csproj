@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\NzbDrone.Common.Test\Shelvance.Common.Test.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Windows\Readarr.Windows.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Windows\Shelvance.Windows.csproj" />
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http.REST;
+using Shelvance.Api.V1.Author;
+using Shelvance.Api.V1.Books;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.Search
+namespace Shelvance.Api.V1.Search
 {
     public class SearchResource : RestResource
     {

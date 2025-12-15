@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaCover;
-using Readarr.Api.V1.Author;
-using Readarr.Http.REST;
+using Shelvance.Api.V1.Author;
+using Shelvance.Http.REST;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace Readarr.Api.V1.Books
+namespace Shelvance.Api.V1.Books
 {
     public class BookResource : RestResource
     {

@@ -1,7 +1,7 @@
 using NzbDrone.Core.Configuration;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Config
+namespace Shelvance.Api.V1.Config
 {
     [V1ApiController("config/metadataexport")]
     public class MetadataExportConfigController : ConfigController<MetadataExportConfigResource>

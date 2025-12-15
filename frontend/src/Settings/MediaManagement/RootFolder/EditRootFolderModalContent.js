@@ -212,7 +212,7 @@ function EditRootFolderModalContent(props) {
 
                 <FormGroup>
                   <FormLabel>
-                    {translate('DefaultReadarrTags')}
+                    {translate('DefaultShelvanceTags')}
                   </FormLabel>
 
                   <FormInputGroup

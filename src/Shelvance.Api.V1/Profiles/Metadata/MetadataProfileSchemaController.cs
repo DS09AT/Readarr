@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Profiles.Metadata;
-using Readarr.Http;
+using Shelvance.Http;
 
-namespace Readarr.Api.V1.Profiles.Metadata
+namespace Shelvance.Api.V1.Profiles.Metadata
 {
     [V1ApiController("metadataprofile/schema")]
     public class MetadataProfileSchemaController : Controller

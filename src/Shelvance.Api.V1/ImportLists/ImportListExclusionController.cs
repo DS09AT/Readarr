@@ -3,10 +3,10 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.ImportLists.Exclusions;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Shelvance.Http;
+using Shelvance.Http.REST;
 
-namespace Readarr.Api.V1.ImportLists
+namespace Shelvance.Api.V1.ImportLists
 {
     [V1ApiController]
     public class ImportListExclusionController : RestController<ImportListExclusionResource>

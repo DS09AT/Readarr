@@ -16,6 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Readarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Shelvance.Core.csproj" />
   </ItemGroup>
 </Project>
