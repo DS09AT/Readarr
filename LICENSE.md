@@ -638,7 +638,7 @@ the "copyright" line and a pointer to where the full notice is found.
     https://github.com/Readarr/Readarr
     
     Continued development (2025-present):
-    Copyright (C) 2025 DS09AT <contact@shelvance.com>
+    Copyright (C) 2025 DS09AT <contact@shelvance.org>
     https://github.com/DS09AT/Shelvance
 
     This program is free software: you can redistribute it and/or modify
@@ -661,7 +661,7 @@ notice like this when it starts in an interactive mode:
 
     Shelvance
     Copyright (C) 2020-2025 Readarr Team (The Servarr Team)
-    Copyright (C) 2025-present DS09AT <contact@shelvance.com>
+    Copyright (C) 2025-present DS09AT <contact@shelvance.org>
     
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
