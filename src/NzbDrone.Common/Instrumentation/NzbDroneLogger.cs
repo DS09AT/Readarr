@@ -132,7 +132,7 @@ namespace NzbDrone.Common.Instrumentation
         private static void RegisterAppFile(IAppFolderInfo appFolderInfo)
         {
             RegisterAppFile(appFolderInfo, "appFileInfo", "shelvance.txt", 5, LogLevel.Info);
-            RegisterAppFile(appFolderInfo, "appFileDebug", "Shelvance.debug.txt", 50, LogLevel.Off);
+            RegisterAppFile(appFolderInfo, "appFileDebug", "shelvance.debug.txt", 50, LogLevel.Off);
             RegisterAppFile(appFolderInfo, "appFileTrace", "shelvance.trace.txt", 50, LogLevel.Off);
         }
 

@@ -26,7 +26,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             Host = "localhost";
             Port = 8112;
             Password = "deluge";
-            MusicCategory = "Shelvance";
+            MusicCategory = "shelvance";
         }
 
         [FieldDefinition(0, Label = "Host", Type = FieldType.Textbox)]

@@ -153,7 +153,7 @@ namespace NzbDrone.Update.UpdateEngine
                     {
                         System.Threading.Thread.Sleep(1000);
 
-                        if (_processProvider.Exists(ProcessProvider.Shelvance_PROCESS_NAME))
+                        if (_processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                         {
                             _logger.Info("Shelvance was restarted by external process.");
                             break;

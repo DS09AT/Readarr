@@ -1376,7 +1376,7 @@
         }
       }
     },
-    "/feed/v1/calendar/Shelvance.ics": {
+    "/feed/v1/calendar/shelvance.ics": {
       "get": {
         "tags": [
           "CalendarFeed"

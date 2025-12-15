@@ -42,7 +42,9 @@ namespace NzbDrone.Console
 
                 Bootstrap.Start(args);
             }
-            catch (Shelvance$3");
+            catch (ShelvanceStartupException ex)
+            {
+                System.Console.WriteLine("");
                 System.Console.WriteLine("");
                 Logger.Fatal(ex, "EPIC FAIL!");
                 Exit(ExitCodes.NonRecoverableFailure, startupArgs);

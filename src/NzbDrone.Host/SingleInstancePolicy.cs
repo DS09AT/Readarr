@@ -65,7 +65,7 @@ namespace NzbDrone.Host
             {
                 var currentId = _processProvider.GetCurrentProcess().Id;
 
-                var otherProcesses = _processProvider.FindProcessByName(ProcessProvider.Shelvance_CONSOLE_PROCESS_NAME)
+                var otherProcesses = _processProvider.FindProcessByName(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME)
                                                      .Union(_processProvider.FindProcessByName(ProcessProvider.SHELVANCE_PROCESS_NAME))
                                                      .Select(c => c.Id)
                                                      .Except(new[] { currentId })
