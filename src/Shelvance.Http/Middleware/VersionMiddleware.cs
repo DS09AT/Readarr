@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 using Shelvance.Http.Extensions;
 
 namespace Shelvance.Http.Middleware

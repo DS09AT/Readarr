@@ -4,12 +4,12 @@ using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Indexers

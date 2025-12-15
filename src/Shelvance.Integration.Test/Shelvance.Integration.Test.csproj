@@ -8,6 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shelvance.Api.V1\Shelvance.Api.V1.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Test.Common\Shelvance.Test.Common.csproj" />
   </ItemGroup>
 </Project>

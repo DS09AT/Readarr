@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Aggregation
+namespace Shelvance.Core.MediaFiles.BookImport.Aggregation
 {
-    public class AugmentingFailedException : NzbDroneException
+    public class AugmentingFailedException : ShelvanceException
     {
         public AugmentingFailedException(string message, params object[] args)
             : base(message, args)

@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications.RssSync
+namespace Shelvance.Core.DecisionEngine.Specifications.RssSync
 {
     public class DeletedBookFileSpecification : IDecisionEngineSpecification
     {

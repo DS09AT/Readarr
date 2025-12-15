@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public static class LongPathSupport
     {

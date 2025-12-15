@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Apprise
+namespace Shelvance.Core.Notifications.Apprise
 {
-    public class AppriseException : NzbDroneException
+    public class AppriseException : ShelvanceException
     {
         public AppriseException(string message)
             : base(message)

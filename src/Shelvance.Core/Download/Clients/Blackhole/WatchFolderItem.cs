@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Download.Clients.Blackhole
+namespace Shelvance.Core.Download.Clients.Blackhole
 {
     public class WatchFolderItem
     {

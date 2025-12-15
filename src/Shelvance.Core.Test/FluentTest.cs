@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test
+namespace Shelvance.Core.Test
 {
     [TestFixture]
 

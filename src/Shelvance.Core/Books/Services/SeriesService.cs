@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface ISeriesService
     {

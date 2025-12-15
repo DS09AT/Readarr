@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Messaging;
+﻿using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Configuration.Events
+namespace Shelvance.Core.Configuration.Events
 {
     public class ConfigFileSavedEvent : IEvent
     {

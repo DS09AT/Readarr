@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download.Clients.Hadouken.Models;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download.Clients.Hadouken.Models;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Hadouken
+namespace Shelvance.Core.Download.Clients.Hadouken
 {
     public class Hadouken : TorrentClientBase<HadoukenSettings>
     {
@@ -168,11 +168,11 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
             {
                 _logger.Error(ex, "Unable to authenticate");
 
-                return new NzbDroneValidationFailure("Password", "Authentication failed");
+                return new ShelvanceValidationFailure("Password", "Authentication failed");
             }
             catch (Exception ex)
             {
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Hadouken")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to Hadouken")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -190,7 +190,7 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to validate");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

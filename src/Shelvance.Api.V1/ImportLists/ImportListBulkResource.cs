@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.ImportLists;
+using Shelvance.Core.ImportLists;
 
 namespace Shelvance.Api.V1.ImportLists
 {

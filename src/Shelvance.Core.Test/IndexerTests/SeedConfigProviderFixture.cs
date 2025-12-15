@@ -2,13 +2,13 @@ using System;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Torznab;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Torznab;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     [TestFixture]
     public class SeedConfigProviderFixture : CoreTest<SeedConfigProvider>

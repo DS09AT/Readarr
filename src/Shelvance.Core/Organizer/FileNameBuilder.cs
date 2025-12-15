@@ -5,16 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public interface IBuildFileNames
     {

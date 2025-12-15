@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Test.Common;
+using Shelvance.Common;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Messaging.Events
+namespace Shelvance.Core.Test.Messaging.Events
 {
     [TestFixture]
     public class EventAggregatorFixture : TestBase<EventAggregator>

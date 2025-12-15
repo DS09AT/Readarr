@@ -5,12 +5,12 @@ using System.IO;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.BookImport.Aggregation.Aggregators
+namespace Shelvance.Core.Test.MediaFiles.BookImport.Aggregation.Aggregators
 {
     [TestFixture]
     public class AggregateFilenameInfoFixture : CoreTest<AggregateFilenameInfo>

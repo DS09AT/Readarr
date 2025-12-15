@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Clients.RTorrent;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Clients.RTorrent;
+using Shelvance.Core.MediaFiles.TorrentInfo;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.RTorrentTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.RTorrentTests
 {
     [TestFixture]
     public class RTorrentFixture : DownloadClientFixtureBase<RTorrent>

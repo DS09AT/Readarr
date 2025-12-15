@@ -1,4 +1,4 @@
-using NzbDrone.Core.Configuration;
+using Shelvance.Core.Configuration;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Config

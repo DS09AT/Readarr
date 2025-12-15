@@ -1,8 +1,8 @@
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Localization;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Localization;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     public class PackageGlobalMessageCheck : HealthCheckBase
     {

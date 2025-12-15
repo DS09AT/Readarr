@@ -3,12 +3,12 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.History;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Datastore
+namespace Shelvance.Core.Test.Datastore
 {
     [TestFixture]
     public class DatabaseRelationshipFixture : DbTest

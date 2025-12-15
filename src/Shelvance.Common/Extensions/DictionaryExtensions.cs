@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class DictionaryExtensions
     {

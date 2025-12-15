@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public class IsoCountry
     {

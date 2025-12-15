@@ -1,8 +1,8 @@
 using System.Linq;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Parser;
+using Shelvance.Core.Books;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class UpdateCleanTitleForAuthor : IHousekeepingTask
     {

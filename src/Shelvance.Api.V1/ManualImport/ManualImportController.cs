@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport.Manual;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport.Manual;
+using Shelvance.Core.Qualities;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.ManualImport
@@ -41,7 +41,7 @@ namespace Shelvance.Api.V1.ManualImport
         [HttpGet]
         public List<ManualImportResource> GetMediaFiles(string folder, string downloadId, int? authorId, bool filterExistingFiles = true, bool replaceExistingFiles = true)
         {
-            NzbDrone.Core.Books.Author author = null;
+            Shelvance.Core.Books.Author author = null;
 
             if (authorId > 0)
             {

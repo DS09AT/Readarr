@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Update;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Update;
 
 namespace Shelvance.Api.V1.System
 {

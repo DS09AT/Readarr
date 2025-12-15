@@ -1,14 +1,14 @@
 using System;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Languages;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Localization
+namespace Shelvance.Core.Test.Localization
 {
     [TestFixture]
     public class LocalizationServiceFixture : CoreTest<LocalizationService>

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.AuthorStats
+namespace Shelvance.Core.AuthorStats
 {
     public interface IAuthorStatisticsService
     {

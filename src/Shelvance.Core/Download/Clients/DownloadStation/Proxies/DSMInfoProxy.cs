@@ -1,9 +1,9 @@
 ﻿using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Download.Clients.DownloadStation.Responses;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Http;
+using Shelvance.Core.Download.Clients.DownloadStation.Responses;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation.Proxies
+namespace Shelvance.Core.Download.Clients.DownloadStation.Proxies
 {
     public interface IDSMInfoProxy
     {

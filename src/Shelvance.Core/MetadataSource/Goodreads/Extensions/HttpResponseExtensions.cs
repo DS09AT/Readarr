@@ -3,9 +3,9 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     public static class HttpResponseExtensions
     {

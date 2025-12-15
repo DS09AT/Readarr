@@ -1,7 +1,7 @@
 using System.Linq;
-using NzbDrone.Core.Indexers.Newznab;
+using Shelvance.Core.Indexers.Newznab;
 
-namespace NzbDrone.Core.Indexers.Torznab
+namespace Shelvance.Core.Indexers.Torznab
 {
     public class TorznabRequestGenerator : NewznabRequestGenerator
     {

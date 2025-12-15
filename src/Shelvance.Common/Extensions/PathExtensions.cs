@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class PathExtensions
     {

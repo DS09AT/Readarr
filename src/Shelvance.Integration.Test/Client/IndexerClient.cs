@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Shelvance.Api.V1.Indexers;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class IndexerClient : ClientBase<IndexerResource>
     {

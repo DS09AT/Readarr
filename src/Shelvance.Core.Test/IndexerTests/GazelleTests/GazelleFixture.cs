@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Gazelle;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Gazelle;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests.GazelleTests
+namespace Shelvance.Core.Test.IndexerTests.GazelleTests
 {
     [TestFixture]
     public class GazelleFixture : CoreTest<Gazelle>

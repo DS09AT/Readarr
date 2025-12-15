@@ -1,7 +1,7 @@
 using System.IO;
 using System.IO.Compression;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class GzipExtensions
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Central aggregation service that implements the legacy metadata interfaces

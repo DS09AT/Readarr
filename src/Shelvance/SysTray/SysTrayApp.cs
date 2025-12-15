@@ -4,11 +4,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Extensions.Hosting;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Host;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Host;
 
-namespace NzbDrone.SysTray
+namespace Shelvance.SysTray
 {
     public class SystemTrayApp : Form, IHostedService
     {
@@ -31,7 +31,7 @@ namespace NzbDrone.SysTray
             _trayMenu.Items.Add(new ToolStripMenuItem("Exit", null, OnExit));
 
             _trayIcon.Text = string.Format("Shelvance - {0}", BuildInfo.Version);
-            _trayIcon.Icon = Properties.Resources.NzbDroneIcon;
+            _trayIcon.Icon = Properties.Resources.ShelvanceIcon;
 
             _trayIcon.ContextMenuStrip = _trayMenu;
             _trayIcon.Visible = true;

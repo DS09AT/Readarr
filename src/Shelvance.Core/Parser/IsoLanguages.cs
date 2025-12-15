@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Languages;
+using Shelvance.Core.Languages;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public static class IsoLanguages
     {

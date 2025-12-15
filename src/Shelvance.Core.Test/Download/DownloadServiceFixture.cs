@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Download
+namespace Shelvance.Core.Test.Download
 {
     [TestFixture]
     public class DownloadServiceFixture : CoreTest<DownloadService>

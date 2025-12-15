@@ -1,10 +1,10 @@
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Notifications.Webhook;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Notifications.Webhook;
 
-namespace NzbDrone.Core.Notifications.Notifiarr
+namespace Shelvance.Core.Notifications.Notifiarr
 {
     public interface INotifiarrProxy
     {

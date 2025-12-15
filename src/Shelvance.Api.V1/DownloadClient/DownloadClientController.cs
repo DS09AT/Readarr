@@ -1,5 +1,5 @@
 using FluentValidation;
-using NzbDrone.Core.Download;
+using Shelvance.Core.Download;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.DownloadClient

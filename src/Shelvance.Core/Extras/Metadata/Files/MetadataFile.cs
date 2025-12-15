@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Extras.Files;
+﻿using Shelvance.Core.Extras.Files;
 
-namespace NzbDrone.Core.Extras.Metadata.Files
+namespace Shelvance.Core.Extras.Metadata.Files
 {
     public class MetadataFile : ExtraFile
     {

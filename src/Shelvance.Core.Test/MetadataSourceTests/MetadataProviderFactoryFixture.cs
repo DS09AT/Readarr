@@ -4,12 +4,12 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Test.MetadataSourceTests
+namespace Shelvance.Core.Test.MetadataSourceTests
 {
     [TestFixture]
     public class MetadataProviderFactoryFixture : CoreTest<MetadataProviderFactory>
@@ -74,21 +74,21 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
             provider1.SetupGet(p => p.Name).Returns("HighPriorityProvider");
             provider1.SetupGet(p => p.Priority).Returns(90);
             provider1.SetupGet(p => p.ConfigContract).Returns(typeof(TestProviderSettingsForFactory));
-            provider1.Setup(p => p.Test()).Returns(new NzbDroneValidationResult());
+            provider1.Setup(p => p.Test()).Returns(new ShelvanceValidationResult());
 
             var provider2 = new Mock<IMetadataProvider>();
             provider2.SetupGet(p => p.Definition).Returns(_definitions[1]);
             provider2.SetupGet(p => p.Name).Returns("MediumPriorityProvider");
             provider2.SetupGet(p => p.Priority).Returns(50);
             provider2.SetupGet(p => p.ConfigContract).Returns(typeof(TestProviderSettingsForFactory));
-            provider2.Setup(p => p.Test()).Returns(new NzbDroneValidationResult());
+            provider2.Setup(p => p.Test()).Returns(new ShelvanceValidationResult());
 
             var provider3 = new Mock<IMetadataProvider>();
             provider3.SetupGet(p => p.Definition).Returns(_definitions[2]);
             provider3.SetupGet(p => p.Name).Returns("LowPriorityProvider");
             provider3.SetupGet(p => p.Priority).Returns(10);
             provider3.SetupGet(p => p.ConfigContract).Returns(typeof(TestProviderSettingsForFactory));
-            provider3.Setup(p => p.Test()).Returns(new NzbDroneValidationResult());
+            provider3.Setup(p => p.Test()).Returns(new ShelvanceValidationResult());
 
             _providers = new List<IMetadataProvider> { provider1.Object, provider2.Object, provider3.Object };
             Mocker.SetConstant<IEnumerable<IMetadataProvider>>(_providers);
@@ -365,14 +365,14 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
     {
         public bool ThrowOnValidation { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
             if (ThrowOnValidation)
             {
                 throw new Exception("Validation failed");
             }
 
-            return new NzbDroneValidationResult();
+            return new ShelvanceValidationResult();
         }
     }
 }

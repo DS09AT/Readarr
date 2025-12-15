@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public class RenameBookFilePreview
     {

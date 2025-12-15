@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Extensions.Logging;
 
-namespace NzbDrone.Core.Datastore.Migration.Framework
+namespace Shelvance.Core.Datastore.Migration.Framework
 {
     public interface IMigrationController
     {
@@ -46,10 +46,10 @@ namespace NzbDrone.Core.Datastore.Migration.Framework
                 .ConfigureRunner(
                     builder => builder
                     .AddPostgres()
-                    .AddNzbDroneSQLite()
+                    .AddShelvanceSQLite()
                     .WithGlobalConnectionString(connectionString)
                     .ScanIn(Assembly.GetExecutingAssembly()).For.All())
-                .Configure<TypeFilterOptions>(opt => opt.Namespace = "NzbDrone.Core.Datastore.Migration")
+                .Configure<TypeFilterOptions>(opt => opt.Namespace = "Shelvance.Core.Datastore.Migration")
                 .Configure<ProcessorOptions>(opt =>
                 {
                     opt.PreviewOnly = false;

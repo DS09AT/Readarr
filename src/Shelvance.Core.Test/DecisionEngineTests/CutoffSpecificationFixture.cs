@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests
+namespace Shelvance.Core.Test.DecisionEngineTests
 {
     [TestFixture]
     public class CutoffSpecificationFixture : CoreTest<UpgradableSpecification>

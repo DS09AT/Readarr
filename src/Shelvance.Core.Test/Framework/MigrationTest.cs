@@ -3,14 +3,14 @@ using FluentMigrator;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
 using NUnit.Framework;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     [Category("DbMigrationTest")]
     [Category("DbTest")]
     public abstract class MigrationTest<TMigration> : DbTest
-        where TMigration : NzbDroneMigrationBase
+        where TMigration : ShelvanceMigrationBase
     {
         protected long MigrationVersion
         {

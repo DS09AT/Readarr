@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.Pending
+namespace Shelvance.Core.Download.Pending
 {
     public class PendingRelease : ModelBase
     {

@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Messaging;
+﻿using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.CustomFormats.Events
+namespace Shelvance.Core.CustomFormats.Events
 {
     public class CustomFormatAddedEvent : IEvent
     {

@@ -1,8 +1,8 @@
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class RecycleBinValidator : PropertyValidator
     {

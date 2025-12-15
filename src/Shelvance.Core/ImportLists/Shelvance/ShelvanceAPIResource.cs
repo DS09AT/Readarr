@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.ImportLists.Shelvance
+namespace Shelvance.Core.ImportLists.Shelvance
 {
     public class ShelvanceAuthor
     {

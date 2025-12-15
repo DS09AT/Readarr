@@ -1,10 +1,10 @@
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Test.Common.AutoMoq;
+using Shelvance.Common.Disk;
+using Shelvance.Test.Common.AutoMoq;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     public abstract class FileSystemTest<TSubject> : CoreTest<TSubject>
         where TSubject : class

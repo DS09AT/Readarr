@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Datastore;
+﻿using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Tags
+namespace Shelvance.Core.Tags
 {
     public class Tag : ModelBase
     {

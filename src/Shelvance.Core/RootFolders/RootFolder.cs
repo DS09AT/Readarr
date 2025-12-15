@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.RootFolders
+namespace Shelvance.Core.RootFolders
 {
     public class RootFolder : ModelBase
     {

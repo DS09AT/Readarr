@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Transmission;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Transmission;
+using Shelvance.Core.MediaFiles.TorrentInfo;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.TransmissionTests
 {
     public abstract class TransmissionFixtureBase<TClient> : DownloadClientFixtureBase<TClient>
         where TClient : class, IDownloadClient

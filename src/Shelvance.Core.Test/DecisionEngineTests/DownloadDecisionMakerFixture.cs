@@ -4,18 +4,18 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests
+namespace Shelvance.Core.Test.DecisionEngineTests
 {
     [TestFixture]
     public class DownloadDecisionMakerFixture : CoreTest<DownloadDecisionMaker>
@@ -288,7 +288,7 @@ namespace NzbDrone.Core.Test.DecisionEngineTests
 
             Mocker.SetConstant<IEnumerable<IDecisionEngineSpecification>>(new List<IDecisionEngineSpecification>
             {
-                Mocker.Resolve<NzbDrone.Core.DecisionEngine.Specifications.Search.BookRequestedSpecification>()
+                Mocker.Resolve<Shelvance.Core.DecisionEngine.Specifications.Search.BookRequestedSpecification>()
             });
 
             var decisions = Subject.GetSearchDecision(reports, criteria);

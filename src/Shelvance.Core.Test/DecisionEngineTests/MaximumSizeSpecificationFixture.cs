@@ -1,11 +1,11 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests
+namespace Shelvance.Core.Test.DecisionEngineTests
 {
     public class MaximumSizeSpecificationFixture : CoreTest<MaximumSizeSpecification>
     {

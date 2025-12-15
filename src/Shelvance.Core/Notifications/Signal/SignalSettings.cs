@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Signal
+namespace Shelvance.Core.Notifications.Signal
 {
     public class SignalSettingsValidator : AbstractValidator<SignalSettings>
     {
@@ -41,9 +41,9 @@ namespace NzbDrone.Core.Notifications.Signal
         [FieldDefinition(6, Label = "Password", Type = FieldType.Password, Privacy = PrivacyLevel.Password, HelpText = "Password used to authenticate requests toward signal-api")]
         public string AuthPassword { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

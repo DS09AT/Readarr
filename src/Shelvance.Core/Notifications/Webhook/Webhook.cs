@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
     public class Webhook : WebhookBase<WebhookSettings>
     {
@@ -89,7 +89,7 @@ namespace NzbDrone.Core.Notifications.Webhook
             }
             catch (WebhookException ex)
             {
-                return new NzbDroneValidationFailure("Url", ex.Message);
+                return new ShelvanceValidationFailure("Url", ex.Message);
             }
 
             return null;

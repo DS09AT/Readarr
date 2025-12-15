@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Deluge
+namespace Shelvance.Core.Download.Clients.Deluge
 {
     public class DelugeSettingsValidator : AbstractValidator<DelugeSettings>
     {
@@ -65,9 +65,9 @@ namespace NzbDrone.Core.Download.Clients.Deluge
         [FieldDefinition(11, Label = "DownloadClientDelugeSettingsDirectoryCompleted", Type = FieldType.Textbox, Advanced = true, HelpText = "DownloadClientDelugeSettingsDirectoryCompletedHelpText")]
         public string CompletedDirectory { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

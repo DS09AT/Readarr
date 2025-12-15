@@ -6,22 +6,22 @@ using System.IO.Abstractions;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IDiskScanService
     {

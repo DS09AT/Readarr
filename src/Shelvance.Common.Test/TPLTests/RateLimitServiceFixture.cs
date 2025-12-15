@@ -3,11 +3,11 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.TPL;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Cache;
+using Shelvance.Common.TPL;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.TPLTests
+namespace Shelvance.Common.Test.TPLTests
 {
     [TestFixture]
     [Platform(Exclude = "MacOsX")]

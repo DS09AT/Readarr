@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IImportList : IProvider
     {

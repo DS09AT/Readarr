@@ -1,7 +1,7 @@
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Books;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class CustomFormatInput
     {

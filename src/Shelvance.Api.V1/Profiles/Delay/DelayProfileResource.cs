@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Profiles.Delay;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Profiles.Delay;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Profiles.Delay

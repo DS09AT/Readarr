@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Download.Pending
+namespace Shelvance.Core.Download.Pending
 {
     public interface IPendingReleaseRepository : IBasicRepository<PendingRelease>
     {

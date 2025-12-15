@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Apprise
+namespace Shelvance.Core.Notifications.Apprise
 {
     public class AppriseSettingsValidator : AbstractValidator<AppriseSettings>
     {
@@ -66,9 +66,9 @@ namespace NzbDrone.Core.Notifications.Apprise
         [FieldDefinition(7, Label = "Password", Type = FieldType.Password, HelpText = "HTTP Basic Auth Password", Privacy = PrivacyLevel.Password)]
         public string AuthPassword { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

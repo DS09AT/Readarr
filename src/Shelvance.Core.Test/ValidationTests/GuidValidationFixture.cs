@@ -1,12 +1,12 @@
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Validation;
-using NzbDrone.Test.Common;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Validation;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.ValidationTests
+namespace Shelvance.Core.Test.ValidationTests
 {
     public class GuidValidationFixture : CoreTest<GuidValidator>
     {

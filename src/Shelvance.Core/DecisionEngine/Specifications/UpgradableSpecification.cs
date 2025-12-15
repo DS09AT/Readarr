@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public interface IUpgradableSpecification
     {

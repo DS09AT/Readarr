@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Notifications.Simplepush
+namespace Shelvance.Core.Notifications.Simplepush
 {
     public class Simplepush : NotificationBase<SimplepushSettings>
     {

@@ -1,8 +1,8 @@
 using System.Linq;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public interface IConfigRepository : IBasicRepository<Config>
     {

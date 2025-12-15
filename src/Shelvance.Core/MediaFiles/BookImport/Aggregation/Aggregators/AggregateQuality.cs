@@ -1,6 +1,6 @@
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators
+namespace Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators
 {
     public class AggregateQuality : IAggregate<LocalBook>
     {

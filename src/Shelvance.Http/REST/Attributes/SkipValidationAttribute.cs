@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Http.REST.Attributes
+namespace Shelvance.Http.REST.Attributes
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class SkipValidationAttribute : Attribute

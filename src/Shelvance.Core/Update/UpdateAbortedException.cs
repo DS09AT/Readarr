@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
-    public class UpdateFailedException : NzbDroneException
+    public class UpdateFailedException : ShelvanceException
     {
         public UpdateFailedException(string message, params object[] args)
             : base(message, args)

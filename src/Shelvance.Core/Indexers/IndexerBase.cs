@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public abstract class IndexerBase<TSettings> : IIndexer
         where TSettings : IIndexerSettings, new()

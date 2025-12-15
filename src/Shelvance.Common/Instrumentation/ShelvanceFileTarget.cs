@@ -2,9 +2,9 @@ using System.Text;
 using NLog;
 using NLog.Targets;
 
-namespace NzbDrone.Common.Instrumentation
+namespace Shelvance.Common.Instrumentation
 {
-    public class NzbDroneFileTarget : FileTarget
+    public class ShelvanceFileTarget : FileTarget
     {
         protected override void RenderFormattedMessage(LogEventInfo logEvent, StringBuilder target)
         {

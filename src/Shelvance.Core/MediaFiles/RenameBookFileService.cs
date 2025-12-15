@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Organizer;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Organizer;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IRenameBookFileService
     {

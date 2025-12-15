@@ -1,11 +1,11 @@
 ﻿using NLog;
 using NLog.Config;
 using NLog.Targets;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.ProgressMessaging
+namespace Shelvance.Core.ProgressMessaging
 {
     public class ProgressMessageTarget : Target, IHandle<ApplicationStartedEvent>
     {

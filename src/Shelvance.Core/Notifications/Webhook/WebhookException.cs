@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
-    public class WebhookException : NzbDroneException
+    public class WebhookException : ShelvanceException
     {
         public WebhookException(string message)
             : base(message)

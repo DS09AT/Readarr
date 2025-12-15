@@ -1,9 +1,9 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Datastore
+namespace Shelvance.Core.Test.Datastore
 {
     [TestFixture]
     public class SortKeyValidationFixture : DbTest

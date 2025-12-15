@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class ProcessMonitoredDownloadsCommand : Command
     {

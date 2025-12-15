@@ -4,17 +4,17 @@ using System.Collections.Specialized;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.HealthCheck;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books;
+using Shelvance.Core.HealthCheck;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.CustomScript
+namespace Shelvance.Core.Notifications.CustomScript
 {
     public class CustomScript : NotificationBase<CustomScriptSettings>
     {
@@ -250,7 +250,7 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
             if (!_diskProvider.FileExists(Settings.Path))
             {
-                failures.Add(new NzbDroneValidationFailure("Path", "File does not exist"));
+                failures.Add(new ShelvanceValidationFailure("Path", "File does not exist"));
             }
 
             if (failures.Empty())
@@ -264,13 +264,13 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
                     if (processOutput.ExitCode != 0)
                     {
-                        failures.Add(new NzbDroneValidationFailure(string.Empty, $"Script exited with code: {processOutput.ExitCode}"));
+                        failures.Add(new ShelvanceValidationFailure(string.Empty, $"Script exited with code: {processOutput.ExitCode}"));
                     }
                 }
                 catch (Exception ex)
                 {
                     _logger.Error(ex);
-                    failures.Add(new NzbDroneValidationFailure(string.Empty, ex.Message));
+                    failures.Add(new ShelvanceValidationFailure(string.Empty, ex.Message));
                 }
             }
 

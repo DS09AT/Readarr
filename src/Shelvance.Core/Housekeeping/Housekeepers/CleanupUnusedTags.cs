@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using Dapper;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class CleanupUnusedTags : IHousekeepingTask
     {

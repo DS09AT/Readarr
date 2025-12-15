@@ -3,16 +3,16 @@ using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Host;
-using NzbDrone.SysTray;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Host;
+using Shelvance.SysTray;
 
-namespace NzbDrone
+namespace Shelvance
 {
     public static class WindowsApp
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(WindowsApp));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(WindowsApp));
 
         public static void Main(string[] args)
         {
@@ -24,7 +24,7 @@ namespace NzbDrone
             {
                 var startupArgs = new StartupContext(args);
 
-                NzbDroneLogger.Register(startupArgs, false, true);
+                ShelvanceLogger.Register(startupArgs, false, true);
 
                 Bootstrap.Start(args, e => { e.ConfigureServices((_, s) => s.AddSingleton<IHostedService, SystemTrayApp>()); });
             }

@@ -1,6 +1,6 @@
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.ImportLists

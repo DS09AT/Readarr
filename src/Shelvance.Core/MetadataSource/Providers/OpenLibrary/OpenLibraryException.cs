@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
+namespace Shelvance.Core.MetadataSource.Providers.OpenLibrary
 {
     public class OpenLibraryException : MetadataProviderException
     {

@@ -2,7 +2,7 @@
 using System.Data;
 using Dapper;
 
-namespace NzbDrone.Core.Datastore.Converters
+namespace Shelvance.Core.Datastore.Converters
 {
     public class GuidConverter : SqlMapper.TypeHandler<Guid>
     {

@@ -1,9 +1,9 @@
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class AuthorAddedHandler : IHandle<AuthorAddedEvent>,
                                       IHandle<AuthorsImportedEvent>

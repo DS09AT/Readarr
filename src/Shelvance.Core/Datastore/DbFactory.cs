@@ -5,13 +5,13 @@ using System.Net.Sockets;
 using System.Threading;
 using NLog;
 using Npgsql;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IDbFactory
     {
@@ -21,7 +21,7 @@ namespace NzbDrone.Core.Datastore
 
     public class DbFactory : IDbFactory
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(DbFactory));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(DbFactory));
         private readonly IMigrationController _migrationController;
         private readonly IConnectionStringFactory _connectionStringFactory;
         private readonly IDiskProvider _diskProvider;

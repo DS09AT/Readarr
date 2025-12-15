@@ -1,8 +1,8 @@
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
-    public class NzbDroneValidationState
+    public class ShelvanceValidationState
     {
-        public static NzbDroneValidationState Warning = new NzbDroneValidationState { IsWarning = true };
+        public static ShelvanceValidationState Warning = new ShelvanceValidationState { IsWarning = true };
 
         public bool IsWarning { get; set; }
     }

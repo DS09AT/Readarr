@@ -4,21 +4,21 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Processes;
-using NzbDrone.Core.Backup;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Update.Commands;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Processes;
+using Shelvance.Core.Backup;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Update.Commands;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public class InstallUpdateService : IExecute<ApplicationUpdateCommand>, IExecute<ApplicationUpdateCheckCommand>, IHandle<ApplicationStartingEvent>
     {

@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.History;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.History;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications.RssSync
+namespace Shelvance.Core.DecisionEngine.Specifications.RssSync
 {
     public class HistorySpecification : IDecisionEngineSpecification
     {

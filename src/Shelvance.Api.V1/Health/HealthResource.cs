@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.HealthCheck;
+using Shelvance.Core.HealthCheck;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Health

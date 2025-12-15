@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Qualities;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Qualities

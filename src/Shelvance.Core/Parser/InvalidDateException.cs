@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
-    public class InvalidDateException : NzbDroneException
+    public class InvalidDateException : ShelvanceException
     {
         public InvalidDateException(string message, params object[] args)
             : base(message, args)

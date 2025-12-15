@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public class DownloadedBooksCommandService : IExecute<DownloadedBooksScanCommand>
     {

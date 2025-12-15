@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class ResourceExtensions
     {

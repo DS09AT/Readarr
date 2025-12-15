@@ -1,12 +1,12 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Specifications
+namespace Shelvance.Core.MediaFiles.BookImport.Specifications
 {
     public class AuthorPathInRootFolderSpecification : IImportDecisionEngineSpecification<LocalEdition>
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Xml.Linq;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     /// <summary>
     /// This class models a Review as defined by the Goodreads API.

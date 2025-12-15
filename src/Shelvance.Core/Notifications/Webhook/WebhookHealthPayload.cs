@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.HealthCheck;
+﻿using Shelvance.Core.HealthCheck;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
     public class WebhookHealthPayload : WebhookPayload
     {

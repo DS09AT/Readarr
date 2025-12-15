@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.ThingiProvider.Events
+namespace Shelvance.Core.ThingiProvider.Events
 {
     public class ProviderStatusChangedEvent<TProvider> : IEvent
     {

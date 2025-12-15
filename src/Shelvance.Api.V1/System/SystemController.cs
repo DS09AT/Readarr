@@ -3,11 +3,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Routing.Internal;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Lifecycle;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Lifecycle;
 using Shelvance.Http;
 using Shelvance.Http.Validation;
 

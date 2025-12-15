@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.Languages
+namespace Shelvance.Core.Languages
 {
     public class LanguageFieldConverter
     {

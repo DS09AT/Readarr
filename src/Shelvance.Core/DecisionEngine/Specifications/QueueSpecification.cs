@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Queue;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Queue;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public class QueueSpecification : IDecisionEngineSpecification
     {

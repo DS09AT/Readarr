@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Download.Clients.UTorrent
+namespace Shelvance.Core.Download.Clients.UTorrent
 {
     [Flags]
     public enum UTorrentTorrentStatus

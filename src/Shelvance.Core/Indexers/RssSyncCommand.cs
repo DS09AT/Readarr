@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class RssSyncCommand : Command
     {

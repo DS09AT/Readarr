@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadIgnoredEvent : IEvent
     {

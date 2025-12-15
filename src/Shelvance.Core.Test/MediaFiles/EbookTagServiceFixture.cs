@@ -2,11 +2,11 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Test.Framework;
 using VersOne.Epub.Schema;
 
-namespace NzbDrone.Core.Test.MediaFiles.AudioTagServiceFixture
+namespace Shelvance.Core.Test.MediaFiles.AudioTagServiceFixture
 {
     [TestFixture]
     public class EbookTagServiceFixture : CoreTest<EBookTagService>

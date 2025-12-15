@@ -1,6 +1,6 @@
-﻿using NzbDrone.Test.Common.AutoMoq;
+﻿using Shelvance.Test.Common.AutoMoq;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public static class MockerExtensions
     {

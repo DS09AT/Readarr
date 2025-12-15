@@ -1,10 +1,10 @@
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Hadouken
+namespace Shelvance.Core.Download.Clients.Hadouken
 {
     public class HadoukenSettingsValidator : AbstractValidator<HadoukenSettings>
     {
@@ -54,9 +54,9 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
         [FieldDefinition(6, Label = "Category", Type = FieldType.Textbox)]
         public string Category { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

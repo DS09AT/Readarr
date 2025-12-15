@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Dapper;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Reflection;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Reflection;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
     public class ProviderRepository<TProviderDefinition> : BasicRepository<TProviderDefinition>, IProviderRepository<TProviderDefinition>
         where TProviderDefinition : ProviderDefinition,

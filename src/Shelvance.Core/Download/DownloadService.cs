@@ -1,19 +1,19 @@
 using System;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IDownloadService
     {

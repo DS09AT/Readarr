@@ -6,14 +6,14 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Nzbget;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Nzbget;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.NzbgetTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.NzbgetTests
 {
     [TestFixture]
     public class NzbgetFixture : DownloadClientFixtureBase<Nzbget>

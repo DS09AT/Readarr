@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Instrumentation
+namespace Shelvance.Core.Instrumentation
 {
     public class Log : ModelBase
     {

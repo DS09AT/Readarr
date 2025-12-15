@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
-    public class NotParentException : NzbDroneException
+    public class NotParentException : ShelvanceException
     {
         public NotParentException(string message, params object[] args)
             : base(message, args)

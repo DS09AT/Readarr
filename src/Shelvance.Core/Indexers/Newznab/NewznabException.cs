@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Indexers.Exceptions;
+﻿using Shelvance.Core.Indexers.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Newznab
+namespace Shelvance.Core.Indexers.Newznab
 {
     public class NewznabException : IndexerException
     {

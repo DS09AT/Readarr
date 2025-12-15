@@ -12,7 +12,7 @@ namespace Shelvance.Api.V1.DiskSpace
 
     public static class DiskSpaceResourceMapper
     {
-        public static DiskSpaceResource MapToResource(this NzbDrone.Core.DiskSpace.DiskSpace model)
+        public static DiskSpaceResource MapToResource(this Shelvance.Core.DiskSpace.DiskSpace model)
         {
             if (model == null)
             {

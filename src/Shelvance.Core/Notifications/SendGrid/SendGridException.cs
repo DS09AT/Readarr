@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.SendGrid
+namespace Shelvance.Core.Notifications.SendGrid
 {
-    public class SendGridException : NzbDroneException
+    public class SendGridException : ShelvanceException
     {
         public SendGridException(string message)
             : base(message)

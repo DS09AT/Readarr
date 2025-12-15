@@ -1,14 +1,14 @@
 using System;
 using System.IO;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Update;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Update;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ConfigFileSavedEvent))]
     public class UpdateCheck : HealthCheckBase

@@ -12,9 +12,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shelvance.Api.V1\Shelvance.Api.V1.csproj" />
-    <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Shelvance.Core.csproj" />
-    <ProjectReference Include="..\NzbDrone.SignalR\Shelvance.SignalR.csproj" />
+    <ProjectReference Include="..\Shelvance.Common\Shelvance.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Core\Shelvance.Core.csproj" />
+    <ProjectReference Include="..\Shelvance.SignalR\Shelvance.SignalR.csproj" />
     <ProjectReference Include="..\Shelvance.Http\Shelvance.Http.csproj" />
   </ItemGroup>
   <ItemGroup>

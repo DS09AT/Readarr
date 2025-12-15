@@ -3,18 +3,18 @@ using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Http.REST.Attributes;
-using NzbDrone.SignalR;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Http.REST.Attributes;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.REST;
-using BadRequestException = NzbDrone.Core.Exceptions.BadRequestException;
+using BadRequestException = Shelvance.Core.Exceptions.BadRequestException;
 using HttpStatusCode = System.Net.HttpStatusCode;
 
 namespace Shelvance.Api.V1.BookFiles
@@ -142,7 +142,7 @@ namespace Shelvance.Api.V1.BookFiles
 
             if (bookFile == null)
             {
-                throw new NzbDroneClientException(HttpStatusCode.NotFound, "Book file not found");
+                throw new ShelvanceClientException(HttpStatusCode.NotFound, "Book file not found");
             }
 
             if (bookFile.EditionId > 0 && bookFile.Author != null && bookFile.Author.Value != null)

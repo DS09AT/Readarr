@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Messaging.Commands;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Author

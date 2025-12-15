@@ -1,10 +1,10 @@
 ﻿using NLog;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Localization;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Localization;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ApplicationStartedEvent))]
     [CheckOn(typeof(ConfigSavedEvent))]

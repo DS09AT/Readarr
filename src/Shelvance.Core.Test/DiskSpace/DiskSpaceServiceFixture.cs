@@ -4,14 +4,14 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DiskSpace;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.DiskSpace;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.DiskSpace
+namespace Shelvance.Core.Test.DiskSpace
 {
     [TestFixture]
     public class DiskSpaceServiceFixture : CoreTest<DiskSpaceService>

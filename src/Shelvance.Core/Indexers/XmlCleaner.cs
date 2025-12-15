@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text.RegularExpressions;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public static class XmlCleaner
     {

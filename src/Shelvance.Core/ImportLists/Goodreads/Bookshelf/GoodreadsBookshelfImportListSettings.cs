@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
     public class GoodreadsBookshelfImportListSettingsValidator : GoodreadsSettingsBaseValidator<GoodreadsBookshelfImportListSettings>
     {

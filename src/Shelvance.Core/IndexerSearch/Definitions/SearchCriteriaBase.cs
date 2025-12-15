@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.IndexerSearch.Definitions
+namespace Shelvance.Core.IndexerSearch.Definitions
 {
     public abstract class SearchCriteriaBase
     {

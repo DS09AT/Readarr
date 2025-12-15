@@ -1,7 +1,7 @@
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public interface ICheckUpdateService
     {

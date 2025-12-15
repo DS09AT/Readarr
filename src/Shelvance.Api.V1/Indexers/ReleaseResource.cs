@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 using Shelvance.Api.V1.CustomFormats;
 using Shelvance.Http.REST;
 

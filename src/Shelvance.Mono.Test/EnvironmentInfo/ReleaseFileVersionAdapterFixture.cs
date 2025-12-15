@@ -1,12 +1,12 @@
 using System.IO.Abstractions;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Mono.Disk;
-using NzbDrone.Mono.EnvironmentInfo.VersionAdapters;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Mono.Disk;
+using Shelvance.Mono.EnvironmentInfo.VersionAdapters;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Mono.Test.EnvironmentInfo
+namespace Shelvance.Mono.Test.EnvironmentInfo
 {
     [TestFixture]
     [Platform("Linux")]

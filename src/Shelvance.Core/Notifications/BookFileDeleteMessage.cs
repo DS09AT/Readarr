@@ -1,7 +1,7 @@
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class BookFileDeleteMessage
     {

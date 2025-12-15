@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
     public abstract class WebhookBase<TSettings> : NotificationBase<TSettings>
         where TSettings : IProviderConfig, new()

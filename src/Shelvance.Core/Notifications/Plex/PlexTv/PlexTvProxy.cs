@@ -1,12 +1,12 @@
 using System;
 using System.Net;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Exceptions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Plex.PlexTv
+namespace Shelvance.Core.Notifications.Plex.PlexTv
 {
     public interface IPlexTvProxy
     {
@@ -89,11 +89,11 @@ namespace NzbDrone.Core.Notifications.Plex.PlexTv
             }
             catch (HttpException ex)
             {
-                throw new NzbDroneClientException(ex.Response.StatusCode, "Unable to connect to plex.tv");
+                throw new ShelvanceClientException(ex.Response.StatusCode, "Unable to connect to plex.tv");
             }
             catch (WebException)
             {
-                throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Unable to connect to plex.tv");
+                throw new ShelvanceClientException(HttpStatusCode.BadRequest, "Unable to connect to plex.tv");
             }
 
             return response.Content;

@@ -2,11 +2,11 @@ using System.Linq;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 using Shelvance.Api.V1.Indexers;
 using Shelvance.Http.ClientSchema;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     public class IndexerFixture : IntegrationTest

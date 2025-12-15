@@ -1,7 +1,7 @@
 using System.Net;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Gotify
+namespace Shelvance.Core.Notifications.Gotify
 {
     public interface IGotifyProxy
     {

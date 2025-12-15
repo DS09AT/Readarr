@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public interface IDiskProvider
     {

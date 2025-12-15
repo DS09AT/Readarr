@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace NzbDrone.Common.Crypto
+namespace Shelvance.Common.Crypto
 {
     public static class HashConverter
     {

@@ -1,6 +1,6 @@
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Host.AccessControl
+namespace Shelvance.Host.AccessControl
 {
     public interface IRemoteAccessAdapter
     {

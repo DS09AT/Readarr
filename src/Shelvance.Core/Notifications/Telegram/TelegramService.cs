@@ -3,11 +3,11 @@ using System.Net;
 using System.Web;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Notifications.Telegram
+namespace Shelvance.Core.Notifications.Telegram
 {
     public interface ITelegramProxy
     {

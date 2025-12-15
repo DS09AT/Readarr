@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.DownloadStation
+﻿namespace Shelvance.Core.Download.Clients.DownloadStation
 {
     public class DiskStationApiInfo
     {

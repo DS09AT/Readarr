@@ -5,14 +5,14 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers.Gutenberg.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers.Gutenberg.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public interface IGutenbergCatalogService
     {

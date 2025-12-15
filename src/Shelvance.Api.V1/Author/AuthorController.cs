@@ -2,29 +2,29 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.AuthorStats;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
-using NzbDrone.Http.REST.Attributes;
-using NzbDrone.SignalR;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.AuthorStats;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
+using Shelvance.Http.REST.Attributes;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Author
 {
     [V1ApiController]
-    public class AuthorController : RestControllerWithSignalR<AuthorResource, NzbDrone.Core.Books.Author>,
+    public class AuthorController : RestControllerWithSignalR<AuthorResource, Shelvance.Core.Books.Author>,
                                 IHandle<BookImportedEvent>,
                                 IHandle<BookEditedEvent>,
                                 IHandle<BookFileDeletedEvent>,
@@ -106,7 +106,7 @@ namespace Shelvance.Api.V1.Author
             return GetAuthorResource(author);
         }
 
-        private AuthorResource GetAuthorResource(NzbDrone.Core.Books.Author author)
+        private AuthorResource GetAuthorResource(Shelvance.Core.Books.Author author)
         {
             if (author == null)
             {

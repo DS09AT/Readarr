@@ -6,11 +6,11 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using Dapper;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Messaging.Events;
 using static Dapper.SqlMapper;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IBasicRepository<TModel>
         where TModel : ModelBase, new()

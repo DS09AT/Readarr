@@ -3,12 +3,12 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MetadataSourceTests
+namespace Shelvance.Core.Test.MetadataSourceTests
 {
     [TestFixture]
     public class MetadataProviderStatusServiceFixture : CoreTest<MetadataProviderStatusService>

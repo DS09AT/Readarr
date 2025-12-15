@@ -4,15 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Composition;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common;
+using Shelvance.Common.Composition;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public interface IManageCommandQueue
     {
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.Messaging.Commands
         {
             if (!_commandQueue.RemoveIfQueued(id))
             {
-                throw new NzbDroneClientException(HttpStatusCode.Conflict, "Unable to cancel task");
+                throw new ShelvanceClientException(HttpStatusCode.Conflict, "Unable to cancel task");
             }
         }
 

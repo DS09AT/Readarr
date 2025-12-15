@@ -1,9 +1,9 @@
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Indexers.Nyaa
+namespace Shelvance.Core.Indexers.Nyaa
 {
     public class Nyaa : HttpIndexerBase<NyaaSettings>
     {

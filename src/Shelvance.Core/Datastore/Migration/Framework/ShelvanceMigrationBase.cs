@@ -1,17 +1,17 @@
 using System;
 using FluentMigrator;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.Datastore.Migration.Framework
+namespace Shelvance.Core.Datastore.Migration.Framework
 {
-    public abstract class NzbDroneMigrationBase : FluentMigrator.Migration
+    public abstract class ShelvanceMigrationBase : FluentMigrator.Migration
     {
         protected readonly Logger _logger;
 
-        protected NzbDroneMigrationBase()
+        protected ShelvanceMigrationBase()
         {
-            _logger = NzbDroneLogger.GetLogger(this);
+            _logger = ShelvanceLogger.GetLogger(this);
         }
 
         protected virtual void MainDbUpgrade()

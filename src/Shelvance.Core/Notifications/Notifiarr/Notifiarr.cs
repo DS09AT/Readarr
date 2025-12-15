@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Notifications.Webhook;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Notifications.Webhook;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Notifiarr
+namespace Shelvance.Core.Notifications.Notifiarr
 {
     public class Notifiarr : WebhookBase<NotifiarrSettings>
     {
@@ -78,7 +78,7 @@ namespace NzbDrone.Core.Notifications.Notifiarr
             }
             catch (NotifiarrException ex)
             {
-                return new NzbDroneValidationFailure("APIKey", ex.Message);
+                return new ShelvanceValidationFailure("APIKey", ex.Message);
             }
 
             return null;

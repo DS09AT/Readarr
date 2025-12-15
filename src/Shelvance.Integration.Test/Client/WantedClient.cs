@@ -3,7 +3,7 @@ using Shelvance.Api.V1.Books;
 using Shelvance.Http;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class WantedClient : ClientBase<BookResource>
     {

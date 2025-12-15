@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace NzbDrone.Core.MediaFiles.Azw
+namespace Shelvance.Core.MediaFiles.Azw
 {
     public class MobiHeader
     {

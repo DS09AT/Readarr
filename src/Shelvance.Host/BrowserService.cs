@@ -1,10 +1,10 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public interface IBrowserService
     {

@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Organizer
+﻿namespace Shelvance.Core.Organizer
 {
     public class BasicNamingConfig
     {

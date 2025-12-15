@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Http;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Http;
+using Shelvance.Core.Http;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MetadataSource.Goodreads
+namespace Shelvance.Core.Test.MetadataSource.Goodreads
 {
     [TestFixture]
     public class GoodreadsProxySearchFixture : CoreTest<GoodreadsSearchProxy>

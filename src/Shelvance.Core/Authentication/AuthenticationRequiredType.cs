@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Authentication
+namespace Shelvance.Core.Authentication
 {
     public enum AuthenticationRequiredType
     {

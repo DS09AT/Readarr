@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.MediaFiles.Azw
+namespace Shelvance.Core.MediaFiles.Azw
 {
     public class AzwTagException : Exception
     {

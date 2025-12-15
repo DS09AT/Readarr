@@ -1,6 +1,6 @@
 using FluentValidation.Validators;
 
-namespace NzbDrone.Core.ImportLists.Exclusions
+namespace Shelvance.Core.ImportLists.Exclusions
 {
     public class ImportListExclusionExistsValidator : PropertyValidator
     {

@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Download.Clients.Pneumatic
+namespace Shelvance.Core.Download.Clients.Pneumatic
 {
     public class PneumaticSettingsValidator : AbstractValidator<PneumaticSettings>
     {
@@ -25,9 +25,9 @@ namespace NzbDrone.Core.Download.Clients.Pneumatic
         [FieldDefinition(1, Label = "Strm Folder", Type = FieldType.Path, HelpText = ".strm files in this folder will be import by drone")]
         public string StrmFolder { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

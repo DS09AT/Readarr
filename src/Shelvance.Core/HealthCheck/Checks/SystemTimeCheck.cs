@@ -1,11 +1,11 @@
 using System;
 using NLog;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Localization;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Localization;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     public class SystemTimeCheck : HealthCheckBase
     {

@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Indexers.Gazelle
+namespace Shelvance.Core.Indexers.Gazelle
 {
     public class GazelleSettingsValidator : AbstractValidator<GazelleSettings>
     {
@@ -52,9 +52,9 @@ namespace NzbDrone.Core.Indexers.Gazelle
         [FieldDefinition(7, Type = FieldType.Checkbox, Label = "Reject Blocklisted Torrent Hashes While Grabbing", HelpText = "If a torrent is blocked by hash it may not properly be rejected during RSS/Search for some indexers, enabling this will allow it to be rejected after the torrent is grabbed, but before it is sent to the client.", Advanced = true)]
         public bool RejectBlocklistedTorrentHashesWhileGrabbing { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

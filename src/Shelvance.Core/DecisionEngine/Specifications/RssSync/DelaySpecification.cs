@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications.RssSync
+namespace Shelvance.Core.DecisionEngine.Specifications.RssSync
 {
     public class DelaySpecification : IDecisionEngineSpecification
     {

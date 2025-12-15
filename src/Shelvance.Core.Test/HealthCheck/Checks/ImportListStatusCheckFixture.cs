@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.HealthCheck.Checks;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.HealthCheck.Checks;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class ImportListStatusCheckFixture : CoreTest<ImportListStatusCheck>

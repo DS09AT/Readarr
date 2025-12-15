@@ -1,4 +1,4 @@
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.MetadataSource;
 
 namespace Shelvance.Api.V1.MetadataProvider
 {

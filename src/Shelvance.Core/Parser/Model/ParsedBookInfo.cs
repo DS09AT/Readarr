@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class ParsedBookInfo
     {

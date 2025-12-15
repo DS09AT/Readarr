@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Download.Clients;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Download.Clients;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class RemoteBook
     {

@@ -5,19 +5,19 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download.Clients.DownloadStation.Proxies;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download.Clients.DownloadStation.Proxies;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation
+namespace Shelvance.Core.Download.Clients.DownloadStation
 {
     public class TorrentDownloadStation : TorrentClientBase<DownloadStationSettings>
     {
@@ -307,7 +307,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                 if (downloadDir == null)
                 {
-                    return new NzbDroneValidationFailure(nameof(Settings.TvDirectory), "No default destination")
+                    return new ShelvanceValidationFailure(nameof(Settings.TvDirectory), "No default destination")
                     {
                         DetailedDescription = $"You must login into your Diskstation as {Settings.Username} and manually set it up into DownloadStation settings under BT/HTTP/FTP/NZB -> Location."
                     };
@@ -324,7 +324,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                     if (folderInfo.Additional == null)
                     {
-                        return new NzbDroneValidationFailure(fieldName, $"Shared folder does not exist")
+                        return new ShelvanceValidationFailure(fieldName, $"Shared folder does not exist")
                         {
                             DetailedDescription = $"The Diskstation does not have a Shared Folder with the name '{sharedFolder}', are you sure you specified it correctly?"
                         };
@@ -332,7 +332,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                     if (!folderInfo.IsDir)
                     {
-                        return new NzbDroneValidationFailure(fieldName, $"Folder does not exist")
+                        return new ShelvanceValidationFailure(fieldName, $"Folder does not exist")
                         {
                             DetailedDescription = $"The folder '{downloadDir}' does not exist, it must be created manually inside the Shared Folder '{sharedFolder}'."
                         };
@@ -345,12 +345,12 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             {
                 // User could not have permission to access to downloadstation
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure(string.Empty, ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Error testing Torrent Download Station");
-                return new NzbDroneValidationFailure(string.Empty, $"Unknown exception: {ex.Message}");
+                return new ShelvanceValidationFailure(string.Empty, $"Unknown exception: {ex.Message}");
             }
         }
 
@@ -363,7 +363,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new ShelvanceValidationFailure("Username", "Authentication failure")
                 {
                     DetailedDescription = $"Please verify your username and password. Also verify if the host running Shelvance isn't blocked from accessing {Name} by WhiteList limitations in the {Name} configuration."
                 };
@@ -374,19 +374,19 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new ShelvanceValidationFailure("Host", "Unable to connect")
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, $"Unknown exception: {ex.Message}");
+                return new ShelvanceValidationFailure(string.Empty, $"Unknown exception: {ex.Message}");
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Error testing Torrent Download Station");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Torrent Download Station")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to Torrent Download Station")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -416,7 +416,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             }
             catch (Exception ex)
             {
-                return new NzbDroneValidationFailure(string.Empty, $"Failed to get the list of torrents: {ex.Message}");
+                return new ShelvanceValidationFailure(string.Empty, $"Failed to get the list of torrents: {ex.Message}");
             }
         }
 

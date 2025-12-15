@@ -1,8 +1,8 @@
 using FluentAssertions;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.HealthCheck;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.HealthCheck;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     public static class HealthCheckFixtureExtensions
     {

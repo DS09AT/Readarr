@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Qualities
+namespace Shelvance.Core.Qualities
 {
     public class QualitiesBelowCutoff
     {

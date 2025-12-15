@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NzbDrone.Common.Cache
+namespace Shelvance.Common.Cache
 {
     public interface ICached
     {

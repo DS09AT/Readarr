@@ -1,6 +1,6 @@
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Datastore.Events
+namespace Shelvance.Core.Datastore.Events
 {
     public class ModelEvent<TModel> : IEvent
         where TModel : ModelBase

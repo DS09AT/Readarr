@@ -3,13 +3,13 @@ using FluentValidation.Results;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.TorrentRss;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.TorrentRss;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Test.IndexerTests.TorrentRssIndexerTests
+namespace Shelvance.Core.Test.IndexerTests.TorrentRssIndexerTests
 {
     public class TestTorrentRssIndexer : TorrentRssIndexer
     {

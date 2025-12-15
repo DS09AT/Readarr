@@ -1,6 +1,6 @@
-using NzbDrone.Core.ProgressMessaging;
+using Shelvance.Core.ProgressMessaging;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public interface ICommandResultReporter
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
-    public class InvalidConfigFileException : NzbDroneException
+    public class InvalidConfigFileException : ShelvanceException
     {
         public InvalidConfigFileException(string message)
             : base(message)

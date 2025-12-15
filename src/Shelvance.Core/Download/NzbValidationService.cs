@@ -2,9 +2,9 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IValidateNzbs
     {

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers.Newznab;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers.Newznab;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Indexers.Torznab
+namespace Shelvance.Core.Indexers.Torznab
 {
     public class Torznab : HttpIndexerBase<TorznabSettings>
     {
@@ -117,7 +117,7 @@ namespace NzbDrone.Core.Indexers.Torznab
                 Settings.BaseUrl.Contains("/torznab/all", StringComparison.InvariantCultureIgnoreCase) ||
                 Settings.BaseUrl.Contains("/api/v2.0/indexers/all/results/torznab", StringComparison.InvariantCultureIgnoreCase))
             {
-                return new NzbDroneValidationFailure("ApiPath", "Jackett's all endpoint is not supported, please add indexers individually")
+                return new ShelvanceValidationFailure("ApiPath", "Jackett's all endpoint is not supported, please add indexers individually")
                 {
                     IsWarning = true,
                     DetailedDescription = "Jackett's all endpoint is not supported, please add indexers individually"

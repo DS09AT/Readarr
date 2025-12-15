@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Qnap
+namespace Shelvance.Core.Download.Clients.Qnap
 {
     public class TorrentQnap : TorrentClientBase<QnapSettings>
     {
@@ -203,7 +203,7 @@ namespace NzbDrone.Core.Download.Clients.Qnap
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Failed to authenticate with QNAP Download Station");
-                return new NzbDroneValidationFailure("Username", "Authentication failed")
+                return new ShelvanceValidationFailure("Username", "Authentication failed")
                 {
                     DetailedDescription = ex.Message
                 };
@@ -211,7 +211,7 @@ namespace NzbDrone.Core.Download.Clients.Qnap
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test QNAP Download Station");
-                return new NzbDroneValidationFailure("Host", "Unable to connect to QNAP Download Station")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to QNAP Download Station")
                 {
                     DetailedDescription = ex.Message
                 };
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.Download.Clients.Qnap
 
                     if (!isValidPath)
                     {
-                        return new NzbDroneValidationFailure("TempFolder", "Temp folder must start with a valid QNAP root folder")
+                        return new ShelvanceValidationFailure("TempFolder", "Temp folder must start with a valid QNAP root folder")
                         {
                             DetailedDescription = $"The folder '{Settings.TempFolder}' must start with one of the available root folders: {string.Join(", ", validDirs.Select(d => d.Path))}"
                         };
@@ -251,7 +251,7 @@ namespace NzbDrone.Core.Download.Clients.Qnap
 
                     if (!isValidPath)
                     {
-                        return new NzbDroneValidationFailure("DestinationFolder", "Destination folder must start with a valid QNAP root folder")
+                        return new ShelvanceValidationFailure("DestinationFolder", "Destination folder must start with a valid QNAP root folder")
                         {
                             DetailedDescription = $"The folder '{Settings.DestinationFolder}' must start with one of the available root folders: {string.Join(", ", validDirs.Select(d => d.Path))}"
                         };
@@ -261,7 +261,7 @@ namespace NzbDrone.Core.Download.Clients.Qnap
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to validate download folders");
-                return new NzbDroneValidationFailure("DestinationFolder", "Unable to validate download folders")
+                return new ShelvanceValidationFailure("DestinationFolder", "Unable to validate download folders")
                 {
                     DetailedDescription = ex.Message
                 };

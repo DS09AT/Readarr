@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Core.Languages
+namespace Shelvance.Core.Languages
 {
     public static class LanguageExtensions
     {

@@ -1,11 +1,11 @@
 ﻿using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Housekeeping.Housekeepers;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Housekeeping.Housekeepers;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Housekeeping.Housekeepers
+namespace Shelvance.Core.Test.Housekeeping.Housekeepers
 {
     [TestFixture]
     public class CleanupAdditionalUsersFixture : DbTest<CleanupAdditionalUsers, User>

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.CustomFormats.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Cache;
+using Shelvance.Core.CustomFormats.Events;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public interface ICustomFormatService
     {

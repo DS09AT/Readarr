@@ -3,13 +3,13 @@ using System.Data;
 using System.Linq;
 using Dapper;
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Converters;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Converters;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(011)]
-    public class update_audio_qualities : NzbDroneMigrationBase
+    public class update_audio_qualities : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

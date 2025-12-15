@@ -4,12 +4,12 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MetadataSourceTests
+namespace Shelvance.Core.Test.MetadataSourceTests
 {
     [TestFixture]
     public class MetadataAggregationServiceFixture : CoreTest<MetadataAggregationService>

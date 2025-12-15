@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.HealthCheck.Checks;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.HealthCheck.Checks;
+using Shelvance.Core.Localization;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class DownloadClientRootFolderCheckFixture : CoreTest<DownloadClientRootFolderCheck>

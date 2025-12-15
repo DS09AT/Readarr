@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Qualities;
 
 namespace Shelvance.Api.V1.BookFiles
 {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Annotations
+namespace Shelvance.Core.Annotations
 {
     public interface ISelectOptionsConverter
     {

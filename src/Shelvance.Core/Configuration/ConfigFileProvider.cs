@@ -5,20 +5,20 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using Microsoft.Extensions.Options;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Options;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Update;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Options;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Update;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public interface IConfigFileProvider : IHandleAsync<ApplicationStartedEvent>,
         IExecute<ResetApiKeyCommand>

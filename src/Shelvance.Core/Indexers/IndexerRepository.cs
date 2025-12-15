@@ -1,8 +1,8 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public interface IIndexerRepository : IProviderRepository<IndexerDefinition>
     {

@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Indexers;
+﻿using Shelvance.Core.Indexers;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class FixFutureIndexerStatusTimes : FixFutureProviderStatusTimes<IndexerStatus>, IHousekeepingTask
     {

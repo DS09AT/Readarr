@@ -1,13 +1,13 @@
 using System;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public class RepackSpecification : IDecisionEngineSpecification
     {

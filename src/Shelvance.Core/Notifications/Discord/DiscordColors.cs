@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Discord
+namespace Shelvance.Core.Notifications.Discord
 {
     public enum DiscordColors
     {

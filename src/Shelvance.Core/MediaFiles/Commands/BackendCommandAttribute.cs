@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.MediaFiles.Commands
+namespace Shelvance.Core.MediaFiles.Commands
 {
     public class BackendCommandAttribute : Attribute
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Twitter
+namespace Shelvance.Core.Notifications.Twitter
 {
-    public class TwitterException : NzbDroneException
+    public class TwitterException : ShelvanceException
     {
         public TwitterException(string message, params object[] args)
             : base(message, args)

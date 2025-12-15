@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Download.Clients.Hadouken.Models;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Download.Clients.Hadouken.Models;
 
-namespace NzbDrone.Core.Download.Clients.Hadouken
+namespace Shelvance.Core.Download.Clients.Hadouken
 {
     public interface IHadoukenProxy
     {

@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class IPAddressExtensions
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Notifications.Mailgun
+namespace Shelvance.Core.Notifications.Mailgun
 {
     public class MailGun : NotificationBase<MailgunSettings>
     {

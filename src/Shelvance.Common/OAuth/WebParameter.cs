@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Common.OAuth
+﻿namespace Shelvance.Common.OAuth
 {
     public class WebParameter
     {

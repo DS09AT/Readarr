@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MusicTests.AuthorServiceTests
+namespace Shelvance.Core.Test.MusicTests.AuthorServiceTests
 {
     [TestFixture]
 

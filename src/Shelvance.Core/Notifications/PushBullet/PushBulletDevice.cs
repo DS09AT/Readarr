@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Notifications.PushBullet
+namespace Shelvance.Core.Notifications.PushBullet
 {
     public class PushBulletDevice
     {

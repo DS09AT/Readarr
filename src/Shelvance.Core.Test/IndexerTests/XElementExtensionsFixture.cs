@@ -2,10 +2,10 @@
 using System.Xml.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Indexers;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     [TestFixture]
     public class XElementExtensionsFixture : TestBase

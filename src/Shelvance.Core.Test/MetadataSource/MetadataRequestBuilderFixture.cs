@@ -1,12 +1,12 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MetadataSource
+namespace Shelvance.Core.Test.MetadataSource
 {
     [TestFixture]
     public class MetadataRequestBuilderFixture : CoreTest<MetadataRequestBuilder>

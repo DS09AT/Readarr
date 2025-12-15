@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class ParsedTrackInfo
     {

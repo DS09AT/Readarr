@@ -1,10 +1,10 @@
 using System.Data;
 using System.Text.Json;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Reflection;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Reflection;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Datastore.Converters
+namespace Shelvance.Core.Datastore.Converters
 {
     public class CommandConverter : EmbeddedDocumentConverter<Command>
     {

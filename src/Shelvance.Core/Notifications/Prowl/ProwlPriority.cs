@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Prowl
+namespace Shelvance.Core.Notifications.Prowl
 {
     public enum ProwlPriority
     {

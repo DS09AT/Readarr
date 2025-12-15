@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.DecisionEngine;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.DecisionEngine;
 
-namespace NzbDrone.Core.MediaFiles.BookImport
+namespace Shelvance.Core.MediaFiles.BookImport
 {
     public class ImportDecision<T>
     {

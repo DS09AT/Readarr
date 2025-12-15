@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Dapper;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public static class SqlMapperExtensions
     {

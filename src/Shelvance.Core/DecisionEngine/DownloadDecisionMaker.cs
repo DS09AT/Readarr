@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.Download.Aggregation;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.Download.Aggregation;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine
+namespace Shelvance.Core.DecisionEngine
 {
     public interface IMakeDownloadDecision
     {

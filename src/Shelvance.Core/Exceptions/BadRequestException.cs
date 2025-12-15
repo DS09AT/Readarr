@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
     public class BadRequestException : DownstreamException
     {

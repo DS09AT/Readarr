@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml;
 using NLog;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public interface IGutenbergMarcParser
     {

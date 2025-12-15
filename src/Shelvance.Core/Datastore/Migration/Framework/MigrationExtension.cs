@@ -8,7 +8,7 @@ using FluentMigrator.Runner.Generators.SQLite;
 using FluentMigrator.Runner.Processors.SQLite;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NzbDrone.Core.Datastore.Migration.Framework
+namespace Shelvance.Core.Datastore.Migration.Framework
 {
     public static class MigrationExtension
     {
@@ -33,13 +33,13 @@ namespace NzbDrone.Core.Datastore.Migration.Framework
             command.Parameters.Add(parameter);
         }
 
-        public static IMigrationRunnerBuilder AddNzbDroneSQLite(this IMigrationRunnerBuilder builder)
+        public static IMigrationRunnerBuilder AddShelvanceSQLite(this IMigrationRunnerBuilder builder)
         {
             builder.Services
                 .AddTransient<SQLiteBatchParser>()
                 .AddScoped<SQLiteDbFactory>()
-                .AddScoped<NzbDroneSQLiteProcessor>()
-                .AddScoped<IMigrationProcessor>(sp => sp.GetRequiredService<NzbDroneSQLiteProcessor>())
+                .AddScoped<ShelvanceSQLiteProcessor>()
+                .AddScoped<IMigrationProcessor>(sp => sp.GetRequiredService<ShelvanceSQLiteProcessor>())
                 .AddScoped<SQLiteQuoter>()
                 .AddScoped<SQLiteGenerator>()
                 .AddScoped<IMigrationGenerator>(sp => sp.GetRequiredService<SQLiteGenerator>());

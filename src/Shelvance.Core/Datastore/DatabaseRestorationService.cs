@@ -1,11 +1,11 @@
 using System;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IRestoreDatabase
     {
@@ -16,7 +16,7 @@ namespace NzbDrone.Core.Datastore
     {
         private readonly IDiskProvider _diskProvider;
         private readonly IAppFolderInfo _appFolderInfo;
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(DatabaseRestorationService));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(DatabaseRestorationService));
 
         public DatabaseRestorationService(IDiskProvider diskProvider, IAppFolderInfo appFolderInfo)
         {

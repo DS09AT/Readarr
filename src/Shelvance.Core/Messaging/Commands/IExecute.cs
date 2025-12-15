@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public interface IExecute<TCommand> : IProcessMessage<TCommand>
         where TCommand : Command

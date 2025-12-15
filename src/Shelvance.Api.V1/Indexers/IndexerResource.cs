@@ -1,4 +1,4 @@
-using NzbDrone.Core.Indexers;
+using Shelvance.Core.Indexers;
 
 namespace Shelvance.Api.V1.Indexers
 {

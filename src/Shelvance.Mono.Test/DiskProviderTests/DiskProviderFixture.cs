@@ -7,12 +7,12 @@ using Mono.Unix;
 using Mono.Unix.Native;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Test.DiskTests;
-using NzbDrone.Mono.Disk;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Test.DiskTests;
+using Shelvance.Mono.Disk;
 
-namespace NzbDrone.Mono.Test.DiskProviderTests
+namespace Shelvance.Mono.Test.DiskProviderTests
 {
     [TestFixture]
     [Platform(Exclude = "Win")]

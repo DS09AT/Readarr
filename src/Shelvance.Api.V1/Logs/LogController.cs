@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Instrumentation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Instrumentation;
 using Shelvance.Http;
 using Shelvance.Http.Extensions;
 

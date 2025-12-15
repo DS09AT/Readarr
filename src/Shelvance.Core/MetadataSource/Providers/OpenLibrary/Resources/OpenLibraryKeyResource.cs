@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary.Resources
+namespace Shelvance.Core.MetadataSource.Providers.OpenLibrary.Resources
 {
     public class OpenLibraryKeyResource
     {

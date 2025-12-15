@@ -5,15 +5,15 @@ using NLog.Config;
 using NLog.Targets;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public abstract class LoggingTest
     {
-        protected static readonly Logger TestLogger = NzbDroneLogger.GetLogger("TestLogger");
+        protected static readonly Logger TestLogger = ShelvanceLogger.GetLogger("TestLogger");
 
         protected static void InitLogging()
         {

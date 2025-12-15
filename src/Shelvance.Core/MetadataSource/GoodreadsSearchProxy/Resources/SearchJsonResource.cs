@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     public class SearchJsonResource
     {

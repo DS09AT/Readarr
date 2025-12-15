@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Common.Test.DiskTests
+namespace Shelvance.Common.Test.DiskTests
 {
     public class MockMount : IMount
     {

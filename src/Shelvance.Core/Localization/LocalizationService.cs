@@ -5,16 +5,16 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Languages;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Localization
+namespace Shelvance.Core.Localization
 {
     public interface ILocalizationService
     {

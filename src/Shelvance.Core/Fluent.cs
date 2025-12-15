@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NzbDrone.Common.EnsureThat;
+using Shelvance.Common.EnsureThat;
 
-namespace NzbDrone.Core
+namespace Shelvance.Core
 {
     public static class Fluent
     {

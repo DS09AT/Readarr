@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
     public class CalibreChangesPayload
     {

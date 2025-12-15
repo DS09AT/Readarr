@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.MediaFiles.BookImport.Identification
 {
     public class Distance
     {

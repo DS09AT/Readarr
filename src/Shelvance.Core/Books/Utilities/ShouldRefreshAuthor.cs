@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using NLog;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface ICheckIfAuthorShouldBeRefreshed
     {

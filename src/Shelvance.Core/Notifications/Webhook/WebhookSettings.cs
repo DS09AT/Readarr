@@ -1,10 +1,10 @@
 using System;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
     public class WebhookSettingsValidator : AbstractValidator<WebhookSettings>
     {
@@ -35,9 +35,9 @@ namespace NzbDrone.Core.Notifications.Webhook
         [FieldDefinition(3, Label = "Password", Type = FieldType.Password, Privacy = PrivacyLevel.Password)]
         public string Password { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

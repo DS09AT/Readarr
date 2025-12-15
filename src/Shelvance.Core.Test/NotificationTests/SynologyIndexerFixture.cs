@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using System.IO;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Notifications;
-using NzbDrone.Core.Notifications.Synology;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Notifications;
+using Shelvance.Core.Notifications.Synology;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.NotificationTests
+namespace Shelvance.Core.Test.NotificationTests
 {
     [TestFixture]
     public class SynologyIndexerFixture : CoreTest<SynologyIndexer>

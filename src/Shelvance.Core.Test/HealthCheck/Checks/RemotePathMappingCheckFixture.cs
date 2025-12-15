@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.HealthCheck.Checks;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.HealthCheck.Checks;
+using Shelvance.Core.Localization;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class RemotePathMappingCheckFixture : CoreTest<RemotePathMappingCheck>

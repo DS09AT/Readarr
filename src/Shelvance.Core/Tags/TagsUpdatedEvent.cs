@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Messaging;
+﻿using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Tags
+namespace Shelvance.Core.Tags
 {
     public class TagsUpdatedEvent : IEvent
     {

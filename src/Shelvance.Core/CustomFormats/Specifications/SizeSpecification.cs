@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class SizeSpecificationValidator : AbstractValidator<SizeSpecification>
     {
@@ -33,9 +33,9 @@ namespace NzbDrone.Core.CustomFormats
             return size > Min.Gigabytes() && size <= Max.Gigabytes();
         }
 
-        public override NzbDroneValidationResult Validate()
+        public override ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

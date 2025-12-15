@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public class UpdatePackage
     {

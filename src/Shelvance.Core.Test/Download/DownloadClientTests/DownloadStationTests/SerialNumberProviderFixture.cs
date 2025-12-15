@@ -2,13 +2,13 @@
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Clients.DownloadStation;
-using NzbDrone.Core.Download.Clients.DownloadStation.Proxies;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Clients.DownloadStation;
+using Shelvance.Core.Download.Clients.DownloadStation.Proxies;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.DownloadStationTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.DownloadStationTests
 {
     [TestFixture]
     public class SerialNumberProviderFixture : CoreTest<SerialNumberProvider>

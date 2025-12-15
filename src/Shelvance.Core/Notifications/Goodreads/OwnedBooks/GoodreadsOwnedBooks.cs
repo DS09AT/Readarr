@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public class GoodreadsOwnedBooks : GoodreadsNotificationBase<GoodreadsOwnedBooksNotificationSettings>
     {

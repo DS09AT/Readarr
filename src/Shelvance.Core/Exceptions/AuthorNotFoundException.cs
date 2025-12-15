@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
-    public class AuthorNotFoundException : NzbDroneException
+    public class AuthorNotFoundException : ShelvanceException
     {
         public string ForeignAuthorId { get; set; }
 

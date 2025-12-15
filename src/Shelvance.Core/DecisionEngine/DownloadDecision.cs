@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine
+namespace Shelvance.Core.DecisionEngine
 {
     public class DownloadDecision
     {

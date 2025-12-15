@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public interface IMetadataFactory : IProviderFactory<IMetadata, MetadataDefinition>
     {

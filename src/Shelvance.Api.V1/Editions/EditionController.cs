@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http;
 
-namespace NzbDrone.Api.V1.Editions
+namespace Shelvance.Api.V1.Editions
 {
     [V1ApiController]
     public class EditionController : Controller

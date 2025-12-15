@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     internal static class XmlExtensions
     {

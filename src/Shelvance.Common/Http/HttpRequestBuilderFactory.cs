@@ -1,4 +1,4 @@
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public interface IHttpRequestBuilderFactory
     {

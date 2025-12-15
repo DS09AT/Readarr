@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public enum AuthorStatusType
     {

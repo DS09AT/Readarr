@@ -1,9 +1,9 @@
 using System;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Http
+namespace Shelvance.Core.Http
 {
     public interface ICachedHttpResponseService
     {

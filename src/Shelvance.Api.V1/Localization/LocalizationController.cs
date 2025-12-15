@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Localization;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Localization;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Localization

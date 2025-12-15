@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Logs

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Twitter
+namespace Shelvance.Core.Notifications.Twitter
 {
     public class Twitter : NotificationBase<TwitterSettings>
     {

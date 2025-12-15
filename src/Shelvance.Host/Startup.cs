@@ -12,18 +12,18 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NLog.Extensions.Logging;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Processes;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Instrumentation;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Host.AccessControl;
-using NzbDrone.Http.Authentication;
-using NzbDrone.SignalR;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Processes;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Instrumentation;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Host.AccessControl;
+using Shelvance.Http.Authentication;
+using Shelvance.SignalR;
 using Shelvance.Api.V1.System;
 using Shelvance.Http;
 using Shelvance.Http.Authentication;
@@ -33,7 +33,7 @@ using Shelvance.Http.Frontend;
 using Shelvance.Http.Middleware;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public class Startup
     {

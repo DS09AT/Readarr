@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class IndexerDefinition : ProviderDefinition
     {

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Core.Profiles.Qualities;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Profiles.Quality

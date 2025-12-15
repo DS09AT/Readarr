@@ -5,12 +5,12 @@ using AutoFixture;
 using Equ;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MusicTests
+namespace Shelvance.Core.Test.MusicTests
 {
     [TestFixture]
     public class EntityFixture : LoggingTest

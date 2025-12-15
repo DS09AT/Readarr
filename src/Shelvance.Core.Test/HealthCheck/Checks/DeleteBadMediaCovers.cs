@@ -5,16 +5,16 @@ using System.Linq;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Extras.Metadata;
-using NzbDrone.Core.Extras.Metadata.Files;
-using NzbDrone.Core.Housekeeping.Housekeepers;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Extras.Metadata;
+using Shelvance.Core.Extras.Metadata.Files;
+using Shelvance.Core.Housekeeping.Housekeepers;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class DeleteBadMediaCoversFixture : CoreTest<DeleteBadMediaCovers>

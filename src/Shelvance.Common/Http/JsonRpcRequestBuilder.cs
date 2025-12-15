@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class JsonRpcRequestBuilder : HttpRequestBuilder
     {

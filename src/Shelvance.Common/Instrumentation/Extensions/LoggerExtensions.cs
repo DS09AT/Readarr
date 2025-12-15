@@ -1,6 +1,6 @@
 using NLog;
 
-namespace NzbDrone.Common.Instrumentation.Extensions
+namespace Shelvance.Common.Instrumentation.Extensions
 {
     public static class LoggerExtensions
     {

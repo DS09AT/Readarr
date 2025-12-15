@@ -4,18 +4,18 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.QBittorrent
+namespace Shelvance.Core.Download.Clients.QBittorrent
 {
     public class QBittorrent : TorrentClientBase<QBittorrentSettings>
     {
@@ -433,7 +433,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 if (version < Version.Parse("1.5"))
                 {
                     // API version 5 introduced the "save_path" property in /query/torrents
-                    return new NzbDroneValidationFailure("Host", "Unsupported client version")
+                    return new ShelvanceValidationFailure("Host", "Unsupported client version")
                     {
                         DetailedDescription = "Please upgrade to qBittorrent version 3.2.4 or higher."
                     };
@@ -443,7 +443,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                     // API version 6 introduced support for labels
                     if (Settings.MusicCategory.IsNotNullOrWhiteSpace())
                     {
-                        return new NzbDroneValidationFailure("Category", "Category is not supported")
+                        return new ShelvanceValidationFailure("Category", "Category is not supported")
                         {
                             DetailedDescription = "Labels are not supported until qBittorrent version 3.3.0. Please upgrade or try again with an empty Category."
                         };
@@ -452,7 +452,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 else if (Settings.MusicCategory.IsNullOrWhiteSpace())
                 {
                     // warn if labels are supported, but category is not provided
-                    return new NzbDroneValidationFailure("MusicCategory", "Category is recommended")
+                    return new ShelvanceValidationFailure("MusicCategory", "Category is recommended")
                     {
                         IsWarning = true,
                         DetailedDescription = "Shelvance will not attempt to import completed downloads without a category."
@@ -463,7 +463,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 var config = Proxy.GetConfig(Settings);
                 if (RemovesCompletedDownloads(config))
                 {
-                    return new NzbDroneValidationFailure(string.Empty, "qBittorrent is configured to remove torrents when they reach their Share Ratio Limit")
+                    return new ShelvanceValidationFailure(string.Empty, "qBittorrent is configured to remove torrents when they reach their Share Ratio Limit")
                     {
                         DetailedDescription = "Shelvance will be unable to perform Completed Download Handling as configured. You can fix this in qBittorrent ('Tools -> Options...' in the menu) by changing 'Options -> BitTorrent -> Share Ratio Limiting' from 'Remove them' to 'Pause them'."
                     };
@@ -472,7 +472,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new ShelvanceValidationFailure("Username", "Authentication failure")
                 {
                     DetailedDescription = "Please verify your username and password."
                 };
@@ -482,19 +482,19 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 _logger.Error(ex, "Unable to connect to qBittorrent");
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new ShelvanceValidationFailure("Host", "Unable to connect")
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to test qBittorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to qBittorrent")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to qBittorrent")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -526,7 +526,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
 
                 if (!labels.ContainsKey(Settings.MusicCategory))
                 {
-                    return new NzbDroneValidationFailure("MusicCategory", "Configuration of label failed")
+                    return new ShelvanceValidationFailure("MusicCategory", "Configuration of label failed")
                     {
                         DetailedDescription = "Shelvance was unable to add the label to qBittorrent."
                     };
@@ -540,7 +540,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
 
                 if (!labels.ContainsKey(Settings.MusicImportedCategory))
                 {
-                    return new NzbDroneValidationFailure("MusicImportedCategory", "Configuration of label failed")
+                    return new ShelvanceValidationFailure("MusicImportedCategory", "Configuration of label failed")
                     {
                         DetailedDescription = "Shelvance was unable to add the label to qBittorrent."
                     };
@@ -568,18 +568,18 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 {
                     if (!recentPriorityDefault)
                     {
-                        return new NzbDroneValidationFailure(nameof(Settings.RecentTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
+                        return new ShelvanceValidationFailure(nameof(Settings.RecentTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
                     }
                     else if (!olderPriorityDefault)
                     {
-                        return new NzbDroneValidationFailure(nameof(Settings.OlderTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
+                        return new ShelvanceValidationFailure(nameof(Settings.OlderTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
                     }
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test qBittorrent");
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
             }
 
             return null;
@@ -594,7 +594,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

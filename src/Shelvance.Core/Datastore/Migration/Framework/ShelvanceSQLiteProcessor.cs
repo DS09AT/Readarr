@@ -11,13 +11,13 @@ using FluentMigrator.Runner.Processors.SQLite;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace NzbDrone.Core.Datastore.Migration.Framework
+namespace Shelvance.Core.Datastore.Migration.Framework
 {
-    public class NzbDroneSQLiteProcessor : SQLiteProcessor
+    public class ShelvanceSQLiteProcessor : SQLiteProcessor
     {
-        public NzbDroneSQLiteProcessor(SQLiteDbFactory factory,
+        public ShelvanceSQLiteProcessor(SQLiteDbFactory factory,
                                        SQLiteGenerator generator,
-                                       ILogger<NzbDroneSQLiteProcessor> logger,
+                                       ILogger<ShelvanceSQLiteProcessor> logger,
                                        IOptionsSnapshot<ProcessorOptions> options,
                                        IConnectionStringAccessor connectionStringAccessor,
                                        IServiceProvider serviceProvider,

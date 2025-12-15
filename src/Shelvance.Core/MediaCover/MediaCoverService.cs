@@ -5,16 +5,16 @@ using System.Linq;
 using System.Net;
 using System.Threading;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.MediaCover
+namespace Shelvance.Core.MediaCover
 {
     public interface IMapCoversToLocal
     {

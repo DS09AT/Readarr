@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Security
+﻿namespace Shelvance.Core.Security
 {
     public enum CertificateValidationType
     {

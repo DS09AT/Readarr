@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Download;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Blocklisting
+namespace Shelvance.Core.Test.Blocklisting
 {
     [TestFixture]
     public class BlocklistServiceFixture : CoreTest<BlocklistService>

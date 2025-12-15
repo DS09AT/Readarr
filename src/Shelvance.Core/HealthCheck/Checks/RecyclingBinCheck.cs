@@ -1,10 +1,10 @@
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.MediaFiles.Events;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Localization;
+using Shelvance.Core.MediaFiles.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(BookImportedEvent), CheckOnCondition.FailedOnly)]
     [CheckOn(typeof(TrackImportedEvent), CheckOnCondition.FailedOnly)]

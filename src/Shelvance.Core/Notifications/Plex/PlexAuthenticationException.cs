@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Notifications.Plex
+﻿namespace Shelvance.Core.Notifications.Plex
 {
     public class PlexAuthenticationException : PlexException
     {

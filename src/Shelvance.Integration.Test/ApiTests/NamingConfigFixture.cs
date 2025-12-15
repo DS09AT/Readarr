@@ -1,7 +1,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     public class NamingConfigFixture : IntegrationTest

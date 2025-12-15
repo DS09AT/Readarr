@@ -1,9 +1,9 @@
 using System.Net;
-using NzbDrone.Core.Exceptions;
+using Shelvance.Core.Exceptions;
 
-namespace NzbDrone.Core.Profiles.Qualities
+namespace Shelvance.Core.Profiles.Qualities
 {
-    public class QualityProfileInUseException : NzbDroneClientException
+    public class QualityProfileInUseException : ShelvanceClientException
     {
         public QualityProfileInUseException(string name)
             : base(HttpStatusCode.BadRequest, "Profile [{0}] is in use.", name)

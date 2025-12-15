@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IEditionRepository : IBasicRepository<Edition>
     {

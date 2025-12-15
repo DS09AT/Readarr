@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public interface IGutenbergFormatProvider
     {

@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Extras.Others
+namespace Shelvance.Core.Extras.Others
 {
     public class ExistingOtherExtraImporter : ImportExistingExtraFilesBase<OtherExtraFile>
     {

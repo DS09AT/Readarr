@@ -1,10 +1,10 @@
 using FluentValidation;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.Clients.RTorrent;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.Clients.RTorrent;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Download.Clients.rTorrent
+namespace Shelvance.Core.Download.Clients.rTorrent
 {
     public interface IRTorrentDirectoryValidator
     {

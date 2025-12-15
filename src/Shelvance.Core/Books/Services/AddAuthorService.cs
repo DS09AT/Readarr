@@ -5,14 +5,14 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IAddAuthorService
     {

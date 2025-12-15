@@ -1,8 +1,8 @@
 ﻿using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class RootFolderValidator : PropertyValidator
     {

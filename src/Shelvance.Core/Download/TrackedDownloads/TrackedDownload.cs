@@ -1,7 +1,7 @@
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.TrackedDownloads
+namespace Shelvance.Core.Download.TrackedDownloads
 {
     public class TrackedDownload
     {

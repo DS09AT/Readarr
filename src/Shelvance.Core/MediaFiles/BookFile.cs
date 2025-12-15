@@ -1,11 +1,11 @@
 using System;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public class BookFile : ModelBase
     {

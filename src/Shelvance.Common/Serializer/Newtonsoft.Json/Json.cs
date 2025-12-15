@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
-namespace NzbDrone.Common.Serializer
+namespace Shelvance.Common.Serializer
 {
     public static class Json
     {

@@ -1,9 +1,9 @@
 using FluentValidation;
 using FluentValidation.Results;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IAddAuthorValidator
     {

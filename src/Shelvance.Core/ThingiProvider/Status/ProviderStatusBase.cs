@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.ThingiProvider.Status
+namespace Shelvance.Core.ThingiProvider.Status
 {
     public abstract class ProviderStatusBase : ModelBase
     {

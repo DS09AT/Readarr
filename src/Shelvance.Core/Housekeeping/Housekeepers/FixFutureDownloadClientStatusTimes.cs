@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Download;
+﻿using Shelvance.Core.Download;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class FixFutureDownloadClientStatusTimes : FixFutureProviderStatusTimes<DownloadClientStatus>, IHousekeepingTask
     {

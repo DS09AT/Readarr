@@ -1,9 +1,9 @@
 using System;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Simplepush
+namespace Shelvance.Core.Notifications.Simplepush
 {
     public interface ISimplepushProxy
     {

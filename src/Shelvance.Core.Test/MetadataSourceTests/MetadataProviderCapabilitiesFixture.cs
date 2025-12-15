@@ -1,8 +1,8 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.MetadataSource;
 
-namespace NzbDrone.Core.Test.MetadataSourceTests
+namespace Shelvance.Core.Test.MetadataSourceTests
 {
     [TestFixture]
     public class MetadataProviderCapabilitiesFixture

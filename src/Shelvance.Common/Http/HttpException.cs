@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class HttpException : Exception
     {

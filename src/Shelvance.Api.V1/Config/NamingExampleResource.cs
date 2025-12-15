@@ -1,4 +1,4 @@
-using NzbDrone.Core.Organizer;
+using Shelvance.Core.Organizer;
 
 namespace Shelvance.Api.V1.Config
 {

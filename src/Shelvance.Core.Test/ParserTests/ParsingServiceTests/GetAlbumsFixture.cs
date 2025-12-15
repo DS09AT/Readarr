@@ -4,13 +4,13 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ParserTests.ParsingServiceTests
+namespace Shelvance.Core.Test.ParserTests.ParsingServiceTests
 {
     [TestFixture]
     public class GetBooksFixture : CoreTest<ParsingService>

@@ -2,15 +2,15 @@ using System.IO;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.MediaFileDeletionService
+namespace Shelvance.Core.Test.MediaFiles.MediaFileDeletionService
 {
     [TestFixture]
     public class DeleteTrackFileFixture : CoreTest<Core.MediaFiles.MediaFileDeletionService>
@@ -70,7 +70,7 @@ namespace NzbDrone.Core.Test.MediaFiles.MediaFileDeletionService
         [Test]
         public void should_throw_if_root_folder_does_not_exist()
         {
-            Assert.Throws<NzbDroneClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
+            Assert.Throws<ShelvanceClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
             ExceptionVerification.ExpectedWarns(1);
         }
 
@@ -78,7 +78,7 @@ namespace NzbDrone.Core.Test.MediaFiles.MediaFileDeletionService
         public void should_throw_if_root_folder_is_empty()
         {
             GivenRootFolderExists();
-            Assert.Throws<NzbDroneClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
+            Assert.Throws<ShelvanceClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
             ExceptionVerification.ExpectedWarns(1);
         }
 
@@ -141,7 +141,7 @@ namespace NzbDrone.Core.Test.MediaFiles.MediaFileDeletionService
                   .Setup(s => s.DeleteFile(_trackFile.Path, "Author Name"))
                   .Throws(new IOException());
 
-            Assert.Throws<NzbDroneClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
+            Assert.Throws<ShelvanceClientException>(() => Subject.DeleteTrackFile(_author, _trackFile));
 
             ExceptionVerification.ExpectedErrors(1);
             Mocker.GetMock<IRecycleBinProvider>().Verify(v => v.DeleteFile(_trackFile.Path, "Author Name"), Times.Once());

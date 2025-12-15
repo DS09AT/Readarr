@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Test.Common;
-using NzbDrone.Windows.EnvironmentInfo;
+using Shelvance.Test.Common;
+using Shelvance.Windows.EnvironmentInfo;
 
-namespace NzbDrone.Windows.Test.EnvironmentInfo
+namespace Shelvance.Windows.Test.EnvironmentInfo
 {
     [TestFixture]
     [Platform("Win")]

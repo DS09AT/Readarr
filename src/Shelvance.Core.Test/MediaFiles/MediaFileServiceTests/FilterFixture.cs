@@ -7,13 +7,13 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.MediaFileServiceTests
+namespace Shelvance.Core.Test.MediaFiles.MediaFileServiceTests
 {
     [TestFixture]
     public class FilterFixture : FileSystemTest<MediaFileService>

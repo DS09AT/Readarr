@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.History;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.History;
 
-namespace NzbDrone.Core.Download.TrackedDownloads
+namespace Shelvance.Core.Download.TrackedDownloads
 {
     public interface ITrackedDownloadAlreadyImported
     {

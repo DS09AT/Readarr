@@ -2,13 +2,13 @@ using System;
 using System.Linq;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Localization;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Localization;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ConfigSavedEvent))]
     public class ProxyCheck : HealthCheckBase

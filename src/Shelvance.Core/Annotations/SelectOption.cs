@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Annotations
+namespace Shelvance.Core.Annotations
 {
     public class SelectOption
     {

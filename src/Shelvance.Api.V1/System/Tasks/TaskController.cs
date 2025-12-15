@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Jobs;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.SignalR;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Jobs;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

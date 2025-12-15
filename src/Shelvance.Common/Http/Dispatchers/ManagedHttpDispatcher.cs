@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http.Proxy;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http.Proxy;
 
-namespace NzbDrone.Common.Http.Dispatchers
+namespace Shelvance.Common.Http.Dispatchers
 {
     public class ManagedHttpDispatcher : IHttpDispatcher
     {

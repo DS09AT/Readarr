@@ -4,18 +4,18 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.UTorrent
+namespace Shelvance.Core.Download.Clients.UTorrent
 {
     public class UTorrent : TorrentClientBase<UTorrentSettings>
     {
@@ -272,7 +272,7 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new ShelvanceValidationFailure("Username", "Authentication failure")
                 {
                     DetailedDescription = "Please verify your username and password."
                 };
@@ -282,19 +282,19 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
                 _logger.Error(ex, "Unable to connect to uTorrent");
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new ShelvanceValidationFailure("Host", "Unable to connect")
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test uTorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to uTorrent")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to uTorrent")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -312,7 +312,7 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

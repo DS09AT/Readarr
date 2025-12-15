@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using NzbDrone.Core.MediaFiles.BookImport.Specifications;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.MediaFiles.BookImport.Specifications;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MediaFiles.BookImport.Specifications
+namespace Shelvance.Core.Test.MediaFiles.BookImport.Specifications
 {
     [TestFixture]
     public class UpgradeSpecificationFixture : CoreTest<UpgradeSpecification>

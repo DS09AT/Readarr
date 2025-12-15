@@ -3,18 +3,18 @@ using System.IO;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.TrackFileMovingServiceTests
+namespace Shelvance.Core.Test.MediaFiles.TrackFileMovingServiceTests
 {
     [TestFixture]
     public class MoveTrackFileFixture : CoreTest<BookFileMovingService>

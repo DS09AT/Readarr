@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
     public abstract class ProviderDefinition : ModelBase
     {

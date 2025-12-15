@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Notifications.Plex.PlexTv;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Notifications.Plex.PlexTv;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Plex.Server
+namespace Shelvance.Core.Notifications.Plex.Server
 {
     public class PlexServer : NotificationBase<PlexServerSettings>
     {

@@ -4,18 +4,18 @@ using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IDownloadedBooksImportService
     {

@@ -1,10 +1,10 @@
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Notifications.Discord.Payloads;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Notifications.Discord.Payloads;
 
-namespace NzbDrone.Core.Notifications.Discord
+namespace Shelvance.Core.Notifications.Discord
 {
     public interface IDiscordProxy
     {

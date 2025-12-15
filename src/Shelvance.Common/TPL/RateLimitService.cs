@@ -2,10 +2,10 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.TPL
+namespace Shelvance.Common.TPL
 {
     public interface IRateLimitService
     {

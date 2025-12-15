@@ -3,12 +3,12 @@ using System.IO;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     [TestFixture]
     public class PathExtensionFixture : TestBase

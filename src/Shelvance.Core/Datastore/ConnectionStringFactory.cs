@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Data.SQLite;
 using Npgsql;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IConnectionStringFactory
     {

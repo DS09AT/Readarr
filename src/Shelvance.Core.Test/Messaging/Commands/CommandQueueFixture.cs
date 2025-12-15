@@ -1,15 +1,15 @@
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Update.Commands;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Download;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Update.Commands;
 
-namespace NzbDrone.Core.Test.Messaging.Commands
+namespace Shelvance.Core.Test.Messaging.Commands
 {
     [TestFixture]
     public class CommandQueueFixture : CoreTest<CommandQueue>

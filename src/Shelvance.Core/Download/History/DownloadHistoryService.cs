@@ -1,13 +1,13 @@
 using System;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.History;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.History;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Download.History
+namespace Shelvance.Core.Download.History
 {
     public interface IDownloadHistoryService
     {

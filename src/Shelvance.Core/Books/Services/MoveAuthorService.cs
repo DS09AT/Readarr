@@ -1,16 +1,16 @@
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Organizer;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Organizer;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class MoveAuthorService : IExecute<MoveAuthorCommand>, IExecute<BulkMoveAuthorCommand>
     {

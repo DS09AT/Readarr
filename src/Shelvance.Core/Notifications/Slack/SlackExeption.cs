@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Slack
+namespace Shelvance.Core.Notifications.Slack
 {
-    public class SlackExeption : NzbDroneException
+    public class SlackExeption : ShelvanceException
     {
         public SlackExeption(string message)
             : base(message)

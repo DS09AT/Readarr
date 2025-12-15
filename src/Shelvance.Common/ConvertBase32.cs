@@ -1,4 +1,4 @@
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public static class ConvertBase32
     {

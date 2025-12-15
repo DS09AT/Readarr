@@ -1,9 +1,9 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public interface IConsoleService
     {

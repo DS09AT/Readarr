@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public class FileAlreadyExistsException : Exception
     {

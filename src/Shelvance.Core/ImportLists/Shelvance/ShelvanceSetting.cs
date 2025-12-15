@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Shelvance
+namespace Shelvance.Core.ImportLists.Shelvance
 {
     public class ShelvanceSettingsValidator : AbstractValidator<ShelvanceSettings>
     {
@@ -43,9 +43,9 @@ namespace NzbDrone.Core.ImportLists.Shelvance
         [FieldDefinition(4, Type = FieldType.Select, SelectOptionsProviderAction = "getRootFolders", Label = "Root Folders", HelpText = "Root Folders from the source instance to import from")]
         public IEnumerable<string> RootFolderPaths { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.ImportLists.Exceptions
+namespace Shelvance.Core.ImportLists.Exceptions
 {
-    public class ImportListException : NzbDroneException
+    public class ImportListException : ShelvanceException
     {
         private readonly ImportListResponse _importListResponse;
 

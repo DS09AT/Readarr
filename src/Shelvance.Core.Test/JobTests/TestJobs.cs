@@ -2,10 +2,10 @@
 using System;
 using System.Linq;
 using System.Threading;
-using NzbDrone.Core.Jobs;
-using NzbDrone.Core.Model.Notification;
+using Shelvance.Core.Jobs;
+using Shelvance.Core.Model.Notification;
 
-namespace NzbDrone.Core.Test.JobTests
+namespace Shelvance.Core.Test.JobTests
 {
 
     public class FakeJob : IJob

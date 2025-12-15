@@ -1,10 +1,10 @@
 using System;
 using System.Diagnostics;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     [DebuggerDisplay("{DownloadClientInfo?.Name}:{Title}")]
     public class DownloadClientItem

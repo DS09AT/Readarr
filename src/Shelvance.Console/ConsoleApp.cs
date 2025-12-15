@@ -3,17 +3,17 @@ using System.IO;
 using System.Net.Sockets;
 using Microsoft.AspNetCore.Connections;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Host;
-using NzbDrone.Host.AccessControl;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Host;
+using Shelvance.Host.AccessControl;
 
-namespace NzbDrone.Console
+namespace Shelvance.Console
 {
     public static class ConsoleApp
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(ConsoleApp));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(ConsoleApp));
 
         private enum ExitCodes
         {
@@ -32,7 +32,7 @@ namespace NzbDrone.Console
                 startupArgs = new StartupContext(args);
                 try
                 {
-                    NzbDroneLogger.Register(startupArgs, false, true);
+                    ShelvanceLogger.Register(startupArgs, false, true);
                 }
                 catch (Exception ex)
                 {

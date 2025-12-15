@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport
+namespace Shelvance.Core.MediaFiles.BookImport
 {
     public class ImportResult
     {

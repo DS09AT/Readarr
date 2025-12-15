@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Crypto;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.History;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Queue
+namespace Shelvance.Core.Queue
 {
     public interface IQueueService
     {

@@ -6,8 +6,8 @@
     <PackageReference Include="NBuilder" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Core\Shelvance.Core.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Core\Shelvance.Core.csproj" />
+    <ProjectReference Include="..\Shelvance.Test.Common\Shelvance.Test.Common.csproj" />
     <ProjectReference Include="..\Shelvance.Api.V1\Shelvance.Api.V1.csproj" />
     <ProjectReference Include="..\Shelvance.Http\Shelvance.Http.csproj" />
   </ItemGroup>

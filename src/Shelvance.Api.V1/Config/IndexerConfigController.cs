@@ -1,5 +1,5 @@
 using FluentValidation;
-using NzbDrone.Core.Configuration;
+using Shelvance.Core.Configuration;
 using Shelvance.Http;
 using Shelvance.Http.Validation;
 

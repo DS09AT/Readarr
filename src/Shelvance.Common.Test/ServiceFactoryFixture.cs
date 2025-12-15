@@ -7,18 +7,18 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Composition.Extensions;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Options;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Extensions;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Host;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Composition.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Options;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Extensions;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Host;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     [TestFixture]
     public class ServiceFactoryFixture : TestBase<ServiceFactory>
@@ -26,8 +26,8 @@ namespace NzbDrone.Common.Test
         [Test]
         public void event_handlers_should_be_unique()
         {
-            var container = new Container(rules => rules.WithNzbDroneRules())
-                .AddNzbDroneLogger()
+            var container = new Container(rules => rules.WithShelvanceRules())
+                .AddShelvanceLogger()
                 .AutoAddServices(Bootstrap.ASSEMBLIES)
                 .AddDummyDatabase()
                 .AddStartupContext(new StartupContext("first", "second"));

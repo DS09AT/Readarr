@@ -4,11 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.DiskSpace
+namespace Shelvance.Core.DiskSpace
 {
     public interface IDiskSpaceService
     {

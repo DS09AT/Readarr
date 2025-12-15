@@ -1,9 +1,9 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Test.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.EnvironmentTests
+namespace Shelvance.Common.Test.EnvironmentTests
 {
     [TestFixture]
     public class StartupArgumentsFixture : TestBase

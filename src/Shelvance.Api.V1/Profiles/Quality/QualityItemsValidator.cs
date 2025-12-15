@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
 namespace Shelvance.Api.V1.Profiles.Quality
 {
@@ -182,7 +182,7 @@ namespace Shelvance.Api.V1.Profiles.Quality
                 }
             }
 
-            var allQualityIds = NzbDrone.Core.Qualities.Quality.All;
+            var allQualityIds = Shelvance.Core.Qualities.Quality.All;
 
             foreach (var quality in allQualityIds)
             {

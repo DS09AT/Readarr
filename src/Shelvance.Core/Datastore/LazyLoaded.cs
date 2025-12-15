@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface ILazyLoaded : ICloneable
     {
@@ -73,7 +73,7 @@ namespace NzbDrone.Core.Datastore
     /// <typeparam name="TChild">The child entity that is being lazy loaded.</typeparam>
     internal class LazyLoaded<TParent, TChild> : LazyLoaded<TChild>
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(LazyLoaded<TParent, TChild>));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(LazyLoaded<TParent, TChild>));
 
         private readonly Func<IDatabase, TParent, TChild> _query;
         private readonly Func<TParent, bool> _condition;

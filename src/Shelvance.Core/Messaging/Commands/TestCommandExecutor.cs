@@ -1,8 +1,8 @@
 using System.Threading;
 using NLog;
-using NzbDrone.Common.Instrumentation.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public class TestCommandExecutor : IExecute<TestCommand>
     {

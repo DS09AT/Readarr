@@ -1,13 +1,13 @@
 ﻿using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Housekeeping.Housekeepers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Housekeeping.Housekeepers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Housekeeping.Housekeepers
+namespace Shelvance.Core.Test.Housekeeping.Housekeepers
 {
     [TestFixture]
     public class CleanupOrphanedPendingReleasesFixture : DbTest<CleanupOrphanedPendingReleases, PendingRelease>

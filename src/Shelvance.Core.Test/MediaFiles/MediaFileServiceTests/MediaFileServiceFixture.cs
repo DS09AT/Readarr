@@ -3,12 +3,12 @@ using System.Linq;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MediaFiles.TrackFileMovingServiceTests
+namespace Shelvance.Core.Test.MediaFiles.TrackFileMovingServiceTests
 {
     [TestFixture]
     public class MediaFileServiceFixture : CoreTest<MediaFileService>

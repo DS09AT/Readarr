@@ -1,7 +1,7 @@
 using FluentValidation.Validators;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public class FolderChmodValidator : PropertyValidator
     {

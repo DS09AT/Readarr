@@ -1,5 +1,5 @@
 using System;
-using NzbDrone.Core.Datastore.Events;
+using Shelvance.Core.Datastore.Events;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Http

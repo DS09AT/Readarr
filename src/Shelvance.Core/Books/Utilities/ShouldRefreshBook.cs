@@ -1,7 +1,7 @@
 using System;
 using NLog;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface ICheckIfBookShouldBeRefreshed
     {

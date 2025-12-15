@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public interface IParsingService
     {

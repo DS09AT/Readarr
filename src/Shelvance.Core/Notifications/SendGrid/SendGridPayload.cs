@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Notifications.SendGrid
+namespace Shelvance.Core.Notifications.SendGrid
 {
     public class SendGridPayload
     {

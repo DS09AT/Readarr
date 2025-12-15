@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.Transmission
+﻿namespace Shelvance.Core.Download.Clients.Transmission
 {
     public enum TransmissionPriority
     {

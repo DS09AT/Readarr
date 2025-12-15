@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Qualities;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.CustomFormats;
 using Shelvance.Http.REST;
@@ -26,7 +26,7 @@ namespace Shelvance.Api.V1.Blocklist
 
     public static class BlocklistResourceMapper
     {
-        public static BlocklistResource MapToResource(this NzbDrone.Core.Blocklisting.Blocklist model, ICustomFormatCalculationService formatCalculator)
+        public static BlocklistResource MapToResource(this Shelvance.Core.Blocklisting.Blocklist model, ICustomFormatCalculationService formatCalculator)
         {
             if (model == null)
             {

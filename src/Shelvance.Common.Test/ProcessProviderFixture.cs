@@ -6,13 +6,13 @@ using System.Linq;
 using System.Threading;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Model;
-using NzbDrone.Common.Processes;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Dummy;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Model;
+using Shelvance.Common.Processes;
+using Shelvance.Test.Common;
+using Shelvance.Test.Dummy;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     // We don't want one tests setup killing processes used in another
     [NonParallelizable]

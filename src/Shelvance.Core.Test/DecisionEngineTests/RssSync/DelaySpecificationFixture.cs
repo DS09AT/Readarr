@@ -5,21 +5,21 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.DecisionEngine.Specifications.RssSync;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.DecisionEngine.Specifications.RssSync;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests.RssSync
+namespace Shelvance.Core.Test.DecisionEngineTests.RssSync
 {
     [TestFixture]
     public class DelaySpecificationFixture : CoreTest<DelaySpecification>

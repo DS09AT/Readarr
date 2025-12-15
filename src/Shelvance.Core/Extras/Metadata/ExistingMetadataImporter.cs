@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.Extras.Metadata.Files;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.Extras.Metadata.Files;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public class ExistingMetadataImporter : ImportExistingExtraFilesBase<MetadataFile>
     {

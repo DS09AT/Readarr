@@ -1,6 +1,6 @@
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.ImportLists.Exclusions
+namespace Shelvance.Core.ImportLists.Exclusions
 {
     public class ImportListExclusion : ModelBase
     {

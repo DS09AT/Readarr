@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Validators;
-using NzbDrone.Core.Download;
+using Shelvance.Core.Download;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public class DownloadClientExistsValidator : PropertyValidator
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public interface IStartupContext
     {

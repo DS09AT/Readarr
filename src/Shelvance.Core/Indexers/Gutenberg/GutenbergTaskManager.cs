@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Indexers.Gutenberg.Commands;
-using NzbDrone.Core.Jobs;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Indexers.Gutenberg.Commands;
+using Shelvance.Core.Jobs;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public class GutenbergTaskManager : IHandle<ProviderAddedEvent<IIndexer>>,
                                         IHandle<ProviderUpdatedEvent<IIndexer>>,

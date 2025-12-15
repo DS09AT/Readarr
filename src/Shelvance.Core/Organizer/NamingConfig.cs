@@ -1,7 +1,7 @@
 using System.IO;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public class NamingConfig : ModelBase
     {

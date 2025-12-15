@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Join
+namespace Shelvance.Core.Notifications.Join
 {
     public class JoinSettingsValidator : AbstractValidator<JoinSettings>
     {
@@ -35,9 +35,9 @@ namespace NzbDrone.Core.Notifications.Join
         [FieldDefinition(3, Label = "Notification Priority", Type = FieldType.Select, SelectOptions = typeof(JoinPriority))]
         public int Priority { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

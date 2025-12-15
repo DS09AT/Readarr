@@ -1,5 +1,5 @@
 using System;
-using NzbDrone.Core.Instrumentation;
+using Shelvance.Core.Instrumentation;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Logs

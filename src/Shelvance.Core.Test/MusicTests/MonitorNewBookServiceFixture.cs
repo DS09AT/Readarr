@@ -4,10 +4,10 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.BookTests
+namespace Shelvance.Core.Test.BookTests
 {
     [TestFixture]
     public class MonitorNewBookServiceFixture : CoreTest<MonitorNewBookService>

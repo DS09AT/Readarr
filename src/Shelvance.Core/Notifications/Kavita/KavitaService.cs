@@ -2,7 +2,7 @@
 using FluentValidation.Results;
 using NLog;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
 public interface IKavitaService
 {

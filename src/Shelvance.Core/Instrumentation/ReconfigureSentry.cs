@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation.Sentry;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation.Sentry;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Instrumentation
+namespace Shelvance.Core.Instrumentation
 {
     public class ReconfigureSentry : IHandleAsync<ApplicationStartedEvent>
     {

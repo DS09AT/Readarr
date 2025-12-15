@@ -1,9 +1,9 @@
-﻿using NzbDrone.Core.Validation;
+﻿using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
     public interface IProviderConfig
     {
-        NzbDroneValidationResult Validate();
+        ShelvanceValidationResult Validate();
     }
 }

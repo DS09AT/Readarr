@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Series

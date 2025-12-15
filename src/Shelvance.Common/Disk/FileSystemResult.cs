@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public class FileSystemResult
     {

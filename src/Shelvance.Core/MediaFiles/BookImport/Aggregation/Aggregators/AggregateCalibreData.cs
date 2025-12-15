@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators
+namespace Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators
 {
     public class AggregateCalibreData : IAggregate<LocalBook>
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public class CommandEqualityComparer : IEqualityComparer<Command>
     {

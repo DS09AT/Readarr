@@ -2,7 +2,7 @@ using System;
 using FluentValidation.Results;
 using NLog;
 
-namespace NzbDrone.Core.Notifications.Subsonic
+namespace Shelvance.Core.Notifications.Subsonic
 {
     public interface ISubsonicService
     {

@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Http;
+﻿using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Http
+namespace Shelvance.Core.Http
 {
     public class TorCacheHttpRequestInterceptor : IHttpRequestInterceptor
     {

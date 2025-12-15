@@ -3,15 +3,15 @@ using System.Linq;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ImportListTests
+namespace Shelvance.Core.Test.ImportListTests
 {
     public class ImportListSyncServiceFixture : CoreTest<ImportListSyncService>
     {

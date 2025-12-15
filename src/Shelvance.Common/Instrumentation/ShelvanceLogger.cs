@@ -4,19 +4,19 @@ using System.IO;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Sentry;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Sentry;
 
-namespace NzbDrone.Common.Instrumentation
+namespace Shelvance.Common.Instrumentation
 {
-    public static class NzbDroneLogger
+    public static class ShelvanceLogger
     {
         private const string FILE_LOG_LAYOUT = @"${date:format=yyyy-MM-dd HH\:mm\:ss.f}|${level}|${logger}|${message}${onexception:inner=${newline}${newline}[v${assembly-version}] ${exception:format=ToString}${newline}${exception:format=Data}${newline}}";
 
         private static bool _isConfigured;
 
-        static NzbDroneLogger()
+        static ShelvanceLogger()
         {
             LogManager.Configuration = new LoggingConfiguration();
         }
@@ -138,7 +138,7 @@ namespace NzbDrone.Common.Instrumentation
 
         private static void RegisterAppFile(IAppFolderInfo appFolderInfo, string name, string fileName, int maxArchiveFiles, LogLevel minLogLevel)
         {
-            var fileTarget = new NzbDroneFileTarget();
+            var fileTarget = new ShelvanceFileTarget();
 
             fileTarget.Name = name;
             fileTarget.FileName = Path.Combine(appFolderInfo.GetLogFolder(), fileName);
@@ -197,7 +197,7 @@ namespace NzbDrone.Common.Instrumentation
 
         public static Logger GetLogger(Type obj)
         {
-            return LogManager.GetLogger(obj.Name.Replace("NzbDrone.", ""));
+            return LogManager.GetLogger(obj.Name.Replace("Shelvance.", ""));
         }
 
         public static Logger GetLogger(object obj)

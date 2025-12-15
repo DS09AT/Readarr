@@ -1,6 +1,6 @@
-using NzbDrone.Core.ImportLists;
+using Shelvance.Core.ImportLists;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class FixFutureImportListStatusTimes : FixFutureProviderStatusTimes<ImportListStatus>, IHousekeepingTask
     {

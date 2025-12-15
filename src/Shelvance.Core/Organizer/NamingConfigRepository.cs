@@ -1,7 +1,7 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public interface INamingConfigRepository : IBasicRepository<NamingConfig>
     {

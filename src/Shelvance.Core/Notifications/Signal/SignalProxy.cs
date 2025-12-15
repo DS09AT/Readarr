@@ -3,11 +3,11 @@ using System.Net;
 using System.Text;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Notifications.Signal
+namespace Shelvance.Core.Notifications.Signal
 {
     public interface ISignalProxy
     {

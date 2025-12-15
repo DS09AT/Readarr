@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class JsonRpcResponse<T>
     {

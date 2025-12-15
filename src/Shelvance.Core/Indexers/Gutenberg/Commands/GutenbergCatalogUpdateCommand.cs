@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Indexers.Gutenberg.Commands
+namespace Shelvance.Core.Indexers.Gutenberg.Commands
 {
     public class GutenbergCatalogUpdateCommand : Command
     {

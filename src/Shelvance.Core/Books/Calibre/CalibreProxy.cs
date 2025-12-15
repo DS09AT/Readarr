@@ -10,18 +10,18 @@ using FluentValidation;
 using FluentValidation.Results;
 using Newtonsoft.Json;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
     public interface ICalibreProxy
     {
@@ -602,7 +602,7 @@ namespace NzbDrone.Core.Books.Calibre
         {
             var failures = new List<ValidationFailure> { TestCalibre(settings) };
             var validationResult = new ValidationResult(failures);
-            var result = new NzbDroneValidationResult(validationResult.Errors);
+            var result = new ShelvanceValidationResult(validationResult.Errors);
 
             if (!result.IsValid || result.HasWarnings)
             {
@@ -630,13 +630,13 @@ namespace NzbDrone.Core.Books.Calibre
                 _logger.Error(ex, "Unable to connect to Calibre");
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new ShelvanceValidationFailure("Host", "Unable to connect")
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
             }
 
             if (response.StatusCode == HttpStatusCode.NotFound)

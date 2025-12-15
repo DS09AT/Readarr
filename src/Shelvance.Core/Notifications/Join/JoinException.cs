@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Join
+namespace Shelvance.Core.Notifications.Join
 {
-    public class JoinException : NzbDroneException
+    public class JoinException : ShelvanceException
     {
         public JoinException(string message)
             : base(message)

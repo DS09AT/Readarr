@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     public interface IDirectDataMapper
     {

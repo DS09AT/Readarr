@@ -1,7 +1,7 @@
 using Dapper;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class TrimHttpCache : IHousekeepingTask
     {

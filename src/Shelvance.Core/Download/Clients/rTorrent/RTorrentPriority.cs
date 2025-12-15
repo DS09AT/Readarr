@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Download.Clients.RTorrent
+namespace Shelvance.Core.Download.Clients.RTorrent
 {
     public enum RTorrentPriority
     {

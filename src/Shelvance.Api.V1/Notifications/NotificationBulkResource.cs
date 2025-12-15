@@ -1,4 +1,4 @@
-using NzbDrone.Core.Notifications;
+using Shelvance.Core.Notifications;
 
 namespace Shelvance.Api.V1.Notifications
 {

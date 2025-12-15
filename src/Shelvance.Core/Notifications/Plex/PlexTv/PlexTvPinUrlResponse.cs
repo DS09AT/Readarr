@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Notifications.Plex.PlexTv
+namespace Shelvance.Core.Notifications.Plex.PlexTv
 {
     public class PlexTvPinUrlResponse
     {

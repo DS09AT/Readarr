@@ -6,16 +6,16 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Sabnzbd;
-using NzbDrone.Core.Download.Clients.Sabnzbd.Responses;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Sabnzbd;
+using Shelvance.Core.Download.Clients.Sabnzbd.Responses;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.SabnzbdTests
 {
     [TestFixture]
     public class SabnzbdFixture : DownloadClientFixtureBase<Sabnzbd>
@@ -570,7 +570,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
                   .Setup(v => v.GetVersion(It.IsAny<SabnzbdSettings>()))
                   .Returns("develop");
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeTrue();
             result.HasWarnings.Should().BeTrue();
@@ -582,7 +582,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = false;
             _config.Misc.tv_categories = null;
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeTrue();
         }
@@ -593,7 +593,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = true;
             _config.Misc.tv_categories = null;
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeFalse();
         }
@@ -604,7 +604,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = true;
             _config.Misc.tv_categories = new string[0];
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeFalse();
         }
@@ -615,7 +615,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = true;
             _config.Misc.tv_categories = new[] { "tv-custom" };
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeTrue();
         }
@@ -626,7 +626,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = true;
             _config.Misc.tv_categories = new[] { "tv" };
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeFalse();
         }
@@ -639,7 +639,7 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.SabnzbdTests
             _config.Misc.enable_tv_sorting = true;
             _config.Misc.tv_categories = new[] { "Default" };
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
 
             result.IsValid.Should().BeFalse();
         }

@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Books;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public class ImportListDefinition : ProviderDefinition
     {

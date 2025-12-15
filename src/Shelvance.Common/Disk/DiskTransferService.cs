@@ -4,10 +4,10 @@ using System.IO.Abstractions;
 using System.Linq;
 using System.Threading;
 using NLog;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public interface IDiskTransferService
     {

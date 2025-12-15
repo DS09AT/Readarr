@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Common.Composition
+namespace Shelvance.Common.Composition
 {
     public class KnownTypes
     {

@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public static class GutenbergConstants
     {

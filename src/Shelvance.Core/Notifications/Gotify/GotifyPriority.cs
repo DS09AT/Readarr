@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Gotify
+namespace Shelvance.Core.Notifications.Gotify
 {
     public enum GotifyPriority
     {

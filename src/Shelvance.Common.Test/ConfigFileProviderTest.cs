@@ -3,15 +3,15 @@ using FluentAssertions;
 using Microsoft.Extensions.Options;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Options;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Options;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Configuration;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     [TestFixture]
 

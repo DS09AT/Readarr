@@ -5,15 +5,15 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Npgsql;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MusicTests.AuthorRepositoryTests
+namespace Shelvance.Core.Test.MusicTests.AuthorRepositoryTests
 {
     [TestFixture]
 

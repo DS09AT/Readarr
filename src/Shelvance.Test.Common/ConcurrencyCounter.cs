@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public class ConcurrencyCounter
     {

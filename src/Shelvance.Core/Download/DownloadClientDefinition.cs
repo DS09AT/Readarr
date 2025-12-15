@@ -1,7 +1,7 @@
-﻿using NzbDrone.Core.Indexers;
-using NzbDrone.Core.ThingiProvider;
+﻿using Shelvance.Core.Indexers;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadClientDefinition : ProviderDefinition
     {

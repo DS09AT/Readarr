@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles.BookImport
+namespace Shelvance.Core.MediaFiles.BookImport
 {
     public interface IMakeImportDecision
     {

@@ -1,6 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Notifications;
+using Shelvance.Core.Notifications;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Notifications

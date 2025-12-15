@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MetadataSource;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Books
@@ -26,7 +26,7 @@ namespace Shelvance.Api.V1.Books
             return MapToResource(searchResults).ToList();
         }
 
-        private IEnumerable<BookResource> MapToResource(IEnumerable<NzbDrone.Core.Books.Book> books)
+        private IEnumerable<BookResource> MapToResource(IEnumerable<Shelvance.Core.Books.Book> books)
         {
             foreach (var currentBook in books)
             {

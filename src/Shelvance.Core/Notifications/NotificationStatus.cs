@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class NotificationStatus : ProviderStatusBase
     {

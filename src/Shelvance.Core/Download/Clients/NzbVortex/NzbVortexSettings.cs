@@ -1,10 +1,10 @@
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.NzbVortex
+namespace Shelvance.Core.Download.Clients.NzbVortex
 {
     public class NzbVortexSettingsValidator : AbstractValidator<NzbVortexSettings>
     {
@@ -57,9 +57,9 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
         [FieldDefinition(6, Label = "Older Priority", Type = FieldType.Select, SelectOptions = typeof(NzbVortexPriority), HelpText = "Priority to use when grabbing books released over 14 days ago")]
         public int OlderTvPriority { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.CustomFormats;
+using Shelvance.Core.CustomFormats;
 using Shelvance.Http.ClientSchema;
 using Shelvance.Http.REST;
 

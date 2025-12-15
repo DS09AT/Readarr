@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation.Paths;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation.Paths;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

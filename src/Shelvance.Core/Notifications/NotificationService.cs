@@ -2,19 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.HealthCheck;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Update.History.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Download;
+using Shelvance.Core.HealthCheck;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Update.History.Events;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class NotificationService
         : IHandle<BookGrabbedEvent>,

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public static class FindDriveType
     {

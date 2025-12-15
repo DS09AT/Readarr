@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
-using NzbDrone.Core.CustomFormats;
+using Shelvance.Core.CustomFormats;
 using Shelvance.Http.ClientSchema;
 using Shelvance.Http.REST;
 

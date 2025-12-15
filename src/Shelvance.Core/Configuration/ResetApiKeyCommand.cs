@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public class ResetApiKeyCommand : Command
     {

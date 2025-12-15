@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation.Proxies
+namespace Shelvance.Core.Download.Clients.DownloadStation.Proxies
 {
     public interface IDownloadStationInfoProxy : IDiskStationProxy
     {

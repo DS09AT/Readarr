@@ -4,22 +4,22 @@ using System.IO;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Model;
-using NzbDrone.Common.Processes;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Update;
-using NzbDrone.Core.Update.Commands;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Model;
+using Shelvance.Common.Processes;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Update;
+using Shelvance.Core.Update.Commands;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
 
-namespace NzbDrone.Core.Test.UpdateTests
+namespace Shelvance.Core.Test.UpdateTests
 {
     [TestFixture]
     public class UpdateServiceFixture : CoreTest<InstallUpdateService>
@@ -280,8 +280,8 @@ namespace NzbDrone.Core.Test.UpdateTests
         [Test]
         public void should_log_error_when_app_data_is_same_as_startup_folder()
         {
-            Mocker.GetMock<IAppFolderInfo>().SetupGet(c => c.StartUpFolder).Returns(@"C:\NzbDrone".AsOsAgnostic);
-            Mocker.GetMock<IAppFolderInfo>().SetupGet(c => c.AppDataFolder).Returns(@"C:\NzbDrone".AsOsAgnostic);
+            Mocker.GetMock<IAppFolderInfo>().SetupGet(c => c.StartUpFolder).Returns(@"C:\Shelvance".AsOsAgnostic);
+            Mocker.GetMock<IAppFolderInfo>().SetupGet(c => c.AppDataFolder).Returns(@"C:\Shelvance".AsOsAgnostic);
 
             Assert.Throws<CommandFailedException>(() => Subject.Execute(new ApplicationUpdateCommand()));
             ExceptionVerification.ExpectedErrors(1);

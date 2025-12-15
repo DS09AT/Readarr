@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Instrumentation.Sentry
+namespace Shelvance.Common.Instrumentation.Sentry
 {
     public class SentryDebounce
     {

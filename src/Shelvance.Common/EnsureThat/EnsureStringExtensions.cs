@@ -1,11 +1,11 @@
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnsureThat.Resources;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnsureThat.Resources;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     [DebuggerStepThrough]
     public static class EnsureStringExtensions

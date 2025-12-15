@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
 namespace Shelvance.Http
 {

@@ -2,15 +2,15 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.TorrentRss;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.TorrentRss;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests.Search
+namespace Shelvance.Core.Test.DecisionEngineTests.Search
 {
     [TestFixture]
     public class TorrentSeedingSpecificationFixture : TestBase<TorrentSeedingSpecification>

@@ -1,10 +1,10 @@
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Extras.Others
+namespace Shelvance.Core.Extras.Others
 {
     public interface IOtherExtraFileService : IExtraFileService<OtherExtraFile>
     {

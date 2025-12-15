@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.AuthorStats;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.SignalR;
+using Shelvance.Core.AuthorStats;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.MediaCover;
+using Shelvance.SignalR;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http;
 using Shelvance.Http.Extensions;

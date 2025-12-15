@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
 
-namespace NzbDrone.Core.MediaFiles.Events
+namespace Shelvance.Core.MediaFiles.Events
 {
     public class BookImportedEvent : IEvent
     {

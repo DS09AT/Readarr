@@ -1,13 +1,13 @@
 using System;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.History;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.History;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IDownloadSeedConfigProvider
     {

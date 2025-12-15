@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
-    public class InvalidNzbException : NzbDroneException
+    public class InvalidNzbException : ShelvanceException
     {
         public InvalidNzbException(string message, params object[] args)
             : base(message, args)

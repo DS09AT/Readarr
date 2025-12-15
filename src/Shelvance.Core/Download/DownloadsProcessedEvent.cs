@@ -1,6 +1,6 @@
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadsProcessedEvent : IEvent
     {

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Notifications.Apprise
+namespace Shelvance.Core.Notifications.Apprise
 {
     public class Apprise : NotificationBase<AppriseSettings>
     {

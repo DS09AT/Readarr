@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IUpgradeMediaFiles
     {

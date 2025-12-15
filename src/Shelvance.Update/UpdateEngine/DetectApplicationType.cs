@@ -1,8 +1,8 @@
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
 
-namespace NzbDrone.Update.UpdateEngine
+namespace Shelvance.Update.UpdateEngine
 {
     public interface IDetectApplicationType
     {

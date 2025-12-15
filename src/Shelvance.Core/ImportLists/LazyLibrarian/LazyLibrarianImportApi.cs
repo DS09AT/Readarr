@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
+namespace Shelvance.Core.ImportLists.LazyLibrarianImport
 {
     public class LazyLibrarianBook
     {

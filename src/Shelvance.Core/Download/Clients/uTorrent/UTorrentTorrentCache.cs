@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Download.Clients.UTorrent
+namespace Shelvance.Core.Download.Clients.UTorrent
 {
     public class UTorrentTorrentCache
     {

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Http;
+using Shelvance.Common.Http;
+using Shelvance.Core.Http;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     public interface IGoodreadsSearchProxy
     {

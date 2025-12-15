@@ -4,12 +4,12 @@ using System.Linq;
 using System.Reflection;
 using System.Text.Json;
 using DryIoc;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Reflection;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Localization;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Reflection;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Localization;
 
 namespace Shelvance.Http.ClientSchema
 {

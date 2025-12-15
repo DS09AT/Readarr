@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace NzbDrone.Core.Notifications.Apprise
+namespace Shelvance.Core.Notifications.Apprise
 {
     public enum AppriseNotificationType
     {

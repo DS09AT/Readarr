@@ -7,12 +7,12 @@ using FizzWare.NBuilder;
 using FizzWare.NBuilder.PropertyNaming;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.Test.MediaFiles.BookImport.Identification
 {
     // we need to use random strings to test the va (so we don't just get author1, author2 etc which are too similar)
     // but the standard random value namer would give paths that are too long on windows

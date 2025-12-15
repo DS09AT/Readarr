@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IBookRepository : IBasicRepository<Book>
     {

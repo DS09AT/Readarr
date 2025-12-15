@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Manual
+namespace Shelvance.Core.MediaFiles.BookImport.Manual
 {
     public class ManualImportCommand : Command
     {

@@ -3,10 +3,10 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Ntfy
+namespace Shelvance.Core.Notifications.Ntfy
 {
     public interface INtfyProxy
     {

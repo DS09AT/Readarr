@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Model;
-using NzbDrone.Common.Processes;
-using NzbDrone.Host;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Model;
+using Shelvance.Common.Processes;
+using Shelvance.Host;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.App.Test
+namespace Shelvance.App.Test
 {
     [TestFixture]
-    public class NzbDroneProcessServiceFixture : TestBase<SingleInstancePolicy>
+    public class ShelvanceProcessServiceFixture : TestBase<SingleInstancePolicy>
     {
         private const int CURRENT_PROCESS_ID = 5;
 
@@ -32,7 +32,7 @@ namespace NzbDrone.App.Test
         public void should_continue_if_only_instance()
         {
             Mocker.GetMock<IProcessProvider>()
-                  .Setup(c => c.FindProcessByName(It.Is<string>(f => f.Contains("NzbDrone"))))
+                  .Setup(c => c.FindProcessByName(It.Is<string>(f => f.Contains("Shelvance"))))
                   .Returns(new List<ProcessInfo>
                            {
                                new ProcessInfo { Id = CURRENT_PROCESS_ID }

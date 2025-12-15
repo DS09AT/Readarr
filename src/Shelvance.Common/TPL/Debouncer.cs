@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Common.TPL
+namespace Shelvance.Common.TPL
 {
     public class Debouncer
     {

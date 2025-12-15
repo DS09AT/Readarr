@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.MediaFiles.Events;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Localization;
+using Shelvance.Core.MediaFiles.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(AuthorDeletedEvent))]
     [CheckOn(typeof(AuthorMovedEvent))]

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net;
-using NzbDrone.Core.Exceptions;
+using Shelvance.Core.Exceptions;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
-    public class GoodreadsException : NzbDroneClientException
+    public class GoodreadsException : ShelvanceClientException
     {
         public GoodreadsException(string message)
             : base(HttpStatusCode.ServiceUnavailable, message)

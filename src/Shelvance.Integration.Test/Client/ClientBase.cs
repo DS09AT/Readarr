@@ -3,12 +3,12 @@ using System.Linq;
 using System.Net;
 using FluentAssertions;
 using NLog;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Serializer;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class ClientBase
     {

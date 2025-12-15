@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.Hadouken.Models
+﻿namespace Shelvance.Core.Download.Clients.Hadouken.Models
 {
     public class HadoukenTorrentResponse
     {

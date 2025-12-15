@@ -4,25 +4,25 @@ using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Manual
+namespace Shelvance.Core.MediaFiles.BookImport.Manual
 {
     public interface IManualImportService
     {

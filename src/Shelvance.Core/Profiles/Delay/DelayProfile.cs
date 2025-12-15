@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Indexers;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Indexers;
 
-namespace NzbDrone.Core.Profiles.Delay
+namespace Shelvance.Core.Profiles.Delay
 {
     public class DelayProfile : ModelBase
     {

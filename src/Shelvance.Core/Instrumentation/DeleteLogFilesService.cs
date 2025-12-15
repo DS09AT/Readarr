@@ -1,11 +1,11 @@
 ﻿using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Instrumentation.Commands;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Instrumentation.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Instrumentation
+namespace Shelvance.Core.Instrumentation
 {
     public interface IDeleteLogFilesService
     {

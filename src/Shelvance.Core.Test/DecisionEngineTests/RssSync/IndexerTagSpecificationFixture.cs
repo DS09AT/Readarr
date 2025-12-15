@@ -3,15 +3,15 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine.Specifications.RssSync;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine.Specifications.RssSync;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests.RssSync
+namespace Shelvance.Core.Test.DecisionEngineTests.RssSync
 {
     [TestFixture]
     public class IndexerTagSpecificationFixture : CoreTest<IndexerTagSpecification>

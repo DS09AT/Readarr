@@ -15,25 +15,25 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using NLog;
 using Npgsql;
-using NzbDrone.Common.Composition.Extensions;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Options;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore.Extensions;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
-using PostgresOptions = NzbDrone.Core.Datastore.PostgresOptions;
+using Shelvance.Common.Composition.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Options;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore.Extensions;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
+using PostgresOptions = Shelvance.Core.Datastore.PostgresOptions;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public static class Bootstrap
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(Bootstrap));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(Bootstrap));
 
         public static readonly List<string> ASSEMBLIES = new List<string>
         {
@@ -88,11 +88,11 @@ namespace NzbDrone.Host
                     default:
                     {
                         new HostBuilder()
-                            .UseServiceProviderFactory(new DryIocServiceProviderFactory(new Container(rules => rules.WithNzbDroneRules())))
+                            .UseServiceProviderFactory(new DryIocServiceProviderFactory(new Container(rules => rules.WithShelvanceRules())))
                             .ConfigureContainer<IContainer>(c =>
                             {
                                 c.AutoAddServices(Bootstrap.ASSEMBLIES)
-                                    .AddNzbDroneLogger()
+                                    .AddShelvanceLogger()
                                     .AddDatabase()
                                     .AddStartupContext(startupContext)
                                     .Resolve<UtilityModeRouter>()
@@ -153,11 +153,11 @@ namespace NzbDrone.Host
 
             return new HostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseServiceProviderFactory(new DryIocServiceProviderFactory(new Container(rules => rules.WithNzbDroneRules())))
+                .UseServiceProviderFactory(new DryIocServiceProviderFactory(new Container(rules => rules.WithShelvanceRules())))
                 .ConfigureContainer<IContainer>(c =>
                 {
                     c.AutoAddServices(Bootstrap.ASSEMBLIES)
-                        .AddNzbDroneLogger()
+                        .AddShelvanceLogger()
                         .AddDatabase()
                         .AddStartupContext(context)
                         .Resolve<IEventAggregator>().PublishEvent(new ApplicationStartingEvent());

@@ -1,19 +1,19 @@
 using System;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IDeleteMediaFiles
     {
@@ -66,13 +66,13 @@ namespace NzbDrone.Core.MediaFiles
             if (!_diskProvider.FolderExists(rootFolder))
             {
                 _logger.Warn("Author's root folder ({0}) doesn't exist.", rootFolder);
-                throw new NzbDroneClientException(HttpStatusCode.Conflict, "Author's root folder ({0}) doesn't exist.", rootFolder);
+                throw new ShelvanceClientException(HttpStatusCode.Conflict, "Author's root folder ({0}) doesn't exist.", rootFolder);
             }
 
             if (_diskProvider.GetDirectories(rootFolder).Empty())
             {
                 _logger.Warn("Author's root folder ({0}) is empty.", rootFolder);
-                throw new NzbDroneClientException(HttpStatusCode.Conflict, "Author's root folder ({0}) is empty.", rootFolder);
+                throw new ShelvanceClientException(HttpStatusCode.Conflict, "Author's root folder ({0}) is empty.", rootFolder);
             }
 
             if (_diskProvider.FolderExists(author.Path))
@@ -122,7 +122,7 @@ namespace NzbDrone.Core.MediaFiles
             catch (Exception e)
             {
                 _logger.Error(e, "Unable to delete book file");
-                throw new NzbDroneClientException(HttpStatusCode.InternalServerError, "Unable to delete book file");
+                throw new ShelvanceClientException(HttpStatusCode.InternalServerError, "Unable to delete book file");
             }
         }
 

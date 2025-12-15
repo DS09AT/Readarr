@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
-    public class CommandNotFoundException : NzbDroneException
+    public class CommandNotFoundException : ShelvanceException
     {
         public CommandNotFoundException(string contract)
             : base("Couldn't find command " + contract)

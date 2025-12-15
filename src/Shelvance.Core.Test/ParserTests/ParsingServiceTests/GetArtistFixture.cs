@@ -1,10 +1,10 @@
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ParserTests.ParsingServiceTests
+namespace Shelvance.Core.Test.ParserTests.ParsingServiceTests
 {
     [TestFixture]
     public class GetAuthorFixture : CoreTest<ParsingService>

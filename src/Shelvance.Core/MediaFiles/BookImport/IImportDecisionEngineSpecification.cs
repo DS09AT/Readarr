@@ -1,7 +1,7 @@
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
 
-namespace NzbDrone.Core.MediaFiles.BookImport
+namespace Shelvance.Core.MediaFiles.BookImport
 {
     public interface IImportDecisionEngineSpecification<T>
     {

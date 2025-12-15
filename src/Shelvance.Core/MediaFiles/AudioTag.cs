@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 using TagLib;
 using TagLib.Id3v2;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public class AudioTag
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(AudioTag));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(AudioTag));
 
         public string Title { get; set; }
         public string[] Performers { get; set; }
@@ -522,7 +522,7 @@ namespace NzbDrone.Core.MediaFiles
             {
                 return new ParsedTrackInfo
                 {
-                    Quality = tag.Quality ?? new QualityModel { Quality = NzbDrone.Core.Qualities.Quality.Unknown },
+                    Quality = tag.Quality ?? new QualityModel { Quality = Shelvance.Core.Qualities.Quality.Unknown },
                     MediaInfo = tag.MediaInfo ?? new MediaInfoModel()
                 };
             }

@@ -7,18 +7,18 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles
+namespace Shelvance.Core.Test.MediaFiles
 {
     [TestFixture]
     public class DownloadedTracksImportServiceFixture : FileSystemTest<DownloadedBooksImportService>

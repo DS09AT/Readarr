@@ -5,19 +5,19 @@ using FluentAssertions;
 using Moq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Test.IndexerTests;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Test.IndexerTests;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests
 {
     public abstract class DownloadClientFixtureBase<TSubject> : CoreTest<TSubject>
         where TSubject : class, IDownloadClient

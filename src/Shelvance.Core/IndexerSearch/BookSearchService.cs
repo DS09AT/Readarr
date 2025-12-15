@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Queue;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Queue;
 
-namespace NzbDrone.Core.IndexerSearch
+namespace Shelvance.Core.IndexerSearch
 {
     internal class BookSearchService : IExecute<BookSearchCommand>,
                                IExecute<MissingBookSearchCommand>,

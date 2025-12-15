@@ -1,7 +1,7 @@
 using FluentValidation.Validators;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Core.Profiles.Qualities;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public class QualityProfileExistsValidator : PropertyValidator
     {

@@ -1,9 +1,9 @@
 using System;
 using System.Net;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Http.Proxy
+namespace Shelvance.Common.Http.Proxy
 {
     public interface ICreateManagedWebProxy
     {

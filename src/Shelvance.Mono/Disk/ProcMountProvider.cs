@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public interface IProcMountProvider
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
     public class CalibreBook
     {

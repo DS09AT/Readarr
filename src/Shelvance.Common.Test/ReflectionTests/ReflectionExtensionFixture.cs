@@ -1,11 +1,11 @@
 using System.Reflection;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Reflection;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Reflection;
+using Shelvance.Core.Datastore;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.ReflectionTests
+namespace Shelvance.Common.Test.ReflectionTests
 {
     public class ReflectionExtensionFixture : TestBase
     {

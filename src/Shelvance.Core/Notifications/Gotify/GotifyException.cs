@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Gotify
+namespace Shelvance.Core.Notifications.Gotify
 {
-    public class GotifyException : NzbDroneException
+    public class GotifyException : ShelvanceException
     {
         public GotifyException(string message)
             : base(message)

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.Languages
+namespace Shelvance.Core.Languages
 {
     public class RealLanguageFieldConverter
     {

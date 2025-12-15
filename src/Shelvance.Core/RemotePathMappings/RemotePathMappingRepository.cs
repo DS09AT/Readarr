@@ -1,7 +1,7 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.RemotePathMappings
+namespace Shelvance.Core.RemotePathMappings
 {
     public interface IRemotePathMappingRepository : IBasicRepository<RemotePathMapping>
     {

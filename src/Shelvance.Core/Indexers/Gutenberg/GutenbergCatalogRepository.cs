@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Dapper;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public interface IGutenbergCatalogRepository : IBasicRepository<GutenbergBook>
     {

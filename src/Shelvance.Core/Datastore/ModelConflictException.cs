@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
-    public class ModelConflictException : NzbDroneException
+    public class ModelConflictException : ShelvanceException
     {
         public ModelConflictException(Type modelType, int modelId)
             : base("{0} with ID {1} cannot be modified", modelType.Name, modelId)

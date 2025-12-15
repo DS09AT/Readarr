@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using DryIoc;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Composition.Extensions
+namespace Shelvance.Common.Composition.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static Rules WithNzbDroneRules(this Rules rules)
+        public static Rules WithShelvanceRules(this Rules rules)
         {
             return rules.WithMicrosoftDependencyInjectionRules()
                 .WithAutoConcreteTypeResolution()

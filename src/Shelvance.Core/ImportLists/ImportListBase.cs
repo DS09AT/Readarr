@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public abstract class ImportListBase<TSettings> : IImportList
         where TSettings : IImportListSettings, new()

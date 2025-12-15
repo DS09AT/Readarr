@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Tracks metadata provider health status and failures

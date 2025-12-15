@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Profiles.Releases;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Profiles.Releases;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.Profiles.Metadata
+namespace Shelvance.Core.Profiles.Metadata
 {
     public interface IMetadataProfileService
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Profiles.Metadata
+namespace Shelvance.Core.Profiles.Metadata
 {
     public class MetadataProfile : ModelBase
     {

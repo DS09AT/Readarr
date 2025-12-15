@@ -1,8 +1,8 @@
 using System;
 
-namespace NzbDrone.Common.Exceptions
+namespace Shelvance.Common.Exceptions
 {
-    public class ServiceProviderException : NzbDroneException
+    public class ServiceProviderException : ShelvanceException
     {
         public ServiceProviderException(string message, params object[] args)
             : base(string.Format(message, args))

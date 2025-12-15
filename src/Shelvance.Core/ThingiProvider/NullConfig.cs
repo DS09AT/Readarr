@@ -1,14 +1,14 @@
-﻿using NzbDrone.Core.Validation;
+﻿using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
     public class NullConfig : IProviderConfig
     {
         public static readonly NullConfig Instance = new NullConfig();
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult();
+            return new ShelvanceValidationResult();
         }
     }
 }

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.History
+namespace Shelvance.Core.History
 {
     public class EntityHistory : ModelBase
     {

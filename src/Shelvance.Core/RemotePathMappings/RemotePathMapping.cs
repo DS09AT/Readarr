@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Datastore;
+﻿using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.RemotePathMappings
+namespace Shelvance.Core.RemotePathMappings
 {
     public class RemotePathMapping : ModelBase
     {

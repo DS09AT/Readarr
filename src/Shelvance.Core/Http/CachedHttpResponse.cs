@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Http
+namespace Shelvance.Core.Http
 {
     public class CachedHttpResponse : ModelBase
     {

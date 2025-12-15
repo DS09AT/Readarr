@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation.Sentry;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation.Sentry;
 
-namespace NzbDrone.Common.Instrumentation
+namespace Shelvance.Common.Instrumentation
 {
     public class InitializeLogger
     {

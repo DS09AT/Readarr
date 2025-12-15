@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
-    public class GoodreadsException : NzbDroneException
+    public class GoodreadsException : ShelvanceException
     {
         public GoodreadsException(string message)
             : base(message)

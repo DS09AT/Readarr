@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Languages
+namespace Shelvance.Core.Languages
 {
     public class Language : IEmbeddedDocument, IEquatable<Language>
     {

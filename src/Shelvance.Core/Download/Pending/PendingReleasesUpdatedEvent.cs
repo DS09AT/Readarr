@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Messaging;
+﻿using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Download.Pending
+namespace Shelvance.Core.Download.Pending
 {
     public class PendingReleasesUpdatedEvent : IEvent
     {

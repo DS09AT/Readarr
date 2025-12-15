@@ -1,7 +1,7 @@
-﻿using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Download;
+﻿using Shelvance.Common.Messaging;
+using Shelvance.Core.Download;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class RssSyncCompleteEvent : IEvent
     {

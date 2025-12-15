@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.HealthCheck
+namespace Shelvance.Core.HealthCheck
 {
     public interface IServerSideNotificationService
     {

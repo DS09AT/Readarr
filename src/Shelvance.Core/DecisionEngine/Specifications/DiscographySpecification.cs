@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public class DiscographySpecification : IDecisionEngineSpecification
     {

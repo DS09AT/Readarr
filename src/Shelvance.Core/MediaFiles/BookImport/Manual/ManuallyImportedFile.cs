@@ -1,6 +1,6 @@
-using NzbDrone.Core.Download.TrackedDownloads;
+using Shelvance.Core.Download.TrackedDownloads;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Manual
+namespace Shelvance.Core.MediaFiles.BookImport.Manual
 {
     public class ManuallyImportedFile
     {

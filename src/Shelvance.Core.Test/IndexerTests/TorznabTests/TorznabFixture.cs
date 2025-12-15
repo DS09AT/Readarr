@@ -6,15 +6,15 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Newznab;
-using NzbDrone.Core.Indexers.Torznab;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Newznab;
+using Shelvance.Core.Indexers.Torznab;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Test.IndexerTests.TorznabTests
+namespace Shelvance.Core.Test.IndexerTests.TorznabTests
 {
     [TestFixture]
     public class TorznabFixture : CoreTest<Torznab>
@@ -144,7 +144,7 @@ namespace NzbDrone.Core.Test.IndexerTests.TorznabTests
                 .Setup(o => o.ExecuteAsync(It.Is<HttpRequest>(v => v.Method == HttpMethod.Get)))
                 .Returns<HttpRequest>(r => Task.FromResult(new HttpResponse(r, new HttpHeader(), recentFeed)));
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
             result.IsValid.Should().BeTrue();
             result.HasWarnings.Should().BeTrue();
         }
@@ -161,7 +161,7 @@ namespace NzbDrone.Core.Test.IndexerTests.TorznabTests
 
             (Subject.Definition.Settings as TorznabSettings).ApiPath = apiPath;
 
-            var result = new NzbDroneValidationResult(Subject.Test());
+            var result = new ShelvanceValidationResult(Subject.Test());
             result.IsValid.Should().BeTrue();
             result.HasWarnings.Should().BeTrue();
         }

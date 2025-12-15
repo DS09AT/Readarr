@@ -3,7 +3,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
-using NzbDrone.Core.MediaCover;
+using Shelvance.Core.MediaCover;
 
 namespace Shelvance.Http.Frontend.Mappers
 {

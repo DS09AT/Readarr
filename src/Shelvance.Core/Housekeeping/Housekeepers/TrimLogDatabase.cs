@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Instrumentation;
+﻿using Shelvance.Core.Instrumentation;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class TrimLogDatabase : IHousekeepingTask
     {

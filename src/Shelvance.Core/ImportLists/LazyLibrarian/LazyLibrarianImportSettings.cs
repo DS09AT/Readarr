@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
+namespace Shelvance.Core.ImportLists.LazyLibrarianImport
 {
     public class LazyLibrarianImportSettingsValidator : AbstractValidator<LazyLibrarianImportSettings>
     {
@@ -28,9 +28,9 @@ namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
         [FieldDefinition(1, Label = "API Key")]
         public string ApiKey { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

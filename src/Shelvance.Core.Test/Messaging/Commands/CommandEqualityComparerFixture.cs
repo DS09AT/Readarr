@@ -5,16 +5,16 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.MediaFiles.BookImport.Manual;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Update.Commands;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.MediaFiles.BookImport.Manual;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Update.Commands;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Messaging.Commands
+namespace Shelvance.Core.Test.Messaging.Commands
 {
     [TestFixture]
     public class CommandEqualityComparerFixture

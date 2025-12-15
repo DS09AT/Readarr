@@ -1,4 +1,4 @@
-using NzbDrone.Core.AuthorStats;
+using Shelvance.Core.AuthorStats;
 
 namespace Shelvance.Api.V1.Author
 {

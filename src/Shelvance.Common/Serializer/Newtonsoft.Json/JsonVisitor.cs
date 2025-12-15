@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Linq;
 
-namespace NzbDrone.Common.Serializer
+namespace Shelvance.Common.Serializer
 {
     public class JsonVisitor
     {

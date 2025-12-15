@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.FileList;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.FileList;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests.FileListTests
+namespace Shelvance.Core.Test.IndexerTests.FileListTests
 {
     [TestFixture]
     public class FileListFixture : CoreTest<FileList>

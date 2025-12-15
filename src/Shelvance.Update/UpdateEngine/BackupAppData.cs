@@ -1,10 +1,10 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Update.UpdateEngine
+namespace Shelvance.Update.UpdateEngine
 {
     public interface IBackupAppData
     {

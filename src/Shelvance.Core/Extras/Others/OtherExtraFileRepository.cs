@@ -1,8 +1,8 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.Messaging.Events;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Extras.Others
+namespace Shelvance.Core.Extras.Others
 {
     public interface IOtherExtraFileRepository : IExtraFileRepository<OtherExtraFile>
     {

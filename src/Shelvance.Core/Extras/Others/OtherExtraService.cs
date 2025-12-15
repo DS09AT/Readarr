@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Extras.Others
+namespace Shelvance.Core.Extras.Others
 {
     public class OtherExtraService : ExtraFileManager<OtherExtraFile>
     {

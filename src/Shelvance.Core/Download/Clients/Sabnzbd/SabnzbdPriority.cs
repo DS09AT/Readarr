@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.Sabnzbd
+﻿namespace Shelvance.Core.Download.Clients.Sabnzbd
 {
     public enum SabnzbdPriority
     {

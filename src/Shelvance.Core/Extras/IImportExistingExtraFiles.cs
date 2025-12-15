@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Files;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Files;
 
-namespace NzbDrone.Core.Extras
+namespace Shelvance.Core.Extras
 {
     public interface IImportExistingExtraFiles
     {

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IMediaFileService
     {

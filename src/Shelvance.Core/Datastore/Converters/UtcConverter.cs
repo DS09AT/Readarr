@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using Dapper;
 
-namespace NzbDrone.Core.Datastore.Converters
+namespace Shelvance.Core.Datastore.Converters
 {
     public class DapperUtcConverter : SqlMapper.TypeHandler<DateTime>
     {

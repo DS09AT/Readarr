@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
     public class GoodreadsSeriesImportListValidator : AbstractValidator<GoodreadsSeriesImportListSettings>
     {
@@ -26,9 +26,9 @@ namespace NzbDrone.Core.ImportLists.Goodreads
         [FieldDefinition(0, Label = "Series ID", HelpText = "Goodreads series ID")]
         public int SeriesId { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

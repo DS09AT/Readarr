@@ -7,11 +7,11 @@ using System.Linq;
 using System.Reflection;
 using DryIoc;
 using Moq;
-using NzbDrone.Common.Composition;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.Composition;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Test.Common.AutoMoq
+namespace Shelvance.Test.Common.AutoMoq
 {
     [DebuggerStepThrough]
     public class AutoMoqer

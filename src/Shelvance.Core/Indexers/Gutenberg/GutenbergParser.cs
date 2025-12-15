@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Languages;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public class GutenbergParser : IParseIndexerResponse
     {

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Update;
-using NzbDrone.Core.Update.History;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Update;
+using Shelvance.Core.Update.History;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Update

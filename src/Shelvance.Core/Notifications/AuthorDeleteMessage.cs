@@ -1,6 +1,6 @@
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class AuthorDeleteMessage
     {

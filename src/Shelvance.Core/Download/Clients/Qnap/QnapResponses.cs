@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Download.Clients.Qnap
+namespace Shelvance.Core.Download.Clients.Qnap
 {
     public class QnapLoginResponse
     {

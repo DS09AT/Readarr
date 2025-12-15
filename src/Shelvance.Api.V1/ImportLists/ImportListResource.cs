@@ -1,6 +1,6 @@
 using System;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ImportLists;
+using Shelvance.Core.Books;
+using Shelvance.Core.ImportLists;
 
 namespace Shelvance.Api.V1.ImportLists
 {

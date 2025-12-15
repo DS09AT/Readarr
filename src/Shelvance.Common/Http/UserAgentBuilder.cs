@@ -1,6 +1,6 @@
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public interface IUserAgentBuilder
     {

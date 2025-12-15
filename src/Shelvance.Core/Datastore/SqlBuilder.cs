@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Dapper;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public class SqlBuilder
     {

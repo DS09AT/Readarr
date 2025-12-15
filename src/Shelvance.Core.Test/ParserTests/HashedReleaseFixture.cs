@@ -1,10 +1,10 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.ParserTests
+namespace Shelvance.Core.Test.ParserTests
 {
     [TestFixture]
     public class HashedReleaseFixture : CoreTest

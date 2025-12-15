@@ -8,16 +8,16 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.OAuth;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.OAuth;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
     public abstract class GoodreadsImportListBase<TSettings> : ImportListBase<TSettings>
         where TSettings : GoodreadsSettingsBase<TSettings>, new()

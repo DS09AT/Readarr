@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Manual
+namespace Shelvance.Core.MediaFiles.BookImport.Manual
 {
     public class ManualImportFile : IEquatable<ManualImportFile>
     {

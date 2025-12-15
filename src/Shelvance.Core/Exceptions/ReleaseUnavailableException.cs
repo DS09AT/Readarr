@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
     public class ReleaseUnavailableException : ReleaseDownloadException
     {

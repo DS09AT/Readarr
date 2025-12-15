@@ -2,11 +2,11 @@ using System.IO;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Mono.EnvironmentInfo.VersionAdapters;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Mono.EnvironmentInfo.VersionAdapters;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Mono.Test.EnvironmentInfo.VersionAdapters
+namespace Shelvance.Mono.Test.EnvironmentInfo.VersionAdapters
 {
     [TestFixture]
     public class MacOsVersionAdapterFixture : TestBase<MacOsVersionAdapter>

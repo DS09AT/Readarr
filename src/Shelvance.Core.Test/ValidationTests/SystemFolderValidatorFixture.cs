@@ -3,13 +3,13 @@ using System.IO;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Validation.Paths;
-using NzbDrone.Test.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Books;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Validation.Paths;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.ValidationTests
+namespace Shelvance.Core.Test.ValidationTests
 {
     public class SystemFolderValidatorFixture : CoreTest<SystemFolderValidator>
     {

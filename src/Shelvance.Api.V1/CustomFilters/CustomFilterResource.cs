@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.CustomFilters;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.CustomFilters;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.CustomFilters

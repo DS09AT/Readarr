@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Books;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Interface for pluggable metadata providers (Open Library, Google Books, ISBNdb, etc.)

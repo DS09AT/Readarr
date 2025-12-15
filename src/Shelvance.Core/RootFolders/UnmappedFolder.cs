@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.RootFolders
+﻿namespace Shelvance.Core.RootFolders
 {
     public class UnmappedFolder
     {

@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Disk;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Aggregation
+namespace Shelvance.Core.MediaFiles.BookImport.Aggregation
 {
     public interface IAugmentingService
     {

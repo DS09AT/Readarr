@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Profiles.Delay;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Profiles.Delay;
 
-namespace NzbDrone.Core.DecisionEngine
+namespace Shelvance.Core.DecisionEngine
 {
     public interface IPrioritizeDownloadDecision
     {

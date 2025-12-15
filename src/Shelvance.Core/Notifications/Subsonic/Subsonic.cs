@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Notifications.Subsonic
+namespace Shelvance.Core.Notifications.Subsonic
 {
     public class Subsonic : NotificationBase<SubsonicSettings>
     {

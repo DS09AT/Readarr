@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.MediaCover
+namespace Shelvance.Core.MediaCover
 {
     public interface IMediaCoverProxy
     {

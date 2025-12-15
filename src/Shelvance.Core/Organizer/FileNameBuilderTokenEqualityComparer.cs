@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public class FileNameBuilderTokenEqualityComparer : IEqualityComparer<string>
     {

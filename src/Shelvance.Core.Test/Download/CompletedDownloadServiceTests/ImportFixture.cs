@@ -3,21 +3,21 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.History;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.History;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.CompletedDownloadServiceTests
+namespace Shelvance.Core.Test.Download.CompletedDownloadServiceTests
 {
     [TestFixture]
     public class ImportFixture : CoreTest<CompletedDownloadService>

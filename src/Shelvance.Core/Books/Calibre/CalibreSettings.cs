@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
     public class CalibreSettingsValidator : AbstractValidator<CalibreSettings>
     {
@@ -42,9 +42,9 @@ namespace NzbDrone.Core.Books.Calibre
         public int OutputProfile { get; set; }
         public bool UseSsl { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

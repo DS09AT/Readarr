@@ -1,20 +1,20 @@
 using System;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Http.Dispatchers;
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Http;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Security;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Common.Http.Dispatchers;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Http;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Security;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     public abstract class CoreTest : TestBase
     {

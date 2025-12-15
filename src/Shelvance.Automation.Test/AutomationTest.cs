@@ -6,20 +6,20 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 using NUnit.Framework;
-using NzbDrone.Automation.Test.PageModel;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Test.Common;
+using Shelvance.Automation.Test.PageModel;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Test.Common;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 
-namespace NzbDrone.Automation.Test
+namespace Shelvance.Automation.Test
 {
     [TestFixture]
     [AutomationTest]
     public abstract class AutomationTest
     {
-        private NzbDroneRunner _runner;
+        private ShelvanceRunner _runner;
         protected RemoteWebDriver driver;
 
         public AutomationTest()
@@ -45,7 +45,7 @@ namespace NzbDrone.Automation.Test
             driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
             driver.Manage().Window.FullScreen();
 
-            _runner = new NzbDroneRunner(LogManager.GetCurrentClassLogger(), null);
+            _runner = new ShelvanceRunner(LogManager.GetCurrentClassLogger(), null);
             _runner.KillAll();
             _runner.Start(true);
 

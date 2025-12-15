@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
     public enum CalibreFormat
     {

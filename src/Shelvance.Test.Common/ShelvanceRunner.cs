@@ -7,21 +7,21 @@ using System.Threading;
 using System.Xml.Linq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
 using RestSharp;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
-    public class NzbDroneRunner
+    public class ShelvanceRunner
     {
         private readonly IProcessProvider _processProvider;
         private readonly IRestClient _restClient;
-        private Process _nzbDroneProcess;
+        private Process _shelvanceProcess;
         private List<string> _startupLog;
 
         public string AppData { get; private set; }
@@ -29,7 +29,7 @@ namespace NzbDrone.Test.Common
         public PostgresOptions PostgresOptions { get; private set; }
         public int Port { get; private set; }
 
-        public NzbDroneRunner(Logger logger, PostgresOptions postgresOptions, int port = 8787)
+        public ShelvanceRunner(Logger logger, PostgresOptions postgresOptions, int port = 8787)
         {
             _processProvider = new ProcessProvider(logger);
             _restClient = new RestClient($"http://localhost:{port}/api/v1");
@@ -67,14 +67,14 @@ namespace NzbDrone.Test.Common
 
             while (true)
             {
-                _nzbDroneProcess.Refresh();
+                _shelvanceProcess.Refresh();
 
-                if (_nzbDroneProcess.HasExited)
+                if (_shelvanceProcess.HasExited)
                 {
                     TestContext.Progress.WriteLine("Shelvance has exited unexpectedly");
                     Thread.Sleep(2000);
                     var output = _startupLog.Join(Environment.NewLine);
-                    Assert.Fail("Process has exited: ExitCode={0} Output={1}", _nzbDroneProcess.ExitCode, output);
+                    Assert.Fail("Process has exited: ExitCode={0} Output={1}", _shelvanceProcess.ExitCode, output);
                 }
 
                 var request = new RestRequest("system/status");
@@ -100,17 +100,17 @@ namespace NzbDrone.Test.Common
         {
             try
             {
-                if (_nzbDroneProcess != null)
+                if (_shelvanceProcess != null)
                 {
-                    _nzbDroneProcess.Refresh();
-                    if (_nzbDroneProcess.HasExited)
+                    _shelvanceProcess.Refresh();
+                    if (_shelvanceProcess.HasExited)
                     {
                         var log = File.ReadAllLines(Path.Combine(AppData, "logs", "shelvance.trace.txt"));
                         var output = log.Join(Environment.NewLine);
-                        TestContext.Progress.WriteLine("Process has exited prematurely: ExitCode={0} Output:\n{1}", _nzbDroneProcess.ExitCode, output);
+                        TestContext.Progress.WriteLine("Process has exited prematurely: ExitCode={0} Output:\n{1}", _shelvanceProcess.ExitCode, output);
                     }
 
-                    _processProvider.Kill(_nzbDroneProcess.Id);
+                    _processProvider.Kill(_shelvanceProcess.Id);
                 }
             }
             catch (InvalidOperationException)
@@ -125,9 +125,9 @@ namespace NzbDrone.Test.Common
         {
             try
             {
-                if (_nzbDroneProcess != null)
+                if (_shelvanceProcess != null)
                 {
-                    _processProvider.Kill(_nzbDroneProcess.Id);
+                    _processProvider.Kill(_shelvanceProcess.Id);
                 }
 
                 _processProvider.KillAll(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME);
@@ -141,7 +141,7 @@ namespace NzbDrone.Test.Common
             TestBase.DeleteTempFolder(AppData);
         }
 
-        private void Start(string outputNzbdroneConsoleExe)
+        private void Start(string outputShelvanceConsoleExe)
         {
             StringDictionary envVars = new ();
             if (PostgresOptions?.Host != null)
@@ -157,10 +157,10 @@ namespace NzbDrone.Test.Common
                 TestContext.Progress.WriteLine("Using env vars:\n{0}", envVars.ToJson());
             }
 
-            TestContext.Progress.WriteLine("Starting instance from {0} on port {1}", outputNzbdroneConsoleExe, Port);
+            TestContext.Progress.WriteLine("Starting instance from {0} on port {1}", outputShelvanceConsoleExe, Port);
 
             var args = "-nobrowser -nosingleinstancecheck -data=\"" + AppData + "\"";
-            _nzbDroneProcess = _processProvider.Start(outputNzbdroneConsoleExe, args, envVars, OnOutputDataReceived, OnOutputDataReceived);
+            _shelvanceProcess = _processProvider.Start(outputShelvanceConsoleExe, args, envVars, OnOutputDataReceived, OnOutputDataReceived);
         }
 
         private void OnOutputDataReceived(string data)
@@ -174,7 +174,7 @@ namespace NzbDrone.Test.Common
 
             if (data.Contains("Press enter to exit"))
             {
-                _nzbDroneProcess.StandardInput.WriteLine(" ");
+                _shelvanceProcess.StandardInput.WriteLine(" ");
             }
         }
 

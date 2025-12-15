@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Download.TrackedDownloads;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Download.TrackedDownloads;
 
-namespace NzbDrone.Core.MediaFiles.Events
+namespace Shelvance.Core.MediaFiles.Events
 {
     public class BookImportIncompleteEvent : IEvent
     {

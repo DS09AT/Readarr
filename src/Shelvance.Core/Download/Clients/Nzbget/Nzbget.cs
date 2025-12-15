@@ -5,16 +5,16 @@ using System.IO;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Nzbget
+namespace Shelvance.Core.Download.Clients.Nzbget
 {
     public class Nzbget : UsenetClientBase<NzbgetSettings>
     {
@@ -295,7 +295,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
 
             if (!Settings.MusicCategory.IsNullOrWhiteSpace() && !categories.Any(v => v.Name == Settings.MusicCategory))
             {
-                return new NzbDroneValidationFailure("MusicCategory", "Category does not exist")
+                return new ShelvanceValidationFailure("MusicCategory", "Category does not exist")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings),
                     DetailedDescription = "The Category your entered doesn't exist in NzbGet. Go to NzbGet to create it."
@@ -312,7 +312,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
             var keepHistory = config.GetValueOrDefault("KeepHistory", "7");
             if (!int.TryParse(keepHistory, NumberStyles.None, CultureInfo.InvariantCulture, out var value) || value == 0)
             {
-                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory should be greater than 0")
+                return new ShelvanceValidationFailure(string.Empty, "NzbGet setting KeepHistory should be greater than 0")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings),
                     DetailedDescription = "NzbGet setting KeepHistory is set to 0. Which prevents Shelvance from seeing completed downloads."
@@ -320,7 +320,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
             }
             else if (value > 25000)
             {
-                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory should be less than 25000")
+                return new ShelvanceValidationFailure(string.Empty, "NzbGet setting KeepHistory should be less than 25000")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings),
                     DetailedDescription = "NzbGet setting KeepHistory is set too high."

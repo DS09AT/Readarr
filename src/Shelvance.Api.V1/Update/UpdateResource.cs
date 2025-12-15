@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Update;
+using Shelvance.Core.Update;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Update

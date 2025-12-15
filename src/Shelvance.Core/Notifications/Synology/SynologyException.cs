@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Synology
+namespace Shelvance.Core.Notifications.Synology
 {
-    public class SynologyException : NzbDroneException
+    public class SynologyException : ShelvanceException
     {
         public SynologyException(string message)
             : base(message)

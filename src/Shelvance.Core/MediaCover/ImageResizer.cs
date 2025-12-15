@@ -1,10 +1,10 @@
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Processing;
 
-namespace NzbDrone.Core.MediaCover
+namespace Shelvance.Core.MediaCover
 {
     public interface IImageResizer
     {

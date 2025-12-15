@@ -6,13 +6,13 @@ using Dapper;
 using FluentMigrator;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(033)]
-    public class metadata_profile_ignored_to_list : NzbDroneMigrationBase
+    public class metadata_profile_ignored_to_list : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

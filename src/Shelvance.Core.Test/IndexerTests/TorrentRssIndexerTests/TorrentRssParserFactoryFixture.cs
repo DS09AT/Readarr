@@ -1,13 +1,13 @@
 ﻿using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Indexers.TorrentRss;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Indexers.TorrentRss;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests.TorrentRssIndexerTests
+namespace Shelvance.Core.Test.IndexerTests.TorrentRssIndexerTests
 {
     [TestFixture]
     public class TorrentRssParserFactoryFixture : CoreTest<TorrentRssParserFactory>

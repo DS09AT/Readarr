@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Reflection;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Reflection;
+using Shelvance.Core.ThingiProvider;
 using Shelvance.Http.ClientSchema;
 using Shelvance.Http.REST;
 

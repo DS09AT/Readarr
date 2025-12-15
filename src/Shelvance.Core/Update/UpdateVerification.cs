@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public interface IVerifyUpdates
     {

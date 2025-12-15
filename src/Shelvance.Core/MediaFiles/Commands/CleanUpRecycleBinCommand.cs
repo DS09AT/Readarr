@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.MediaFiles.Commands
+namespace Shelvance.Core.MediaFiles.Commands
 {
     public class CleanUpRecycleBinCommand : Command
     {

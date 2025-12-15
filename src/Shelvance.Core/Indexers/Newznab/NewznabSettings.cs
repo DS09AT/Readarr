@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Indexers.Newznab
+namespace Shelvance.Core.Indexers.Newznab
 {
     public class NewznabSettingsValidator : AbstractValidator<NewznabSettings>
     {
@@ -76,9 +76,9 @@ namespace NzbDrone.Core.Indexers.Newznab
 
         // Field 6 is used by TorznabSettings MinimumSeeders
         // If you need to add another field here, update TorznabSettings as well and this comment
-        public virtual NzbDroneValidationResult Validate()
+        public virtual ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

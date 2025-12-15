@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Books.Commands
+namespace Shelvance.Core.Books.Commands
 {
     public class BulkRefreshAuthorCommand : Command
     {

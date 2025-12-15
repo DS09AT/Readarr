@@ -5,22 +5,22 @@ using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.Azw;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.Azw;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.RootFolders;
 using PdfSharpCore.Pdf.IO;
 using VersOne.Epub;
 using VersOne.Epub.Schema;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IEBookTagService
     {

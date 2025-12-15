@@ -1,6 +1,6 @@
 using FluentValidation;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Validation;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Indexers

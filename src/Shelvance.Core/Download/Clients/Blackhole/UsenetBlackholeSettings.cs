@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Download.Clients.Blackhole
+namespace Shelvance.Core.Download.Clients.Blackhole
 {
     public class UsenetBlackholeSettingsValidator : AbstractValidator<UsenetBlackholeSettings>
     {
@@ -25,9 +25,9 @@ namespace NzbDrone.Core.Download.Clients.Blackhole
         [FieldDefinition(1, Label = "Watch Folder", Type = FieldType.Path, HelpText = "Folder from which Shelvance should import completed downloads")]
         public string WatchFolder { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

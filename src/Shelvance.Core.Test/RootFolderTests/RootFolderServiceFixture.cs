@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.RootFolderTests
+namespace Shelvance.Core.Test.RootFolderTests
 {
     [TestFixture]
 

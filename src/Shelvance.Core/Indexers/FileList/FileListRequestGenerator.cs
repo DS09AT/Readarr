@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.IndexerSearch.Definitions;
+using Shelvance.Common.Http;
+using Shelvance.Core.IndexerSearch.Definitions;
 
-namespace NzbDrone.Core.Indexers.FileList
+namespace Shelvance.Core.Indexers.FileList
 {
     public class FileListRequestGenerator : IIndexerRequestGenerator
     {

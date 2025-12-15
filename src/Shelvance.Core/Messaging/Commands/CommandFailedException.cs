@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
-    public class CommandFailedException : NzbDroneException
+    public class CommandFailedException : ShelvanceException
     {
         public CommandFailedException(string message, params object[] args)
             : base(message, args)

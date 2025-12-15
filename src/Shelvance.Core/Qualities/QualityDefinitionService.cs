@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities.Commands;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities.Commands;
 
-namespace NzbDrone.Core.Qualities
+namespace Shelvance.Core.Qualities
 {
     public interface IQualityDefinitionService
     {

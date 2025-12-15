@@ -2,19 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Download.History;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Download.History;
+using Shelvance.Core.History;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.TrackedDownloads
+namespace Shelvance.Core.Download.TrackedDownloads
 {
     public interface ITrackedDownloadService
     {

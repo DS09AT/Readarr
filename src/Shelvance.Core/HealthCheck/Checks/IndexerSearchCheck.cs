@@ -1,9 +1,9 @@
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Localization;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ProviderAddedEvent<IIndexer>))]
     [CheckOn(typeof(ProviderUpdatedEvent<IIndexer>))]

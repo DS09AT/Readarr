@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public interface IFilenameSampleService
     {

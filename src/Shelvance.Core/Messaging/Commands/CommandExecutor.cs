@@ -1,12 +1,12 @@
 using System;
 using System.Threading;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ProgressMessaging;
+using Shelvance.Common;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ProgressMessaging;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public class CommandExecutor : IHandle<ApplicationStartedEvent>,
                                    IHandle<ApplicationShutdownRequested>

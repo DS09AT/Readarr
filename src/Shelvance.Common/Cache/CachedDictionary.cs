@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace NzbDrone.Common.Cache
+namespace Shelvance.Common.Cache
 {
     public class CachedDictionary<TValue> : ICachedDictionary<TValue>
     {

@@ -1,12 +1,12 @@
 using System;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public interface ISeedConfigProvider
     {

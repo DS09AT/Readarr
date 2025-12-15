@@ -1,8 +1,8 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ParserTests
+namespace Shelvance.Core.Test.ParserTests
 {
     [TestFixture]
     public class ReleaseGroupParserFixture : CoreTest

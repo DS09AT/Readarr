@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 
 namespace Shelvance.Api.V1
 {

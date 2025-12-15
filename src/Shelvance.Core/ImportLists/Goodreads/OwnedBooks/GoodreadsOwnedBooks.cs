@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
     public class GoodreadsOwnedBooksImportListSettings : GoodreadsSettingsBase<GoodreadsOwnedBooksImportListSettings>
     {

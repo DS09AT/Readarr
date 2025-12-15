@@ -5,21 +5,21 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles
+namespace Shelvance.Core.Test.MediaFiles
 {
     [TestFixture]
     public class ImportApprovedTracksFixture : CoreTest<ImportApprovedBooks>

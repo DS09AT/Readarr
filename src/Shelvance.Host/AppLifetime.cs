@@ -2,14 +2,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public class AppLifetime : IHostedService, IHandle<ApplicationShutdownRequested>
     {

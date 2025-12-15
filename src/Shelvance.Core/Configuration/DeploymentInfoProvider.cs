@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Update;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Update;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public interface IDeploymentInfoProvider
     {

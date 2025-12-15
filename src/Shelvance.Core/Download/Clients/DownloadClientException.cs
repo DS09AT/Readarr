@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Download.Clients
+namespace Shelvance.Core.Download.Clients
 {
-    public class DownloadClientException : NzbDroneException
+    public class DownloadClientException : ShelvanceException
     {
         public DownloadClientException(string message, params object[] args)
             : base(string.Format(message, args))

@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.BookFiles
@@ -59,7 +59,7 @@ namespace Shelvance.Api.V1.BookFiles
             };
         }
 
-        public static BookFileResource ToResource(this BookFile model, NzbDrone.Core.Books.Author author, IUpgradableSpecification upgradableSpecification)
+        public static BookFileResource ToResource(this BookFile model, Shelvance.Core.Books.Author author, IUpgradableSpecification upgradableSpecification)
         {
             if (model == null)
             {

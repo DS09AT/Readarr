@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.History
+namespace Shelvance.Core.History
 {
     public interface IHistoryRepository : IBasicRepository<EntityHistory>
     {

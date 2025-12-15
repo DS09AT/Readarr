@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     public interface ISearchForNewBook
     {

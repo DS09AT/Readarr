@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Download.Clients.Sabnzbd.JsonConverters
+namespace Shelvance.Core.Download.Clients.Sabnzbd.JsonConverters
 {
     public class SabnzbdPriorityTypeConverter : JsonConverter
     {

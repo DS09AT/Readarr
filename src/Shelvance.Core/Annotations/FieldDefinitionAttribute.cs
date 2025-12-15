@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace NzbDrone.Core.Annotations
+namespace Shelvance.Core.Annotations
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class FieldDefinitionAttribute : Attribute

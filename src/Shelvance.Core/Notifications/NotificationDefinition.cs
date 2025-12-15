@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class NotificationDefinition : ProviderDefinition
     {

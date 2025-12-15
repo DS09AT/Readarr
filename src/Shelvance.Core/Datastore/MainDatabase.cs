@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IMainDatabase : IDatabase
     {

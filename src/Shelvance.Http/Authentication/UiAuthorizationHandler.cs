@@ -2,14 +2,14 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Messaging.Events;
 using Shelvance.Http.Extensions;
 
-namespace NzbDrone.Http.Authentication
+namespace Shelvance.Http.Authentication
 {
     public class UiAuthorizationHandler : AuthorizationHandler<BypassableDenyAnonymousAuthorizationRequirement>, IAuthorizationRequirement, IHandle<ConfigSavedEvent>
     {

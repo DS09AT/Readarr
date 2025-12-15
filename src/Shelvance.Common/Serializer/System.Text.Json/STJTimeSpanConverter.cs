@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace NzbDrone.Common.Serializer
+namespace Shelvance.Common.Serializer
 {
     public class STJTimeSpanConverter : JsonConverter<TimeSpan>
     {

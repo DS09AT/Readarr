@@ -1,34 +1,34 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
-    public class NzbDroneValidationResult : ValidationResult
+    public class ShelvanceValidationResult : ValidationResult
     {
-        public NzbDroneValidationResult()
+        public ShelvanceValidationResult()
         {
-            Failures = new List<NzbDroneValidationFailure>();
-            Errors = new List<NzbDroneValidationFailure>();
-            Warnings = new List<NzbDroneValidationFailure>();
+            Failures = new List<ShelvanceValidationFailure>();
+            Errors = new List<ShelvanceValidationFailure>();
+            Warnings = new List<ShelvanceValidationFailure>();
         }
 
-        public NzbDroneValidationResult(ValidationResult validationResult)
+        public ShelvanceValidationResult(ValidationResult validationResult)
             : this(validationResult.Errors)
         {
         }
 
-        public NzbDroneValidationResult(IEnumerable<ValidationFailure> failures)
+        public ShelvanceValidationResult(IEnumerable<ValidationFailure> failures)
         {
-            var errors = new List<NzbDroneValidationFailure>();
-            var warnings = new List<NzbDroneValidationFailure>();
+            var errors = new List<ShelvanceValidationFailure>();
+            var warnings = new List<ShelvanceValidationFailure>();
 
             foreach (var failureBase in failures)
             {
-                if (failureBase is not NzbDroneValidationFailure failure)
+                if (failureBase is not ShelvanceValidationFailure failure)
                 {
-                    failure = new NzbDroneValidationFailure(failureBase);
+                    failure = new ShelvanceValidationFailure(failureBase);
                 }
 
                 if (failure.IsWarning)
@@ -47,9 +47,9 @@ namespace NzbDrone.Core.Validation
             Warnings = warnings;
         }
 
-        public IList<NzbDroneValidationFailure> Failures { get; private set; }
-        public new IList<NzbDroneValidationFailure> Errors { get; private set; }
-        public IList<NzbDroneValidationFailure> Warnings { get; private set; }
+        public IList<ShelvanceValidationFailure> Failures { get; private set; }
+        public new IList<ShelvanceValidationFailure> Errors { get; private set; }
+        public IList<ShelvanceValidationFailure> Warnings { get; private set; }
 
         public virtual bool HasWarnings => Warnings.Any();
 

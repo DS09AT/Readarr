@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Security;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Languages;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Security;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public enum ConfigKey
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Download.Clients.Hadouken.Models
+namespace Shelvance.Core.Download.Clients.Hadouken.Models
 {
     public sealed class HadoukenSystemInfo
     {

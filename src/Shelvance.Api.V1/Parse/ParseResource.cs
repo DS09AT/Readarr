@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http.REST;

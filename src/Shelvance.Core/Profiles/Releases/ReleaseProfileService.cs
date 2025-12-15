@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Profiles.Releases
+namespace Shelvance.Core.Profiles.Releases
 {
     public interface IReleaseProfileService
     {

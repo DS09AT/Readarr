@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.HealthCheck
+namespace Shelvance.Core.HealthCheck
 {
     public class CheckHealthCommand : Command
     {

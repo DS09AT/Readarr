@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class BookGrabbedEvent : IEvent
     {

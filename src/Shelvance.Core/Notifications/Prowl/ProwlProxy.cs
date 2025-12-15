@@ -2,10 +2,10 @@ using System;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Prowl
+namespace Shelvance.Core.Notifications.Prowl
 {
     public interface IProwlProxy
     {

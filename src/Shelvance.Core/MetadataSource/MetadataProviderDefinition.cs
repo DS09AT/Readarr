@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Database model for metadata provider configuration

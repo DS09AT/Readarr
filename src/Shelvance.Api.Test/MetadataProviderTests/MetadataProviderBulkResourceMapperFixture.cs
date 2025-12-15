@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.MetadataSource;
 using Shelvance.Api.V1.MetadataProvider;
 
-namespace NzbDrone.Api.Test.MetadataProviderTests
+namespace Shelvance.Api.Test.MetadataProviderTests
 {
     [TestFixture]
     public class MetadataProviderBulkResourceMapperFixture

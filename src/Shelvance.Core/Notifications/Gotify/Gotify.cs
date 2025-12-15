@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Notifications.Gotify
+namespace Shelvance.Core.Notifications.Gotify
 {
     public class Gotify : NotificationBase<GotifySettings>
     {

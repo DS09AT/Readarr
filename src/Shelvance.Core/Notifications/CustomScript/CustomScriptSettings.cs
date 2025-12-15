@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Notifications.CustomScript
+namespace Shelvance.Core.Notifications.CustomScript
 {
     public class CustomScriptSettingsValidator : AbstractValidator<CustomScriptSettings>
     {
@@ -26,9 +26,9 @@ namespace NzbDrone.Core.Notifications.CustomScript
         [FieldDefinition(1, Label = "Arguments", HelpText = "Arguments to pass to the script", Hidden = HiddenType.HiddenIfNotSet)]
         public string Arguments { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

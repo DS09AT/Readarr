@@ -1,27 +1,27 @@
 using System;
 using System.IO;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
-using IServiceProvider = NzbDrone.Common.IServiceProvider;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
+using IServiceProvider = Shelvance.Common.IServiceProvider;
 
-namespace NzbDrone.Update.UpdateEngine
+namespace Shelvance.Update.UpdateEngine
 {
-    public interface IStartNzbDrone
+    public interface IStartShelvance
     {
         void Start(AppType appType, string installationFolder);
     }
 
-    public class StartNzbDrone : IStartNzbDrone
+    public class StartShelvance : IStartShelvance
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IProcessProvider _processProvider;
         private readonly IStartupContext _startupContext;
         private readonly Logger _logger;
 
-        public StartNzbDrone(IServiceProvider serviceProvider, IProcessProvider processProvider, IStartupContext startupContext, Logger logger)
+        public StartShelvance(IServiceProvider serviceProvider, IProcessProvider processProvider, IStartupContext startupContext, Logger logger)
         {
             _serviceProvider = serviceProvider;
             _processProvider = processProvider;

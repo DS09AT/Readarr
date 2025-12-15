@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Processes;
+using Shelvance.Common.Processes;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public interface ISingleInstancePolicy
     {
@@ -40,7 +40,7 @@ namespace NzbDrone.Host
 
         public void KillAllOtherInstance()
         {
-            foreach (var processId in GetOtherNzbDroneProcessIds())
+            foreach (var processId in GetOtherShelvanceProcessIds())
             {
                 _processProvider.Kill(processId);
             }
@@ -56,10 +56,10 @@ namespace NzbDrone.Host
 
         private bool IsAlreadyRunning()
         {
-            return GetOtherNzbDroneProcessIds().Any();
+            return GetOtherShelvanceProcessIds().Any();
         }
 
-        private List<int> GetOtherNzbDroneProcessIds()
+        private List<int> GetOtherShelvanceProcessIds()
         {
             try
             {

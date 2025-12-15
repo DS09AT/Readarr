@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Download
+namespace Shelvance.Core.Test.Download
 {
     [TestFixture]
     public class RedownloadFailedDownloadServiceFixture : CoreTest<RedownloadFailedDownloadService>

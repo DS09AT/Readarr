@@ -1,9 +1,9 @@
 using System.Net;
 using System.Net.Http;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Notifications.SendGrid
+namespace Shelvance.Core.Notifications.SendGrid
 {
     public interface ISendGridProxy
     {

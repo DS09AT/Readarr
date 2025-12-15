@@ -4,13 +4,13 @@ using System.IO.Abstractions;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Mono.Disk;
-using NzbDrone.Mono.EnvironmentInfo.VersionAdapters;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
+using Shelvance.Common.Disk;
+using Shelvance.Mono.Disk;
+using Shelvance.Mono.EnvironmentInfo.VersionAdapters;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
 
-namespace NzbDrone.Mono.Test.EnvironmentInfo.VersionAdapters
+namespace Shelvance.Mono.Test.EnvironmentInfo.VersionAdapters
 {
     [TestFixture]
     public class ReleaseFileVersionAdapterFixture : TestBase<ReleaseFileVersionAdapter>

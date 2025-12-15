@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.History;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IFailedDownloadService
     {

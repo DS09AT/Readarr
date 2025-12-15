@@ -1,4 +1,4 @@
-namespace NzbDrone.Test.Common.AutoMoq
+namespace Shelvance.Test.Common.AutoMoq
 {
     public enum FileSystemType
     {

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Books.Events
+namespace Shelvance.Core.Books.Events
 {
     public class BookInfoRefreshedEvent : IEvent
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
+using Shelvance.Common.Cache;
 
-namespace NzbDrone.Common.Test.CacheTests
+namespace Shelvance.Common.Test.CacheTests
 {
     [TestFixture]
     public class CachedDictionaryFixture

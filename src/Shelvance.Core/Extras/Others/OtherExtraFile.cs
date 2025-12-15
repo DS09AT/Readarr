@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Extras.Files;
+﻿using Shelvance.Core.Extras.Files;
 
-namespace NzbDrone.Core.Extras.Others
+namespace Shelvance.Core.Extras.Others
 {
     public class OtherExtraFile : ExtraFile
     {

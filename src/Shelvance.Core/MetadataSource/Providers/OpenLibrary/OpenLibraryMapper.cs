@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MetadataSource.Providers.OpenLibrary.Resources;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MetadataSource.Providers.OpenLibrary.Resources;
 
-namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
+namespace Shelvance.Core.MetadataSource.Providers.OpenLibrary
 {
     public static class OpenLibraryMapper
     {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Parser;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http;

@@ -1,9 +1,9 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.OrganizerTests
+namespace Shelvance.Core.Test.OrganizerTests
 {
     [TestFixture]
     public class CleanFilenameFixture : CoreTest

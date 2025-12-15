@@ -1,10 +1,10 @@
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Notifications;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Notifications;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ProviderUpdatedEvent<INotification>))]
     [CheckOn(typeof(ProviderDeletedEvent<INotification>))]

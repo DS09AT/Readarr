@@ -1,7 +1,7 @@
 using FluentValidation.Validators;
-using NzbDrone.Core.Profiles.Metadata;
+using Shelvance.Core.Profiles.Metadata;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public class MetadataProfileExistsValidator : PropertyValidator
     {

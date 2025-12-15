@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Blocklisting
+namespace Shelvance.Core.Test.Blocklisting
 {
     [TestFixture]
     public class BlocklistRepositoryFixture : DbTest<BlocklistRepository, Blocklist>

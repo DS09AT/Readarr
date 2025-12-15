@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class TorrentInfo : ReleaseInfo
     {

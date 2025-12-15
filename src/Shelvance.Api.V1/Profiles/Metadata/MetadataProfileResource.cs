@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Profiles.Metadata;
+using Shelvance.Core.Profiles.Metadata;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Profiles.Metadata

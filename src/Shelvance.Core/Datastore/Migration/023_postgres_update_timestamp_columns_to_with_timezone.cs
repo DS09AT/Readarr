@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(23)]
-    public class postgres_update_timestamp_columns_to_with_timezone : NzbDroneMigrationBase
+    public class postgres_update_timestamp_columns_to_with_timezone : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

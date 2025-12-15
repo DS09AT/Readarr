@@ -2,11 +2,11 @@ using System;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Notifications.Email;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Notifications.Email;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.NotificationTests.EmailTests
+namespace Shelvance.Core.Test.NotificationTests.EmailTests
 {
     [TestFixture]
     public class EmailSettingsValidatorFixture : CoreTest<EmailSettingsValidator>

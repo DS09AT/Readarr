@@ -1,10 +1,10 @@
 using NLog;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class AuthorScannedHandler : IHandle<AuthorScannedEvent>,
                                         IHandle<AuthorScanSkippedEvent>

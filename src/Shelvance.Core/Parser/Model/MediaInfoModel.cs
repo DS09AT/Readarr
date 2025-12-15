@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Datastore;
+﻿using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class MediaInfoModel : IEmbeddedDocument
     {

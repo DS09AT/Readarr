@@ -3,8 +3,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Configuration;
 
 namespace Shelvance.Api.V1.Logs
 {

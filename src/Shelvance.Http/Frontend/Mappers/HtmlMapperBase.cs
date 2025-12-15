@@ -2,8 +2,8 @@ using System;
 using System.IO;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
 
 namespace Shelvance.Http.Frontend.Mappers
 {

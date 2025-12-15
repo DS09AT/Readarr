@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NzbDrone.Core.DecisionEngine;
+using Shelvance.Core.DecisionEngine;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class ProcessedDecisions
     {

@@ -1,11 +1,11 @@
 using System.Text.RegularExpressions;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Transmission
+namespace Shelvance.Core.Download.Clients.Transmission
 {
     public class TransmissionSettingsValidator : AbstractValidator<TransmissionSettings>
     {
@@ -68,9 +68,9 @@ namespace NzbDrone.Core.Download.Clients.Transmission
         [FieldDefinition(10, Label = "Add Paused", Type = FieldType.Checkbox)]
         public bool AddPaused { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

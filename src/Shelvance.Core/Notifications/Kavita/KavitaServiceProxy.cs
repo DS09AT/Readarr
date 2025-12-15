@@ -1,12 +1,12 @@
 ﻿using System.Net.Http;
 using System.Text.Json;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
 public interface IKavitaServiceProxy
 {

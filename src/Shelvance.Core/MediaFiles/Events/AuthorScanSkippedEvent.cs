@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Books;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.MediaFiles.Events
+namespace Shelvance.Core.MediaFiles.Events
 {
     public class AuthorScanSkippedEvent : IEvent
     {

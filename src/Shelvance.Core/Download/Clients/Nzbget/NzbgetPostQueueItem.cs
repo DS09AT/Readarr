@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.Nzbget
+﻿namespace Shelvance.Core.Download.Clients.Nzbget
 {
     public class NzbgetPostQueueItem
     {

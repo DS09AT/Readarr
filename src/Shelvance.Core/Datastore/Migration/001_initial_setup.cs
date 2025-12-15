@@ -1,12 +1,12 @@
 using System;
 using System.Data;
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(1)]
-    public class InitialSetup : NzbDroneMigrationBase
+    public class InitialSetup : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

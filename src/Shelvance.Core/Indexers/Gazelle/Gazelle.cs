@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Indexers.Gazelle
+namespace Shelvance.Core.Indexers.Gazelle
 {
     public class Gazelle : HttpIndexerBase<GazelleSettings>
     {

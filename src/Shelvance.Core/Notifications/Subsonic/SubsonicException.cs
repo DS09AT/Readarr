@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Subsonic
+namespace Shelvance.Core.Notifications.Subsonic
 {
-    public class SubsonicException : NzbDroneException
+    public class SubsonicException : ShelvanceException
     {
         public SubsonicException(string message)
             : base(message)

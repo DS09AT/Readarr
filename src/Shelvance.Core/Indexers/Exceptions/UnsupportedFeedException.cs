@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Exceptions
+namespace Shelvance.Core.Indexers.Exceptions
 {
-    public class UnsupportedFeedException : NzbDroneException
+    public class UnsupportedFeedException : ShelvanceException
     {
         public UnsupportedFeedException(string message, params object[] args)
             : base(message, args)

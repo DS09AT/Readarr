@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
+namespace Shelvance.Core.ImportLists.LazyLibrarianImport
 {
     public class LazyLibrarianImportRequestGenerator : IImportListRequestGenerator
     {

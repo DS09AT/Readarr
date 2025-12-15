@@ -6,16 +6,16 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Http.CloudFlare;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Http.CloudFlare;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public abstract class HttpIndexerBase<TSettings> : IndexerBase<TSettings>
         where TSettings : IIndexerSettings, new()

@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Authentication
+namespace Shelvance.Core.Authentication
 {
     public class User : ModelBase
     {

@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public interface ITorrentIndexerSettings : IIndexerSettings
     {

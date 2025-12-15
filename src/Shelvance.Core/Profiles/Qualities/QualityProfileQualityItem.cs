@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Profiles.Qualities
+namespace Shelvance.Core.Profiles.Qualities
 {
     public class QualityProfileQualityItem : IEmbeddedDocument
     {

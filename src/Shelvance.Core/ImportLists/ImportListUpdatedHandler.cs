@@ -1,8 +1,8 @@
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public class ImportListUpdatedHandler : IHandle<ProviderUpdatedEvent<IImportList>>, IHandle<ProviderAddedEvent<IImportList>>
     {

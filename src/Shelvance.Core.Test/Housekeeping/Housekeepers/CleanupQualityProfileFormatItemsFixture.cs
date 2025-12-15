@@ -3,15 +3,15 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Housekeeping.Housekeepers;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Profiles;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Housekeeping.Housekeepers;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Profiles;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Housekeeping.Housekeepers
+namespace Shelvance.Core.Test.Housekeeping.Housekeepers
 {
     [TestFixture]
     public class CleanupQualityProfileFormatItemsFixture : DbTest<CleanupQualityProfileFormatItems, QualityProfile>

@@ -1,8 +1,8 @@
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IDownloadClientStatusRepository : IProviderStatusRepository<DownloadClientStatus>
     {

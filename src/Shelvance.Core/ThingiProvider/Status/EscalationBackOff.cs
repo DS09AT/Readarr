@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.ThingiProvider.Status
+namespace Shelvance.Core.ThingiProvider.Status
 {
     public static class EscalationBackOff
     {

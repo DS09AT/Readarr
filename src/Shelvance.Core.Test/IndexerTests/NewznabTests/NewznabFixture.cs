@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Newznab;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Newznab;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.IndexerTests.NewznabTests
+namespace Shelvance.Core.Test.IndexerTests.NewznabTests
 {
     [TestFixture]
     public class NewznabFixture : CoreTest<Newznab>

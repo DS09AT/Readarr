@@ -1,13 +1,13 @@
 using System.Data;
 using Dapper;
 using FluentMigrator;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(013)]
-    public class update_author_sort_name_again : NzbDroneMigrationBase
+    public class update_author_sort_name_again : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

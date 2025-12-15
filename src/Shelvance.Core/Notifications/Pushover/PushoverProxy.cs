@@ -1,10 +1,10 @@
 using System;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Pushover
+namespace Shelvance.Core.Notifications.Pushover
 {
     public interface IPushoverProxy
     {

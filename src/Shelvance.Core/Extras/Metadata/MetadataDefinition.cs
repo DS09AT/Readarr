@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.ThingiProvider;
+﻿using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public class MetadataDefinition : ProviderDefinition
     {

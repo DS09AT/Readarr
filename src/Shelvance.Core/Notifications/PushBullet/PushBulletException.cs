@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.PushBullet
+namespace Shelvance.Core.Notifications.PushBullet
 {
-    public class PushBulletException : NzbDroneException
+    public class PushBulletException : ShelvanceException
     {
         public PushBulletException(string message)
             : base(message)

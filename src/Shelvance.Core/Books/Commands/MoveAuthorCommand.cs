@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Books.Commands
+namespace Shelvance.Core.Books.Commands
 {
     public class MoveAuthorCommand : Command
     {

@@ -9,15 +9,15 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.OAuth;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.ImportLists.Goodreads;
-using NzbDrone.Core.MetadataSource.Goodreads;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.OAuth;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.ImportLists.Goodreads;
+using Shelvance.Core.MetadataSource.Goodreads;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public abstract class GoodreadsNotificationBase<TSettings> : NotificationBase<TSettings>
     where TSettings : GoodreadsSettingsBase<TSettings>, new()

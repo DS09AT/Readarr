@@ -4,15 +4,15 @@ using System.IO;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.NzbVortex
+namespace Shelvance.Core.Download.Clients.NzbVortex
 {
     public class NzbVortex : UsenetClientBase<NzbVortexSettings>
     {
@@ -162,7 +162,7 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             {
                 _logger.Error(ex, "Unable to connect to NZBVortex");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to NZBVortex")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to NZBVortex")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -214,7 +214,7 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             {
                 if (Settings.MusicCategory.IsNotNullOrWhiteSpace())
                 {
-                    return new NzbDroneValidationFailure("MusicCategory", "Group does not exist")
+                    return new ShelvanceValidationFailure("MusicCategory", "Group does not exist")
                     {
                         DetailedDescription = "The Group you entered doesn't exist in NzbVortex. Go to NzbVortex to create it."
                     };

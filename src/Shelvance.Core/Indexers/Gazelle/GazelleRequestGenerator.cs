@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.IndexerSearch.Definitions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.IndexerSearch.Definitions;
 
-namespace NzbDrone.Core.Indexers.Gazelle
+namespace Shelvance.Core.Indexers.Gazelle
 {
     public class GazelleRequestGenerator : IIndexerRequestGenerator
     {

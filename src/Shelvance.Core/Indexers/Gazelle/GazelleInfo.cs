@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Parser.Model;
+﻿using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.Gazelle
+namespace Shelvance.Core.Indexers.Gazelle
 {
     public class GazelleInfo : TorrentInfo
     {

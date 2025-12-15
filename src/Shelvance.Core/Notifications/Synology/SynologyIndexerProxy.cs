@@ -1,8 +1,8 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.Processes;
+using Shelvance.Common.Processes;
 
-namespace NzbDrone.Core.Notifications.Synology
+namespace Shelvance.Core.Notifications.Synology
 {
     public interface ISynologyIndexerProxy
     {

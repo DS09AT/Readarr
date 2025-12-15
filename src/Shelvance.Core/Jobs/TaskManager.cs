@@ -2,23 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Backup;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.HealthCheck;
-using NzbDrone.Core.Housekeeping;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Update.Commands;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Backup;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Download;
+using Shelvance.Core.HealthCheck;
+using Shelvance.Core.Housekeeping;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Update.Commands;
 
-namespace NzbDrone.Core.Jobs
+namespace Shelvance.Core.Jobs
 {
     public interface ITaskManager
     {

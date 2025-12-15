@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IBuildAuthorPaths
     {

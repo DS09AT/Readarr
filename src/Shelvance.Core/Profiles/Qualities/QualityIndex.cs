@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.Profiles.Qualities
+namespace Shelvance.Core.Profiles.Qualities
 {
     public class QualityIndex : IComparable, IComparable<QualityIndex>
     {

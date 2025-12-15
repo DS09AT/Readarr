@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Configuration;
 
 namespace Shelvance.Http.Ping
 {

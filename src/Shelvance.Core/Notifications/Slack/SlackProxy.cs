@@ -1,10 +1,10 @@
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Notifications.Slack.Payloads;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Notifications.Slack.Payloads;
 
-namespace NzbDrone.Core.Notifications.Slack
+namespace Shelvance.Core.Notifications.Slack
 {
     public interface ISlackProxy
     {

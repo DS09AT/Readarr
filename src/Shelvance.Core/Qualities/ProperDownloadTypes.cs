@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Qualities
+namespace Shelvance.Core.Qualities
 {
     public enum ProperDownloadTypes
     {

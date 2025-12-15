@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using Dapper;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public class WhereBuilderSqlite : WhereBuilder
     {

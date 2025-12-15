@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
-using NzbDrone.Common.EnsureThat.Resources;
+using Shelvance.Common.EnsureThat.Resources;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     public static class EnsureGuidExtensions
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 
 using NLog;
-using NzbDrone.Common.Cache;
+using Shelvance.Common.Cache;
 
-namespace NzbDrone.Core.Download.Clients.QBittorrent
+namespace Shelvance.Core.Download.Clients.QBittorrent
 {
     public interface IQBittorrentProxy
     {

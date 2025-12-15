@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Profiles;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Profiles;
+using Shelvance.Core.Profiles.Qualities;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Profiles.Quality
@@ -21,7 +21,7 @@ namespace Shelvance.Api.V1.Profiles.Quality
     public class QualityProfileQualityItemResource : RestResource
     {
         public string Name { get; set; }
-        public NzbDrone.Core.Qualities.Quality Quality { get; set; }
+        public Shelvance.Core.Qualities.Quality Quality { get; set; }
         public List<QualityProfileQualityItemResource> Items { get; set; }
         public bool Allowed { get; set; }
 
@@ -118,7 +118,7 @@ namespace Shelvance.Api.V1.Profiles.Quality
             {
                 Id = resource.Id,
                 Name = resource.Name,
-                Quality = resource.Quality != null ? (NzbDrone.Core.Qualities.Quality)resource.Quality.Id : null,
+                Quality = resource.Quality != null ? (Shelvance.Core.Qualities.Quality)resource.Quality.Id : null,
                 Items = resource.Items.ConvertAll(ToModel),
                 Allowed = resource.Allowed
             };

@@ -2,7 +2,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace NzbDrone.Core
+namespace Shelvance.Core
 {
     public static class Hashing
     {

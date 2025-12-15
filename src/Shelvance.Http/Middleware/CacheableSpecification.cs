@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
 namespace Shelvance.Http.Middleware
 {

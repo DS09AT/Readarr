@@ -1,9 +1,9 @@
 using System;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Http;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.HealthCheck
+namespace Shelvance.Core.HealthCheck
 {
     public class HealthCheck : ModelBase
     {

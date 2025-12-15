@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class HttpResponse
     {

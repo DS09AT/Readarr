@@ -1,10 +1,10 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ParserTests
+namespace Shelvance.Core.Test.ParserTests
 {
     [TestFixture]
     public class QualityParserFixture : CoreTest

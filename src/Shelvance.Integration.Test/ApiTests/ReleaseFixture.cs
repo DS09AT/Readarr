@@ -4,7 +4,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using Shelvance.Api.V1.Indexers;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     [Ignore("Need mock Newznab to test")]

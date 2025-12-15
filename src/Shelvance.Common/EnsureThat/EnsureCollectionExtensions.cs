@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using NzbDrone.Common.EnsureThat.Resources;
+using Shelvance.Common.EnsureThat.Resources;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     public static class EnsureCollectionExtensions
     {

@@ -8,10 +8,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Model;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Model;
 
-namespace NzbDrone.Common.Processes
+namespace Shelvance.Common.Processes
 {
     public interface IProcessProvider
     {

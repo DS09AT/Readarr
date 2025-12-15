@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.DiskSpace;
+using Shelvance.Core.DiskSpace;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.DiskSpace

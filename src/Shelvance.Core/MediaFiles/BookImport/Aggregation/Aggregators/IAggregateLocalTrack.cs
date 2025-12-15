@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators
+namespace Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators
 {
     public interface IAggregate<T>
     {

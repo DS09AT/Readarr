@@ -4,13 +4,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Indexers.Gutenberg
+namespace Shelvance.Core.Indexers.Gutenberg
 {
     public class Gutenberg : HttpIndexerBase<GutenbergSettings>
     {

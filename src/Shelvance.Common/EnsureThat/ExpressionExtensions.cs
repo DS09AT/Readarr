@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     internal static class ExpressionExtensions
     {

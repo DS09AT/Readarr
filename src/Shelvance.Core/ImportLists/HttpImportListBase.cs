@@ -4,16 +4,16 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Http.CloudFlare;
-using NzbDrone.Core.ImportLists.Exceptions;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Http.CloudFlare;
+using Shelvance.Core.ImportLists.Exceptions;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public abstract class HttpImportListBase<TSettings> : ImportListBase<TSettings>
         where TSettings : IImportListSettings, new()

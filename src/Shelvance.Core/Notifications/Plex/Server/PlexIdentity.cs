@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Plex.Server
+namespace Shelvance.Core.Notifications.Plex.Server
 {
     public class PlexIdentity
     {

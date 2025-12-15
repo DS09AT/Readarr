@@ -11,19 +11,19 @@ using FluentAssertions;
 using Moq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Http.Dispatchers;
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Security;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
-using HttpClient = NzbDrone.Common.Http.HttpClient;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Common.Http.Dispatchers;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Security;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
+using HttpClient = Shelvance.Common.Http.HttpClient;
 
-namespace NzbDrone.Common.Test.Http
+namespace Shelvance.Common.Test.Http
 {
     [IntegrationTest]
     [TestFixture(typeof(ManagedHttpDispatcher))]

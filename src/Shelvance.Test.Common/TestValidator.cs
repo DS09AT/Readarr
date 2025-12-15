@@ -1,7 +1,7 @@
 using System;
 using FluentValidation;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public class TestValidator<T> : InlineValidator<T>
     {

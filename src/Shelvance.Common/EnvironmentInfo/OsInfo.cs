@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using NLog;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public class OsInfo : IOsInfo
     {

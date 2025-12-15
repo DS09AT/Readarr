@@ -6,12 +6,12 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http.Dispatchers;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http.Dispatchers;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Notifications.Email
+namespace Shelvance.Core.Notifications.Email
 {
     public class Email : NotificationBase<EmailSettings>
     {

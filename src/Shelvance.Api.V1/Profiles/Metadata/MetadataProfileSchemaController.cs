@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Profiles.Metadata;
+using Shelvance.Core.Profiles.Metadata;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Profiles.Metadata

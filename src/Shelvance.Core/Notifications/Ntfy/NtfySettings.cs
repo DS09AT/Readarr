@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Ntfy
+namespace Shelvance.Core.Notifications.Ntfy
 {
     public class NtfySettingsValidator : AbstractValidator<NtfySettings>
     {
@@ -58,9 +58,9 @@ namespace NzbDrone.Core.Notifications.Ntfy
         [FieldDefinition(7, Label = "Click URL", Type = FieldType.Url, HelpText = "Optional link when user clicks notification")]
         public string ClickUrl { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

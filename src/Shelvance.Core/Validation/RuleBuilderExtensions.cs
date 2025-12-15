@@ -2,9 +2,9 @@ using System;
 using System.Text.RegularExpressions;
 using FluentValidation;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public static class RuleBuilderExtensions
     {
@@ -65,7 +65,7 @@ namespace NzbDrone.Core.Validation
 
         public static IRuleBuilderOptions<T, TProp> AsWarning<T, TProp>(this IRuleBuilderOptions<T, TProp> ruleBuilder)
         {
-            return ruleBuilder.WithState(v => NzbDroneValidationState.Warning);
+            return ruleBuilder.WithState(v => ShelvanceValidationState.Warning);
         }
 
         public static IRuleBuilderOptions<T, string> ContainsShelvance<T>(this IRuleBuilder<T, string> ruleBuilder)

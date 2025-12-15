@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.HealthCheck;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.HealthCheck;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.HealthCheck
+namespace Shelvance.Core.Test.HealthCheck
 {
     public class HealthCheckServiceFixture : CoreTest<HealthCheckService>
     {

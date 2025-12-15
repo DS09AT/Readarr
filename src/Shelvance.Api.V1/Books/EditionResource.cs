@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaCover;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaCover;
 using Shelvance.Http.REST;
 using Swashbuckle.AspNetCore.Annotations;
 

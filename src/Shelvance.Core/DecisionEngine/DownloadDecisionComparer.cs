@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.DecisionEngine
+namespace Shelvance.Core.DecisionEngine
 {
     public class DownloadDecisionComparer : IComparer<DownloadDecision>
     {

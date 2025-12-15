@@ -1,8 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Common.Serializer
+namespace Shelvance.Common.Serializer
 {
     public class HttpUriConverter : JsonConverter
     {

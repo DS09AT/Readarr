@@ -3,14 +3,14 @@ using System.Threading;
 using FluentAssertions;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Core.Datastore.Migration.Framework;
-using NzbDrone.Core.Instrumentation;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Instrumentation;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Instrumentation
+namespace Shelvance.Core.Test.Instrumentation
 {
     [TestFixture]
     public class DatabaseTargetFixture : DbTest<DatabaseTarget, Log>
@@ -28,7 +28,7 @@ namespace NzbDrone.Core.Test.Instrumentation
 
             LogManager.ReconfigExistingLoggers();
 
-            _logger = NzbDroneLogger.GetLogger(this);
+            _logger = ShelvanceLogger.GetLogger(this);
 
             _uniqueMessage = "Unique message: " + Guid.NewGuid();
         }

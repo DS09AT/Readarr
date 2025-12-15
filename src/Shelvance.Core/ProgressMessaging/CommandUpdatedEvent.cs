@@ -1,7 +1,7 @@
-﻿using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Common.Messaging;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.ProgressMessaging
+namespace Shelvance.Core.ProgressMessaging
 {
     public class CommandUpdatedEvent : IEvent
     {

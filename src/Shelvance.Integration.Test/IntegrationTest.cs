@@ -3,21 +3,21 @@ using System.Linq;
 using System.Threading;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Migration.Framework;
-using NzbDrone.Core.Indexers.Newznab;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Datastore;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Indexers.Newznab;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Datastore;
 
-namespace NzbDrone.Integration.Test
+namespace Shelvance.Integration.Test
 {
     [Parallelizable(ParallelScope.Fixtures)]
     public abstract class IntegrationTest : IntegrationTestBase
     {
         protected static int StaticPort = 8787;
 
-        protected NzbDroneRunner _runner;
+        protected ShelvanceRunner _runner;
 
         public override string AuthorRootFolder => GetTempDirectory("AuthorRootFolder");
 
@@ -40,7 +40,7 @@ namespace NzbDrone.Integration.Test
                 CreatePostgresDb(PostgresOptions);
             }
 
-            _runner = new NzbDroneRunner(LogManager.GetCurrentClassLogger(), PostgresOptions, Port);
+            _runner = new ShelvanceRunner(LogManager.GetCurrentClassLogger(), PostgresOptions, Port);
             _runner.Kill();
 
             _runner.Start();

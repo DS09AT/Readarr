@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Join
+namespace Shelvance.Core.Notifications.Join
 {
     public enum JoinPriority
     {

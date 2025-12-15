@@ -3,11 +3,11 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     public class IndexerStatusServiceFixture : CoreTest<IndexerStatusService>
     {

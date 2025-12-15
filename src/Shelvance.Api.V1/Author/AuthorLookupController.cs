@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Organizer;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Organizer;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Author
@@ -29,7 +29,7 @@ namespace Shelvance.Api.V1.Author
             return MapToResource(searchResults).ToList();
         }
 
-        private IEnumerable<AuthorResource> MapToResource(IEnumerable<NzbDrone.Core.Books.Author> author)
+        private IEnumerable<AuthorResource> MapToResource(IEnumerable<Shelvance.Core.Books.Author> author)
         {
             foreach (var currentAuthor in author)
             {

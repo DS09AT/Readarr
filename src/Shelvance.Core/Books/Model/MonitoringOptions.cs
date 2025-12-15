@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class MonitoringOptions : IEmbeddedDocument
     {

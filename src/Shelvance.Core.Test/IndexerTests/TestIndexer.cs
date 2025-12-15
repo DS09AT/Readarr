@@ -1,10 +1,10 @@
 ﻿using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     public class TestIndexer : HttpIndexerBase<TestIndexerSettings>
     {

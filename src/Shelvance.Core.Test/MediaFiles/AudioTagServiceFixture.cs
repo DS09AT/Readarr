@@ -7,18 +7,18 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.AutoMoq;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.AutoMoq;
 
-namespace NzbDrone.Core.Test.MediaFiles.AudioTagServiceFixture
+namespace Shelvance.Core.Test.MediaFiles.AudioTagServiceFixture
 {
     [TestFixture]
     public class AudioTagServiceFixture : CoreTest<AudioTagService>

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Core.Profiles.Qualities;
 
-namespace NzbDrone.Core.Qualities
+namespace Shelvance.Core.Qualities
 {
     public class QualityModelComparer : IComparer<Quality>, IComparer<QualityModel>
     {

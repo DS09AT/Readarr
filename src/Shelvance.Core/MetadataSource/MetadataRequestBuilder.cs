@@ -1,9 +1,9 @@
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     public interface IMetadataRequestBuilder
     {

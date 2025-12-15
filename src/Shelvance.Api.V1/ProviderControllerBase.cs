@@ -3,11 +3,11 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1
@@ -260,7 +260,7 @@ namespace Shelvance.Api.V1
 
         protected void VerifyValidationResult(ValidationResult validationResult, bool includeWarnings)
         {
-            var result = validationResult as NzbDroneValidationResult ?? new NzbDroneValidationResult(validationResult.Errors);
+            var result = validationResult as ShelvanceValidationResult ?? new ShelvanceValidationResult(validationResult.Errors);
 
             if (includeWarnings && (!result.IsValid || result.HasWarnings))
             {

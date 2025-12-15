@@ -8,19 +8,19 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.DiskScanServiceTests
+namespace Shelvance.Core.Test.MediaFiles.DiskScanServiceTests
 {
     [TestFixture]
     public class ScanFixture : FileSystemTest<DiskScanService>

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class SpecificationMatchesGroup
     {

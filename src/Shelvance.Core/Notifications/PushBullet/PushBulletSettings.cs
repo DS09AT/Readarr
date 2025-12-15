@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.PushBullet
+namespace Shelvance.Core.Notifications.PushBullet
 {
     public class PushBulletSettingsValidator : AbstractValidator<PushBulletSettings>
     {
@@ -36,9 +36,9 @@ namespace NzbDrone.Core.Notifications.PushBullet
         [FieldDefinition(3, Label = "Sender ID", HelpText = "The device ID to send notifications from, use device_iden in the device's URL on pushbullet.com (leave blank to send from yourself)")]
         public string SenderId { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

@@ -2,21 +2,21 @@ using System.Collections.Generic;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.History;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.History;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MusicTests
+namespace Shelvance.Core.Test.MusicTests
 {
     [TestFixture]
     public class RefreshAuthorServiceFixture : CoreTest<RefreshAuthorService>

@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public class ImportListStatus : ProviderStatusBase
     {

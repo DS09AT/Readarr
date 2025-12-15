@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public class GoodreadsBookshelfNotificationSettingsValidator : GoodreadsSettingsBaseValidator<GoodreadsBookshelfNotificationSettings>
     {
@@ -32,9 +32,9 @@ namespace NzbDrone.Core.Notifications.Goodreads
         [FieldDefinition(1, Label = "Add to Bookshelves", Type = FieldType.Bookshelf)]
         public IEnumerable<string> AddIds { get; set; }
 
-        public override NzbDroneValidationResult Validate()
+        public override ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

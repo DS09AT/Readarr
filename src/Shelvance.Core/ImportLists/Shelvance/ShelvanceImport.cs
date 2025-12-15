@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Shelvance
+namespace Shelvance.Core.ImportLists.Shelvance
 {
     public class ShelvanceImport : ImportListBase<ShelvanceSettings>
     {

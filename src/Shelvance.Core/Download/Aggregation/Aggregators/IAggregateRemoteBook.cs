@@ -1,6 +1,6 @@
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.Aggregation.Aggregators
+namespace Shelvance.Core.Download.Aggregation.Aggregators
 {
     public interface IAggregateRemoteBook
     {

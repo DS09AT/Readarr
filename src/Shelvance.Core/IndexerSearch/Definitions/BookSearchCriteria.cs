@@ -1,6 +1,6 @@
-using NzbDrone.Core.Parser;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.IndexerSearch.Definitions
+namespace Shelvance.Core.IndexerSearch.Definitions
 {
     public class BookSearchCriteria : SearchCriteriaBase
     {

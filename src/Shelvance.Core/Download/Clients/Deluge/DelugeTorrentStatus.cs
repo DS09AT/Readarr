@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download.Clients.Deluge
+﻿namespace Shelvance.Core.Download.Clients.Deluge
 {
     public class DelugeTorrentStatus
     {

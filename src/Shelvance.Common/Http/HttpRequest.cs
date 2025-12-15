@@ -4,10 +4,10 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class HttpRequest
     {

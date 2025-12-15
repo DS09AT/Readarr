@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
-    public class EditionNotFoundException : NzbDroneException
+    public class EditionNotFoundException : ShelvanceException
     {
         public string ForeignEditionId { get; set; }
 

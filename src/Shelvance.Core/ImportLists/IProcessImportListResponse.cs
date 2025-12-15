@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IParseImportListResponse
     {

@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Exceptions
+namespace Shelvance.Core.Indexers.Exceptions
 {
-    public class SizeParsingException : NzbDroneException
+    public class SizeParsingException : ShelvanceException
     {
         public SizeParsingException(string message, params object[] args)
             : base(message, args)

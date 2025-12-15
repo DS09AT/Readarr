@@ -13,7 +13,7 @@ namespace Shelvance.Api.V1.Series
 
     public static class SeriesResourceMapper
     {
-        public static SeriesResource ToResource(this NzbDrone.Core.Books.Series model)
+        public static SeriesResource ToResource(this Shelvance.Core.Books.Series model)
         {
             if (model == null)
             {
@@ -29,7 +29,7 @@ namespace Shelvance.Api.V1.Series
             };
         }
 
-        public static List<SeriesResource> ToResource(this IEnumerable<NzbDrone.Core.Books.Series> models)
+        public static List<SeriesResource> ToResource(this IEnumerable<Shelvance.Core.Books.Series> models)
         {
             return models?.Select(ToResource).ToList();
         }

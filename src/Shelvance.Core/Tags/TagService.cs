@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Notifications;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Profiles.Releases;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Download;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Notifications;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Profiles.Releases;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.Tags
+namespace Shelvance.Core.Tags
 {
     public interface ITagService
     {

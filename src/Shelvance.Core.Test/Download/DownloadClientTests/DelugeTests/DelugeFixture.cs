@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Deluge;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Http;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Deluge;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.DelugeTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.DelugeTests
 {
     [TestFixture]
     public class DelugeFixture : DownloadClientFixtureBase<Deluge>

@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Download
+﻿namespace Shelvance.Core.Download
 {
     public enum DownloadItemStatus
     {

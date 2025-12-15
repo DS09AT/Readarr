@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Plex.Server
+namespace Shelvance.Core.Notifications.Plex.Server
 {
     public interface IPlexServerService
     {
@@ -164,13 +164,13 @@ namespace NzbDrone.Core.Notifications.Plex.Server
             }
             catch (PlexException ex)
             {
-                return new NzbDroneValidationFailure("Host", ex.Message);
+                return new ShelvanceValidationFailure("Host", ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to Plex Media Server");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Plex Media Server")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to Plex Media Server")
                        {
                            DetailedDescription = ex.Message
                        };

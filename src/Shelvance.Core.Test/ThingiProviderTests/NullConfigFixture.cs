@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Test.ThingiProviderTests
+namespace Shelvance.Core.Test.ThingiProviderTests
 {
     [TestFixture]
     public class NullConfigFixture : CoreTest<NullConfig>

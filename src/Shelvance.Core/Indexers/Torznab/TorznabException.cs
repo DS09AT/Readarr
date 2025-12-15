@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Torznab
+namespace Shelvance.Core.Indexers.Torznab
 {
-    public class TorznabException : NzbDroneException
+    public class TorznabException : ShelvanceException
     {
         public TorznabException(string message, params object[] args)
             : base(message, args)

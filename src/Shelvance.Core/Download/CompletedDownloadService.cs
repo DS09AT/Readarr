@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.History;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.History;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface ICompletedDownloadService
     {

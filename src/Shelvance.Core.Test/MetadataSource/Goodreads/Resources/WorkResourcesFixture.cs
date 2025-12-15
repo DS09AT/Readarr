@@ -2,11 +2,11 @@ using System;
 using System.Xml.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MetadataSource.Goodreads.Resources
+namespace Shelvance.Core.Test.MetadataSource.Goodreads.Resources
 {
     [TestFixture]
     public class WorkResourceFixture : CoreTest<WorkResource>

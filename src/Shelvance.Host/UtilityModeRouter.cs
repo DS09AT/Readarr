@@ -1,11 +1,11 @@
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Host.AccessControl;
-using IServiceProvider = NzbDrone.Common.IServiceProvider;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Host.AccessControl;
+using IServiceProvider = Shelvance.Common.IServiceProvider;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public interface IUtilityModeRouter
     {

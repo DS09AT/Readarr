@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using NzbDrone.Common.EnsureThat.Resources;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnsureThat.Resources;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     public static class EnsureLongExtensions
     {

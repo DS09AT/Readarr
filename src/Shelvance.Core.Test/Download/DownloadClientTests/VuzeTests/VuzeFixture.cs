@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Transmission;
-using NzbDrone.Core.Download.Clients.Vuze;
-using NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Transmission;
+using Shelvance.Core.Download.Clients.Vuze;
+using Shelvance.Core.Test.Download.DownloadClientTests.TransmissionTests;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.VuzeTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.VuzeTests
 {
     [TestFixture]
     public class VuzeFixture : TransmissionFixtureBase<Vuze>

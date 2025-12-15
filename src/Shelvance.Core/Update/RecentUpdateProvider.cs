@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Update.History;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Update.History;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public interface IRecentUpdateProvider
     {

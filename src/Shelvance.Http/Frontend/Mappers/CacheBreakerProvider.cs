@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
 namespace Shelvance.Http.Frontend.Mappers
 {

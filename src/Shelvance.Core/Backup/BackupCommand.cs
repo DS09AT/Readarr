@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Backup
+namespace Shelvance.Core.Backup
 {
     public class BackupCommand : Command
     {

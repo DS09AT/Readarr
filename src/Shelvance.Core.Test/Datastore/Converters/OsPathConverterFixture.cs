@@ -1,12 +1,12 @@
 using System.Data.SQLite;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Datastore.Converters;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Datastore.Converters;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Datastore.Converters
+namespace Shelvance.Core.Test.Datastore.Converters
 {
     [TestFixture]
     public class OsPathConverterFixture : CoreTest<OsPathConverter>

@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.EnsureTest
+namespace Shelvance.Common.Test.EnsureTest
 {
     [TestFixture]
     public class PathExtensionFixture : TestBase

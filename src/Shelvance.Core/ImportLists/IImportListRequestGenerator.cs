@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IImportListRequestGenerator
     {

@@ -4,13 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Http;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     public interface IGoodreadsProxy
     {

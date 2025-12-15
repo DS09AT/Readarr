@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Qnap
+namespace Shelvance.Core.Download.Clients.Qnap
 {
     public class QnapSettingsValidator : AbstractValidator<QnapSettings>
     {
@@ -53,9 +53,9 @@ namespace NzbDrone.Core.Download.Clients.Qnap
         [FieldDefinition(7, Label = "Category", Type = FieldType.Textbox, Advanced = true, HelpText = "Optional category/label for downloads")]
         public string Category { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

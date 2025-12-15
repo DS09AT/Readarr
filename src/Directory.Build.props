@@ -95,8 +95,8 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <!-- For now keep the NzbDrone namespace -->
-    <RootNamespace Condition="'$(ShelvanceProject)'=='true'">$(MSBuildProjectName.Replace('Shelvance','NzbDrone'))</RootNamespace>
+    <!-- For now keep the Shelvance namespace -->
+    <RootNamespace Condition="'$(ShelvanceProject)'=='true'">$(MSBuildProjectName.Replace('Shelvance','Shelvance'))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TestProject)'!='true'">

@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Common.Processes
+namespace Shelvance.Common.Processes
 {
     public interface IProvidePidFile
     {

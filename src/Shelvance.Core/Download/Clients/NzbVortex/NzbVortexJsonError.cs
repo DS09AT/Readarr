@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Download.Clients.NzbVortex
+namespace Shelvance.Core.Download.Clients.NzbVortex
 {
     public class NzbVortexJsonError
     {

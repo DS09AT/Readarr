@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace NzbDrone.Common.Processes
+namespace Shelvance.Common.Processes
 {
     public class ProcessOutput
     {

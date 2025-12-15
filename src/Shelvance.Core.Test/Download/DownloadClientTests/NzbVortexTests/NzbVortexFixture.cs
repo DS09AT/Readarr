@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Clients.Nzbget;
-using NzbDrone.Core.Download.Clients.NzbVortex;
-using NzbDrone.Core.Download.Clients.NzbVortex.Responses;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Clients.Nzbget;
+using Shelvance.Core.Download.Clients.NzbVortex;
+using Shelvance.Core.Download.Clients.NzbVortex.Responses;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.NzbVortexTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.NzbVortexTests
 {
     [TestFixture]
     public class NzbVortexFixture : DownloadClientFixtureBase<NzbVortex>

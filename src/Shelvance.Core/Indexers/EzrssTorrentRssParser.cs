@@ -1,9 +1,9 @@
 using System.Linq;
 using System.Xml.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Indexers.Exceptions;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Indexers.Exceptions;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class EzrssTorrentRssParser : TorrentRssParser
     {

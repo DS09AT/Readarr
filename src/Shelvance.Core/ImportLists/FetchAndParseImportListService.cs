@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IFetchAndParseImportList
     {

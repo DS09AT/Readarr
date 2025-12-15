@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class LocalBook
     {

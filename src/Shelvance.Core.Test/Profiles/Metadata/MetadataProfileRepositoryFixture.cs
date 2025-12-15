@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Profiles.Metadata
+namespace Shelvance.Core.Test.Profiles.Metadata
 {
     [TestFixture]
     public class MetadataProfileRepositoryFixture : DbTest<MetadataProfileRepository, MetadataProfile>

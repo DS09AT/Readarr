@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.PushBullet
+namespace Shelvance.Core.Notifications.PushBullet
 {
     public class PushBullet : NotificationBase<PushBulletSettings>
     {

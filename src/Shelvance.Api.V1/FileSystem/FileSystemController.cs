@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Disk;
+using Shelvance.Core.MediaFiles;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.FileSystem

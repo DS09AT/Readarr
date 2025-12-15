@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Test.ExtensionTests
+namespace Shelvance.Common.Test.ExtensionTests
 {
     [TestFixture]
     public class Int64ExtensionFixture

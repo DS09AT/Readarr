@@ -1,7 +1,7 @@
 ﻿using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Update.History
+namespace Shelvance.Core.Update.History
 {
     public class UpdateHistory : ModelBase
     {

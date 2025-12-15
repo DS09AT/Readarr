@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Equ;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class Edition : Entity<Edition>
     {

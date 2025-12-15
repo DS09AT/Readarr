@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation.Responses
+namespace Shelvance.Core.Download.Clients.DownloadStation.Responses
 {
     public class DownloadStationTaskInfoResponse
     {

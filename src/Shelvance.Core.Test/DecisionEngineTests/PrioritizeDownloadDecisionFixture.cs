@@ -5,18 +5,18 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests
+namespace Shelvance.Core.Test.DecisionEngineTests
 {
     [TestFixture]
     public class PrioritizeDownloadDecisionFixture : CoreTest<DownloadDecisionPriorizationService>

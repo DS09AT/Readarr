@@ -4,21 +4,21 @@ using System.Linq;
 using System.Threading;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Download.Clients.rTorrent;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Download.Clients.rTorrent;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.RTorrent
+namespace Shelvance.Core.Download.Clients.RTorrent
 {
     public class RTorrent : TorrentClientBase<RTorrentSettings>
     {
@@ -260,7 +260,7 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
             {
                 _logger.Error(ex, "Failed to test rTorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to rTorrent")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to rTorrent")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -278,7 +278,7 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

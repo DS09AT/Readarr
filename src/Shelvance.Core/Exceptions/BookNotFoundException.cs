@@ -1,8 +1,8 @@
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
-    public class BookNotFoundException : NzbDroneException
+    public class BookNotFoundException : ShelvanceException
     {
         public string ForeignBookId { get; set; }
 

@@ -2,20 +2,20 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public class ImportListSyncService : IExecute<ImportListSyncCommand>
     {

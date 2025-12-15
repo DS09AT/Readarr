@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 
-namespace NzbDrone.Common.OAuth
+namespace Shelvance.Common.OAuth
 {
     public class WebParameterCollection : IList<WebParameter>
     {

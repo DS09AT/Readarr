@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace NzbDrone.Common.Serializer
+namespace Shelvance.Common.Serializer
 {
     public class IntConverter : JsonConverter
     {

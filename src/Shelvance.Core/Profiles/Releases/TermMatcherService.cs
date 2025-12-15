@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Profiles.Releases.TermMatchers;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Profiles.Releases.TermMatchers;
 
-namespace NzbDrone.Core.Profiles.Releases
+namespace Shelvance.Core.Profiles.Releases
 {
     public interface ITermMatcherService
     {

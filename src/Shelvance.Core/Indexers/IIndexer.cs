@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Http;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public interface IIndexer : IProvider
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public struct OsPath : IEquatable<OsPath>
     {

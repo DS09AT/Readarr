@@ -4,16 +4,16 @@ using NLog;
 using NLog.Config;
 using NLog.Targets.Syslog;
 using NLog.Targets.Syslog.Settings;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Sentry;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Configuration.Events;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Sentry;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Configuration.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Instrumentation
+namespace Shelvance.Core.Instrumentation
 {
     public class ReconfigureLogging : IHandleAsync<ConfigFileSavedEvent>
     {
@@ -93,7 +93,7 @@ namespace NzbDrone.Core.Instrumentation
 
         private void SetLogRotation()
         {
-            foreach (var target in LogManager.Configuration.AllTargets.OfType<NzbDroneFileTarget>())
+            foreach (var target in LogManager.Configuration.AllTargets.OfType<ShelvanceFileTarget>())
             {
                 target.MaxArchiveFiles = _configFileProvider.LogRotate;
             }

@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Common.Crypto
+namespace Shelvance.Common.Crypto
 {
     public interface IHashProvider
     {

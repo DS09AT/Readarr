@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.MediaFiles.BookImport.Identification
 {
     public class CandidateEdition
     {

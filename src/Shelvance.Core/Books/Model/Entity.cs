@@ -1,8 +1,8 @@
 using System;
 using Equ;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public abstract class Entity<T> : ModelBase, IEquatable<T>
         where T : Entity<T>

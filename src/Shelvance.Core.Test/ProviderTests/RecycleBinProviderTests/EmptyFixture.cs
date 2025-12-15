@@ -1,11 +1,11 @@
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.ProviderTests.RecycleBinProviderTests
+namespace Shelvance.Core.Test.ProviderTests.RecycleBinProviderTests
 {
     [TestFixture]
 

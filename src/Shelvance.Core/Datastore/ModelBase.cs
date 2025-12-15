@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     [DebuggerDisplay("{GetType().FullName} ID = {Id}")]
     public abstract class ModelBase

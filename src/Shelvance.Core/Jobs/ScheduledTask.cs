@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Jobs
+namespace Shelvance.Core.Jobs
 {
     public class ScheduledTask : ModelBase
     {

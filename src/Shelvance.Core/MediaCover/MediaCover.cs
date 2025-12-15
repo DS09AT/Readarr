@@ -1,9 +1,9 @@
 using System.IO;
 using Equ;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.MediaCover
+namespace Shelvance.Core.MediaCover
 {
     public enum MediaCoverTypes
     {

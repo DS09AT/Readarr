@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using System.Text.Json.Serialization;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Qualities
+namespace Shelvance.Core.Qualities
 {
     public class QualityModel : IEmbeddedDocument, IEquatable<QualityModel>, IComparable
     {

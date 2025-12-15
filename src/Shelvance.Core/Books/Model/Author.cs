@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using Equ;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.Profiles.Qualities;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class Author : Entity<Author>
     {

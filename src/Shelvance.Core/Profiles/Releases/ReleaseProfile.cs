@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Profiles.Releases
+namespace Shelvance.Core.Profiles.Releases
 {
     public class ReleaseProfile : ModelBase
     {

@@ -5,16 +5,16 @@ using System.IO.Abstractions;
 using System.Linq;
 using System.Threading;
 using NLog;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public abstract class DiskProviderBase : IDiskProvider
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(DiskProviderBase));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(DiskProviderBase));
         protected readonly IFileSystem _fileSystem;
 
         public DiskProviderBase(IFileSystem fileSystem)

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 
@@ -29,7 +29,7 @@ namespace Shelvance.Api.V1.Profiles.Metadata
                     .Trim(',')
                     .Split(',')
                     .Select(y => y.Trim())
-                    .All(y => y == "null" || NzbDrone.Core.Books.Calibre.Extensions.KnownLanguages.Contains(y)))
+                    .All(y => y == "null" || Shelvance.Core.Books.Calibre.Extensions.KnownLanguages.Contains(y)))
                 .When(x => x.AllowedLanguages.IsNotNullOrWhiteSpace())
                 .WithMessage("Unknown languages");
         }

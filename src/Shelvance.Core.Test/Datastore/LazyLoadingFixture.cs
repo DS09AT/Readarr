@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using FizzWare.NBuilder;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Datastore
+namespace Shelvance.Core.Test.Datastore
 {
     [TestFixture]
     public class LazyLoadingFixture : DbTest

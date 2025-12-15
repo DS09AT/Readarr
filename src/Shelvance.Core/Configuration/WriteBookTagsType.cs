@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public enum WriteBookTagsType
     {

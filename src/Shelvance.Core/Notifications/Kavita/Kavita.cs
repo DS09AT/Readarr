@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net.Sockets;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
 public class Kavita : NotificationBase<KavitaSettings>
 {

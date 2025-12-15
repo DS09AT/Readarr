@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Notifiarr
+namespace Shelvance.Core.Notifications.Notifiarr
 {
-    public class NotifiarrException : NzbDroneException
+    public class NotifiarrException : ShelvanceException
     {
         public NotifiarrException(string message)
             : base(message)

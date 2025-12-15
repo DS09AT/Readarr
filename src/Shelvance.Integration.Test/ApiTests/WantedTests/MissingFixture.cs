@@ -1,10 +1,10 @@
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 using Shelvance.Api.V1.RootFolders;
 
-namespace NzbDrone.Integration.Test.ApiTests.WantedTests
+namespace Shelvance.Integration.Test.ApiTests.WantedTests
 {
     [TestFixture]
     [Ignore("Waiting for metadata to be back again", Until = "2026-01-15 00:00:00Z")]

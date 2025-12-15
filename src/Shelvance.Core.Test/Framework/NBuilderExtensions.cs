@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using FizzWare.NBuilder;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     public static class NBuilderExtensions
     {

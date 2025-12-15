@@ -1,14 +1,14 @@
 using System;
 using NLog;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Localization;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ProviderUpdatedEvent<IDownloadClient>))]
     [CheckOn(typeof(ProviderDeletedEvent<IDownloadClient>))]

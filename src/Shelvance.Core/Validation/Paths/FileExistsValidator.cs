@@ -1,7 +1,7 @@
 using FluentValidation.Validators;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class FileExistsValidator : PropertyValidator
     {

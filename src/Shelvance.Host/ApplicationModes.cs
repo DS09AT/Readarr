@@ -1,4 +1,4 @@
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public enum ApplicationModes
     {

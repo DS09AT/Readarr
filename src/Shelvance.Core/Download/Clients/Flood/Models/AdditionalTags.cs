@@ -1,6 +1,6 @@
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.Download.Clients.Flood.Models
+namespace Shelvance.Core.Download.Clients.Flood.Models
 {
     public enum AdditionalTags
     {

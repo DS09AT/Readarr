@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Manual
+namespace Shelvance.Core.MediaFiles.BookImport.Manual
 {
     public class ManualImportItem : ModelBase
     {

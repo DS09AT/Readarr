@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Notifications.Signal
+﻿namespace Shelvance.Core.Notifications.Signal
 {
     public class SignalError
     {

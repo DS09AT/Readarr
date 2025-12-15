@@ -2,13 +2,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 using Timer = System.Timers.Timer;
 
-namespace NzbDrone.Core.Jobs
+namespace Shelvance.Core.Jobs
 {
     public class Scheduler :
         IHandle<ApplicationStartedEvent>,

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public interface IMount
     {

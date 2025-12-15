@@ -8,14 +8,14 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Languages;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class RssParser : IParseIndexerResponse
     {
@@ -44,7 +44,7 @@ namespace NzbDrone.Core.Indexers
 
         public RssParser()
         {
-            _logger = NzbDroneLogger.GetLogger(this);
+            _logger = ShelvanceLogger.GetLogger(this);
         }
 
         public virtual IList<ReleaseInfo> ParseResponse(IndexerResponse indexerResponse)

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface ISeriesBookLinkService
     {

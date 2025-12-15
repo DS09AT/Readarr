@@ -23,7 +23,7 @@ namespace Shelvance.Api.V1.Books
 
     public static class RetagTrackResourceMapper
     {
-        public static RetagBookResource ToResource(this NzbDrone.Core.MediaFiles.RetagBookFilePreview model)
+        public static RetagBookResource ToResource(this Shelvance.Core.MediaFiles.RetagBookFilePreview model)
         {
             if (model == null)
             {
@@ -46,7 +46,7 @@ namespace Shelvance.Api.V1.Books
             };
         }
 
-        public static List<RetagBookResource> ToResource(this IEnumerable<NzbDrone.Core.MediaFiles.RetagBookFilePreview> models)
+        public static List<RetagBookResource> ToResource(this IEnumerable<Shelvance.Core.MediaFiles.RetagBookFilePreview> models)
         {
             return models.Select(ToResource).ToList();
         }

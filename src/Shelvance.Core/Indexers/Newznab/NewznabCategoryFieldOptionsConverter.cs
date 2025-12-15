@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.Indexers.Newznab
+namespace Shelvance.Core.Indexers.Newznab
 {
     public static class NewznabCategoryFieldOptionsConverter
     {

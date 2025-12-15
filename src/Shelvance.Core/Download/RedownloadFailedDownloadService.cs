@@ -1,13 +1,13 @@
 using NLog;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.Messaging;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.Messaging;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class RedownloadFailedDownloadService : IHandle<DownloadFailedEvent>
     {

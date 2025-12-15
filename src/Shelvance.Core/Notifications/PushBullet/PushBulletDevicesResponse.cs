@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Notifications.PushBullet
+namespace Shelvance.Core.Notifications.PushBullet
 {
     public class PushBulletDevicesResponse
     {

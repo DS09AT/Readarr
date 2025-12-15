@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Sabnzbd
+namespace Shelvance.Core.Download.Clients.Sabnzbd
 {
     public class Sabnzbd : UsenetClientBase<SabnzbdSettings>
     {
@@ -364,7 +364,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
 
                 if (rawVersion.Equals("develop", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    return new NzbDroneValidationFailure("Version", "Sabnzbd develop version, assuming version 3.0.0 or higher.")
+                    return new ShelvanceValidationFailure("Version", "Sabnzbd develop version, assuming version 3.0.0 or higher.")
                     {
                         IsWarning = true,
                         DetailedDescription = "Shelvance may not be able to support new features added to SABnzbd when running develop versions."
@@ -386,7 +386,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
             catch (Exception ex)
             {
                 _logger.Error(ex, ex.Message);
-                return new NzbDroneValidationFailure("Host", "Unable to connect to SABnzbd")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to SABnzbd")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -422,7 +422,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
             var config = _proxy.GetConfig(Settings);
             if (config.Misc.pre_check && !HasVersion(1, 1))
             {
-                return new NzbDroneValidationFailure("", "Disable 'Check before download' option in Sabnbzd")
+                return new ShelvanceValidationFailure("", "Disable 'Check before download' option in Sabnbzd")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/switches/"),
                     DetailedDescription = "Using Check before download affects Shelvance ability to track new downloads. Also Sabnzbd recommends 'Abort jobs that cannot be completed' instead since it's more effective."
@@ -441,7 +441,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
             {
                 if (category.Dir.EndsWith("*"))
                 {
-                    return new NzbDroneValidationFailure("MusicCategory", "Enable Job folders")
+                    return new ShelvanceValidationFailure("MusicCategory", "Enable Job folders")
                     {
                         InfoLink = _proxy.GetBaseUrl(Settings, "config/categories/"),
                         DetailedDescription = "Shelvance prefers each download to have a separate folder. With * appended to the Folder/Path Sabnzbd will not create these job folders. Go to Sabnzbd to fix it."
@@ -452,7 +452,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
             {
                 if (!Settings.MusicCategory.IsNullOrWhiteSpace())
                 {
-                    return new NzbDroneValidationFailure("MusicCategory", "Category does not exist")
+                    return new ShelvanceValidationFailure("MusicCategory", "Category does not exist")
                     {
                         InfoLink = _proxy.GetBaseUrl(Settings, "config/categories/"),
                         DetailedDescription = "The Category your entered doesn't exist in Sabnzbd. Go to Sabnzbd to create it."
@@ -462,7 +462,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
 
             if (config.Misc.enable_tv_sorting && ContainsCategory(config.Misc.tv_categories, Settings.MusicCategory))
             {
-                return new NzbDroneValidationFailure("MusicCategory", "Disable TV Sorting")
+                return new ShelvanceValidationFailure("MusicCategory", "Disable TV Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
                     DetailedDescription = "You must disable Sabnzbd TV Sorting for the category Shelvance uses to prevent import issues. Go to Sabnzbd to fix it."
@@ -471,7 +471,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
 
             if (config.Misc.enable_movie_sorting && ContainsCategory(config.Misc.movie_categories, Settings.MusicCategory))
             {
-                return new NzbDroneValidationFailure("MusicCategory", "Disable Movie Sorting")
+                return new ShelvanceValidationFailure("MusicCategory", "Disable Movie Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
                     DetailedDescription = "You must disable Sabnzbd Movie Sorting for the category Shelvance uses to prevent import issues. Go to Sabnzbd to fix it."
@@ -480,7 +480,7 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
 
             if (config.Misc.enable_date_sorting && ContainsCategory(config.Misc.date_categories, Settings.MusicCategory))
             {
-                return new NzbDroneValidationFailure("MusicCategory", "Disable Date Sorting")
+                return new ShelvanceValidationFailure("MusicCategory", "Disable Date Sorting")
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings, "config/sorting/"),
                     DetailedDescription = "You must disable Sabnzbd Date Sorting for the category Shelvance uses to prevent import issues. Go to Sabnzbd to fix it."

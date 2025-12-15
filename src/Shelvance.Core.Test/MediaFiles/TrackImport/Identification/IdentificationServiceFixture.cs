@@ -7,23 +7,23 @@ using FluentValidation.Results;
 using Moq;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.BookImport;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation.Aggregators;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.BookImport;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation.Aggregators;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.Test.MediaFiles.BookImport.Identification
 {
     [TestFixture]
     public class IdentificationServiceFixture : DbTest

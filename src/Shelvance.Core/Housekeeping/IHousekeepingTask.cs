@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Housekeeping
+namespace Shelvance.Core.Housekeeping
 {
     public interface IHousekeepingTask
     {

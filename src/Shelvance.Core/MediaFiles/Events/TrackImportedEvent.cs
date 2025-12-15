@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Download;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.Events
+namespace Shelvance.Core.MediaFiles.Events
 {
     public class TrackImportedEvent : IEvent
     {

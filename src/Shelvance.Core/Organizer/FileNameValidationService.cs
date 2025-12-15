@@ -1,6 +1,6 @@
 using FluentValidation.Results;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public interface IFilenameValidationService
     {

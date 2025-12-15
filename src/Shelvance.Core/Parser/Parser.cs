@@ -4,16 +4,16 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Core.Books;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public static class Parser
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(Parser));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(Parser));
 
         private static readonly Regex[] ReportMusicTitleRegex = new[]
         {

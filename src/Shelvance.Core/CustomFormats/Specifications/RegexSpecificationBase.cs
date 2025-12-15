@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class RegexSpecificationBaseValidator : AbstractValidator<RegexSpecificationBase>
     {
@@ -46,9 +46,9 @@ namespace NzbDrone.Core.CustomFormats
             return _regex.IsMatch(compared);
         }
 
-        public override NzbDroneValidationResult Validate()
+        public override ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

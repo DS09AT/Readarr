@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadClientInfo
     {

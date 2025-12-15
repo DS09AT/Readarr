@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Xml.Linq;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     /// <summary>
     /// This class models a book link as defined by the Goodreads API.

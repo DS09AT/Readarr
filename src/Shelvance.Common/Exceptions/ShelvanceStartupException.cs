@@ -1,8 +1,8 @@
 using System;
 
-namespace NzbDrone.Common.Exceptions
+namespace Shelvance.Common.Exceptions
 {
-    public class ShelvanceStartupException : NzbDroneException
+    public class ShelvanceStartupException : ShelvanceException
     {
         public ShelvanceStartupException(string message, params object[] args)
             : base("Shelvance failed to start: " + string.Format(message, args))

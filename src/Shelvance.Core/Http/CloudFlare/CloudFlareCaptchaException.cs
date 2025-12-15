@@ -1,9 +1,9 @@
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Http.CloudFlare
+namespace Shelvance.Core.Http.CloudFlare
 {
-    public class CloudFlareCaptchaException : NzbDroneException
+    public class CloudFlareCaptchaException : ShelvanceException
     {
         public HttpResponse Response { get; set; }
 

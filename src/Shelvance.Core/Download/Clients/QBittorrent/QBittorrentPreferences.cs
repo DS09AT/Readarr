@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Download.Clients.QBittorrent
+namespace Shelvance.Core.Download.Clients.QBittorrent
 {
     public enum QBittorrentMaxRatioAction
     {

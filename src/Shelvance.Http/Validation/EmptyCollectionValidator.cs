@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
 namespace Shelvance.Http.Validation
 {

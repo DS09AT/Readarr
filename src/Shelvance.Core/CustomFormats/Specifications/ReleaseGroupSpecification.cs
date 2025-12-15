@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class ReleaseGroupSpecification : RegexSpecificationBase
     {

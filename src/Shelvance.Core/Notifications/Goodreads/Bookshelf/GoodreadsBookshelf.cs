@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.MetadataSource.Goodreads;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.MetadataSource.Goodreads;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public class GoodreadsBookshelf : GoodreadsNotificationBase<GoodreadsBookshelfNotificationSettings>
     {

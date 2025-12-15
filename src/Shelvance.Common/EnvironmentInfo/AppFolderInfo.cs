@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Reflection;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public interface IAppFolderInfo
     {
@@ -17,7 +17,7 @@ namespace NzbDrone.Common.EnvironmentInfo
     {
         private readonly Environment.SpecialFolder _dataSpecialFolder = Environment.SpecialFolder.CommonApplicationData;
 
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(AppFolderInfo));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(AppFolderInfo));
 
         public AppFolderInfo(IStartupContext startupContext)
         {

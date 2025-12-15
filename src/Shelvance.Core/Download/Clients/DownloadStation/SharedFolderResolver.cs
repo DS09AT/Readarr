@@ -1,10 +1,10 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Download.Clients.DownloadStation.Proxies;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Download.Clients.DownloadStation.Proxies;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation
+namespace Shelvance.Core.Download.Clients.DownloadStation
 {
     public interface ISharedFolderResolver
     {

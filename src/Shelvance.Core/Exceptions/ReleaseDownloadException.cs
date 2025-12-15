@@ -1,10 +1,10 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Exceptions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
-    public class ReleaseDownloadException : NzbDroneException
+    public class ReleaseDownloadException : ShelvanceException
     {
         public ReleaseInfo Release { get; set; }
 

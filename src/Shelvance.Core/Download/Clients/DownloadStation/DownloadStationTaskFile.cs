@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation
+namespace Shelvance.Core.Download.Clients.DownloadStation
 {
     public class DownloadStationTaskFile
     {

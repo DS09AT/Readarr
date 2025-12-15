@@ -4,14 +4,14 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.OrganizerTests.FileNameBuilderTests
+namespace Shelvance.Core.Test.OrganizerTests.FileNameBuilderTests
 {
     [TestFixture]
     public class NestedFileNameBuilderFixture : CoreTest<FileNameBuilder>

@@ -1,10 +1,10 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IIgnoredDownloadService
     {

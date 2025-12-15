@@ -5,12 +5,12 @@ using System.Linq;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Download.Clients.Deluge
+namespace Shelvance.Core.Download.Clients.Deluge
 {
     public interface IDelugeProxy
     {

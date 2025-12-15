@@ -1,6 +1,6 @@
 using Dapper;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public abstract class WhereBuilder : ExpressionVisitor
     {

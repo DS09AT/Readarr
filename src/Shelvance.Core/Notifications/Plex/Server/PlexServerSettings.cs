@@ -1,10 +1,10 @@
 using FluentValidation;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Plex.Server
+namespace Shelvance.Core.Notifications.Plex.Server
 {
     public class PlexServerSettingsValidator : AbstractValidator<PlexServerSettings>
     {
@@ -62,9 +62,9 @@ namespace NzbDrone.Core.Notifications.Plex.Server
 
         public bool IsValid => !string.IsNullOrWhiteSpace(Host);
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

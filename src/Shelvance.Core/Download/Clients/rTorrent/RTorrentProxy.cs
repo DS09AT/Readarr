@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Download.Extensions;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Download.Extensions;
 
-namespace NzbDrone.Core.Download.Clients.RTorrent
+namespace Shelvance.Core.Download.Clients.RTorrent
 {
     public interface IRTorrentProxy
     {

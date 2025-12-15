@@ -5,9 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Loader;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Common.Composition
+namespace Shelvance.Common.Composition
 {
     public class AssemblyLoader
     {
@@ -56,7 +56,7 @@ namespace NzbDrone.Common.Composition
             catch (InvalidOperationException)
             {
                 // This can only be set once per assembly
-                // Catch required for NzbDrone.Host tests
+                // Catch required for Shelvance.Host tests
             }
         }
 

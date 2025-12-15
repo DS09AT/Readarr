@@ -6,13 +6,13 @@ using System.Linq;
 using Mono.Unix;
 using Mono.Unix.Native;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public class DiskProvider : DiskProviderBase
     {
@@ -20,7 +20,7 @@ namespace NzbDrone.Mono.Disk
         // `unchecked((uint)-1)` and `uint.MaxValue` are the same thing.
         private const uint UNCHANGED_ID = uint.MaxValue;
 
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(DiskProvider));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(DiskProvider));
 
         private readonly IProcMountProvider _procMountProvider;
         private readonly ISymbolicLinkResolver _symLinkResolver;

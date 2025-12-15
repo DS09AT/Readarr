@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public interface IAppFolderFactory
     {
@@ -27,7 +27,7 @@ namespace NzbDrone.Common.EnvironmentInfo
         {
             _appFolderInfo = appFolderInfo;
             _diskProvider = diskProvider;
-            _logger = NzbDroneLogger.GetLogger(this);
+            _logger = ShelvanceLogger.GetLogger(this);
         }
 
         public void Register()

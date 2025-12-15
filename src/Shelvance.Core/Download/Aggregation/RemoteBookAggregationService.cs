@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Core.Download.Aggregation.Aggregators;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Download.Aggregation.Aggregators;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.Aggregation
+namespace Shelvance.Core.Download.Aggregation
 {
     public interface IRemoteBookAggregationService
     {

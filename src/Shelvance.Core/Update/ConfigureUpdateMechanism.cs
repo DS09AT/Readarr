@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public interface IUpdaterConfigProvider
     {

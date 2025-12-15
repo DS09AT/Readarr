@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Download.TrackedDownloads;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Download.TrackedDownloads;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadCanBeRemovedEvent : IEvent
     {

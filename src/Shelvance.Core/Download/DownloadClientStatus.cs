@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public class DownloadClientStatus : ProviderStatusBase
     {

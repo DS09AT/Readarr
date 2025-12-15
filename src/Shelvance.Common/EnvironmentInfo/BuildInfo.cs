@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public static class BuildInfo
     {

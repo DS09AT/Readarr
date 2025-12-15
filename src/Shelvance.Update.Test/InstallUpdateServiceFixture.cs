@@ -2,19 +2,19 @@
 using System.IO;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Test.Common;
-using NzbDrone.Update.UpdateEngine;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Test.Common;
+using Shelvance.Update.UpdateEngine;
 
-namespace NzbDrone.Update.Test
+namespace Shelvance.Update.Test
 {
     [TestFixture]
     public class InstallUpdateServiceFixture : TestBase<InstallUpdateService>
     {
         private const int _processId = 12;
-        private string _targetFolder = @"C:\NzbDrone\".AsOsAgnostic();
+        private string _targetFolder = @"C:\Shelvance\".AsOsAgnostic();
 
         [SetUp]
         public void Setup()
@@ -56,7 +56,7 @@ namespace NzbDrone.Update.Test
         [Test]
         public void update_should_throw_if_update_folder_doesnt_exist()
         {
-            const string sandboxFolder = @"C:\Temp\NzbDrone_update\nzbdrone";
+            const string sandboxFolder = @"C:\Temp\Shelvance_update\shelvance";
 
             GivenTargetFolderExists();
             GivenProcessExists();

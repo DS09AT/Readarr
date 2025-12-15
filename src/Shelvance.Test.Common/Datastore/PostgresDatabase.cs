@@ -1,9 +1,9 @@
 using System;
 using Npgsql;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Test.Common.Datastore
+namespace Shelvance.Test.Common.Datastore
 {
     public static class PostgresDatabase
     {

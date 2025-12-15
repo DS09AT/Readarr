@@ -1,6 +1,6 @@
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.MediaFiles.Events
+namespace Shelvance.Core.MediaFiles.Events
 {
     public class BookFileAddedEvent : IEvent
     {

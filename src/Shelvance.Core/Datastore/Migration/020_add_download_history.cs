@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using FluentMigrator;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(20)]
-    public class AddDownloadHistory : NzbDroneMigrationBase
+    public class AddDownloadHistory : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

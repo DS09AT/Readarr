@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Tags
+namespace Shelvance.Core.Tags
 {
     public interface ITagRepository : IBasicRepository<Tag>
     {

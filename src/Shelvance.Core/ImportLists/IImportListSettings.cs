@@ -1,6 +1,6 @@
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IImportListSettings : IProviderConfig
     {

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NzbDrone.Common;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Files;
+using Shelvance.Common;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Files;
 
-namespace NzbDrone.Core.Extras
+namespace Shelvance.Core.Extras
 {
     public abstract class ImportExistingExtraFilesBase<TExtraFile> : IImportExistingExtraFiles
         where TExtraFile : ExtraFile, new()

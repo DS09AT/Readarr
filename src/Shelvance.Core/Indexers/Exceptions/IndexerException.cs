@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Exceptions
+namespace Shelvance.Core.Indexers.Exceptions
 {
-    public class IndexerException : NzbDroneException
+    public class IndexerException : ShelvanceException
     {
         private readonly IndexerResponse _indexerResponse;
 

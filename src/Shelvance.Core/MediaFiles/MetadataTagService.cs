@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 using NLog;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IMetadataTagService
     {

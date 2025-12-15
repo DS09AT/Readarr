@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Profiles;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Profiles;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.CustomFormats
+namespace Shelvance.Core.Test.CustomFormats
 {
     public class CustomFormatsTestHelpers : CoreTest
     {

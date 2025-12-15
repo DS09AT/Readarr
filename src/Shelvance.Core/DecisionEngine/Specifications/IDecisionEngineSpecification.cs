@@ -1,7 +1,7 @@
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public interface IDecisionEngineSpecification
     {

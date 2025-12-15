@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Download.TrackedDownloads
+namespace Shelvance.Core.Download.TrackedDownloads
 {
     public class TrackedDownloadsRemovedEvent : IEvent
     {

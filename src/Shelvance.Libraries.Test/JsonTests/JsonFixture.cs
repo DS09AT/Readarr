@@ -1,9 +1,9 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Serializer;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Libraries.Test.JsonTests
+namespace Shelvance.Libraries.Test.JsonTests
 {
     [TestFixture]
     public class JsonFixture : TestBase

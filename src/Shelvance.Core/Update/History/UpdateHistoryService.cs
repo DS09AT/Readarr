@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Update.History.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Update.History.Events;
 
-namespace NzbDrone.Core.Update.History
+namespace Shelvance.Core.Update.History
 {
     public interface IUpdateHistoryService
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.MetadataSource;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.MetadataProvider

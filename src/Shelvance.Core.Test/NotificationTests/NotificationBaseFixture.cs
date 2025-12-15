@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Notifications;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Notifications;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.NotificationTests
+namespace Shelvance.Core.Test.NotificationTests
 {
     [TestFixture]
     public class NotificationBaseFixture : TestBase
     {
         private class TestSetting : IProviderConfig
         {
-            public NzbDroneValidationResult Validate()
+            public ShelvanceValidationResult Validate()
             {
-                return new NzbDroneValidationResult();
+                return new ShelvanceValidationResult();
             }
         }
 
@@ -84,7 +84,7 @@ namespace NzbDrone.Core.Test.NotificationTests
                 TestLogger.Info("OnBookFileDelete was called");
             }
 
-            public override void OnHealthIssue(NzbDrone.Core.HealthCheck.HealthCheck author)
+            public override void OnHealthIssue(Shelvance.Core.HealthCheck.HealthCheck author)
             {
                 TestLogger.Info("OnHealthIssue was called");
             }

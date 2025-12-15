@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.DiskSpace
+﻿namespace Shelvance.Core.DiskSpace
 {
     public class DiskSpace
     {

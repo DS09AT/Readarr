@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Indexers;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Indexers;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IProcessDownloadDecisions
     {

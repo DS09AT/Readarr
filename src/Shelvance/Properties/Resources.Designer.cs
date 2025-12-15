@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NzbDrone.Properties {
+namespace Shelvance.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace NzbDrone.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NzbDrone.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Shelvance.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace NzbDrone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon NzbDroneIcon {
+        internal static System.Drawing.Icon ShelvanceIcon {
             get {
-                object obj = ResourceManager.GetObject("NzbDroneIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("ShelvanceIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

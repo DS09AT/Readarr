@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Indexers.Exceptions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Indexers.Exceptions;
 
-namespace NzbDrone.Core.Indexers.Newznab
+namespace Shelvance.Core.Indexers.Newznab
 {
     public interface INewznabCapabilitiesProvider
     {

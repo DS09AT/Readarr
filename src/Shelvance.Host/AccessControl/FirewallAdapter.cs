@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using NetFwTypeLib;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Host.AccessControl
+namespace Shelvance.Host.AccessControl
 {
     public interface IFirewallAdapter
     {
@@ -29,13 +29,13 @@ namespace NzbDrone.Host.AccessControl
         {
             if (IsFirewallEnabled())
             {
-                if (!IsNzbDronePortOpen(_configFileProvider.Port))
+                if (!IsShelvancePortOpen(_configFileProvider.Port))
                 {
                     _logger.Debug("Opening Port for Shelvance: {0}", _configFileProvider.Port);
                     OpenFirewallPort(_configFileProvider.Port);
                 }
 
-                if (_configFileProvider.EnableSsl && !IsNzbDronePortOpen(_configFileProvider.SslPort))
+                if (_configFileProvider.EnableSsl && !IsShelvancePortOpen(_configFileProvider.SslPort))
                 {
                     _logger.Debug("Opening SSL Port for Shelvance: {0}", _configFileProvider.SslPort);
                     OpenFirewallPort(_configFileProvider.SslPort);
@@ -43,7 +43,7 @@ namespace NzbDrone.Host.AccessControl
             }
         }
 
-        private bool IsNzbDronePortOpen(int port)
+        private bool IsShelvancePortOpen(int port)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace NzbDrone.Host.AccessControl
                 var port = (INetFwOpenPort)Activator.CreateInstance(type);
 
                 port.Port = portNumber;
-                port.Name = "NzbDrone";
+                port.Name = "Shelvance";
                 port.Protocol = NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP;
                 port.Enabled = true;
 

@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Notifications.Slack.Payloads;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Notifications.Slack.Payloads;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Slack
+namespace Shelvance.Core.Notifications.Slack
 {
     public class Slack : NotificationBase<SlackSettings>
     {
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.Notifications.Slack
             }
             catch (SlackExeption ex)
             {
-                return new NzbDroneValidationFailure("Unable to post", ex.Message);
+                return new ShelvanceValidationFailure("Unable to post", ex.Message);
             }
 
             return null;

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.History;
+using Shelvance.Core.Qualities;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Api.V1.CustomFormats;

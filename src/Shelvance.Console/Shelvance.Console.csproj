@@ -3,12 +3,12 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net8.0</TargetFrameworks>
 
-    <ApplicationIcon>..\NzbDrone.Host\Shelvance.ico</ApplicationIcon>
+    <ApplicationIcon>..\Shelvance.Host\Shelvance.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="!$(RuntimeIdentifier.StartsWith('win'))">
     <AssemblyName>Shelvance</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Shelvance.Host.csproj" />
+    <ProjectReference Include="..\Shelvance.Host\Shelvance.Host.csproj" />
   </ItemGroup>
 </Project>

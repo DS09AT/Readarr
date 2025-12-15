@@ -1,18 +1,18 @@
 using System;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
-using NzbDrone.Test.Common;
-using NzbDrone.Update.UpdateEngine;
-using IServiceProvider = NzbDrone.Common.IServiceProvider;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
+using Shelvance.Test.Common;
+using Shelvance.Update.UpdateEngine;
+using IServiceProvider = Shelvance.Common.IServiceProvider;
 
-namespace NzbDrone.Update.Test
+namespace Shelvance.Update.Test
 {
     [TestFixture]
-    public class StartNzbDroneServiceFixture : TestBase<StartNzbDrone>
+    public class StartShelvanceServiceFixture : TestBase<StartShelvance>
     {
         [Test]
         public void should_start_service_if_app_type_was_serivce()

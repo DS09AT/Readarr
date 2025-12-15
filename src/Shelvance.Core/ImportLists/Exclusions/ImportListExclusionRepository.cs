@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.ImportLists.Exclusions
+namespace Shelvance.Core.ImportLists.Exclusions
 {
     public interface IImportListExclusionRepository : IBasicRepository<ImportListExclusion>
     {

@@ -2,9 +2,9 @@ using System.Data;
 using System.Text.RegularExpressions;
 using FluentMigrator;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Maintenance(MigrationStage.BeforeAll, TransactionBehavior.None)]
     public class DatabaseEngineVersionCheck : FluentMigrator.Migration
@@ -13,7 +13,7 @@ namespace NzbDrone.Core.Datastore.Migration
 
         public DatabaseEngineVersionCheck()
         {
-            _logger = NzbDroneLogger.GetLogger(this);
+            _logger = ShelvanceLogger.GetLogger(this);
         }
 
         public override void Up()

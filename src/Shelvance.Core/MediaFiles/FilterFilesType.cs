@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public enum FilterFilesType
     {

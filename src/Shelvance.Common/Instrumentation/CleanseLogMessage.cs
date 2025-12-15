@@ -1,9 +1,9 @@
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Instrumentation
+namespace Shelvance.Common.Instrumentation
 {
     public class CleanseLogMessage
     {

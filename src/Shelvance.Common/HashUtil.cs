@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public static class HashUtil
     {

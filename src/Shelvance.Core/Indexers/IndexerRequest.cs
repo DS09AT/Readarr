@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Http;
+﻿using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class IndexerRequest
     {

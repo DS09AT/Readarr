@@ -6,8 +6,8 @@ using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.Datastore;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http.Validation;
 
 namespace Shelvance.Http.REST

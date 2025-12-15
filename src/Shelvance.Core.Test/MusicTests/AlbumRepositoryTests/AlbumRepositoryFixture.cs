@@ -5,11 +5,11 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using FluentAssertions.Equivalency;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MusicTests.BookRepositoryTests
+namespace Shelvance.Core.Test.MusicTests.BookRepositoryTests
 {
     [TestFixture]
     public class BookRepositoryFixture : DbTest<BookService, Book>

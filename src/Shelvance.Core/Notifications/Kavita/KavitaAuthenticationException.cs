@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.Notifications.Kavita;
+﻿namespace Shelvance.Core.Notifications.Kavita;
 
 public class KavitaAuthenticationException : KavitaException
 {

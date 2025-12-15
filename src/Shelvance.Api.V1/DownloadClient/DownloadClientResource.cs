@@ -1,5 +1,5 @@
-﻿using NzbDrone.Core.Download;
-using NzbDrone.Core.Indexers;
+﻿using Shelvance.Core.Download;
+using Shelvance.Core.Indexers;
 
 namespace Shelvance.Api.V1.DownloadClient
 {

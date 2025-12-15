@@ -7,7 +7,7 @@ using ICSharpCode.SharpZipLib.Tar;
 using ICSharpCode.SharpZipLib.Zip;
 using NLog;
 
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public interface IArchiveService
     {

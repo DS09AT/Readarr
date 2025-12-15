@@ -1,4 +1,4 @@
-namespace NzbDrone.Common.Options;
+namespace Shelvance.Common.Options;
 
 public class UpdateOptions
 {

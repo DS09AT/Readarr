@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.Extensions;
 
@@ -26,7 +26,7 @@ namespace Shelvance.Api.V1.Blocklist
         public PagingResource<BlocklistResource> GetBlocklist([FromQuery] PagingRequestResource paging)
         {
             var pagingResource = new PagingResource<BlocklistResource>(paging);
-            var pagingSpec = pagingResource.MapToPagingSpec<BlocklistResource, NzbDrone.Core.Blocklisting.Blocklist>("date", SortDirection.Descending);
+            var pagingSpec = pagingResource.MapToPagingSpec<BlocklistResource, Shelvance.Core.Blocklisting.Blocklist>("date", SortDirection.Descending);
 
             return pagingSpec.ApplyToPage(_blocklistService.Paged, model => BlocklistResourceMapper.MapToResource(model, _formatCalculator));
         }

@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Localization;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Localization;
+using Shelvance.Test.Common;
 using Shelvance.Http.ClientSchema;
 
-namespace NzbDrone.Api.Test.ClientSchemaTests
+namespace Shelvance.Api.Test.ClientSchemaTests
 {
     [TestFixture]
     public class SchemaBuilderFixture : TestBase

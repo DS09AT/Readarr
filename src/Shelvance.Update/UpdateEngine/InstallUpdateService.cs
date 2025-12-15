@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
 
-namespace NzbDrone.Update.UpdateEngine
+namespace Shelvance.Update.UpdateEngine
 {
     public interface IInstallUpdateService
     {
@@ -19,11 +19,11 @@ namespace NzbDrone.Update.UpdateEngine
         private readonly IDiskTransferService _diskTransferService;
         private readonly IDetectApplicationType _detectApplicationType;
         private readonly IDetectExistingVersion _detectExistingVersion;
-        private readonly ITerminateNzbDrone _terminateNzbDrone;
+        private readonly ITerminateShelvance _terminateShelvance;
         private readonly IAppFolderInfo _appFolderInfo;
         private readonly IBackupAndRestore _backupAndRestore;
         private readonly IBackupAppData _backupAppData;
-        private readonly IStartNzbDrone _startNzbDrone;
+        private readonly IStartShelvance _startShelvance;
         private readonly IProcessProvider _processProvider;
         private readonly Logger _logger;
 
@@ -31,11 +31,11 @@ namespace NzbDrone.Update.UpdateEngine
                                     IDiskTransferService diskTransferService,
                                     IDetectApplicationType detectApplicationType,
                                     IDetectExistingVersion detectExistingVersion,
-                                    ITerminateNzbDrone terminateNzbDrone,
+                                    ITerminateShelvance terminateShelvance,
                                     IAppFolderInfo appFolderInfo,
                                     IBackupAndRestore backupAndRestore,
                                     IBackupAppData backupAppData,
-                                    IStartNzbDrone startNzbDrone,
+                                    IStartShelvance startShelvance,
                                     IProcessProvider processProvider,
                                     Logger logger)
         {
@@ -43,11 +43,11 @@ namespace NzbDrone.Update.UpdateEngine
             _diskTransferService = diskTransferService;
             _detectApplicationType = detectApplicationType;
             _detectExistingVersion = detectExistingVersion;
-            _terminateNzbDrone = terminateNzbDrone;
+            _terminateShelvance = terminateShelvance;
             _appFolderInfo = appFolderInfo;
             _backupAndRestore = backupAndRestore;
             _backupAppData = backupAppData;
-            _startNzbDrone = startNzbDrone;
+            _startShelvance = startShelvance;
             _processProvider = processProvider;
             _logger = logger;
         }
@@ -103,7 +103,7 @@ namespace NzbDrone.Update.UpdateEngine
 
             if (OsInfo.IsWindows)
             {
-                _terminateNzbDrone.Terminate(processId);
+                _terminateShelvance.Terminate(processId);
             }
 
             try
@@ -142,11 +142,11 @@ namespace NzbDrone.Update.UpdateEngine
             {
                 if (OsInfo.IsWindows)
                 {
-                    _startNzbDrone.Start(appType, installationFolder);
+                    _startShelvance.Start(appType, installationFolder);
                 }
                 else
                 {
-                    _terminateNzbDrone.Terminate(processId);
+                    _terminateShelvance.Terminate(processId);
 
                     _logger.Info("Waiting for external auto-restart.");
                     for (var i = 0; i < 10; i++)
@@ -162,7 +162,7 @@ namespace NzbDrone.Update.UpdateEngine
 
                     if (!_processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                     {
-                        _startNzbDrone.Start(appType, installationFolder);
+                        _startShelvance.Start(appType, installationFolder);
                     }
                 }
             }

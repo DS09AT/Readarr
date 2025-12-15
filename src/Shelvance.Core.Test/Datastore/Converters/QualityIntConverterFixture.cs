@@ -1,11 +1,11 @@
 using System.Data.SQLite;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Datastore.Converters;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Datastore.Converters;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Datastore.Converters
+namespace Shelvance.Core.Test.Datastore.Converters
 {
     [TestFixture]
     public class QualityIntConverterFixture : CoreTest<DapperQualityIntConverter>

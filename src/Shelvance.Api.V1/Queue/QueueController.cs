@@ -2,19 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Queue;
-using NzbDrone.Http.REST.Attributes;
-using NzbDrone.SignalR;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Queue;
+using Shelvance.Http.REST.Attributes;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.Extensions;
 using Shelvance.Http.REST;
@@ -22,7 +22,7 @@ using Shelvance.Http.REST;
 namespace Shelvance.Api.V1.Queue
 {
     [V1ApiController]
-    public class QueueController : RestControllerWithSignalR<QueueResource, NzbDrone.Core.Queue.Queue>,
+    public class QueueController : RestControllerWithSignalR<QueueResource, Shelvance.Core.Queue.Queue>,
                                IHandle<QueueUpdatedEvent>, IHandle<PendingReleasesUpdatedEvent>
     {
         private readonly IQueueService _queueService;
@@ -95,7 +95,7 @@ namespace Shelvance.Api.V1.Queue
         public object RemoveMany([FromBody] QueueBulkResource resource, [FromQuery] bool removeFromClient = true, [FromQuery] bool blocklist = false, [FromQuery] bool skipRedownload = false, [FromQuery] bool changeCategory = false)
         {
             var trackedDownloadIds = new List<string>();
-            var pendingToRemove = new List<NzbDrone.Core.Queue.Queue>();
+            var pendingToRemove = new List<Shelvance.Core.Queue.Queue>();
             var trackedToRemove = new List<TrackedDownload>();
 
             foreach (var id in resource.Ids)
@@ -137,12 +137,12 @@ namespace Shelvance.Api.V1.Queue
         public PagingResource<QueueResource> GetQueue([FromQuery] PagingRequestResource paging, bool includeUnknownAuthorItems = false, bool includeAuthor = false, bool includeBook = false)
         {
             var pagingResource = new PagingResource<QueueResource>(paging);
-            var pagingSpec = pagingResource.MapToPagingSpec<QueueResource, NzbDrone.Core.Queue.Queue>("timeleft", SortDirection.Ascending);
+            var pagingSpec = pagingResource.MapToPagingSpec<QueueResource, Shelvance.Core.Queue.Queue>("timeleft", SortDirection.Ascending);
 
             return pagingSpec.ApplyToPage((spec) => GetQueue(spec, includeUnknownAuthorItems), (q) => MapToResource(q, includeAuthor, includeBook));
         }
 
-        private PagingSpec<NzbDrone.Core.Queue.Queue> GetQueue(PagingSpec<NzbDrone.Core.Queue.Queue> pagingSpec, bool includeUnknownAuthorItems)
+        private PagingSpec<Shelvance.Core.Queue.Queue> GetQueue(PagingSpec<Shelvance.Core.Queue.Queue> pagingSpec, bool includeUnknownAuthorItems)
         {
             var ascending = pagingSpec.SortDirection == SortDirection.Ascending;
             var orderByFunc = GetOrderByFunc(pagingSpec);
@@ -151,7 +151,7 @@ namespace Shelvance.Api.V1.Queue
             var filteredQueue = includeUnknownAuthorItems ? queue : queue.Where(q => q.Author != null);
             var pending = _pendingReleaseService.GetPendingQueue();
             var fullQueue = filteredQueue.Concat(pending).ToList();
-            IOrderedEnumerable<NzbDrone.Core.Queue.Queue> ordered;
+            IOrderedEnumerable<Shelvance.Core.Queue.Queue> ordered;
 
             if (pagingSpec.SortKey == "timeleft")
             {
@@ -209,7 +209,7 @@ namespace Shelvance.Api.V1.Queue
             return pagingSpec;
         }
 
-        private Func<NzbDrone.Core.Queue.Queue, object> GetOrderByFunc(PagingSpec<NzbDrone.Core.Queue.Queue> pagingSpec)
+        private Func<Shelvance.Core.Queue.Queue, object> GetOrderByFunc(PagingSpec<Shelvance.Core.Queue.Queue> pagingSpec)
         {
             switch (pagingSpec.SortKey)
             {
@@ -239,7 +239,7 @@ namespace Shelvance.Api.V1.Queue
             }
         }
 
-        private void Remove(NzbDrone.Core.Queue.Queue pendingRelease)
+        private void Remove(Shelvance.Core.Queue.Queue pendingRelease)
         {
             _blocklistService.Block(pendingRelease.RemoteBook, "Pending release manually blocklisted");
             _pendingReleaseService.RemovePendingQueueItems(pendingRelease.Id);
@@ -305,7 +305,7 @@ namespace Shelvance.Api.V1.Queue
             return trackedDownload;
         }
 
-        private QueueResource MapToResource(NzbDrone.Core.Queue.Queue queueItem, bool includeAuthor, bool includeBook)
+        private QueueResource MapToResource(Shelvance.Core.Queue.Queue queueItem, bool includeAuthor, bool includeBook)
         {
             return queueItem.ToResource(includeAuthor, includeBook);
         }

@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Qualities.Commands
+namespace Shelvance.Core.Qualities.Commands
 {
     public class ResetQualityDefinitionsCommand : Command
     {

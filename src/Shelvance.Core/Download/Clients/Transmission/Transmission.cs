@@ -2,14 +2,14 @@ using System;
 using System.Text.RegularExpressions;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.RemotePathMappings;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.RemotePathMappings;
 
-namespace NzbDrone.Core.Download.Clients.Transmission
+namespace Shelvance.Core.Download.Clients.Transmission
 {
     public class Transmission : TransmissionBase
     {

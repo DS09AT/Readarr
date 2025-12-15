@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public interface IMediaFileTableCleanupService
     {

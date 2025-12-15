@@ -23,7 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class FuzzyContainsExtension
     {

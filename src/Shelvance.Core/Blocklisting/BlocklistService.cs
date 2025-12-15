@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Download;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Blocklisting
+namespace Shelvance.Core.Blocklisting
 {
     public interface IBlocklistService
     {

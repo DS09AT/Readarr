@@ -1,13 +1,13 @@
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine.Specifications.Search;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine.Specifications.Search;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.DecisionEngineTests.Search
+namespace Shelvance.Core.Test.DecisionEngineTests.Search
 {
     [TestFixture]
     public class AuthorSpecificationFixture : TestBase<AuthorSpecification>

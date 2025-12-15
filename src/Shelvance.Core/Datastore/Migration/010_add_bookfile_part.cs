@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(010)]
-    public class add_bookfile_part : NzbDroneMigrationBase
+    public class add_bookfile_part : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

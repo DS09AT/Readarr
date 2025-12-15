@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public static class UrlValidation
     {

@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using NLog;
 
-namespace NzbDrone.Update.UpdateEngine
+namespace Shelvance.Update.UpdateEngine
 {
     public interface IDetectExistingVersion
     {

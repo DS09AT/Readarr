@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Download.Clients.NzbVortex.Responses
+namespace Shelvance.Core.Download.Clients.NzbVortex.Responses
 {
     public class NzbVortexGroupResponse : NzbVortexResponseBase
     {

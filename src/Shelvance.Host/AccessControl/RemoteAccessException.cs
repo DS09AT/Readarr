@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Host.AccessControl
+namespace Shelvance.Host.AccessControl
 {
-    public class RemoteAccessException : NzbDroneException
+    public class RemoteAccessException : ShelvanceException
     {
         public RemoteAccessException(string message, params object[] args)
             : base(message, args)

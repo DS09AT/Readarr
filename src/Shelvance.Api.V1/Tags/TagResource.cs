@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Tags;
+using Shelvance.Core.Tags;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Tags

@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Mailgun
+namespace Shelvance.Core.Notifications.Mailgun
 {
-    public class MailgunException : NzbDroneException
+    public class MailgunException : ShelvanceException
     {
         public MailgunException(string message)
             : base(message)

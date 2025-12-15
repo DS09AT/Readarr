@@ -1,13 +1,13 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Specifications
+namespace Shelvance.Core.MediaFiles.BookImport.Specifications
 {
     public class UpgradeSpecification : IImportDecisionEngineSpecification<LocalBook>
     {

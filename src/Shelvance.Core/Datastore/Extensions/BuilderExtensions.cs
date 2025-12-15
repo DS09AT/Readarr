@@ -6,15 +6,15 @@ using System.Reflection;
 using System.Text;
 using Dapper;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public static class SqlBuilderExtensions
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(SqlBuilderExtensions));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(SqlBuilderExtensions));
 
         public static bool LogSql { get; set; }
 

@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public class GoodreadsSettingsBaseValidator<TSettings> : AbstractValidator<TSettings>
         where TSettings : GoodreadsSettingsBase<TSettings>
@@ -48,6 +48,6 @@ namespace NzbDrone.Core.Notifications.Goodreads
 
         public bool IsValid => !string.IsNullOrWhiteSpace(AccessTokenSecret);
 
-        public abstract NzbDroneValidationResult Validate();
+        public abstract ShelvanceValidationResult Validate();
     }
 }

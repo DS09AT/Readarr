@@ -1,8 +1,8 @@
 using System.Linq;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.Configuration;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Config

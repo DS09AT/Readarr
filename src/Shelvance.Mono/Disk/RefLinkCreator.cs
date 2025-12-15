@@ -2,10 +2,10 @@ using System;
 using Mono.Unix;
 using Mono.Unix.Native;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Mono.Interop;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Mono.Interop;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public interface IRefLinkCreator
     {

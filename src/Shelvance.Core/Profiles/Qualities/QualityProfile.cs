@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Profiles.Qualities
+namespace Shelvance.Core.Profiles.Qualities
 {
     public class QualityProfile : ModelBase
     {

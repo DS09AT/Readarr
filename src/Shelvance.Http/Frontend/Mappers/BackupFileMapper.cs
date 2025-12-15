@@ -1,7 +1,7 @@
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Backup;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Backup;
 
 namespace Shelvance.Http.Frontend.Mappers
 {

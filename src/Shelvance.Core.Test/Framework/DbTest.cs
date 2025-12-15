@@ -8,13 +8,13 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Npgsql;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Migration.Framework;
-using NzbDrone.Test.Common.Datastore;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Migration.Framework;
+using Shelvance.Test.Common.Datastore;
 
-namespace NzbDrone.Core.Test.Framework
+namespace Shelvance.Core.Test.Framework
 {
     public abstract class DbTest<TSubject, TModel> : DbTest
         where TSubject : class

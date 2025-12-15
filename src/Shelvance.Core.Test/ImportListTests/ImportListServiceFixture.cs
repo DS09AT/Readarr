@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Test.ImportListTests
+namespace Shelvance.Core.Test.ImportListTests
 {
     /*
     public class ImportListServiceFixture : DbTest<ImportListFactory, ImportListDefinition>

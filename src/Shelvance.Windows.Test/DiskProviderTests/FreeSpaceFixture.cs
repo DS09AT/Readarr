@@ -1,10 +1,10 @@
 using System.IO;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Test.DiskTests;
-using NzbDrone.Windows.Disk;
+using Shelvance.Common.Test.DiskTests;
+using Shelvance.Windows.Disk;
 
-namespace NzbDrone.Windows.Test.DiskProviderTests
+namespace Shelvance.Windows.Test.DiskProviderTests
 {
     [TestFixture]
     [Platform("Win")]

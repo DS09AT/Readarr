@@ -1,6 +1,6 @@
-using NzbDrone.Core.Notifications;
+using Shelvance.Core.Notifications;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class FixFutureNotificationStatusTimes : FixFutureProviderStatusTimes<NotificationStatus>, IHousekeepingTask
     {

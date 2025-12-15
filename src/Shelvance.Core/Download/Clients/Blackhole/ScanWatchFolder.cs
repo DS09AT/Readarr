@@ -4,14 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Organizer;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Organizer;
 
-namespace NzbDrone.Core.Download.Clients.Blackhole
+namespace Shelvance.Core.Download.Clients.Blackhole
 {
     public interface IScanWatchFolder
     {

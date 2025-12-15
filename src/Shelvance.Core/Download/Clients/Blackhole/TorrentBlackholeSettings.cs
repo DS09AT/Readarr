@@ -1,12 +1,12 @@
 using System.ComponentModel;
 using FluentValidation;
 using Newtonsoft.Json;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 
-namespace NzbDrone.Core.Download.Clients.Blackhole
+namespace Shelvance.Core.Download.Clients.Blackhole
 {
     public class TorrentBlackholeSettingsValidator : AbstractValidator<TorrentBlackholeSettings>
     {
@@ -47,9 +47,9 @@ namespace NzbDrone.Core.Download.Clients.Blackhole
         [FieldDefinition(4, Label = "Read Only", Type = FieldType.Checkbox, HelpText = "Instead of moving files this will instruct Shelvance to Copy or Hardlink (depending on settings/system configuration)")]
         public bool ReadOnly { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

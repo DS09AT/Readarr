@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Validation;
-using NzbDrone.Core.Validation.Paths;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Validation;
+using Shelvance.Core.Validation.Paths;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Config

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 using Shelvance.Http.Validation;

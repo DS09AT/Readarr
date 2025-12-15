@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.Queue
+namespace Shelvance.Core.Queue
 {
     public class TimeleftComparer : IComparer<TimeSpan?>
     {

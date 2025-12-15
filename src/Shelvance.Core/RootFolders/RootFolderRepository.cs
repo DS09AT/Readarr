@@ -1,7 +1,7 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.RootFolders
+namespace Shelvance.Core.RootFolders
 {
     public interface IRootFolderRepository : IBasicRepository<RootFolder>
     {

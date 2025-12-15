@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
-    public class LinuxPermissionsException : NzbDroneException
+    public class LinuxPermissionsException : ShelvanceException
     {
         public LinuxPermissionsException(string message, params object[] args)
             : base(message, args)

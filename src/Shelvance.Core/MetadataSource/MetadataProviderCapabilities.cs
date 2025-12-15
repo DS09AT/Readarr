@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Describes what features a metadata provider supports

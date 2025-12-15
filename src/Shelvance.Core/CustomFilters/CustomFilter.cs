@@ -1,6 +1,6 @@
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.CustomFilters
+namespace Shelvance.Core.CustomFilters
 {
     public class CustomFilter : ModelBase
     {

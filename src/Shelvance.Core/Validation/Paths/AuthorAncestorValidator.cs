@@ -1,9 +1,9 @@
 using System.Linq;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class AuthorAncestorValidator : PropertyValidator
     {

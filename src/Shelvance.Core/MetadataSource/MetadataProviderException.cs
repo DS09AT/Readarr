@@ -1,12 +1,12 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Base exception for metadata provider errors
     /// </summary>
-    public class MetadataProviderException : NzbDroneException
+    public class MetadataProviderException : ShelvanceException
     {
         public string ProviderName { get; set; }
 

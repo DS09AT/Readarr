@@ -1,9 +1,9 @@
 ﻿using System.Net;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Exceptions
+namespace Shelvance.Core.Exceptions
 {
-    public class DownstreamException : NzbDroneException
+    public class DownstreamException : ShelvanceException
     {
         public HttpStatusCode StatusCode { get; private set; }
 

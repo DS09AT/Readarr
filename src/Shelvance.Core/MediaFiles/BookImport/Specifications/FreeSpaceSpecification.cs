@@ -1,13 +1,13 @@
 using System;
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Specifications
+namespace Shelvance.Core.MediaFiles.BookImport.Specifications
 {
     public class FreeSpaceSpecification : IImportDecisionEngineSpecification<LocalBook>
     {

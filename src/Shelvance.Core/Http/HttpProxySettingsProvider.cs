@@ -2,11 +2,11 @@ using System;
 using System.Linq;
 using System.Net;
 using NetTools;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Http;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Http
+namespace Shelvance.Core.Http
 {
     public class HttpProxySettingsProvider : IHttpProxySettingsProvider
     {

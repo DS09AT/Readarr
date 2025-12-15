@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Messaging
+namespace Shelvance.Core.Messaging
 {
     public interface IProcessMessage
     {

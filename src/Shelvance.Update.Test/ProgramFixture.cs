@@ -1,12 +1,12 @@
 using System;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Model;
-using NzbDrone.Common.Processes;
-using NzbDrone.Test.Common;
-using NzbDrone.Update.UpdateEngine;
+using Shelvance.Common.Model;
+using Shelvance.Common.Processes;
+using Shelvance.Test.Common;
+using Shelvance.Update.UpdateEngine;
 
-namespace NzbDrone.Update.Test
+namespace Shelvance.Update.Test
 {
     [TestFixture]
     public class ProgramFixture : TestBase<UpdateApp>

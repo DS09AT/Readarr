@@ -1,10 +1,10 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Indexers.Exceptions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Indexers.Exceptions;
 
-namespace NzbDrone.Core.Indexers.TorrentRss
+namespace Shelvance.Core.Indexers.TorrentRss
 {
     public interface ITorrentRssParserFactory
     {

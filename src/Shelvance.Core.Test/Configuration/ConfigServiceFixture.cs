@@ -4,10 +4,10 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Configuration;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Configuration
+namespace Shelvance.Core.Test.Configuration
 {
     [TestFixture]
     public class ConfigServiceFixture : TestBase<ConfigService>

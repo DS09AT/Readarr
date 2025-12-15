@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Ntfy
+namespace Shelvance.Core.Notifications.Ntfy
 {
     public enum NtfyPriority
     {

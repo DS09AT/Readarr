@@ -1,9 +1,9 @@
 ﻿using System;
 using Dapper;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Download.Pending;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Download.Pending;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class CleanupDownloadClientUnavailablePendingReleases : IHousekeepingTask
     {

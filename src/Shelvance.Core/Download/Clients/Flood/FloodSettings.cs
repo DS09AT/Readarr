@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Download.Clients.Flood.Models;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Download.Clients.Flood.Models;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Flood
+namespace Shelvance.Core.Download.Clients.Flood
 {
     public class FloodSettingsValidator : AbstractValidator<FloodSettings>
     {
@@ -67,9 +67,9 @@ namespace NzbDrone.Core.Download.Clients.Flood
         [FieldDefinition(10, Label = "Add Paused", Type = FieldType.Checkbox)]
         public bool AddPaused { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

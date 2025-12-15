@@ -9,13 +9,13 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.MediaFiles.BookImport.Manual;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Integration.Test.Client;
-using NzbDrone.SignalR;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.MediaFiles.BookImport.Manual;
+using Shelvance.Core.Qualities;
+using Shelvance.Integration.Test.Client;
+using Shelvance.SignalR;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Blocklist;
 using Shelvance.Api.V1.Config;
@@ -28,7 +28,7 @@ using Shelvance.Api.V1.Tags;
 using RestSharp;
 using RestSharp.Serializers.SystemTextJson;
 
-namespace NzbDrone.Integration.Test
+namespace Shelvance.Integration.Test
 {
     [IntegrationTest]
     public abstract class IntegrationTestBase

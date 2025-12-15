@@ -17,7 +17,7 @@
 using System;
 using System.Diagnostics;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     /**
  * A modified version of a string edit distance described by Berghel and

@@ -33,7 +33,7 @@
     <PackageReference Include="PdfSharpCore" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Common\Shelvance.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Localization\Core\**">

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NzbDrone.Common.EnsureThat;
+using Shelvance.Common.EnsureThat;
 
-namespace NzbDrone.Common.Cache
+namespace Shelvance.Common.Cache
 {
     public interface ICacheManager
     {

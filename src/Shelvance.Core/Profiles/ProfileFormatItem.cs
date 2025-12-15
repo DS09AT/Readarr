@@ -1,7 +1,7 @@
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Profiles
+namespace Shelvance.Core.Profiles
 {
     public class ProfileFormatItem : IEmbeddedDocument
     {

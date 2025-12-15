@@ -1,6 +1,6 @@
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Update.Commands
+namespace Shelvance.Core.Update.Commands
 {
     public class ApplicationUpdateCheckCommand : Command
     {

@@ -1,8 +1,8 @@
 using System;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     public class CommandModel : ModelBase, IMessage
     {

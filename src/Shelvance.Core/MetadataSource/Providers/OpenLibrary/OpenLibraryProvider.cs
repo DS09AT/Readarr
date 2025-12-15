@@ -8,12 +8,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MetadataSource.Providers.OpenLibrary.Resources;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.MetadataSource.Providers.OpenLibrary.Resources;
 
-namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
+namespace Shelvance.Core.MetadataSource.Providers.OpenLibrary
 {
     public class OpenLibraryProvider : MetadataProviderBase<OpenLibrarySettings>
     {

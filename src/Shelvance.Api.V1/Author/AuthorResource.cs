@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaCover;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaCover;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Author
@@ -64,7 +64,7 @@ namespace Shelvance.Api.V1.Author
 
     public static class AuthorResourceMapper
     {
-        public static AuthorResource ToResource(this NzbDrone.Core.Books.Author model)
+        public static AuthorResource ToResource(this Shelvance.Core.Books.Author model)
         {
             if (model == null)
             {
@@ -137,18 +137,18 @@ namespace Shelvance.Api.V1.Author
             return null;
         }
 
-        public static NzbDrone.Core.Books.Author ToModel(this AuthorResource resource)
+        public static Shelvance.Core.Books.Author ToModel(this AuthorResource resource)
         {
             if (resource == null)
             {
                 return null;
             }
 
-            return new NzbDrone.Core.Books.Author
+            return new Shelvance.Core.Books.Author
             {
                 Id = resource.Id,
 
-                Metadata = new NzbDrone.Core.Books.AuthorMetadata
+                Metadata = new Shelvance.Core.Books.AuthorMetadata
                 {
                     ForeignAuthorId = resource.ForeignAuthorId,
                     TitleSlug = resource.TitleSlug,
@@ -181,7 +181,7 @@ namespace Shelvance.Api.V1.Author
             };
         }
 
-        public static NzbDrone.Core.Books.Author ToModel(this AuthorResource resource, NzbDrone.Core.Books.Author author)
+        public static Shelvance.Core.Books.Author ToModel(this AuthorResource resource, Shelvance.Core.Books.Author author)
         {
             var updatedAuthor = resource.ToModel();
 
@@ -190,12 +190,12 @@ namespace Shelvance.Api.V1.Author
             return author;
         }
 
-        public static List<AuthorResource> ToResource(this IEnumerable<NzbDrone.Core.Books.Author> author)
+        public static List<AuthorResource> ToResource(this IEnumerable<Shelvance.Core.Books.Author> author)
         {
             return author.Select(ToResource).ToList();
         }
 
-        public static List<NzbDrone.Core.Books.Author> ToModel(this IEnumerable<AuthorResource> resources)
+        public static List<Shelvance.Core.Books.Author> ToModel(this IEnumerable<AuthorResource> resources)
         {
             return resources.Select(ToModel).ToList();
         }

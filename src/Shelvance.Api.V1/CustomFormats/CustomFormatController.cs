@@ -3,10 +3,10 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Validation;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Validation;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 
@@ -109,7 +109,7 @@ namespace Shelvance.Api.V1.CustomFormats
 
         private void VerifyValidationResult(ValidationResult validationResult)
         {
-            var result = new NzbDroneValidationResult(validationResult.Errors);
+            var result = new ShelvanceValidationResult(validationResult.Errors);
 
             if (!result.IsValid)
             {

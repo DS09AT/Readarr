@@ -5,9 +5,9 @@ using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using NLog;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Exceptions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Exceptions;
 using Shelvance.Http.Exceptions;
 
 namespace Shelvance.Http.ErrorManagement
@@ -52,7 +52,7 @@ namespace Shelvance.Http.ErrorManagement
                 await response.WriteAsync(STJson.ToJson(validationException.Errors));
                 return;
             }
-            else if (exception is NzbDroneClientException clientException)
+            else if (exception is ShelvanceClientException clientException)
             {
                 statusCode = clientException.StatusCode;
             }

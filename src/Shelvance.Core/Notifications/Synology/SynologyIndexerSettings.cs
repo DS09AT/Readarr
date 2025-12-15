@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Synology
+namespace Shelvance.Core.Notifications.Synology
 {
     public class SynologyIndexerSettingsValidator : AbstractValidator<SynologyIndexerSettings>
     {
@@ -21,9 +21,9 @@ namespace NzbDrone.Core.Notifications.Synology
         [FieldDefinition(0, Label = "Update Library", Type = FieldType.Checkbox, HelpText = "Call synoindex on localhost to update a library file")]
         public bool UpdateLibrary { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

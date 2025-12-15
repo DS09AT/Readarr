@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Languages;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Languages;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.Newznab
+namespace Shelvance.Core.Indexers.Newznab
 {
     public class NewznabRssParser : RssParser
     {

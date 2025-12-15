@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(005)]
-    public class add_indexer_and_enabled_to_release_profiles : NzbDroneMigrationBase
+    public class add_indexer_and_enabled_to_release_profiles : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

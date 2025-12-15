@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Languages;
+using Shelvance.Core.Languages;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

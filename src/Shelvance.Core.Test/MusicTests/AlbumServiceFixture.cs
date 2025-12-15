@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MusicTests.BookRepositoryTests
+namespace Shelvance.Core.Test.MusicTests.BookRepositoryTests
 {
     [TestFixture]
     public class BookServiceFixture : CoreTest<BookService>

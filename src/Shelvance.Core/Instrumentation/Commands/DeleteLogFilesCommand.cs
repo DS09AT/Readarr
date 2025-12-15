@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Instrumentation.Commands
+namespace Shelvance.Core.Instrumentation.Commands
 {
     public class DeleteLogFilesCommand : Command
     {

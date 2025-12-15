@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Download.History
+namespace Shelvance.Core.Download.History
 {
     public class DownloadHistory : ModelBase
     {

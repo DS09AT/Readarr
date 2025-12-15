@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data;
 using Dapper;
-using NzbDrone.Common.Disk;
+using Shelvance.Common.Disk;
 
-namespace NzbDrone.Core.Datastore.Converters
+namespace Shelvance.Core.Datastore.Converters
 {
     public class OsPathConverter : SqlMapper.TypeHandler<OsPath>
     {

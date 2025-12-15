@@ -1,10 +1,10 @@
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public interface IIndexerStatusService : IProviderStatusServiceBase<IndexerStatus>
     {

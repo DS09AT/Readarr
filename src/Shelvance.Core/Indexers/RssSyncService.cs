@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class RssSyncService : IExecute<RssSyncCommand>
     {

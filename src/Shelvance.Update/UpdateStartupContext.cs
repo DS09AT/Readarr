@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Update
+﻿namespace Shelvance.Update
 {
     public class UpdateStartupContext
     {

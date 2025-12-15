@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore.Migration;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore.Migration;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Datastore.Migration
+namespace Shelvance.Core.Test.Datastore.Migration
 {
     [TestFixture]
     public class add_custom_formatsFixture : MigrationTest<add_custom_formats>

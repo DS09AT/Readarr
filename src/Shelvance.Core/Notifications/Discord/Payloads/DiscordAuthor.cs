@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Notifications.Discord.Payloads
+namespace Shelvance.Core.Notifications.Discord.Payloads
 {
     public class DiscordAuthor
     {

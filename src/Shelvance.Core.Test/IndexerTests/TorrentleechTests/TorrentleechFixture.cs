@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Indexers.Torrentleech;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Indexers.Torrentleech;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests.TorrentleechTests
+namespace Shelvance.Core.Test.IndexerTests.TorrentleechTests
 {
     [TestFixture]
     public class TorrentleechFixture : CoreTest<Torrentleech>

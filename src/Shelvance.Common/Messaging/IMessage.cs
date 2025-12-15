@@ -1,4 +1,4 @@
-namespace NzbDrone.Common.Messaging
+namespace Shelvance.Common.Messaging
 {
     public interface IMessage
     {

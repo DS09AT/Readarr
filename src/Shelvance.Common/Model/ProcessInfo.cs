@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Common.Model
+﻿namespace Shelvance.Common.Model
 {
     public class ProcessInfo
     {

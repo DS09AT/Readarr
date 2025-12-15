@@ -2,12 +2,12 @@ using System;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Update;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Update;
 
-namespace NzbDrone.Core.Test.UpdateTests
+namespace Shelvance.Core.Test.UpdateTests
 {
     public class UpdatePackageProviderFixture : CoreTest<UpdatePackageProvider>
     {

@@ -3,18 +3,18 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
-    public static class NzbDroneValidationExtensions
+    public static class ShelvanceValidationExtensions
     {
-        public static NzbDroneValidationResult Filter(this NzbDroneValidationResult result, params string[] fields)
+        public static ShelvanceValidationResult Filter(this ShelvanceValidationResult result, params string[] fields)
         {
             var failures = result.Failures.Where(v => fields.Contains(v.PropertyName)).ToArray();
 
-            return new NzbDroneValidationResult(failures);
+            return new ShelvanceValidationResult(failures);
         }
 
-        public static void ThrowOnError(this NzbDroneValidationResult result)
+        public static void ThrowOnError(this ShelvanceValidationResult result)
         {
             if (!result.IsValid)
             {
@@ -24,7 +24,7 @@ namespace NzbDrone.Core.Validation
 
         public static bool HasErrors(this List<ValidationFailure> list)
         {
-            return list.Any(item => item is not NzbDroneValidationFailure { IsWarning: true });
+            return list.Any(item => item is not ShelvanceValidationFailure { IsWarning: true });
         }
     }
 }

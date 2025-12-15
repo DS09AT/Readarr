@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Download.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Download.Extensions;
 
-namespace NzbDrone.Core.Download.Clients.Aria2
+namespace Shelvance.Core.Download.Clients.Aria2
 {
     public interface IAria2Proxy
     {

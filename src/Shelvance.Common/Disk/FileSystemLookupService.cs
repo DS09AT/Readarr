@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public interface IFileSystemLookupService
     {

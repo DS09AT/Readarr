@@ -1,12 +1,12 @@
 ﻿using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Lifecycle.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using IServiceProvider = NzbDrone.Common.IServiceProvider;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Lifecycle.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using IServiceProvider = Shelvance.Common.IServiceProvider;
 
-namespace NzbDrone.Core.Lifecycle
+namespace Shelvance.Core.Lifecycle
 {
     public interface ILifecycleService
     {

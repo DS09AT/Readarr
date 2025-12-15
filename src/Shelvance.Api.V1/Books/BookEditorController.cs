@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Books;
+using Shelvance.Core.Messaging.Commands;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Books

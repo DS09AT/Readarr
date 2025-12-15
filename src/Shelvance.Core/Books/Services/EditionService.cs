@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IEditionService
     {

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Dapper;
 using FluentMigrator;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(026)]
-    public class add_custom_formats : NzbDroneMigrationBase
+    public class add_custom_formats : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

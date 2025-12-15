@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using NLog;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public static class MediaInfoFormatter
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(MediaInfoFormatter));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(MediaInfoFormatter));
 
         public static string FormatAudioBitrate(MediaInfoModel mediaInfo)
         {

@@ -1,6 +1,6 @@
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Lifecycle
+namespace Shelvance.Core.Lifecycle
 {
     public class ApplicationStartingEvent : IEvent
     {

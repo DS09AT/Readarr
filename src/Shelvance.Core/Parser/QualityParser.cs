@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public class QualityParser
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(QualityParser));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(QualityParser));
 
         private static readonly Regex ProperRegex = new (@"\b(?<proper>proper)\b",
                                                                 RegexOptions.Compiled | RegexOptions.IgnoreCase);

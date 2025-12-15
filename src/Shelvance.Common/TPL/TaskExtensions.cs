@@ -1,12 +1,12 @@
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Common.TPL
+namespace Shelvance.Common.TPL
 {
     public static class TaskExtensions
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(TaskExtensions));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(TaskExtensions));
 
         public static Task LogExceptions(this Task task)
         {

@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Ntfy
+namespace Shelvance.Core.Notifications.Ntfy
 {
-    public class NtfyException : NzbDroneException
+    public class NtfyException : ShelvanceException
     {
         public NtfyException(string message)
             : base(message)

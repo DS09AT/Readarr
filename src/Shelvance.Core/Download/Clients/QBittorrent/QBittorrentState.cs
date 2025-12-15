@@ -1,6 +1,6 @@
-using NzbDrone.Core.Annotations;
+using Shelvance.Core.Annotations;
 
-namespace NzbDrone.Core.Download.Clients.QBittorrent
+namespace Shelvance.Core.Download.Clients.QBittorrent
 {
     public enum QBittorrentState
     {

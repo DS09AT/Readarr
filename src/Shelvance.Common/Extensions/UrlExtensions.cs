@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class UrlExtensions
     {

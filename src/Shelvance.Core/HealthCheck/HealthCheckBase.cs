@@ -1,6 +1,6 @@
-using NzbDrone.Core.Localization;
+using Shelvance.Core.Localization;
 
-namespace NzbDrone.Core.HealthCheck
+namespace Shelvance.Core.HealthCheck
 {
     public abstract class HealthCheckBase : IProvideHealthCheck
     {

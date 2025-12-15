@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace NzbDrone.Core.Parser
+namespace Shelvance.Core.Parser
 {
     public class RegexReplace
     {

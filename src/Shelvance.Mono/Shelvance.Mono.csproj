@@ -9,6 +9,6 @@
     <PackageReference Include="Mono.Posix.NETStandard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Shelvance.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Common\Shelvance.Common.csproj" />
   </ItemGroup>
 </Project>

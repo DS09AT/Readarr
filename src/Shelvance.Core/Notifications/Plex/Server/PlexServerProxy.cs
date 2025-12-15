@@ -3,13 +3,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Notifications.Plex.Server
+namespace Shelvance.Core.Notifications.Plex.Server
 {
     public interface IPlexServerProxy
     {

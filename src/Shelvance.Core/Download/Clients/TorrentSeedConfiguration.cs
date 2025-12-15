@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Download.Clients
+namespace Shelvance.Core.Download.Clients
 {
     public class TorrentSeedConfiguration
     {

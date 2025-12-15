@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Blocklisting
+namespace Shelvance.Core.Blocklisting
 {
     public interface IBlocklistRepository : IBasicRepository<Blocklist>
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.Clients.DownloadStation.Proxies;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.Clients.DownloadStation.Proxies;
 
-namespace NzbDrone.Core.Download.Clients.DownloadStation
+namespace Shelvance.Core.Download.Clients.DownloadStation
 {
     public interface ISerialNumberProvider
     {

@@ -1,6 +1,6 @@
-using NzbDrone.Core.Datastore.Events;
+using Shelvance.Core.Datastore.Events;
 
-namespace NzbDrone.SignalR
+namespace Shelvance.SignalR
 {
     public class SignalRMessage
     {

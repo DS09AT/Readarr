@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Blocklisting
+namespace Shelvance.Core.Blocklisting
 {
     public class ClearBlocklistCommand : Command
     {

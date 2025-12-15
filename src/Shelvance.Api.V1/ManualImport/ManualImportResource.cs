@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.MediaFiles.BookImport.Manual;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.MediaFiles.BookImport.Manual;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Qualities;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http.REST;

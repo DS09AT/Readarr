@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public static class StringExtensions
     {

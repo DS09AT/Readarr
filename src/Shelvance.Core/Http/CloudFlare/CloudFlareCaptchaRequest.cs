@@ -1,6 +1,6 @@
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Http.CloudFlare
+namespace Shelvance.Core.Http.CloudFlare
 {
     public class CloudFlareCaptchaRequest
     {

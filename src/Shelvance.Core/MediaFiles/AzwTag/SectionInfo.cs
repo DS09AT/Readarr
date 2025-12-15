@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.MediaFiles.Azw
+namespace Shelvance.Core.MediaFiles.Azw
 {
     public struct SectionInfo
     {

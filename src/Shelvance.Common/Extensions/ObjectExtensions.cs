@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Serializer;
+﻿using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Common.Extensions
+namespace Shelvance.Common.Extensions
 {
     public static class ObjectExtensions
     {

@@ -1,12 +1,12 @@
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.HealthCheck.Checks;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.HealthCheck.Checks;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class AppDataLocationFixture : CoreTest<AppDataLocationCheck>
@@ -24,11 +24,11 @@ namespace NzbDrone.Core.Test.HealthCheck.Checks
         {
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.StartUpFolder)
-                  .Returns(@"C:\NzbDrone".AsOsAgnostic());
+                  .Returns(@"C:\Shelvance".AsOsAgnostic());
 
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.AppDataFolder)
-                  .Returns(@"C:\NzbDrone\AppData".AsOsAgnostic());
+                  .Returns(@"C:\Shelvance\AppData".AsOsAgnostic());
 
             Subject.Check().ShouldBeWarning();
         }
@@ -38,11 +38,11 @@ namespace NzbDrone.Core.Test.HealthCheck.Checks
         {
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.StartUpFolder)
-                  .Returns(@"C:\NzbDrone".AsOsAgnostic());
+                  .Returns(@"C:\Shelvance".AsOsAgnostic());
 
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.AppDataFolder)
-                  .Returns(@"C:\NzbDrone".AsOsAgnostic());
+                  .Returns(@"C:\Shelvance".AsOsAgnostic());
 
             Subject.Check().ShouldBeWarning();
         }
@@ -52,11 +52,11 @@ namespace NzbDrone.Core.Test.HealthCheck.Checks
         {
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.StartUpFolder)
-                  .Returns(@"C:\NzbDrone".AsOsAgnostic());
+                  .Returns(@"C:\Shelvance".AsOsAgnostic());
 
             Mocker.GetMock<IAppFolderInfo>()
                   .Setup(s => s.AppDataFolder)
-                  .Returns(@"C:\ProgramData\NzbDrone".AsOsAgnostic());
+                  .Returns(@"C:\ProgramData\Shelvance".AsOsAgnostic());
 
             Subject.Check().ShouldBeOk();
         }

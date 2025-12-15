@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace NzbDrone.Core.MetadataSource.Goodreads
+namespace Shelvance.Core.MetadataSource.Goodreads
 {
     public abstract class GoodreadsResource
     {

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.HealthCheck.Checks;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.HealthCheck.Checks;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Localization;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.HealthCheck.Checks
+namespace Shelvance.Core.Test.HealthCheck.Checks
 {
     [TestFixture]
     public class IndexerRssCheckFixture : CoreTest<IndexerRssCheck>

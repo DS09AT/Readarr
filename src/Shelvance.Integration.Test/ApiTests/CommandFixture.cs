@@ -1,8 +1,8 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Integration.Test.Client;
+using Shelvance.Integration.Test.Client;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     [Ignore("Not ready to be used on this branch")]

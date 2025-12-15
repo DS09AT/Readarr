@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Core.HealthCheck
+namespace Shelvance.Core.HealthCheck
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class CheckOnAttribute : Attribute

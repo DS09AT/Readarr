@@ -1,10 +1,10 @@
 using System;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public class IndexerFlagSpecificationValidator : AbstractValidator<IndexerFlagSpecification>
     {
@@ -36,9 +36,9 @@ namespace NzbDrone.Core.CustomFormats
             return input.IndexerFlags.HasFlag((IndexerFlags)Value);
         }
 
-        public override NzbDroneValidationResult Validate()
+        public override ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

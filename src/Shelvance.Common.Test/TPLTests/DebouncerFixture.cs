@@ -2,9 +2,9 @@
 using System.Threading;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.TPL;
+using Shelvance.Common.TPL;
 
-namespace NzbDrone.Common.Test.TPLTests
+namespace Shelvance.Common.Test.TPLTests
 {
     [TestFixture]
     [Platform(Exclude = "MacOsX")]

@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using Mono.Unix.Native;
 
-namespace NzbDrone.Mono.Interop
+namespace Shelvance.Mono.Interop
 {
     internal sealed class SafeUnixHandle : SafeHandle
     {

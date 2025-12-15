@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using NzbDrone.Common.Cloud;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Analytics;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Cloud;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Core.Analytics;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public interface IUpdatePackageProvider
     {

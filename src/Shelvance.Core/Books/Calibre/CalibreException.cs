@@ -1,9 +1,9 @@
 ﻿using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Books.Calibre
+namespace Shelvance.Core.Books.Calibre
 {
-    public class CalibreException : NzbDroneException
+    public class CalibreException : ShelvanceException
     {
         public CalibreException(string message)
             : base(message)

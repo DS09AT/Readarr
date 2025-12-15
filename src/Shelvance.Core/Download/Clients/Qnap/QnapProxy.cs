@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Download.Clients.Qnap
+namespace Shelvance.Core.Download.Clients.Qnap
 {
     public interface IQnapProxy
     {

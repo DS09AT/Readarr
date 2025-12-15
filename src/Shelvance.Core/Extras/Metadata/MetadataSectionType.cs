@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public static class MetadataSectionType
     {

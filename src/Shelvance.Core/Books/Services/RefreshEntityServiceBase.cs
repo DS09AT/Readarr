@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NLog;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public abstract class RefreshEntityServiceBase<TEntity, TChild>
     {

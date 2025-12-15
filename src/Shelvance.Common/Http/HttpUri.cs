@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public class HttpUri : IEquatable<HttpUri>
     {

@@ -6,16 +6,16 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Backup
+namespace Shelvance.Core.Backup
 {
     public interface IBackupService
     {

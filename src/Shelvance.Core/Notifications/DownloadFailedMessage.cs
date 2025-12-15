@@ -1,6 +1,6 @@
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Notifications
+namespace Shelvance.Core.Notifications
 {
     public class DownloadFailedMessage
     {

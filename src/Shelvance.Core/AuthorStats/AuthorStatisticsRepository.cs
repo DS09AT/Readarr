@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Dapper;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.AuthorStats
+namespace Shelvance.Core.AuthorStats
 {
     public interface IAuthorStatisticsRepository
     {

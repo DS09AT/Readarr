@@ -1,6 +1,6 @@
 using System;
 
-namespace NzbDrone.Common.EnvironmentInfo
+namespace Shelvance.Common.EnvironmentInfo
 {
     public interface IRuntimeInfo
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Qualities;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.ManualImport

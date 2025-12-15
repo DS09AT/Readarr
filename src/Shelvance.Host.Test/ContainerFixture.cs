@@ -8,24 +8,24 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.Composition.Extensions;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Options;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Extensions;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Host;
-using NzbDrone.SignalR;
-using NzbDrone.Test.Common;
+using Shelvance.Common;
+using Shelvance.Common.Composition.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Options;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Extensions;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Host;
+using Shelvance.SignalR;
+using Shelvance.Test.Common;
 using IServiceProvider = System.IServiceProvider;
 
-namespace NzbDrone.App.Test
+namespace Shelvance.App.Test
 {
     [TestFixture]
     public class ContainerFixture : TestBase
@@ -37,9 +37,9 @@ namespace NzbDrone.App.Test
         {
             var args = new StartupContext("first", "second");
 
-            var container = new Container(rules => rules.WithNzbDroneRules())
+            var container = new Container(rules => rules.WithShelvanceRules())
                 .AutoAddServices(Bootstrap.ASSEMBLIES)
-                .AddNzbDroneLogger()
+                .AddShelvanceLogger()
                 .AddDummyDatabase()
                 .AddStartupContext(args);
 

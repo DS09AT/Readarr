@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using FluentValidation.Results;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Extras.Metadata.Files;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Books;
+using Shelvance.Core.Extras.Metadata.Files;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public abstract class MetadataBase<TSettings> : IMetadata
         where TSettings : IProviderConfig, new()

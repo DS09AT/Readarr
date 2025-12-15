@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.Gazelle
+namespace Shelvance.Core.Indexers.Gazelle
 {
     public class GazelleParser : IParseIndexerResponse
     {

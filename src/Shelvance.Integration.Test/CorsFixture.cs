@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Shelvance.Http.Extensions;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test
+namespace Shelvance.Integration.Test
 {
     [TestFixture]
     public class CorsFixture : IntegrationTest

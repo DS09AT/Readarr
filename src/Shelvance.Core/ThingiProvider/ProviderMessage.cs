@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.ThingiProvider
+﻿namespace Shelvance.Core.ThingiProvider
 {
     public class ProviderMessage
     {

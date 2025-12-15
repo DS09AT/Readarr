@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.AuthorStats;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine.Specifications;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.SignalR;
+using Shelvance.Core.AuthorStats;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine.Specifications;
+using Shelvance.Core.MediaCover;
+using Shelvance.SignalR;
 using Shelvance.Api.V1.Author;
 using Shelvance.Http.REST;
 
@@ -86,7 +86,7 @@ namespace Shelvance.Api.V1.Books
 
             if (includeAuthor)
             {
-                var authorDict = new Dictionary<int, NzbDrone.Core.Books.Author>();
+                var authorDict = new Dictionary<int, Shelvance.Core.Books.Author>();
                 for (var i = 0; i < books.Count; i++)
                 {
                     var book = books[i];

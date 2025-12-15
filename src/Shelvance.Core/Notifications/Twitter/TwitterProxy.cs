@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Web;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.OAuth;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.OAuth;
 
-namespace NzbDrone.Core.Notifications.Twitter
+namespace Shelvance.Core.Notifications.Twitter
 {
     public interface ITwitterProxy
     {

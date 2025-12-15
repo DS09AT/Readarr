@@ -1,10 +1,10 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Profiles
+namespace Shelvance.Core.Test.Profiles
 {
     [TestFixture]
     public class ProfileRepositoryFixture : DbTest<QualityProfileRepository, QualityProfile>

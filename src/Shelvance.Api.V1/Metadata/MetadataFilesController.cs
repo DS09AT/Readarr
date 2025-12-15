@@ -1,6 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Extras.Metadata;
+using Shelvance.Core.Extras.Metadata;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Metadata

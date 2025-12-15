@@ -7,13 +7,13 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http.Dispatchers;
-using NzbDrone.Common.TPL;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http.Dispatchers;
+using Shelvance.Common.TPL;
 
-namespace NzbDrone.Common.Http
+namespace Shelvance.Common.Http
 {
     public interface IHttpClient
     {

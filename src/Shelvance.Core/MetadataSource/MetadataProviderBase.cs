@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Cache;
+using Shelvance.Core.Books;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     /// <summary>
     /// Abstract base class for all metadata providers

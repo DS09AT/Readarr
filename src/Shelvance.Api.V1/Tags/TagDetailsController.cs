@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Tags;
+using Shelvance.Core.Tags;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

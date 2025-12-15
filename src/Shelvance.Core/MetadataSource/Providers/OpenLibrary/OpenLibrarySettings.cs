@@ -1,7 +1,7 @@
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
+namespace Shelvance.Core.MetadataSource.Providers.OpenLibrary
 {
     public class OpenLibrarySettings : IProviderConfig
     {
@@ -13,9 +13,9 @@ namespace NzbDrone.Core.MetadataSource.Providers.OpenLibrary
 
         public bool UseCoversFallback { get; set; } = true;
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult();
+            return new ShelvanceValidationResult();
         }
     }
 }

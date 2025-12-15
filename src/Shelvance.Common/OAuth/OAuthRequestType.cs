@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Common.OAuth
+﻿namespace Shelvance.Common.OAuth
 {
     /// <summary>
     /// The types of OAuth requests possible in a typical workflow.

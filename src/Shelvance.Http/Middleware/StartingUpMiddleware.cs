@@ -1,8 +1,8 @@
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Serializer;
 using Shelvance.Http.Extensions;
 
 namespace Shelvance.Http.Middleware

@@ -1,7 +1,7 @@
 using System;
 using FluentValidation.Validators;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public class GuidValidator : PropertyValidator
     {

@@ -2,10 +2,10 @@ using System;
 using System.Text;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.ParserTests
+namespace Shelvance.Core.Test.ParserTests
 {
     [TestFixture]
     public class CrapParserFixture : CoreTest

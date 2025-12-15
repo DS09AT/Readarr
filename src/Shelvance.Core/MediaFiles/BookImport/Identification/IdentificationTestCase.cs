@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Metadata;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Metadata;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.MediaFiles.BookImport.Identification
 {
     public class BasicLocalTrack
     {

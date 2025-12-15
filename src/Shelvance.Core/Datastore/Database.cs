@@ -4,9 +4,9 @@ using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using Dapper;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public interface IDatabase
     {
@@ -22,7 +22,7 @@ namespace NzbDrone.Core.Datastore
         private readonly string _databaseName;
         private readonly Func<IDbConnection> _datamapperFactory;
 
-        private readonly Logger _logger = NzbDroneLogger.GetLogger(typeof(Database));
+        private readonly Logger _logger = ShelvanceLogger.GetLogger(typeof(Database));
 
         public Database(string databaseName, Func<IDbConnection> datamapperFactory)
         {

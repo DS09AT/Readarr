@@ -1,10 +1,10 @@
 using System.Reflection;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Automation.Test.PageModel;
+using Shelvance.Automation.Test.PageModel;
 using OpenQA.Selenium;
 
-namespace NzbDrone.Automation.Test
+namespace Shelvance.Automation.Test
 {
     [TestFixture]
     public class MainPagesTest : AutomationTest

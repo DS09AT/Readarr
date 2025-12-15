@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Notifications.Pushover
+namespace Shelvance.Core.Notifications.Pushover
 {
     public class InvalidResponseException : Exception
     {

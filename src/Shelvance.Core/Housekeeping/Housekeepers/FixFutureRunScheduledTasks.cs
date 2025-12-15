@@ -1,10 +1,10 @@
 ﻿using System;
 using Dapper;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class FixFutureRunScheduledTasks : IHousekeepingTask
     {

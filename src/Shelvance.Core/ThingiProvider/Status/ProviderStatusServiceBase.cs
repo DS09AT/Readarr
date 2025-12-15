@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.ThingiProvider.Status
+namespace Shelvance.Core.ThingiProvider.Status
 {
     public interface IProviderStatusServiceBase<TModel>
         where TModel : ProviderStatusBase, new()

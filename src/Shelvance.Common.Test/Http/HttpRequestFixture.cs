@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace NzbDrone.Common.Test.Http
+namespace Shelvance.Common.Test.Http
 {
     [TestFixture]
     public class HttpRequestFixture

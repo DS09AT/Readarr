@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Update.History
+namespace Shelvance.Core.Update.History
 {
     public interface IUpdateHistoryRepository : IBasicRepository<UpdateHistory>
     {

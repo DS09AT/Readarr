@@ -3,20 +3,20 @@ using System.Net;
 using System.Threading.Tasks;
 using MonoTorrent;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public abstract class TorrentClientBase<TSettings> : DownloadClientBase<TSettings>
         where TSettings : IProviderConfig, new()

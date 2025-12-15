@@ -4,18 +4,18 @@ using System.ServiceProcess;
 using System.Threading;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Test.Common;
-using NzbDrone.Test.Common.Categories;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Test.Common;
+using Shelvance.Test.Common.Categories;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     [TestFixture]
     public class ServiceProviderFixture : TestBase<ServiceProvider>
     {
         private const string ALWAYS_INSTALLED_SERVICE = "SCardSvr"; //Smart Card
-        private const string TEMP_SERVICE_NAME = "NzbDrone_Nunit";
+        private const string TEMP_SERVICE_NAME = "Shelvance_Nunit";
 
         [SetUp]
         public void Setup()

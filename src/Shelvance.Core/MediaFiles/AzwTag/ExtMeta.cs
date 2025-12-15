@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NLog;
-using NzbDrone.Common.Instrumentation;
+using Shelvance.Common.Instrumentation;
 
-namespace NzbDrone.Core.MediaFiles.Azw
+namespace Shelvance.Core.MediaFiles.Azw
 {
     public class ExtMeta
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(ExtMeta));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(ExtMeta));
 
         public Dictionary<uint, ulong> IdValue { get; } = new Dictionary<uint, ulong>();
         public Dictionary<uint, List<string>> IdString { get; } = new Dictionary<uint, List<string>>();

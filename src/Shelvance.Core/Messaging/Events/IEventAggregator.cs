@@ -1,6 +1,6 @@
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Messaging.Events
+namespace Shelvance.Core.Messaging.Events
 {
     public interface IEventAggregator
     {

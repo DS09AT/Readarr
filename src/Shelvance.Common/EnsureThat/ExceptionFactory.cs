@@ -1,7 +1,7 @@
 ﻿using System;
 using NLog;
 
-namespace NzbDrone.Common.EnsureThat
+namespace Shelvance.Common.EnsureThat
 {
     internal static class ExceptionFactory
     {

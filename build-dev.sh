@@ -128,7 +128,7 @@ BuildBackendFull()
     mkdir -p "$devFolder"
 
     echo "  [1/2] Building & publishing Shelvance.Console..."
-    DotnetPublishWithRetry src/NzbDrone.Console/Shelvance.Console.csproj "$devFolder"
+    DotnetPublishWithRetry src/Shelvance.Console/Shelvance.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
         echo "Failed to build Shelvance.Console"
@@ -136,7 +136,7 @@ BuildBackendFull()
     fi
 
     echo "  [2/2] Building & publishing Shelvance.Update..."
-    DotnetPublishWithRetry src/NzbDrone.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
+    DotnetPublishWithRetry src/Shelvance.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
 
     if [ $? -ne 0 ]; then
         echo "Failed to build Shelvance.Update"
@@ -145,7 +145,7 @@ BuildBackendFull()
     
     echo "  Copying platform-specific assemblies..."
 	
-    dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
+    dotnet publish src/Shelvance.Mono/Shelvance.Mono.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
     cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
@@ -154,7 +154,7 @@ BuildBackendFull()
     cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-mono" 2>/dev/null || true
     
-    dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
+    dotnet publish src/Shelvance.Windows/Shelvance.Windows.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
     cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \
@@ -176,7 +176,7 @@ PublishBackend()
     mkdir -p "$devFolder"
 
     echo "  [1/2] Publishing Shelvance.Console..."
-    DotnetPublishWithRetry src/NzbDrone.Console/Shelvance.Console.csproj "$devFolder"
+    DotnetPublishWithRetry src/Shelvance.Console/Shelvance.Console.csproj "$devFolder"
 
     if [ $? -ne 0 ]; then
         echo "Failed to publish Shelvance.Console"
@@ -185,7 +185,7 @@ PublishBackend()
 
     echo ""
     echo "  [2/2] Publishing Shelvance.Update..."
-    DotnetPublishWithRetry src/NzbDrone.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
+    DotnetPublishWithRetry src/Shelvance.Update/Shelvance.Update.csproj "$devFolder/Shelvance.Update"
 
     if [ $? -ne 0 ]; then
         echo "Failed to publish Shelvance.Update"
@@ -194,7 +194,7 @@ PublishBackend()
     
     echo "  Copying platform-specific assemblies..."
 	
-    dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
+    dotnet publish src/Shelvance.Mono/Shelvance.Mono.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
     cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
@@ -203,7 +203,7 @@ PublishBackend()
     cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
     rm -rf "_output/temp-mono" 2>/dev/null || true
     
-    dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
+    dotnet publish src/Shelvance.Windows/Shelvance.Windows.csproj \
         -c Debug -r $RID -f $FRAMEWORK --no-restore \
         -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
     cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \
@@ -354,7 +354,7 @@ WatchMode()
                     
                     local build_start=$(date +%s)
                     local build_output
-                    build_output=$(dotnet publish src/NzbDrone.Console/Shelvance.Console.csproj \
+                    build_output=$(dotnet publish src/Shelvance.Console/Shelvance.Console.csproj \
                         -c Debug \
                         -r $RID \
                         -f $FRAMEWORK \
@@ -385,7 +385,7 @@ WatchMode()
                         echo ""
                         echo "Published to: $devFolder/"
 						
-                        dotnet publish src/NzbDrone.Mono/Shelvance.Mono.csproj \
+                        dotnet publish src/Shelvance.Mono/Shelvance.Mono.csproj \
                             -c Debug -r $RID -f $FRAMEWORK --no-restore \
                             -o "_output/temp-mono" -v minimal > /dev/null 2>&1 || true
                         cp "_output/temp-mono/Shelvance.Mono.dll" "$devFolder/" 2>/dev/null || \
@@ -394,7 +394,7 @@ WatchMode()
                         cp "_output/temp-mono/libMonoPosixHelper.so" "$devFolder/" 2>/dev/null || true
                         rm -rf "_output/temp-mono" 2>/dev/null || true
                         
-                        dotnet publish src/NzbDrone.Windows/Shelvance.Windows.csproj \
+                        dotnet publish src/Shelvance.Windows/Shelvance.Windows.csproj \
                             -c Debug -r $RID -f $FRAMEWORK --no-restore \
                             -o "_output/temp-windows" -v minimal > /dev/null 2>&1 || true
                         cp "_output/temp-windows/Shelvance.Windows.dll" "$devFolder/" 2>/dev/null || \

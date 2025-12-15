@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 
-namespace NzbDrone.Common.OAuth
+namespace Shelvance.Common.OAuth
 {
     /// <summary>
     /// A request wrapper for the OAuth 1.0a specification.

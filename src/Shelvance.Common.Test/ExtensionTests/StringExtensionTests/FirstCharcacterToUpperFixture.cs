@@ -1,9 +1,9 @@
 ﻿using System.Globalization;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Test.ExtensionTests.StringExtensionTests
+namespace Shelvance.Common.Test.ExtensionTests.StringExtensionTests
 {
     [TestFixture]
     public class FirstCharcacterToUpperFixture

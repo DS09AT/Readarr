@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Qualities;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Api.V1.CustomFormats;
@@ -42,7 +42,7 @@ namespace Shelvance.Api.V1.Queue
 
     public static class QueueResourceMapper
     {
-        public static QueueResource ToResource(this NzbDrone.Core.Queue.Queue model, bool includeAuthor, bool includeBook)
+        public static QueueResource ToResource(this Shelvance.Core.Queue.Queue model, bool includeAuthor, bool includeBook)
         {
             if (model == null)
             {
@@ -82,7 +82,7 @@ namespace Shelvance.Api.V1.Queue
             };
         }
 
-        public static List<QueueResource> ToResource(this IEnumerable<NzbDrone.Core.Queue.Queue> models, bool includeAuthor, bool includeBook)
+        public static List<QueueResource> ToResource(this IEnumerable<Shelvance.Core.Queue.Queue> models, bool includeAuthor, bool includeBook)
         {
             return models.Select((m) => ToResource(m, includeAuthor, includeBook)).ToList();
         }

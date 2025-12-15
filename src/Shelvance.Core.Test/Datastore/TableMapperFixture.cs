@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using Dapper;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Datastore.Converters;
+using Shelvance.Core.Books;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Datastore.Converters;
 
-namespace NzbDrone.Core.Test.Datastore
+namespace Shelvance.Core.Test.Datastore
 {
     [TestFixture]
     public class TableMapperFixture

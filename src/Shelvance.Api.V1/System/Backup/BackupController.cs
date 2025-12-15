@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Backup;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Backup;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 
@@ -124,17 +124,17 @@ namespace Shelvance.Api.V1.System.Backup
             };
         }
 
-        private string GetBackupPath(NzbDrone.Core.Backup.Backup backup)
+        private string GetBackupPath(Shelvance.Core.Backup.Backup backup)
         {
             return Path.Combine(_backupService.GetBackupFolder(backup.Type), backup.Name);
         }
 
-        private int GetBackupId(NzbDrone.Core.Backup.Backup backup)
+        private int GetBackupId(Shelvance.Core.Backup.Backup backup)
         {
             return HashConverter.GetHashInt31($"backup-{backup.Type}-{backup.Name}");
         }
 
-        private NzbDrone.Core.Backup.Backup GetBackup(int id)
+        private Shelvance.Core.Backup.Backup GetBackup(int id)
         {
             return _backupService.GetBackups().SingleOrDefault(b => GetBackupId(b) == id);
         }

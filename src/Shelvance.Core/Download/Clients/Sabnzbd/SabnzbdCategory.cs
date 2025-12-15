@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Download.Clients.Sabnzbd.JsonConverters;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Download.Clients.Sabnzbd.JsonConverters;
 
-namespace NzbDrone.Core.Download.Clients.Sabnzbd
+namespace Shelvance.Core.Download.Clients.Sabnzbd
 {
     public class SabnzbdConfig
     {

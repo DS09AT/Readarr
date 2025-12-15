@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Discord
+namespace Shelvance.Core.Notifications.Discord
 {
-    public class DiscordException : NzbDroneException
+    public class DiscordException : ShelvanceException
     {
         public DiscordException(string message)
             : base(message)

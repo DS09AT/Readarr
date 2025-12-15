@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Notifications.Telegram
+namespace Shelvance.Core.Notifications.Telegram
 {
     public class InvalidResponseException : Exception
     {

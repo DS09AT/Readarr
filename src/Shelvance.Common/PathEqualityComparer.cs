@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public class PathEqualityComparer : IEqualityComparer<string>
     {

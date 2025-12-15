@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
-using NzbDrone.Test.Common;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.Test.MediaFiles.BookImport.Identification
 {
     [TestFixture]
     public class DistanceFixture : TestBase

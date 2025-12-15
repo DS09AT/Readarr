@@ -4,22 +4,22 @@ using System.IO;
 using System.Linq;
 using DryIoc;
 using NLog;
-using NzbDrone.Common.Composition.Extensions;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Common.Processes;
-using NzbDrone.Update.UpdateEngine;
+using Shelvance.Common.Composition.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Common.Processes;
+using Shelvance.Update.UpdateEngine;
 
-namespace NzbDrone.Update
+namespace Shelvance.Update
 {
     public class UpdateApp
     {
         private readonly IInstallUpdateService _installUpdateService;
         private readonly IProcessProvider _processProvider;
 
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(UpdateApp));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(UpdateApp));
 
         public UpdateApp(IInstallUpdateService installUpdateService, IProcessProvider processProvider)
         {
@@ -32,13 +32,13 @@ namespace NzbDrone.Update
             try
             {
                 var startupContext = new StartupContext(args);
-                NzbDroneLogger.Register(startupContext, true, true);
+                ShelvanceLogger.Register(startupContext, true, true);
 
                 Logger.Info("Starting Shelvance Update Client");
 
-                var container = new Container(rules => rules.WithNzbDroneRules())
+                var container = new Container(rules => rules.WithShelvanceRules())
                     .AutoAddServices(new List<string> { "Shelvance.Update" })
-                    .AddNzbDroneLogger()
+                    .AddShelvanceLogger()
                     .AddStartupContext(startupContext);
 
                 container.Resolve<InitializeLogger>().Initialize();

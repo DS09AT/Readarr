@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Notifications.Signal
+namespace Shelvance.Core.Notifications.Signal
 {
     public class SignalInvalidResponseException : Exception
     {

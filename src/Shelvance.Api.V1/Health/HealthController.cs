@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.HealthCheck;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.SignalR;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.HealthCheck;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

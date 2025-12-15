@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.FileList
+namespace Shelvance.Core.Indexers.FileList
 {
     public class FileListParser : IParseIndexerResponse
     {

@@ -3,19 +3,19 @@ using System.IO;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Qualities;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.Test.Qualities;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
+using Shelvance.Core.History;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Qualities;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.Test.Qualities;
 
-namespace NzbDrone.Core.Test.HistoryTests
+namespace Shelvance.Core.Test.HistoryTests
 {
     public class HistoryServiceFixture : CoreTest<HistoryService>
     {

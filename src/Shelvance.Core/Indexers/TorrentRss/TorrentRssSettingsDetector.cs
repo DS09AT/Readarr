@@ -4,12 +4,12 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers.Exceptions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers.Exceptions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.Indexers.TorrentRss
+namespace Shelvance.Core.Indexers.TorrentRss
 {
     public interface ITorrentRssSettingsDetector
     {

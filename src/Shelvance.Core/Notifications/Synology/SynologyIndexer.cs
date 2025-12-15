@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using FluentValidation.Results;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Notifications.Synology
+namespace Shelvance.Core.Notifications.Synology
 {
     public class SynologyIndexer : NotificationBase<SynologyIndexerSettings>
     {

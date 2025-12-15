@@ -1,14 +1,14 @@
 using System;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.History;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public class AlreadyImportedSpecification : IDecisionEngineSpecification
     {

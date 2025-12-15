@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
-using NzbDrone.Common.EnvironmentInfo;
+using Shelvance.Common.EnvironmentInfo;
 
-namespace NzbDrone.SignalR
+namespace Shelvance.SignalR
 {
     public class SignalRMessageBroadcaster : IBroadcastSignalRMessage
     {

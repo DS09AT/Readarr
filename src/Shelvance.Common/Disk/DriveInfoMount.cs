@@ -1,8 +1,8 @@
 using System.IO;
 using System.IO.Abstractions;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public class DriveInfoMount : IMount
     {

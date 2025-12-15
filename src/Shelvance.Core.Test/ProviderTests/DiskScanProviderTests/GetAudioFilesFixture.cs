@@ -5,12 +5,12 @@ using System.Linq;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.ProviderTests.DiskScanProviderTests
+namespace Shelvance.Core.Test.ProviderTests.DiskScanProviderTests
 {
     public class GetAudioFilesFixture : CoreTest<DiskScanService>
     {

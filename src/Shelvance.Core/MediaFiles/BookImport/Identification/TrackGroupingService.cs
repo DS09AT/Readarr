@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.MediaFiles.BookImport.Identification
 {
     public interface ITrackGroupingService
     {
@@ -19,7 +19,7 @@ namespace NzbDrone.Core.MediaFiles.BookImport.Identification
 
     public class TrackGroupingService : ITrackGroupingService
     {
-        private static readonly Logger _logger = NzbDroneLogger.GetLogger(typeof(TrackGroupingService));
+        private static readonly Logger _logger = ShelvanceLogger.GetLogger(typeof(TrackGroupingService));
 
         private static readonly List<string> MultiDiscMarkers = new () { @"dis[ck]", @"cd" };
         private static readonly string MultiDiscPatternFormat = @"^(?<root>.*%s[\W_]*)\d";

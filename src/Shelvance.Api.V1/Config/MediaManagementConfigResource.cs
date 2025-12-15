@@ -1,6 +1,6 @@
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Qualities;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Config

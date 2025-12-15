@@ -1,9 +1,9 @@
 using System.IO;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Core.Books;
+using Shelvance.Common.Disk;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Extras.Metadata.Files
+namespace Shelvance.Core.Extras.Metadata.Files
 {
     public interface ICleanMetadataService
     {

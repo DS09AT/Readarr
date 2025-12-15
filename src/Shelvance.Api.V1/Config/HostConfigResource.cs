@@ -1,8 +1,8 @@
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Security;
-using NzbDrone.Core.Update;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Security;
+using Shelvance.Core.Update;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Config

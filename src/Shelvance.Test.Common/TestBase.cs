@@ -5,14 +5,14 @@ using FluentAssertions;
 using Moq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Common.Processes;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Test.Common.AutoMoq;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Messaging;
+using Shelvance.Common.Processes;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Test.Common.AutoMoq;
 
-namespace NzbDrone.Test.Common
+namespace Shelvance.Test.Common
 {
     public abstract class TestBase<TSubject> : TestBase
         where TSubject : class
@@ -74,7 +74,7 @@ namespace NzbDrone.Test.Common
         {
             get
             {
-                var virtualPath = Path.Combine(TempFolder, "VirtualNzbDrone");
+                var virtualPath = Path.Combine(TempFolder, "VirtualShelvance");
                 if (!Directory.Exists(virtualPath))
                 {
                     Directory.CreateDirectory(virtualPath);

@@ -3,9 +3,9 @@ using System.Data;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Dapper;
-using NzbDrone.Core.Qualities;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Datastore.Converters
+namespace Shelvance.Core.Datastore.Converters
 {
     public class QualityIntConverter : JsonConverter<Quality>
     {

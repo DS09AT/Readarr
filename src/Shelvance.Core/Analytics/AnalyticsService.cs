@@ -1,11 +1,11 @@
 using System;
 using System.Linq;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.History;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.History;
 
-namespace NzbDrone.Core.Analytics
+namespace Shelvance.Core.Analytics
 {
     public interface IAnalyticsService
     {

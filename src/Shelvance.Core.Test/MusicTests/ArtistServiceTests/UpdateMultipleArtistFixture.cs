@@ -5,12 +5,12 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MusicTests.AuthorServiceTests
+namespace Shelvance.Core.Test.MusicTests.AuthorServiceTests
 {
     [TestFixture]
     public class UpdateMultipleAuthorFixture : CoreTest<AuthorService>

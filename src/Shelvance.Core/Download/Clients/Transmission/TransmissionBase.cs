@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Transmission
+namespace Shelvance.Core.Download.Clients.Transmission
 {
     public abstract class TransmissionBase : TorrentClientBase<TransmissionSettings>
     {
@@ -261,7 +261,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new ShelvanceValidationFailure("Username", "Authentication failure")
                 {
                     DetailedDescription = string.Format("Please verify your username and password. Also verify if the host running Shelvance isn't blocked from accessing {0} by WhiteList limitations in the {0} configuration.", Name)
                 };
@@ -270,7 +270,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             {
                 _logger.Error(ex, ex.Message);
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Transmission")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to Transmission")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -279,7 +279,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             {
                 _logger.Error(ex, "Failed to test");
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
             }
         }
 
@@ -294,7 +294,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

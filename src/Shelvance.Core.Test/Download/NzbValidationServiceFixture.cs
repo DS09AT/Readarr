@@ -1,10 +1,10 @@
 using System.IO;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Download;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Download
+namespace Shelvance.Core.Test.Download
 {
     [TestFixture]
     public class NzbValidationServiceFixture : CoreTest<NzbValidationService>

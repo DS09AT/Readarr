@@ -1,10 +1,10 @@
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Integration.Test.Client;
+using Shelvance.Integration.Test.Client;
 using Shelvance.Api.V1.DiskSpace;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     public class DiskSpaceFixture : IntegrationTest

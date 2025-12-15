@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public class AuthorMetadata : Entity<AuthorMetadata>
     {

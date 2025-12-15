@@ -1,7 +1,7 @@
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Organizer
+namespace Shelvance.Core.Organizer
 {
     public class SampleResult
     {

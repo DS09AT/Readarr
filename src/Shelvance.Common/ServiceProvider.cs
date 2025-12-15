@@ -2,11 +2,11 @@ using System;
 using System.Linq;
 using System.ServiceProcess;
 using NLog;
-using NzbDrone.Common.Exceptions;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Processes;
+using Shelvance.Common.Exceptions;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Processes;
 
-namespace NzbDrone.Common
+namespace Shelvance.Common
 {
     public interface IServiceProvider
     {

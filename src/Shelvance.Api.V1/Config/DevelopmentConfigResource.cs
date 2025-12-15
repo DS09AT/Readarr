@@ -1,4 +1,4 @@
-using NzbDrone.Core.Configuration;
+using Shelvance.Core.Configuration;
 using Shelvance.Http.REST;
 
 namespace Prowlarr.Api.V1.Config

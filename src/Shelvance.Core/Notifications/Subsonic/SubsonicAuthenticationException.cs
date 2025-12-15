@@ -1,4 +1,4 @@
-namespace NzbDrone.Core.Notifications.Subsonic
+namespace Shelvance.Core.Notifications.Subsonic
 {
     public class SubsonicAuthenticationException : SubsonicException
     {

@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
-public class KavitaException : NzbDroneException
+public class KavitaException : ShelvanceException
 {
     public KavitaException(string message)
         : base(message)

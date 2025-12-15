@@ -1,8 +1,8 @@
 using System;
 using System.IO;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Organizer;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Organizer;
 
 namespace Shelvance.Api.V1.Author
 {

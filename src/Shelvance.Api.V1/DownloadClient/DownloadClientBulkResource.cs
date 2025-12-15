@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Download;
+using Shelvance.Core.Download;
 
 namespace Shelvance.Api.V1.DownloadClient
 {

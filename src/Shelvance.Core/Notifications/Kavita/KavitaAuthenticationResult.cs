@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
 public class KavitaAuthenticationResult
 {

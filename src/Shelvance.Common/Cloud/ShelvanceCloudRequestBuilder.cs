@@ -1,6 +1,6 @@
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Common.Cloud
+namespace Shelvance.Common.Cloud
 {
     public interface IShelvanceCloudRequestBuilder
     {

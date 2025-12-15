@@ -5,14 +5,14 @@ using FluentAssertions;
 using FluentValidation;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MusicTests
+namespace Shelvance.Core.Test.MusicTests
 {
     [TestFixture]
     public class AddBookFixture : CoreTest<AddBookService>

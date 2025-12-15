@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace NzbDrone.SignalR
+namespace Shelvance.SignalR
 {
     public interface IBroadcastSignalRMessage
     {

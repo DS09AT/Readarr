@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(027)]
-    public class remove_omg : NzbDroneMigrationBase
+    public class remove_omg : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

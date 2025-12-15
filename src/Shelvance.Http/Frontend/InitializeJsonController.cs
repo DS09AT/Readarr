@@ -1,10 +1,10 @@
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Analytics;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Analytics;
+using Shelvance.Core.Configuration;
 
 namespace Shelvance.Http.Frontend
 {

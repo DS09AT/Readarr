@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles.BookImport.Identification;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles.BookImport.Identification;
 
-namespace NzbDrone.Core.Parser.Model
+namespace Shelvance.Core.Parser.Model
 {
     public class LocalEdition
     {

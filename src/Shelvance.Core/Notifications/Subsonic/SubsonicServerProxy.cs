@@ -2,10 +2,10 @@ using System.IO;
 using System.Net.Http;
 using System.Xml.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Subsonic
+namespace Shelvance.Core.Notifications.Subsonic
 {
     public interface ISubsonicServerProxy
     {

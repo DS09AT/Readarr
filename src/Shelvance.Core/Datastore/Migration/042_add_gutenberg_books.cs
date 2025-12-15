@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(042)]
-    public class add_gutenberg_books : NzbDroneMigrationBase
+    public class add_gutenberg_books : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

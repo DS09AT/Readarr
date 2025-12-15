@@ -1,9 +1,9 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Indexers.Newznab;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Indexers.Newznab;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests.NewznabTests
+namespace Shelvance.Core.Test.IndexerTests.NewznabTests
 {
     public class NewznabSettingFixture : CoreTest
     {

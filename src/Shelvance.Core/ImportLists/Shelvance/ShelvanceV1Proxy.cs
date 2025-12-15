@@ -4,10 +4,10 @@ using System.Net;
 using FluentValidation.Results;
 using Newtonsoft.Json;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.ImportLists.Shelvance
+namespace Shelvance.Core.ImportLists.Shelvance
 {
     public interface IShelvanceV1Proxy
     {

@@ -1,10 +1,10 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Test.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.Http
+namespace Shelvance.Common.Test.Http
 {
     [TestFixture]
     public class UserAgentBuilderFixture : TestBase<UserAgentBuilder>

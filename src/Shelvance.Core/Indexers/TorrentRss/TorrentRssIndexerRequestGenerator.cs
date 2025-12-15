@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.IndexerSearch.Definitions;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.IndexerSearch.Definitions;
 
-namespace NzbDrone.Core.Indexers.TorrentRss
+namespace Shelvance.Core.Indexers.TorrentRss
 {
     public class TorrentRssIndexerRequestGenerator : IIndexerRequestGenerator
     {

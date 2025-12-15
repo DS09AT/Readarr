@@ -4,12 +4,12 @@ using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.MediaFiles.BookImport.Aggregation;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.MediaFiles.BookImport.Aggregation;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.MediaFiles.BookImport.Identification
+namespace Shelvance.Core.MediaFiles.BookImport.Identification
 {
     public interface IIdentificationService
     {

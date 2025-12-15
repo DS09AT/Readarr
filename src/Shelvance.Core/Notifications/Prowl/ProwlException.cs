@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Prowl
+namespace Shelvance.Core.Notifications.Prowl
 {
-    public class ProwlException : NzbDroneException
+    public class ProwlException : ShelvanceException
     {
         public ProwlException(string message)
             : base(message)

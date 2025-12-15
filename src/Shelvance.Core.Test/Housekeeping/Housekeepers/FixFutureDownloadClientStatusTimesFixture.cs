@@ -4,12 +4,12 @@ using System.Linq;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Housekeeping.Housekeepers;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.Download;
+using Shelvance.Core.Housekeeping.Housekeepers;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Test.Housekeeping.Housekeepers
+namespace Shelvance.Core.Test.Housekeeping.Housekeepers
 {
     [TestFixture]
     public class FixFutureDownloadClientStatusTimesFixture : CoreTest<FixFutureDownloadClientStatusTimes>

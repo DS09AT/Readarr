@@ -5,15 +5,15 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.TrackedDownloads;
-using NzbDrone.Core.History;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Queue;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.TrackedDownloads;
+using Shelvance.Core.History;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Queue;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.QueueTests
+namespace Shelvance.Core.Test.QueueTests
 {
     [TestFixture]
     public class QueueServiceFixture : CoreTest<QueueService>
@@ -25,7 +25,7 @@ namespace NzbDrone.Core.Test.QueueTests
         {
             var downloadClientInfo = Builder<DownloadClientItemClientInfo>.CreateNew().Build();
 
-            var downloadItem = Builder<NzbDrone.Core.Download.DownloadClientItem>.CreateNew()
+            var downloadItem = Builder<Shelvance.Core.Download.DownloadClientItem>.CreateNew()
                 .With(v => v.RemainingTime = TimeSpan.FromSeconds(10))
                 .With(v => v.DownloadClientInfo = downloadClientInfo)
                 .Build();

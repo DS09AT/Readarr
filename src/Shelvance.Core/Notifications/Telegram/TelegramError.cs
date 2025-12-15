@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Notifications.Telegram
+namespace Shelvance.Core.Notifications.Telegram
 {
     public class TelegramError
     {

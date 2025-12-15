@@ -3,7 +3,7 @@ using System.Net;
 using Shelvance.Api.V1.Author;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class AuthorClient : ClientBase<AuthorResource>
     {

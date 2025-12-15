@@ -1,13 +1,13 @@
 using System;
 using System.Data;
 using FluentMigrator;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(006)]
-    public class remove_chown_and_folderchmod_config : NzbDroneMigrationBase
+    public class remove_chown_and_folderchmod_config : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

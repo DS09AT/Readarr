@@ -1,6 +1,6 @@
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.CustomFormats
+namespace Shelvance.Core.CustomFormats
 {
     public abstract class CustomFormatSpecificationBase : ICustomFormatSpecification
     {
@@ -18,7 +18,7 @@ namespace NzbDrone.Core.CustomFormats
             return (ICustomFormatSpecification)MemberwiseClone();
         }
 
-        public abstract NzbDroneValidationResult Validate();
+        public abstract ShelvanceValidationResult Validate();
 
         public bool IsSatisfiedBy(CustomFormatInput input)
         {

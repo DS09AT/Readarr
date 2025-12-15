@@ -1,8 +1,8 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Instrumentation.Commands;
-using NzbDrone.Core.Messaging.Commands;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Instrumentation.Commands;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Instrumentation
+namespace Shelvance.Core.Instrumentation
 {
     public interface ILogService
     {

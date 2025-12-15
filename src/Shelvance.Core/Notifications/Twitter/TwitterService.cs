@@ -3,9 +3,9 @@ using System.IO;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Notifications.Twitter
+namespace Shelvance.Core.Notifications.Twitter
 {
     public interface ITwitterService
     {

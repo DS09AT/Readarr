@@ -5,12 +5,12 @@ using System.Net;
 using System.Reflection;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Integration.Test.Client;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Integration.Test.Client;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.ApiTests
+namespace Shelvance.Integration.Test.ApiTests
 {
     [TestFixture]
     public class FileSystemFixture : IntegrationTest

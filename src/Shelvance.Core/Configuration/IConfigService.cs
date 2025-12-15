@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using NzbDrone.Common.Http.Proxy;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Qualities;
-using NzbDrone.Core.Security;
+using Shelvance.Common.Http.Proxy;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Qualities;
+using Shelvance.Core.Security;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
     public interface IConfigService
     {

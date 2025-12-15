@@ -1,5 +1,5 @@
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Parser.Model;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.BookFiles

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Download.Clients.Transmission
+namespace Shelvance.Core.Download.Clients.Transmission
 {
     public interface ITransmissionProxy
     {

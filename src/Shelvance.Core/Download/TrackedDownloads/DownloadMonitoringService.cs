@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.TPL;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.TPL;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Download.TrackedDownloads
+namespace Shelvance.Core.Download.TrackedDownloads
 {
     public class DownloadMonitoringService : IExecute<RefreshMonitoredDownloadsCommand>,
                                              IExecute<CheckForFinishedDownloadCommand>,

@@ -1,10 +1,10 @@
 using System;
 using NLog;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.ImportLists
+namespace Shelvance.Core.ImportLists
 {
     public interface IImportListStatusService : IProviderStatusServiceBase<ImportListStatus>
     {

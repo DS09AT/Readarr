@@ -2,11 +2,11 @@ using System.Linq;
 using System.Text;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Http;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     public class BasicRssParserFixture : CoreTest<RssParser>
     {

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Pending;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Pending;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

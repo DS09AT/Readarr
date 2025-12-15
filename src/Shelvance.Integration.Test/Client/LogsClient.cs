@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class LogsClient : ClientBase
     {

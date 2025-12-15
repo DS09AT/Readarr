@@ -3,9 +3,9 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NzbDrone.Common.EnsureThat;
+using Shelvance.Common.EnsureThat;
 
-namespace NzbDrone.Common.Cache
+namespace Shelvance.Common.Cache
 {
     public class Cached<T> : ICached<T>
     {

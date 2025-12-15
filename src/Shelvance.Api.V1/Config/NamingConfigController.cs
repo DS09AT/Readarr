@@ -3,9 +3,9 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Organizer;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 

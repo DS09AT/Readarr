@@ -3,11 +3,11 @@ using System.Linq;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.MusicTests.AuthorRepositoryTests
+namespace Shelvance.Core.Test.MusicTests.AuthorRepositoryTests
 {
     [TestFixture]
 

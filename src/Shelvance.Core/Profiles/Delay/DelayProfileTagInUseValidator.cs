@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Validators;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Profiles.Delay
+namespace Shelvance.Core.Profiles.Delay
 {
     public class DelayProfileTagInUseValidator : PropertyValidator
     {

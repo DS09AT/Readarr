@@ -4,18 +4,18 @@ using System.Net;
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 using Polly;
 using Polly.Retry;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public abstract class DownloadClientBase<TSettings> : IDownloadClient
         where TSettings : IProviderConfig, new()
@@ -164,7 +164,7 @@ namespace NzbDrone.Core.Download
         {
             if (!_diskProvider.FolderExists(folder))
             {
-                return new NzbDroneValidationFailure(propertyName, "Folder does not exist")
+                return new ShelvanceValidationFailure(propertyName, "Folder does not exist")
                 {
                     DetailedDescription = string.Format("The folder you specified does not exist or is inaccessible. Please verify the folder permissions for the user account '{0}', which is used to execute Shelvance.", Environment.UserName)
                 };
@@ -173,7 +173,7 @@ namespace NzbDrone.Core.Download
             if (mustBeWritable && !_diskProvider.FolderWritable(folder))
             {
                 _logger.Error("Folder '{0}' is not writable.", folder);
-                return new NzbDroneValidationFailure(propertyName, "Unable to write to folder")
+                return new ShelvanceValidationFailure(propertyName, "Unable to write to folder")
                 {
                     DetailedDescription = string.Format("The folder you specified is not writable. Please verify the folder permissions for the user account '{0}', which is used to execute Shelvance.", Environment.UserName)
                 };

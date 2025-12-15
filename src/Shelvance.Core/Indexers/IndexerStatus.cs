@@ -1,7 +1,7 @@
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Indexers
+namespace Shelvance.Core.Indexers
 {
     public class IndexerStatus : ProviderStatusBase
     {

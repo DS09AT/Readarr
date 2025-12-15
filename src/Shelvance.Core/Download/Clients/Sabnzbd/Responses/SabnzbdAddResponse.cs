@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Download.Clients.Sabnzbd.Responses
+namespace Shelvance.Core.Download.Clients.Sabnzbd.Responses
 {
     public class SabnzbdAddResponse
     {

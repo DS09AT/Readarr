@@ -6,13 +6,13 @@ using FluentValidation.Results;
 using Moq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Books;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Test.MetadataSourceTests
+namespace Shelvance.Core.Test.MetadataSourceTests
 {
     [TestFixture]
     public class MetadataProviderBaseFixture : CoreTest
@@ -478,9 +478,9 @@ namespace NzbDrone.Core.Test.MetadataSourceTests
 
     internal class TestProviderSettingsForBase : IProviderConfig
     {
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult();
+            return new ShelvanceValidationResult();
         }
     }
 }

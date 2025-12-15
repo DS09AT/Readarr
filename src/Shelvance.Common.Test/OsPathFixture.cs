@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     public class OsPathFixture : TestBase
     {

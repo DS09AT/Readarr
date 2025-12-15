@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Download.Clients.DownloadStation;
-using NzbDrone.Core.Download.Clients.DownloadStation.Proxies;
-using NzbDrone.Core.Organizer;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Http;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Download.Clients.DownloadStation;
+using Shelvance.Core.Download.Clients.DownloadStation.Proxies;
+using Shelvance.Core.Organizer;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.DownloadStationTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.DownloadStationTests
 {
     [TestFixture]
     public class UsenetDownloadStationFixture : DownloadClientFixtureBase<UsenetDownloadStation>

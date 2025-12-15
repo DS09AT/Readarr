@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Validators;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class AuthorExistsValidator : PropertyValidator
     {

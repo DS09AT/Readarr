@@ -4,17 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.MediaFiles.Commands;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.RemotePathMappings;
+using Shelvance.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.MediaFiles.Commands;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.RemotePathMappings;
 
-namespace NzbDrone.Core.RootFolders
+namespace Shelvance.Core.RootFolders
 {
     public interface IRootFolderService
     {

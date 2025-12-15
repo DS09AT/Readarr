@@ -1,10 +1,10 @@
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.IndexerSearchTests
+namespace Shelvance.Core.Test.IndexerSearchTests
 {
     public class BookSearchDefinitionFixture : CoreTest<BookSearchCriteria>
     {

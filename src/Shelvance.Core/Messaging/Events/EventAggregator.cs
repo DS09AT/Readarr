@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
-using NzbDrone.Common;
-using NzbDrone.Common.EnsureThat;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Common.TPL;
+using Shelvance.Common;
+using Shelvance.Common.EnsureThat;
+using Shelvance.Common.Messaging;
+using Shelvance.Common.TPL;
 
-namespace NzbDrone.Core.Messaging.Events
+namespace Shelvance.Core.Messaging.Events
 {
     public class EventAggregator : IEventAggregator
     {

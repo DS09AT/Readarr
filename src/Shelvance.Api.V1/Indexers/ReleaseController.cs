@@ -4,17 +4,17 @@ using System.Threading.Tasks;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.IndexerSearch;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.IndexerSearch;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Validation;
 using Shelvance.Http;
 using HttpStatusCode = System.Net.HttpStatusCode;
 
@@ -73,7 +73,7 @@ namespace Shelvance.Api.V1.Indexers
             {
                 _logger.Debug("Couldn't find requested release in cache, cache timeout probably expired.");
 
-                throw new NzbDroneClientException(HttpStatusCode.NotFound, "Couldn't find requested release in cache, try searching again");
+                throw new ShelvanceClientException(HttpStatusCode.NotFound, "Couldn't find requested release in cache, try searching again");
             }
 
             try
@@ -94,7 +94,7 @@ namespace Shelvance.Api.V1.Indexers
 
                         if (books.Empty())
                         {
-                            throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
+                            throw new ShelvanceClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
                         }
 
                         remoteBook.Author = author;
@@ -102,7 +102,7 @@ namespace Shelvance.Api.V1.Indexers
                     }
                     else
                     {
-                        throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find matching author and books");
+                        throw new ShelvanceClientException(HttpStatusCode.NotFound, "Unable to find matching author and books");
                     }
                 }
                 else if (remoteBook.Books.Empty())
@@ -121,7 +121,7 @@ namespace Shelvance.Api.V1.Indexers
 
                 if (remoteBook.Books.Empty())
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
+                    throw new ShelvanceClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
                 }
 
                 await _downloadService.DownloadReport(remoteBook, release.DownloadClientId);
@@ -129,7 +129,7 @@ namespace Shelvance.Api.V1.Indexers
             catch (ReleaseDownloadException ex)
             {
                 _logger.Error(ex, "Getting release from indexer failed");
-                throw new NzbDroneClientException(HttpStatusCode.Conflict, "Getting release from indexer failed");
+                throw new ShelvanceClientException(HttpStatusCode.Conflict, "Getting release from indexer failed");
             }
 
             return Ok(release);
@@ -163,7 +163,7 @@ namespace Shelvance.Api.V1.Indexers
             catch (Exception ex)
             {
                 _logger.Error(ex, "Book search failed");
-                throw new NzbDroneClientException(HttpStatusCode.InternalServerError, ex.Message);
+                throw new ShelvanceClientException(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -179,7 +179,7 @@ namespace Shelvance.Api.V1.Indexers
             catch (Exception ex)
             {
                 _logger.Error(ex, "Author search failed");
-                throw new NzbDroneClientException(HttpStatusCode.InternalServerError, ex.Message);
+                throw new ShelvanceClientException(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 

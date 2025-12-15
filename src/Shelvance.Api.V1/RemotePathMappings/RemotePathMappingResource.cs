@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Core.RemotePathMappings;
+using Shelvance.Core.RemotePathMappings;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.RemotePathMappings

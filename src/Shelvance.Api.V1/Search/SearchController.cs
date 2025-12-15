@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.Organizer;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.Organizer;
 using Shelvance.Api.V1.Author;
 using Shelvance.Api.V1.Books;
 using Shelvance.Http;
@@ -40,7 +40,7 @@ namespace Shelvance.Api.V1.Search
                 var resource = new SearchResource();
                 resource.Id = id++;
 
-                if (result is NzbDrone.Core.Books.Author author)
+                if (result is Shelvance.Core.Books.Author author)
                 {
                     resource.Author = author.ToResource();
                     resource.ForeignId = author.ForeignAuthorId;
@@ -56,7 +56,7 @@ namespace Shelvance.Api.V1.Search
 
                     resource.Author.Folder = _fileNameBuilder.GetAuthorFolder(author);
                 }
-                else if (result is NzbDrone.Core.Books.Book book)
+                else if (result is Shelvance.Core.Books.Book book)
                 {
                     resource.Book = book.ToResource();
                     var monitoredEdition = book.Editions.Value.FirstOrDefault(x => x.Monitored);

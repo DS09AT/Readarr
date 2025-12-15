@@ -3,12 +3,12 @@ using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Download.Clients.Sabnzbd.Responses;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Download.Clients.Sabnzbd.Responses;
 
-namespace NzbDrone.Core.Download.Clients.Sabnzbd
+namespace Shelvance.Core.Download.Clients.Sabnzbd
 {
     public interface ISabnzbdProxy
     {

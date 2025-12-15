@@ -1,8 +1,8 @@
 using System;
 using System.Text.Json.Serialization;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Serializer;
 
-namespace NzbDrone.Core.Messaging.Commands
+namespace Shelvance.Core.Messaging.Commands
 {
     [JsonConverter(typeof(PolymorphicWriteOnlyJsonConverter<Command>))]
     public abstract class Command

@@ -2,9 +2,9 @@ using System.Linq;
 using System.Reflection;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Languages;
-using NzbDrone.Http.REST.Attributes;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Languages;
+using Shelvance.Http.REST.Attributes;
 using Shelvance.Http;
 
 namespace Shelvance.Api.V1.Config

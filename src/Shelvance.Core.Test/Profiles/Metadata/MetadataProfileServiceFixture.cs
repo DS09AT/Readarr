@@ -3,14 +3,14 @@ using System.Linq;
 using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.ImportLists;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Profiles.Metadata;
-using NzbDrone.Core.RootFolders;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Books;
+using Shelvance.Core.ImportLists;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Profiles.Metadata;
+using Shelvance.Core.RootFolders;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Profiles.Metadata
+namespace Shelvance.Core.Test.Profiles.Metadata
 {
     [TestFixture]
 

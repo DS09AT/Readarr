@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Profiles.Delay
+namespace Shelvance.Core.Profiles.Delay
 {
     public interface IDelayProfileService
     {

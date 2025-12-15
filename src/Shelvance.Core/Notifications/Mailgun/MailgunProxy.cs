@@ -1,9 +1,9 @@
 using System.Net;
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Http;
+using Shelvance.Common.Http;
 
-namespace NzbDrone.Core.Notifications.Mailgun
+namespace Shelvance.Core.Notifications.Mailgun
 {
     public interface IMailgunProxy
     {

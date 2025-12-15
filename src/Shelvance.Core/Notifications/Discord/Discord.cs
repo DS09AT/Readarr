@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Notifications.Discord.Payloads;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Notifications.Discord.Payloads;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Discord
+namespace Shelvance.Core.Notifications.Discord
 {
     public class Discord : NotificationBase<DiscordSettings>
     {
@@ -263,7 +263,7 @@ namespace NzbDrone.Core.Notifications.Discord
             }
             catch (DiscordException ex)
             {
-                return new NzbDroneValidationFailure("Unable to post", ex.Message);
+                return new ShelvanceValidationFailure("Unable to post", ex.Message);
             }
 
             return null;

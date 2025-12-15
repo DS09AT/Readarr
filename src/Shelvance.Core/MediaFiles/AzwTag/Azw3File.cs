@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace NzbDrone.Core.MediaFiles.Azw
+namespace Shelvance.Core.MediaFiles.Azw
 {
     public class Azw3File : AzwFile
     {

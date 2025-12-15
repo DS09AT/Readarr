@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Common.Serializer;
-using NzbDrone.Core.Download.Clients.NzbVortex.Responses;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Common.Serializer;
+using Shelvance.Core.Download.Clients.NzbVortex.Responses;
 
-namespace NzbDrone.Core.Download.Clients.NzbVortex
+namespace Shelvance.Core.Download.Clients.NzbVortex
 {
     public interface INzbVortexProxy
     {

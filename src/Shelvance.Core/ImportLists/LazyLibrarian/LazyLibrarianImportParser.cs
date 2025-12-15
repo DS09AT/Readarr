@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.ImportLists.Exceptions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.ImportLists.Exceptions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
+namespace Shelvance.Core.ImportLists.LazyLibrarianImport
 {
     public class LazyLibrarianImportParser : IParseImportListResponse
     {

@@ -3,11 +3,11 @@ using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using NLog;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http.Dispatchers;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http.Dispatchers;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Security
+namespace Shelvance.Core.Security
 {
     public class X509CertificateValidationService : ICertificateValidationService
     {

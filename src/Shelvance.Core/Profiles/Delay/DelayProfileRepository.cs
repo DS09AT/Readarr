@@ -1,7 +1,7 @@
-﻿using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+﻿using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Profiles.Delay
+namespace Shelvance.Core.Profiles.Delay
 {
     public interface IDelayProfileRepository : IBasicRepository<DelayProfile>
     {

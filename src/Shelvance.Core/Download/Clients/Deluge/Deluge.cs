@@ -4,17 +4,17 @@ using System.Linq;
 using System.Net;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Blocklisting;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.MediaFiles.TorrentInfo;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.Validation;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Blocklisting;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.MediaFiles.TorrentInfo;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.Deluge
+namespace Shelvance.Core.Download.Clients.Deluge
 {
     public class Deluge : TorrentClientBase<DelugeSettings>
     {
@@ -272,7 +272,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Password", "Authentication failed");
+                return new ShelvanceValidationFailure("Password", "Authentication failed");
             }
             catch (WebException ex)
             {
@@ -280,29 +280,29 @@ namespace NzbDrone.Core.Download.Clients.Deluge
                 switch (ex.Status)
                 {
                     case WebExceptionStatus.ConnectFailure:
-                        return new NzbDroneValidationFailure("Host", "Unable to connect")
+                        return new ShelvanceValidationFailure("Host", "Unable to connect")
                         {
                             DetailedDescription = "Please verify the hostname and port."
                         };
                     case WebExceptionStatus.ConnectionClosed:
-                        return new NzbDroneValidationFailure("UseSsl", "Verify SSL settings")
+                        return new ShelvanceValidationFailure("UseSsl", "Verify SSL settings")
                         {
                             DetailedDescription = "Please verify your SSL configuration on both Deluge and Shelvance."
                         };
                     case WebExceptionStatus.SecureChannelFailure:
-                        return new NzbDroneValidationFailure("UseSsl", "Unable to connect through SSL")
+                        return new ShelvanceValidationFailure("UseSsl", "Unable to connect through SSL")
                         {
                             DetailedDescription = "Shelvance is unable to connect to Deluge using SSL. This problem could be computer related. Please try to configure both drone and Deluge to not use SSL."
                         };
                     default:
-                        return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                        return new ShelvanceValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test connection");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Deluge")
+                return new ShelvanceValidationFailure("Host", "Unable to connect to Deluge")
                        {
                            DetailedDescription = ex.Message
                        };
@@ -322,7 +322,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
             if (!enabledPlugins.Contains("Label"))
             {
-                return new NzbDroneValidationFailure("MusicCategory", "Label plugin not activated")
+                return new ShelvanceValidationFailure("MusicCategory", "Label plugin not activated")
                 {
                     DetailedDescription = "You must have the Label plugin enabled in Deluge to use categories."
                 };
@@ -337,7 +337,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
                 if (!labels.Contains(Settings.MusicCategory))
                 {
-                    return new NzbDroneValidationFailure("MusicCategory", "Configuration of label failed")
+                    return new ShelvanceValidationFailure("MusicCategory", "Configuration of label failed")
                     {
                         DetailedDescription = "Shelvance was unable to add the label to Deluge."
                     };
@@ -351,7 +351,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
                 if (!labels.Contains(Settings.MusicImportedCategory))
                 {
-                    return new NzbDroneValidationFailure("MusicImportedCategory", "Configuration of label failed")
+                    return new ShelvanceValidationFailure("MusicImportedCategory", "Configuration of label failed")
                     {
                         DetailedDescription = "Shelvance was unable to add the label to Deluge."
                     };
@@ -370,7 +370,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return new ShelvanceValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
             }
 
             return null;

@@ -1,7 +1,7 @@
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.Messaging.Events
+namespace Shelvance.Core.Messaging.Events
 {
     public class CommandExecutedEvent : IEvent
     {

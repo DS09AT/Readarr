@@ -1,7 +1,7 @@
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Goodreads
+namespace Shelvance.Core.Notifications.Goodreads
 {
     public enum OwnedBookCondition
     {
@@ -26,9 +26,9 @@ namespace NzbDrone.Core.Notifications.Goodreads
         [FieldDefinition(1, Label = "Purchase Location", HelpText = "Will be displayed on Goodreads website", Type = FieldType.Textbox)]
         public string Location { get; set; }
 
-        public override NzbDroneValidationResult Validate()
+        public override ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

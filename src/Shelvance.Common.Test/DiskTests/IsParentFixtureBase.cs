@@ -1,6 +1,6 @@
-﻿using NzbDrone.Test.Common;
+﻿using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.DiskTests
+namespace Shelvance.Common.Test.DiskTests
 {
     public class IsParentPathFixture : TestBase
     {

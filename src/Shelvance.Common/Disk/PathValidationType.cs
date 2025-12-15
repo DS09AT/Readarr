@@ -1,4 +1,4 @@
-namespace NzbDrone.Common.Disk
+namespace Shelvance.Common.Disk
 {
     public enum PathValidationType
     {

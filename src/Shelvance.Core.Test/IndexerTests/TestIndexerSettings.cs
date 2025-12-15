@@ -1,12 +1,12 @@
 using System;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Test.IndexerTests
+namespace Shelvance.Core.Test.IndexerTests
 {
     public class TestIndexerSettings : IIndexerSettings
     {
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
             throw new NotImplementedException();
         }

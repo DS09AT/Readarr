@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Email
+namespace Shelvance.Core.Notifications.Email
 {
     public class EmailSettingsValidator : AbstractValidator<EmailSettings>
     {
@@ -70,9 +70,9 @@ namespace NzbDrone.Core.Notifications.Email
         [FieldDefinition(9, Label = "Attach Books", HelpText = "Add books as an attachment on import", Type = FieldType.Checkbox)]
         public bool AttachFiles { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

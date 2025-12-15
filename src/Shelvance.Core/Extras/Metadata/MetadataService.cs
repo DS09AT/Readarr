@@ -4,17 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Extras.Files;
-using NzbDrone.Core.Extras.Metadata.Files;
-using NzbDrone.Core.Extras.Others;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Http;
+using Shelvance.Core.Books;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Extras.Files;
+using Shelvance.Core.Extras.Metadata.Files;
+using Shelvance.Core.Extras.Others;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Extras.Metadata
+namespace Shelvance.Core.Extras.Metadata
 {
     public class MetadataService : ExtraFileManager<MetadataFile>
     {

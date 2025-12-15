@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Profiles;
-using NzbDrone.Core.Profiles.Qualities;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Profiles;
+using Shelvance.Core.Profiles.Qualities;
 
-namespace NzbDrone.Core.Housekeeping.Housekeepers
+namespace Shelvance.Core.Housekeeping.Housekeepers
 {
     public class CleanupQualityProfileFormatItems : IHousekeepingTask
     {

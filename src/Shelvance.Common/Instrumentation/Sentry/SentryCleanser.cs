@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Sentry;
 
-namespace NzbDrone.Common.Instrumentation.Sentry
+namespace Shelvance.Common.Instrumentation.Sentry
 {
     public static class SentryCleanser
     {

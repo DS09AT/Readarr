@@ -1,7 +1,7 @@
 using FluentValidation;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Validation
+namespace Shelvance.Core.Validation
 {
     public static class IpValidation
     {

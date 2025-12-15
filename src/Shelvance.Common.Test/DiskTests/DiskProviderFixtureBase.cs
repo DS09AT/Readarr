@@ -3,10 +3,10 @@ using System.IO;
 using System.IO.Abstractions;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Disk;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Disk;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test.DiskTests
+namespace Shelvance.Common.Test.DiskTests
 {
     public abstract class DiskProviderFixtureBase<TSubject> : TestBase<TSubject>
         where TSubject : class, IDiskProvider

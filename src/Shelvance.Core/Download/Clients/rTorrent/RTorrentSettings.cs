@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Download.Clients.RTorrent
+namespace Shelvance.Core.Download.Clients.RTorrent
 {
     public class RTorrentSettingsValidator : AbstractValidator<RTorrentSettings>
     {
@@ -67,9 +67,9 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
         [FieldDefinition(11, Label = "Add Stopped", Type = FieldType.Checkbox, HelpText = "Enabling will add torrents and magnets to rTorrent in a stopped state. This may break magnet files.")]
         public bool AddStopped { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

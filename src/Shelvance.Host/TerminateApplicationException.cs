@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Host
+namespace Shelvance.Host
 {
     public class TerminateApplicationException : ApplicationException
     {

@@ -1,9 +1,9 @@
 using System.Data.SQLite;
 using System.IO;
 using NLog;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Backup
+namespace Shelvance.Core.Backup
 {
     public interface IMakeDatabaseBackup
     {

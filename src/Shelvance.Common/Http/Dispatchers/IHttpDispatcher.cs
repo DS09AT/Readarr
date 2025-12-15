@@ -1,7 +1,7 @@
 using System.Net;
 using System.Threading.Tasks;
 
-namespace NzbDrone.Common.Http.Dispatchers
+namespace Shelvance.Common.Http.Dispatchers
 {
     public interface IHttpDispatcher
     {

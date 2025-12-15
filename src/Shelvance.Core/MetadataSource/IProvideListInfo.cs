@@ -1,6 +1,6 @@
-using NzbDrone.Core.MetadataSource.Goodreads;
+using Shelvance.Core.MetadataSource.Goodreads;
 
-namespace NzbDrone.Core.MetadataSource
+namespace Shelvance.Core.MetadataSource
 {
     public interface IProvideListInfo
     {

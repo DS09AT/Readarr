@@ -4,11 +4,11 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using NLog;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.ImportLists.Exclusions;
-using NzbDrone.Core.MetadataSource;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.ImportLists.Exclusions;
+using Shelvance.Core.MetadataSource;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IAddBookService
     {

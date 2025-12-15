@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using NLog;
-using NzbDrone.Core.Authentication;
-using NzbDrone.Core.Configuration;
+using Shelvance.Core.Authentication;
+using Shelvance.Core.Configuration;
 using Shelvance.Http.Extensions;
 
 namespace Shelvance.Http.Authentication

@@ -1,10 +1,10 @@
 using System.Linq;
 using NLog;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.IndexerSearch.Definitions;
-using NzbDrone.Core.Parser.Model;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.IndexerSearch.Definitions;
+using Shelvance.Core.Parser.Model;
 
-namespace NzbDrone.Core.DecisionEngine.Specifications
+namespace Shelvance.Core.DecisionEngine.Specifications
 {
     public class UpgradeAllowedSpecification : IDecisionEngineSpecification
     {

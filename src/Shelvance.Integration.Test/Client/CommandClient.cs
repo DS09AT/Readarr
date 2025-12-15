@@ -4,11 +4,11 @@ using System.Threading;
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Commands;
 using Shelvance.Http.REST;
 using RestSharp;
 
-namespace NzbDrone.Integration.Test.Client
+namespace Shelvance.Integration.Test.Client
 {
     public class SimpleCommandResource : RestResource
     {

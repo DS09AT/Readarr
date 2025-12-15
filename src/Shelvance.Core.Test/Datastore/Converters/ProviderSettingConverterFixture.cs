@@ -1,11 +1,11 @@
 ﻿using System.Data.SQLite;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Datastore.Converters;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider;
+using Shelvance.Core.Datastore.Converters;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider;
 
-namespace NzbDrone.Core.Test.Datastore.Converters
+namespace Shelvance.Core.Test.Datastore.Converters
 {
     [Ignore("To reinstate once dapper changes worked out")]
     [TestFixture]

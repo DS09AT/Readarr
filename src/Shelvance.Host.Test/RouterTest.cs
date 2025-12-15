@@ -1,12 +1,12 @@
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Processes;
-using NzbDrone.Host;
-using NzbDrone.Test.Common;
+using Shelvance.Common;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Processes;
+using Shelvance.Host;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.App.Test
+namespace Shelvance.App.Test
 {
     [TestFixture]
     public class RouterTest : TestBase<UtilityModeRouter>

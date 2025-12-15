@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace NzbDrone.Core.Download.Clients.Transmission
+namespace Shelvance.Core.Download.Clients.Transmission
 {
     public class TransmissionConfig
     {

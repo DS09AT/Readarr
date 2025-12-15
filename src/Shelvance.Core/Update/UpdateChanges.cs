@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NzbDrone.Core.Update
+namespace Shelvance.Core.Update
 {
     public class UpdateChanges
     {

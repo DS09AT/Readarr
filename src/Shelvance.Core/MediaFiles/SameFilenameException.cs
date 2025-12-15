@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.MediaFiles
+namespace Shelvance.Core.MediaFiles
 {
     public class SameFilenameException : Exception
     {

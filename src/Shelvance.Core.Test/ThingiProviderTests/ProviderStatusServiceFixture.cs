@@ -4,13 +4,13 @@ using FluentAssertions;
 using Moq;
 using NLog;
 using NUnit.Framework;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Test.Framework;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.ThingiProvider.Status;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Test.Framework;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.ThingiProvider.Status;
 
-namespace NzbDrone.Core.Test.ThingiProviderTests
+namespace Shelvance.Core.Test.ThingiProviderTests
 {
     public class MockProviderStatus : ProviderStatusBase
     {

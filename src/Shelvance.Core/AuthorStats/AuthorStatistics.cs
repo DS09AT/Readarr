@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.AuthorStats
+namespace Shelvance.Core.AuthorStats
 {
     public class AuthorStatistics : ResultSet
     {

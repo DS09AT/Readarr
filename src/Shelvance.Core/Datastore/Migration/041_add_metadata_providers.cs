@@ -1,14 +1,14 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     /// <summary>
     /// Creates the MetadataProviders and MetadataProviderStatus tables
     /// This enables the new plugin-based metadata provider architecture
     /// </summary>
     [Migration(041)]
-    public class add_metadata_providers : NzbDroneMigrationBase
+    public class add_metadata_providers : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NLog;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 using Shelvance.Http.ErrorManagement;
 using Shelvance.Http.Extensions;
 

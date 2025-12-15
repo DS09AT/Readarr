@@ -1,4 +1,4 @@
-﻿namespace NzbDrone.Core.DecisionEngine
+﻿namespace Shelvance.Core.DecisionEngine
 {
     public class Rejection
     {

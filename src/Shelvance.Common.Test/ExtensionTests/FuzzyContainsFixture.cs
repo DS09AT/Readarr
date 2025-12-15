@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Test.Common;
+using Shelvance.Common.Extensions;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Common.Test
+namespace Shelvance.Common.Test
 {
     [TestFixture]
     public class FuzzyContainsFixture : TestBase

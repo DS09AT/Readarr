@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Indexers;
+using Shelvance.Common.Cache;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Indexers;
 
-namespace NzbDrone.Core.Download
+namespace Shelvance.Core.Download
 {
     public interface IProvideDownloadClient
     {

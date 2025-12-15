@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Notifications.Webhook
+namespace Shelvance.Core.Notifications.Webhook
 {
     public class WebhookBookFile
     {

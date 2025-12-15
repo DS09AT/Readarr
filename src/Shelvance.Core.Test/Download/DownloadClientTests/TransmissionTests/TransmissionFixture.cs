@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients.Transmission;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients.Transmission;
 
-namespace NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests
+namespace Shelvance.Core.Test.Download.DownloadClientTests.TransmissionTests
 {
     [TestFixture]
     public class TransmissionFixture : TransmissionFixtureBase<Transmission>

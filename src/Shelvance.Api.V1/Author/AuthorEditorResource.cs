@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using NzbDrone.Core.Books;
+using Shelvance.Core.Books;
 
 namespace Shelvance.Api.V1.Author
 {

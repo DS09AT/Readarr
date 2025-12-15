@@ -1,9 +1,9 @@
 using NLog;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Messaging.Commands;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Download;
+using Shelvance.Core.Messaging.Commands;
 
-namespace NzbDrone.Core.IndexerSearch
+namespace Shelvance.Core.IndexerSearch
 {
     public class AuthorSearchService : IExecute<AuthorSearchCommand>
     {

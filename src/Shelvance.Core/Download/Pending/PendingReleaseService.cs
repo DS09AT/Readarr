@@ -2,23 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Crypto;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.CustomFormats;
-using NzbDrone.Core.DecisionEngine;
-using NzbDrone.Core.Download.Aggregation;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Jobs;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Parser;
-using NzbDrone.Core.Parser.Model;
-using NzbDrone.Core.Profiles.Delay;
-using NzbDrone.Core.Qualities;
+using Shelvance.Common.Crypto;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.CustomFormats;
+using Shelvance.Core.DecisionEngine;
+using Shelvance.Core.Download.Aggregation;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Jobs;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Parser;
+using Shelvance.Core.Parser.Model;
+using Shelvance.Core.Profiles.Delay;
+using Shelvance.Core.Qualities;
 
-namespace NzbDrone.Core.Download.Pending
+namespace Shelvance.Core.Download.Pending
 {
     public interface IPendingReleaseService
     {

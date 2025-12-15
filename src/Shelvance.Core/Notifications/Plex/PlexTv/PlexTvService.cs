@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
 using System.Net.Http;
-using NzbDrone.Common.Cache;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
+using Shelvance.Common.Cache;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
 
-namespace NzbDrone.Core.Notifications.Plex.PlexTv
+namespace Shelvance.Core.Notifications.Plex.PlexTv
 {
     public interface IPlexTvService
     {

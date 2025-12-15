@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Kavita;
+namespace Shelvance.Core.Notifications.Kavita;
 
 public class KavitaSettingsValidator : AbstractValidator<KavitaSettings>
 {
@@ -39,8 +39,8 @@ public class KavitaSettings : IProviderConfig
     [FieldDefinition(4, Label = "Update Library", Type = FieldType.Checkbox)]
     public bool Notify { get; set; }
 
-    public NzbDroneValidationResult Validate()
+    public ShelvanceValidationResult Validate()
     {
-        return new NzbDroneValidationResult(Validator.Validate(this));
+        return new ShelvanceValidationResult(Validator.Validate(this));
     }
 }

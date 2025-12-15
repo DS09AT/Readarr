@@ -1,9 +1,9 @@
 using System.IO;
 using Mono.Unix;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public class ProcMount : IMount
     {

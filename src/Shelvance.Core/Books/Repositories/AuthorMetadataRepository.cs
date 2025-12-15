@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLog;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IAuthorMetadataRepository : IBasicRepository<AuthorMetadata>
     {

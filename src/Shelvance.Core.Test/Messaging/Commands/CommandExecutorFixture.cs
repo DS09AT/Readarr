@@ -2,13 +2,13 @@ using System;
 using System.Threading;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Common;
-using NzbDrone.Core.Lifecycle;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Test.Common;
+using Shelvance.Common;
+using Shelvance.Core.Lifecycle;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.Messaging.Commands
+namespace Shelvance.Core.Test.Messaging.Commands
 {
     [TestFixture]
     public class CommandExecutorFixture : TestBase<CommandExecutor>

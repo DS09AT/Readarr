@@ -8,11 +8,11 @@ using System.Threading;
 using NLog;
 using NLog.Common;
 using NLog.Targets;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
 using Sentry;
 
-namespace NzbDrone.Common.Instrumentation.Sentry
+namespace Shelvance.Common.Instrumentation.Sentry
 {
     [Target("Sentry")]
     public class SentryTarget : TargetWithLayout

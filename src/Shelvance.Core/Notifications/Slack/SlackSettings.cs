@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Slack
+namespace Shelvance.Core.Notifications.Slack
 {
     public class SlackSettingsValidator : AbstractValidator<SlackSettings>
     {
@@ -30,9 +30,9 @@ namespace NzbDrone.Core.Notifications.Slack
         [FieldDefinition(3, Label = "Channel", HelpText = "Overrides the default channel for the incoming webhook (#other-channel)", Type = FieldType.Textbox)]
         public string Channel { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

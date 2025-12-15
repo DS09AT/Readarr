@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Notifications.Plex
+namespace Shelvance.Core.Notifications.Plex
 {
-    public class PlexVersionException : NzbDroneException
+    public class PlexVersionException : ShelvanceException
     {
         public PlexVersionException(string message)
             : base(message)

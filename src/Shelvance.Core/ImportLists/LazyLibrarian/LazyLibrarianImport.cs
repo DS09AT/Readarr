@@ -1,10 +1,10 @@
 using System;
 using NLog;
-using NzbDrone.Common.Http;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Parser;
+using Shelvance.Common.Http;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Parser;
 
-namespace NzbDrone.Core.ImportLists.LazyLibrarianImport
+namespace Shelvance.Core.ImportLists.LazyLibrarianImport
 {
     public class LazyLibrarianImport : HttpImportListBase<LazyLibrarianImportSettings>
     {

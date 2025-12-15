@@ -2,10 +2,10 @@ using System;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Core.Books;
-using NzbDrone.Test.Common;
+using Shelvance.Core.Books;
+using Shelvance.Test.Common;
 
-namespace NzbDrone.Core.Test.MusicTests
+namespace Shelvance.Core.Test.MusicTests
 {
     [TestFixture]
     public class ShouldRefreshBookFixture : TestBase<ShouldRefreshBook>

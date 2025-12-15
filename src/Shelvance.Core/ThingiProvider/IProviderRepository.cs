@@ -1,6 +1,6 @@
-﻿using NzbDrone.Core.Datastore;
+﻿using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
     public interface IProviderRepository<TProvider> : IBasicRepository<TProvider>
         where TProvider : ModelBase, new()

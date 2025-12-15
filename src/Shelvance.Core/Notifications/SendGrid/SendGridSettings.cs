@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.SendGrid
+namespace Shelvance.Core.Notifications.SendGrid
 {
     public class SendGridSettingsValidator : AbstractValidator<SendGridSettings>
     {
@@ -38,9 +38,9 @@ namespace NzbDrone.Core.Notifications.SendGrid
         [FieldDefinition(3, Label = "Recipient Address(es)", Type = FieldType.Tag)]
         public IEnumerable<string> Recipients { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

@@ -4,12 +4,12 @@ using FizzWare.NBuilder;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Indexers;
-using NzbDrone.Core.Test.Framework;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Indexers;
+using Shelvance.Core.Test.Framework;
 
-namespace NzbDrone.Core.Test.Download
+namespace Shelvance.Core.Test.Download
 {
     [TestFixture]
     public class DownloadClientProviderFixture : CoreTest<DownloadClientProvider>

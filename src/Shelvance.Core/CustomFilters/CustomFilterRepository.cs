@@ -1,7 +1,7 @@
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.Messaging.Events;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.Messaging.Events;
 
-namespace NzbDrone.Core.CustomFilters
+namespace Shelvance.Core.CustomFilters
 {
     public interface ICustomFilterRepository : IBasicRepository<CustomFilter>
     {

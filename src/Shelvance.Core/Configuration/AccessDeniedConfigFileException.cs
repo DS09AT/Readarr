@@ -1,9 +1,9 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Configuration
+namespace Shelvance.Core.Configuration
 {
-    public class AccessDeniedConfigFileException : NzbDroneException
+    public class AccessDeniedConfigFileException : ShelvanceException
     {
         public AccessDeniedConfigFileException(string message)
             : base(message)

@@ -1,8 +1,8 @@
 using FluentValidation.Validators;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Disk;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Core.Validation.Paths
+namespace Shelvance.Core.Validation.Paths
 {
     public class SystemFolderValidator : PropertyValidator
     {

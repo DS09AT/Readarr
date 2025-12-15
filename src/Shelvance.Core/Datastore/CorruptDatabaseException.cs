@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Common.Exceptions;
+using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.Datastore
+namespace Shelvance.Core.Datastore
 {
     public class CorruptDatabaseException : ShelvanceStartupException
     {

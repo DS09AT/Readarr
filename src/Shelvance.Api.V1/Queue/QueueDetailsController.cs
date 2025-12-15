@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Download.Pending;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.Queue;
-using NzbDrone.SignalR;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Download.Pending;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.Queue;
+using Shelvance.SignalR;
 using Shelvance.Http;
 using Shelvance.Http.REST;
 
 namespace Shelvance.Api.V1.Queue
 {
     [V1ApiController("queue/details")]
-    public class QueueDetailsController : RestControllerWithSignalR<QueueResource, NzbDrone.Core.Queue.Queue>,
+    public class QueueDetailsController : RestControllerWithSignalR<QueueResource, Shelvance.Core.Queue.Queue>,
                                IHandle<QueueUpdatedEvent>, IHandle<PendingReleasesUpdatedEvent>
     {
         private readonly IQueueService _queueService;

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Instrumentation.Extensions;
-using NzbDrone.Core.Books.Commands;
-using NzbDrone.Core.Books.Events;
-using NzbDrone.Core.Exceptions;
-using NzbDrone.Core.History;
-using NzbDrone.Core.MediaCover;
-using NzbDrone.Core.MediaFiles;
-using NzbDrone.Core.Messaging.Commands;
-using NzbDrone.Core.Messaging.Events;
-using NzbDrone.Core.MetadataSource;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Instrumentation.Extensions;
+using Shelvance.Core.Books.Commands;
+using Shelvance.Core.Books.Events;
+using Shelvance.Core.Exceptions;
+using Shelvance.Core.History;
+using Shelvance.Core.MediaCover;
+using Shelvance.Core.MediaFiles;
+using Shelvance.Core.Messaging.Commands;
+using Shelvance.Core.Messaging.Events;
+using Shelvance.Core.MetadataSource;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     public interface IRefreshBookService
     {

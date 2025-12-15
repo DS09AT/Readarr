@@ -3,7 +3,7 @@ using Mono.Unix;
 using Mono.Unix.Native;
 using NLog;
 
-namespace NzbDrone.Mono.Disk
+namespace Shelvance.Mono.Disk
 {
     public interface ISymbolicLinkResolver
     {

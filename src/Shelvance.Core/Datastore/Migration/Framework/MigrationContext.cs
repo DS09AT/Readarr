@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NzbDrone.Core.Datastore.Migration.Framework
+namespace Shelvance.Core.Datastore.Migration.Framework
 {
     public class MigrationContext
     {
@@ -8,7 +8,7 @@ namespace NzbDrone.Core.Datastore.Migration.Framework
 
         public MigrationType MigrationType { get; private set; }
         public long? DesiredVersion { get; set; }
-        public Action<NzbDroneMigrationBase> BeforeMigration { get; set; }
+        public Action<ShelvanceMigrationBase> BeforeMigration { get; set; }
 
         public MigrationContext(MigrationType migrationType, long? desiredVersion = null)
         {

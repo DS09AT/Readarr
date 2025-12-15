@@ -1,8 +1,8 @@
-﻿using NzbDrone.Common.Exceptions;
+﻿using Shelvance.Common.Exceptions;
 
-namespace NzbDrone.Core.ThingiProvider
+namespace Shelvance.Core.ThingiProvider
 {
-    public class ConfigContractNotFoundException : NzbDroneException
+    public class ConfigContractNotFoundException : ShelvanceException
     {
         public ConfigContractNotFoundException(string contract)
             : base("Couldn't find config contract " + contract)

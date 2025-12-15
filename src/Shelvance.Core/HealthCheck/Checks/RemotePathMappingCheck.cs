@@ -2,20 +2,20 @@ using System;
 using System.Linq;
 using System.Net.Http;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Common.Messaging;
-using NzbDrone.Core.Configuration;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Download;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.MediaFiles.Events;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.ThingiProvider.Events;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Common.Messaging;
+using Shelvance.Core.Configuration;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Download;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Localization;
+using Shelvance.Core.MediaFiles.Events;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.ThingiProvider.Events;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ProviderAddedEvent<IDownloadClient>))]
     [CheckOn(typeof(ProviderUpdatedEvent<IDownloadClient>))]

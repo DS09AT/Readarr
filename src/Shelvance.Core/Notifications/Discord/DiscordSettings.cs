@@ -1,9 +1,9 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.ThingiProvider;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.ThingiProvider;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.Notifications.Discord
+namespace Shelvance.Core.Notifications.Discord
 {
     public class DiscordSettingsValidator : AbstractValidator<DiscordSettings>
     {
@@ -28,9 +28,9 @@ namespace NzbDrone.Core.Notifications.Discord
         [FieldDefinition(3, Label = "Host", Advanced = true, HelpText = "Override the Host that shows for this notification, Blank is machine name", Type = FieldType.Textbox)]
         public string Author { get; set; }
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate(this));
+            return new ShelvanceValidationResult(Validator.Validate(this));
         }
     }
 }

@@ -6,9 +6,9 @@
     <PackageReference Include="Mono.Posix.NETStandard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common.Test\Shelvance.Common.Test.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Shelvance.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Mono\Shelvance.Mono.csproj" />
+    <ProjectReference Include="..\Shelvance.Common.Test\Shelvance.Common.Test.csproj" />
+    <ProjectReference Include="..\Shelvance.Test.Common\Shelvance.Test.Common.csproj" />
+    <ProjectReference Include="..\Shelvance.Mono\Shelvance.Mono.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Files\**\*.*">

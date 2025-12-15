@@ -2,11 +2,11 @@ using System;
 using System.Threading.Tasks;
 using NLog;
 
-namespace NzbDrone.Common.Instrumentation
+namespace Shelvance.Common.Instrumentation
 {
     public static class GlobalExceptionHandlers
     {
-        private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(GlobalExceptionHandlers));
+        private static readonly Logger Logger = ShelvanceLogger.GetLogger(typeof(GlobalExceptionHandlers));
         public static void Register()
         {
             AppDomain.CurrentDomain.UnhandledException += HandleAppDomainException;

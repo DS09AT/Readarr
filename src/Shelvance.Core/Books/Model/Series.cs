@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Equ;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     [DebuggerDisplay("{GetType().FullName} ID = {Id} [{ForeignSeriesId}][{Title}]")]
     public class Series : Entity<Series>

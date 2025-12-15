@@ -1,6 +1,6 @@
-﻿using NzbDrone.Common.Messaging;
+﻿using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Queue
+namespace Shelvance.Core.Queue
 {
     public class QueueUpdatedEvent : IEvent
     {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.Json.Serialization;
 using Equ;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Datastore;
-using NzbDrone.Core.MediaFiles;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Datastore;
+using Shelvance.Core.MediaFiles;
 
-namespace NzbDrone.Core.Books
+namespace Shelvance.Core.Books
 {
     [DebuggerDisplay("{GetType().FullName} ID = {Id} [{ForeignBookId}][{Title}]")]
     public class Book : Entity<Book>

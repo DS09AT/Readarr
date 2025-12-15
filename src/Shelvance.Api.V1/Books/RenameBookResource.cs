@@ -15,7 +15,7 @@ namespace Shelvance.Api.V1.Books
 
     public static class RenameBookResourceMapper
     {
-        public static RenameBookResource ToResource(this NzbDrone.Core.MediaFiles.RenameBookFilePreview model)
+        public static RenameBookResource ToResource(this Shelvance.Core.MediaFiles.RenameBookFilePreview model)
         {
             if (model == null)
             {
@@ -32,7 +32,7 @@ namespace Shelvance.Api.V1.Books
             };
         }
 
-        public static List<RenameBookResource> ToResource(this IEnumerable<NzbDrone.Core.MediaFiles.RenameBookFilePreview> models)
+        public static List<RenameBookResource> ToResource(this IEnumerable<Shelvance.Core.MediaFiles.RenameBookFilePreview> models)
         {
             return models.Select(ToResource).ToList();
         }

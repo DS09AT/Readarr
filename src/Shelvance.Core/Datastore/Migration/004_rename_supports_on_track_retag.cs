@@ -1,10 +1,10 @@
 using FluentMigrator;
-using NzbDrone.Core.Datastore.Migration.Framework;
+using Shelvance.Core.Datastore.Migration.Framework;
 
-namespace NzbDrone.Core.Datastore.Migration
+namespace Shelvance.Core.Datastore.Migration
 {
     [Migration(004)]
-    public class rename_supports_on_track_retag : NzbDroneMigrationBase
+    public class rename_supports_on_track_retag : ShelvanceMigrationBase
     {
         protected override void MainDbUpgrade()
         {

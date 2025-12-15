@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Core.Datastore;
+using Shelvance.Core.Datastore;
 
-namespace NzbDrone.Core.Extras.Files
+namespace Shelvance.Core.Extras.Files
 {
     public abstract class ExtraFile : ModelBase
     {

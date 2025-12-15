@@ -1,4 +1,4 @@
-namespace NzbDrone.Common.Http.Proxy
+namespace Shelvance.Common.Http.Proxy
 {
     public interface IHttpProxySettingsProvider
     {

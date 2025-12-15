@@ -1,7 +1,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using NzbDrone.Common.Serializer;
+using Shelvance.Common.Serializer;
 using Shelvance.Http.Exceptions;
 
 namespace Shelvance.Http.ErrorManagement

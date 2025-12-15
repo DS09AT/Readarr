@@ -1,7 +1,7 @@
 using System;
-using NzbDrone.Common.Messaging;
+using Shelvance.Common.Messaging;
 
-namespace NzbDrone.Core.Update.History.Events
+namespace Shelvance.Core.Update.History.Events
 {
     public class UpdateInstalledEvent : IEvent
     {

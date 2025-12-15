@@ -2,17 +2,17 @@ using System;
 using System.IO;
 using System.Linq;
 using NLog;
-using NzbDrone.Common.Disk;
-using NzbDrone.Common.EnvironmentInfo;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books.Calibre;
-using NzbDrone.Core.Datastore.Events;
-using NzbDrone.Core.Download.Clients;
-using NzbDrone.Core.Localization;
-using NzbDrone.Core.RemotePathMappings;
-using NzbDrone.Core.RootFolders;
+using Shelvance.Common.Disk;
+using Shelvance.Common.EnvironmentInfo;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books.Calibre;
+using Shelvance.Core.Datastore.Events;
+using Shelvance.Core.Download.Clients;
+using Shelvance.Core.Localization;
+using Shelvance.Core.RemotePathMappings;
+using Shelvance.Core.RootFolders;
 
-namespace NzbDrone.Core.HealthCheck.Checks
+namespace Shelvance.Core.HealthCheck.Checks
 {
     [CheckOn(typeof(ModelEvent<RootFolder>))]
     [CheckOn(typeof(ModelEvent<RemotePathMapping>))]

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using NzbDrone.Common.Extensions;
+using Shelvance.Common.Extensions;
 
-namespace NzbDrone.Common.Test.ExtensionTests.IEnumerableExtensionTests
+namespace Shelvance.Common.Test.ExtensionTests.IEnumerableExtensionTests
 {
     [TestFixture]
     public class ExceptByFixture

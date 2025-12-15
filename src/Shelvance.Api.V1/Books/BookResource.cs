@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using NzbDrone.Common.Extensions;
-using NzbDrone.Core.Books;
-using NzbDrone.Core.MediaCover;
+using Shelvance.Common.Extensions;
+using Shelvance.Core.Books;
+using Shelvance.Core.MediaCover;
 using Shelvance.Api.V1.Author;
 using Shelvance.Http.REST;
 using Swashbuckle.AspNetCore.Annotations;
@@ -92,7 +92,7 @@ namespace Shelvance.Api.V1.Books
                 return null;
             }
 
-            var author = resource.Author?.ToModel() ?? new NzbDrone.Core.Books.Author();
+            var author = resource.Author?.ToModel() ?? new Shelvance.Core.Books.Author();
 
             return new Book
             {

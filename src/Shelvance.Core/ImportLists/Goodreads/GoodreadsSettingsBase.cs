@@ -1,8 +1,8 @@
 using FluentValidation;
-using NzbDrone.Core.Annotations;
-using NzbDrone.Core.Validation;
+using Shelvance.Core.Annotations;
+using Shelvance.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Goodreads
+namespace Shelvance.Core.ImportLists.Goodreads
 {
     public class GoodreadsSettingsBaseValidator<TSettings> : AbstractValidator<TSettings>
         where TSettings : GoodreadsSettingsBase<TSettings>
@@ -49,9 +49,9 @@ namespace NzbDrone.Core.ImportLists.Goodreads
 
         protected virtual AbstractValidator<TSettings> Validator => new GoodreadsSettingsBaseValidator<TSettings>();
 
-        public NzbDroneValidationResult Validate()
+        public ShelvanceValidationResult Validate()
         {
-            return new NzbDroneValidationResult(Validator.Validate((TSettings)this));
+            return new ShelvanceValidationResult(Validator.Validate((TSettings)this));
         }
     }
 }
