@@ -130,8 +130,8 @@ namespace NzbDrone.Test.Common
                     _processProvider.Kill(_nzbDroneProcess.Id);
                 }
 
-                _processProvider.KillAll(ProcessProvider.READARR_CONSOLE_PROCESS_NAME);
-                _processProvider.KillAll(ProcessProvider.READARR_PROCESS_NAME);
+                _processProvider.KillAll(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME);
+                _processProvider.KillAll(ProcessProvider.SHELVANCE_PROCESS_NAME);
             }
             catch (InvalidOperationException)
             {

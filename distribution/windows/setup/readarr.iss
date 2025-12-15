@@ -8,7 +8,7 @@
 #define AppExeName "Readarr.exe"
 #define BaseVersion GetEnv('MAJORVERSION')
 #define BuildNumber GetEnv('MINORVERSION')
-#define BuildVersion GetEnv('READARRVERSION')
+#define BuildVersion GetEnv('SHELVANCEVERSION')
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.

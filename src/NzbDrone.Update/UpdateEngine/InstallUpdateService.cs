@@ -98,8 +98,8 @@ namespace NzbDrone.Update.UpdateEngine
 
             var appType = _detectApplicationType.GetAppType();
 
-            _processProvider.FindProcessByName(ProcessProvider.READARR_CONSOLE_PROCESS_NAME);
-            _processProvider.FindProcessByName(ProcessProvider.READARR_PROCESS_NAME);
+            _processProvider.FindProcessByName(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME);
+            _processProvider.FindProcessByName(ProcessProvider.SHELVANCE_PROCESS_NAME);
 
             if (OsInfo.IsWindows)
             {
@@ -113,7 +113,7 @@ namespace NzbDrone.Update.UpdateEngine
 
                 if (OsInfo.IsWindows)
                 {
-                    if (_processProvider.Exists(ProcessProvider.READARR_CONSOLE_PROCESS_NAME) || _processProvider.Exists(ProcessProvider.READARR_PROCESS_NAME))
+                    if (_processProvider.Exists(ProcessProvider.SHELVANCE_CONSOLE_PROCESS_NAME) || _processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                     {
                         _logger.Error("Shelvance was restarted prematurely by external process.");
                         return;
@@ -160,7 +160,7 @@ namespace NzbDrone.Update.UpdateEngine
                         }
                     }
 
-                    if (!_processProvider.Exists(ProcessProvider.READARR_PROCESS_NAME))
+                    if (!_processProvider.Exists(ProcessProvider.SHELVANCE_PROCESS_NAME))
                     {
                         _startNzbDrone.Start(appType, installationFolder);
                     }

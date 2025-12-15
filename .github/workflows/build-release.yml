@@ -126,7 +126,7 @@ jobs:
       - name: Build Backend
         run: bash build.sh --backend
         env:
-          READARRVERSION: ${{ steps.version.outputs.version }}
+          SHELVANCEVERSION: ${{ steps.version.outputs.version }}
 
       - name: Build Frontend
         run: bash build.sh --frontend
@@ -134,7 +134,7 @@ jobs:
       - name: Create Packages
         run: bash build.sh --packages
         env:
-          READARRVERSION: ${{ steps.version.outputs.version }}
+          SHELVANCEVERSION: ${{ steps.version.outputs.version }}
 
       - name: Create release archives
         run: |

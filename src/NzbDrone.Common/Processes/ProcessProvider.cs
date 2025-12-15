@@ -35,8 +35,8 @@ namespace NzbDrone.Common.Processes
     {
         private readonly Logger _logger;
 
-        public const string READARR_PROCESS_NAME = "Shelvance";
-        public const string READARR_CONSOLE_PROCESS_NAME = "Shelvance.Console";
+        public const string SHELVANCE_PROCESS_NAME = "Shelvance";
+        public const string SHELVANCE_CONSOLE_PROCESS_NAME = "Shelvance.Console";
 
         public ProcessProvider(Logger logger)
         {
